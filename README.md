@@ -42,8 +42,9 @@ If you have an error, that means you have not installed Vim or NeoVim properly o
 
 Open a Terminal application and go to this repository directory.
 
-This repository contains submodules, you need to update them to use my Vim or NeoVim setup:
+This repository contains submodules, you need to init and update them to use my Vim or NeoVim setup:
 ```git
+    git submodule init
     git submodule update
 ```
 

@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# init and update submodules
+git submodule init
+git submodule update
+
 # copy .vimrc to ~/.vimrc
 cp .vimrc ~/.vimrc
 

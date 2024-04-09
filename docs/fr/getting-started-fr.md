@@ -207,3 +207,13 @@ La commande sudo existe par défaut dans les systèmes Unix pour demander les dr
 Grâce à la gestion de paquets, vous aurez plus de facilité à maintenir vos logiciels ou outils de développement, mais aussi plus de contrôle sur ce qui est installé et quand vous le voulez. En effet, plusieurs logiciels se mettent à jour automatiquement avec des programmes de démarrage. Il vaut mieux que vous le fassiez manuellement, disons 1-2 fois par mois, pour des raisons de stabilité et de sécurité.
 
 En résumé, pour installer un paquet (ex: 'python', 'nodejs', 'vscode' ou 'nvim'), vous pourriez le faire directement à partir du Terminal avec un package manager.
+
+## 3. Choisir sa police de charactère
+
+Maintenant que vous avez choisi votre terminal et votre package manager, vous pourriez choisir une police de charactère pour votre terminal. Il est recommendé d'installer les 'NERD Fonts' si vous utilisez Vim ou NeoVim, puisque certains plugins utilisent des emojis qui ne sont pas disponibles dans toutes les polices de charactères.
+
+Pour installer et choisir une police de charactère 'NERD Fonts':
+- [NERD Fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/readme_fr.md)
+
+Personnellement, j'utilise une police de charactère 'JetBrains Mono', aussi disponible avec les 'NERD Fonts', mais avec le répertoire Git principal:
+- [Jetbrains Mono](https://github.com/JetBrains/JetBrainsMono)

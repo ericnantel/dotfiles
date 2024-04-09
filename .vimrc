@@ -16,6 +16,19 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'OmniSharp/omnisharp-vim'
 Bundle 'tpope/vim-dispatch'
 
+" Status/Tabline for Vim
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+
+" File system explorer
+Bundle 'preservim/nerdtree'
+
+" File system explorer Git status
+Bundle 'Xuyuanp/nerdtree-git-plugin'
+
+" Always load the Vim DevIcons as the very last one
+Bundle 'ryanoasis/vim-devicons'
+
 " All of your Plugins must be added before the following line
 call vundle#end()						" required (for Vundle)
 filetype indent plugin on				" required (for Vundle)
@@ -40,6 +53,9 @@ augroup omnisharp_commands
 	autocmd!
 	autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 augroup END
+
+" Airline
+let g:airline_theme='zenburn'
 
 set updatetime=500
 set cmdheight=2

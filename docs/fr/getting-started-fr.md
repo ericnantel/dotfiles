@@ -18,9 +18,9 @@ Aujourd'hui je peux faire toutes mes tâches, à partir de n'importe quelle mach
 
 Les 3 grandes familles de systèmes d'opération (Windows, MacOS, GNU/Linux) ont tous déjà une application ou émulateur de terminal, installé par défaut. Vous pouvez aussi en installer un autre sur votre machine si vous préférez, tel que iTerm2 ou WarpDotDev, mais faites cela une fois que vous aurez tout lu et vous déciderez par la suite. Personnellement, c'est beaucoup plus une question de goût et d'esthétique.
 
-Un terminal utilise un 'shell', ou plusieurs, pour interpréter des commandes et/ou lire des scripts. Sur MacOS et GNU/Linux vous pouvez utiliser les commandes Unix par défaut, ainsi qu'exécuter des scripts Shell (.sh); cependant sur Windows 11, l'émulateur de terminal utilise PowerShell qui ne comprend pas les commandes Unix par défaut. Vous devrez installer manuellement ces fonctionnalités. **L'idée c'est que vous utilisez les mêmes commandes peut importe le terminal ou système d'opération.**
+Un terminal utilise un 'shell', ou plusieurs, pour interpréter des commandes et/ou lire des scripts. Sous MacOS et GNU/Linux vous pouvez utiliser les commandes Unix par défaut, ainsi qu'exécuter des scripts Shell (.sh); cependant sous Windows 11, l'émulateur de terminal utilise PowerShell qui ne comprend pas les commandes Unix par défaut. Vous devrez installer manuellement ces fonctionnalités. **L'idée c'est que vous utilisez les mêmes commandes peut importe le terminal ou système d'opération.**
 
-Sur Windows, il existe une autre application, que je ne vous recommande pas d'utiliser. Pour en être certain, sur Windows 11, nous allons choisir notre émulateur 'Terminal Windows' comme l'application de terminal par défaut.
+Sous Windows, il existe une autre application, que je ne vous recommande pas d'utiliser. Pour en être certain, sous Windows 11, nous allons choisir notre émulateur 'Terminal Windows' comme l'application de terminal par défaut.
 
 *Ignorez les 2 étapes ci-dessous, si vous n'utilisez pas Windows 11*
 
@@ -208,12 +208,60 @@ Grâce à la gestion de paquets, vous aurez plus de facilité à maintenir vos l
 
 En résumé, pour installer un paquet (ex: 'python', 'nodejs', 'vscode' ou 'nvim'), vous pourriez le faire directement à partir du Terminal avec un package manager.
 
-## 3. Choisir sa police de charactère
+## 3. Choisir sa police de charactères
 
-Maintenant que vous avez choisi votre terminal et votre package manager, vous pourriez choisir une police de charactère pour votre terminal. Il est recommendé d'installer les 'NERD Fonts' si vous utilisez Vim ou NeoVim, puisque certains plugins utilisent des emojis qui ne sont pas disponibles dans toutes les polices de charactères.
+Maintenant que vous avez choisi votre terminal et votre package manager, vous pourriez choisir une police de charactères pour votre terminal. Il est recommendé d'installer les 'NERD Fonts' si vous utilisez Vim ou NeoVim, puisque certains plugins utilisent des emojis qui ne sont pas disponibles dans toutes les polices de charactères.
 
-Pour installer et choisir une police de charactère 'NERD Fonts':
+### 3.1. Installation de la police de charactères
+
+Pour installer et choisir une police de charactères 'NERD Fonts':
 - [NERD Fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/readme_fr.md)
 
-Personnellement, j'utilise une police de charactère 'JetBrains Mono', aussi disponible avec les 'NERD Fonts', mais avec le répertoire Git principal:
-- [Jetbrains Mono](https://github.com/JetBrains/JetBrainsMono)
+Personnellement, j'utilise une police de charactères 'JetBrains Mono', aussi disponible avec les 'NERD Fonts', mais en utilisant le répertoire Git principal:
+- [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+
+Donc, il vous faut télécharger ou cloner les fichiers de police de charactères, avec ou sans package manager, puis normalement vous devriez avoir un script d'installation; sinon vous devriez être en mesure de pouvoir double-clic sur une police de charactères pour l'installer dans votre système.
+
+Par exemple, sous Windows 11:
+
+Sélectionnez les polices de charactères que vous voudriez installer et double-cliquez.
+![Étape 1 Installation Police de charactères sous Windows 11](/resources/images/Capture%20d’écran%202024-04-09%20100448.png "Étape 1 Installation Police de charactères sous Windows 11")
+
+Une fenètre devrait s'afficher avec une option pour installer la police de charactères dans le système.
+![Étape 2 Installation Police de charactères sous Windows 11](/resources/images/Capture%20d’écran%202024-04-09%20100525.png "Étape 2 Installation Police de charactères sous Windows 11")
+
+Par exemple, sous MacOS:
+
+Sélectionnez les polices de charactères que vous voudriez installer et double-cliquez.
+![Étape 1 Installation Police de charactères sous MacOS]( "Étape 1 Installation Police de charactères sous MacOS")
+
+Une fenètre devrait s'afficher avec une option pour installer la police de charactères dans le système.
+![Étape 2 Installation Police de charactères sous MacOS]( "Étape 2 Installation Police de charactères sous MacOS")
+
+### 3.2. Configuration de la police de charactères pour le terminal
+
+Lorsque l'installation est complétée, il vous faut configurer votre Terminal pour la police de charactères a utiliser pour le 'profil' de votre choix.
+
+Par exemple, sous Windows 11 avec Terminal Windows:
+
+Ouvrez l'application Terminal Windows, et cliquez sur l'icône à côté du symbole '+'.
+![Étape 1 Configuration Police de charactères pour Terminal Windows](/resources/images/Capture%20d’écran%202024-04-09%20100022.png "Étape 1 Configuration Police de charactères pour Terminal Windows")
+
+Cliquez sur Paramètres.
+![Étape 2 Configuration Police de charactères pour Terminal Windows](/resources/images/Capture%20d’écran%202024-04-09%20100110.png "Étape 2 Configuration Police de charactères pour Terminal Windows")
+
+Cliquez sur le profil par défaut (ou de votre choix) puis sur Apparences dans les Paramètres supplémentaires.
+![Étape 3 Configuration Police de charactères pour Terminal Windows](/resources/images/Capture%20d’écran%202024-04-09%20100203.png "Étape 3 Configuration Police de charactères pour Terminal Windows")
+
+Sélectionnez la police de charactères de votre choix.
+![Étape 4 Configuration Police de charactères pour Terminal Windows](/resources/images/Capture%20d’écran%202024-04-09%20100620.png "Étape 4 Configuration Police de charactères pour Terminal Windows")
+
+Assurez-vous de sauvegarder vos changements pour les paramètres du Terminal.
+![Étape 5 Configuration Police de charactères pour Terminal Windows](/resources/images/Capture%20d’écran%202024-04-09%20100713.png "Étape 5 Configuration Police de charactères pour Terminal Windows")
+
+Par exemple, sous MacOS avec le Terminal:
+
+Ouvrez l'application Terminal, et en haut à gauche, cliquez sur Terminal et Réglages.
+Vous devriez voir une option 'Police' et un bouton 'Modifier...', cliquez sur ce bouton.
+Par la suite, je vous suggère de choisir l'option 'Toutes les Polices' pour voir vos polices de charactères.
+![Étape 1 Configuration Police de charactères pour Terminal MacOS]( "Étape 1 Configuration Police de charactères pour Terminal MacOS")

@@ -15,5 +15,9 @@ Be sure to read the 'Getting started' first, which is going to tell you everythi
 
 * **Getting started** [English](/docs/en/getting-started-en.md) | [Français](/docs/fr/getting-started-fr.md)
 
+This repository contains submodules, you may ignore them. But I would recommend you to pull them if you plan on using Vim or NeoVim:
+```git
+    git submodule update
+```
 
 *Copyright(c) 2024 - Eric Nantel*

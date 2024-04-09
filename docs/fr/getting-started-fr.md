@@ -126,7 +126,7 @@ Voici une petite liste de paquets, non exaustive, que j'installe généralement 
 sudo
 7zip
 cmake
-vim ou nvim
+vim ou neovim
 git
 git-lfs
 vscode
@@ -206,7 +206,7 @@ La commande sudo existe par défaut dans les systèmes Unix pour demander les dr
 
 Grâce à la gestion de paquets, vous aurez plus de facilité à maintenir vos logiciels ou outils de développement, mais aussi plus de contrôle sur ce qui est installé et quand vous le voulez. En effet, plusieurs logiciels se mettent à jour automatiquement avec des programmes de démarrage. Il vaut mieux que vous le fassiez manuellement, disons 1-2 fois par mois, pour des raisons de stabilité et de sécurité.
 
-En résumé, pour installer un paquet (ex: 'python', 'nodejs', 'vscode' ou 'nvim'), vous pourriez le faire directement à partir du Terminal avec un package manager.
+En résumé, pour installer un paquet (ex: 'python', 'nodejs', 'vscode' ou 'neovim'), vous pourriez le faire directement à partir du Terminal avec un package manager.
 
 ## 3. Choisir sa police de charactères
 
@@ -268,5 +268,8 @@ Vous devriez voir une option 'Police' et un bouton 'Modifier...', cliquez sur ce
 
 Par la suite, je vous suggère de choisir l'option 'Toutes les Polices' pour voir vos polices de charactères.
 ![Étape 2 Configuration Police de charactères pour Terminal MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2011.38.52.png "Étape 2 Configuration Police de charactères pour Terminal MacOS")
+
+[Retour vers README](/README.md)
+[Haut](#getting-started)
 
 *Copyright(c) 2024 - Eric Nantel*

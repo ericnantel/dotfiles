@@ -233,10 +233,10 @@ Une fenètre devrait s'afficher avec une option pour installer la police de char
 Par exemple, sous MacOS:
 
 Sélectionnez les polices de charactères que vous voudriez installer et double-cliquez.
-![Étape 1 Installation Police de charactères sous MacOS]( "Étape 1 Installation Police de charactères sous MacOS")
+![Étape 1 Installation Police de charactères sous MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2010.21.50.png "Étape 1 Installation Police de charactères sous MacOS")
 
 Une fenètre devrait s'afficher avec une option pour installer la police de charactères dans le système.
-![Étape 2 Installation Police de charactères sous MacOS]( "Étape 2 Installation Police de charactères sous MacOS")
+![Étape 2 Installation Police de charactères sous MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2010.22.52.png "Étape 2 Installation Police de charactères sous MacOS")
 
 ### 3.2. Configuration de la police de charactères pour le terminal
 
@@ -263,5 +263,10 @@ Par exemple, sous MacOS avec le Terminal:
 
 Ouvrez l'application Terminal, et en haut à gauche, cliquez sur Terminal et Réglages.
 Vous devriez voir une option 'Police' et un bouton 'Modifier...', cliquez sur ce bouton.
+
+![Étape 1 Configuration Police de charactères pour Terminal MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2010.23.58.png "Étape 1 Configuration Police de charactères pour Terminal MacOS")
+
 Par la suite, je vous suggère de choisir l'option 'Toutes les Polices' pour voir vos polices de charactères.
-![Étape 1 Configuration Police de charactères pour Terminal MacOS]( "Étape 1 Configuration Police de charactères pour Terminal MacOS")
+![Étape 2 Configuration Police de charactères pour Terminal MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2011.38.52.png "Étape 2 Configuration Police de charactères pour Terminal MacOS")
+
+*Copyright(c) 2024 - Eric Nantel*

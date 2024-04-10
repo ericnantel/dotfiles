@@ -7,3 +7,6 @@
 	path = fonts/JetBrainsMono
 	url = https://github.com/JetBrains/JetBrainsMono
 	ignore = dirty
+[submodule ".vim/plugged/vim-plug"]
+	path = .vim/plugged/vim-plug
+	url = https://github.com/junegunn/vim-plug

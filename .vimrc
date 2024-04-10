@@ -3,65 +3,91 @@
 set nocompatible						" be iMproved, required (for Vundle)
 filetype off							" required (for Vundle)
 
-" Set the runtime path to include colors
+" Add .vim to the runtime path (for colors)
 set rtp+=~/.vim
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" Alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
+" Add Vundle.vim to the runtime path
+"set rtp+=~/.vim/bundle/Vundle.vim
 
-" Let Vundle manage Vundle, required (for Vundle)
-Plugin 'VundleVim/Vundle.vim'
+" Add Plug.vim to the runtime path
+set rtp+=~/.vim/plugged/vim-plug
 
-" Code Completion (requires nodejs)
-Bundle 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
-Bundle 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
+" Begin Initialize Plug
+call plug#begin('~/.vim/plugged')
+	" Make sure to use single quotes
 
-" C# however ..
-Bundle 'OmniSharp/omnisharp-vim'
-Bundle 'tpope/vim-dispatch'
+	" Code completion
+	" Dependencies:
+	"	- nodejs
+	"	- python3 with vim support (pip install pyvim/pynvim) 
+	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
+	Plug 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
+	" Syntax checking and semantic errors
+	Plug 'dense-analysis/ale'
+	" Git
+	Plug 'tpope/vim-fugitive'
+	" Fuzzy Finder
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	" Status
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	" File system explorer
+	Plug 'preservim/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'ryanoasis/vim-devicons'
 
-" Ale
-Bundle 'dense-analysis/ale'
+" Initialize plugin system
+" - Automatically executes:
+"	- filetype indent plugin on
+"	- syntax on
+call plug#end()
 
-" Fugitive
-Bundle 'tpope/vim-fugitive'
+" Begin Initialize Vundle
+"call vundle#begin('~/.vim/bundle')
+	" Let Vundle manage Vundle, required (for Vundle)
+	"Plugin 'VundleVim/Vundle.vim'
 
-" FZF
-Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Bundle 'junegunn/fzf.vim'
+	" Code Completion (requires nodejs)
+	"Bundle 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
+	"Bundle 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
 
-" Airline
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+	" C# however ..
+	"Bundle 'OmniSharp/omnisharp-vim'
+	"Bundle 'tpope/vim-dispatch'
 
-" File system explorer
-Bundle 'preservim/nerdtree'
+	" Ale
+	"Bundle 'dense-analysis/ale'
 
-" File system explorer Git status
-Bundle 'Xuyuanp/nerdtree-git-plugin'
+	" Fugitive
+	"Bundle 'tpope/vim-fugitive'
 
-" Always load the Vim DevIcons as the very last one
-Bundle 'ryanoasis/vim-devicons'
+	" FZF
+	"Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	"Bundle 'junegunn/fzf.vim'
+
+	" Airline
+	"Bundle 'vim-airline/vim-airline'
+	"Bundle 'vim-airline/vim-airline-themes'
+
+	" File system explorer
+	"Bundle 'preservim/nerdtree'
+
+	" File system explorer Git status
+	"Bundle 'Xuyuanp/nerdtree-git-plugin'
+
+	" Always load the Vim DevIcons as the very last one
+	"Bundle 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
-call vundle#end()						" required (for Vundle)
-filetype indent plugin on				" required (for Vundle)
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-"
+"call vundle#end()						" required (for Vundle)
+"filetype indent plugin on				" required (for Vundle)
 " Brief help
 " :PluginList							- lists configured plugins
 " :PluginInstall						- installs plugins; append '|' to update or just :PluginUpdate
 " :PluginSearch foo						- searches for foo; append '|' to refresh local cache
 " :PluginClean							- confirms removal of unused plugins; append '|' to auto-approve removal
-"
-" See :h vundle for more details of wiki for FAQ
-" Put your non-Plugin stuff after this line
 
-"call coc#util#install()
 
 " CoC
 " Brief help
@@ -73,14 +99,14 @@ let g:coc_global_extensions = [
 	\'coc-prisma']
 
 " OmniSharp
-let g:OmniSharp_timeout=1				" Timeout in seconds to wait for a response from the server
-set noshowmatch							" Showmatch significantly slows down omnicomplete
-set completeopt=longest,menuone,preview
-set splitbelow							" Move preview window (code documentation) to the bottom of the screen
-augroup omnisharp_commands
-	autocmd!
-	autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-augroup END
+"let g:OmniSharp_timeout=1				" Timeout in seconds to wait for a response from the server
+"set noshowmatch							" Showmatch significantly slows down omnicomplete
+"set completeopt=longest,menuone,preview
+"set splitbelow							" Move preview window (code documentation) to the bottom of the screen
+"augroup omnisharp_commands
+"	autocmd!
+"	autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+"augroup END
 
 " Fugitive
 
@@ -96,8 +122,8 @@ let g:airline#extensions#fzf#enabled=1
 set updatetime=500
 set cmdheight=2
 
-inoremap <C-space> <C-x><C-o>
-inoremap <C-@> <C-Space>
+"inoremap <C-space> <C-x><C-o>
+"inoremap <C-@> <C-Space>
 
 set relativenumber			" Show line relative numbers
 set number				" Show line numbers

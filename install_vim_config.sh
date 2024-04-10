@@ -13,17 +13,8 @@ mkdir -p ~/.vim
 # copy .vim to ~.vim
 cp -rp .vim/* ~/.vim
 
-# note sure why but the git folder is not copied properly..
-# until then keep uncomment code below
+# make directory ~/.vim/autoload
+mkdir -p ~/.vim/autoload
 
-# current directory ~/.vim/bundle/Vundle.vim
-cd ~/.vim/bundle
-
-# remove Vundle.vim
-rm -rf Vundle.vim
-
-# make directory Vundle.vim
-mkdir -p Vundle.vim
-
-# git clone Vundle
-git clone https://github.com/VundleVim/Vundle.vim Vundle.vim
+# copy vim-plug/plug.vim to ~/.vim/autoload/plug.vim
+cp vim-plug/plug.vim ~/.vim/autoload/plug.vim

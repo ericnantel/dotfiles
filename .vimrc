@@ -15,7 +15,11 @@ call vundle#begin()
 " Let Vundle manage Vundle, required (for Vundle)
 Plugin 'VundleVim/Vundle.vim'
 
-" C#
+" Code Completion (requires nodejs)
+Bundle 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
+Bundle 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
+
+" C# however ..
 Bundle 'OmniSharp/omnisharp-vim'
 Bundle 'tpope/vim-dispatch'
 
@@ -56,6 +60,17 @@ filetype indent plugin on				" required (for Vundle)
 "
 " See :h vundle for more details of wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+"call coc#util#install()
+
+" CoC
+" Brief help
+" :CocInstall coc-json coc-tsserver		- installs plugins
+let g:coc_global_extensions = [
+	\'coc-snippets', 'coc-json', 'coc-tsserver',
+	\'coc-css', 'coc-eslint', 'coc-react-refactor',
+	\'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
+	\'coc-prisma']
 
 " OmniSharp
 let g:OmniSharp_timeout=1				" Timeout in seconds to wait for a response from the server

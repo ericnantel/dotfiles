@@ -30,8 +30,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'
 	
 	" Fuzzy Finder
-	"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	"Plug 'junegunn/fzf.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 	
 	" Status
 	Plug 'vim-airline/vim-airline'
@@ -93,6 +93,10 @@ call plug#end()
 " :PluginSearch foo						- searches for foo; append '|' to refresh local cache
 " :PluginClean							- confirms removal of unused plugins; append '|' to auto-approve removal
 
+set cmdheight=1
+set splitbelow
+set noshowmatch
+set updatetime=500
 
 " CoC
 " Brief help
@@ -105,9 +109,7 @@ let g:coc_global_extensions = [
 
 " OmniSharp
 "let g:OmniSharp_timeout=1				" Timeout in seconds to wait for a response from the server
-"set noshowmatch							" Showmatch significantly slows down omnicomplete
 "set completeopt=longest,menuone,preview
-"set splitbelow							" Move preview window (code documentation) to the bottom of the screen
 "augroup omnisharp_commands
 "	autocmd!
 "	autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
@@ -123,9 +125,6 @@ let g:airline#extensions#fugitiveline#enabled=1
 "let g:airline#extensions#fzf#enabled=1
 
 " NERDTree
-
-set updatetime=500
-set cmdheight=2
 
 "inoremap <C-space> <C-x><C-o>
 "inoremap <C-@> <C-Space>

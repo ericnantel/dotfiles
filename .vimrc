@@ -3,6 +3,9 @@
 set nocompatible						" be iMproved, required (for Vundle)
 filetype off							" required (for Vundle)
 
+" Set the runtime path to include colors
+set rtp+=~/.vim
+
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -96,7 +99,8 @@ set backspace=indent,eol,start		" Sets backspace
 
 set background=dark			"
 syntax on				" Enables syntax
-
+"set termguicolors		" Enables truecolor
+set t_Co=256			" Needed for Terminal Windows..
 
 " Darcula (Jetbrains) color scheme
 colorscheme darcula			"

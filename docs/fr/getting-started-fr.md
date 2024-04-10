@@ -129,6 +129,8 @@ cmake
 vim ou neovim
 git
 git-lfs
+lua
+bat
 vscode
 nodejs
 nvm

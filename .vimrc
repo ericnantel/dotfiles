@@ -114,7 +114,7 @@ set updatetime=500
 " :CocInstall coc-json coc-tsserver		- installs plugins
 let g:coc_global_extensions = [
 	\'coc-vimlsp', 'coc-snippets', 'coc-tsserver', 'coc-css', 'coc-html',
-	\'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
+	\'coc-prettier', 'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
 	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-yank',
 	\'coc-prisma', 'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
 	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']

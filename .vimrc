@@ -21,17 +21,22 @@ call plug#begin('~/.vim/plugged')
 	"	- nodejs
 	"	- python3 with vim support (pip install pyvim/pynvim) 
 	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
-	Plug 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
+	"Plug 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
+	
 	" Syntax checking and semantic errors
 	Plug 'dense-analysis/ale'
+	
 	" Git
 	Plug 'tpope/vim-fugitive'
+	
 	" Fuzzy Finder
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
+	"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	"Plug 'junegunn/fzf.vim'
+	
 	" Status
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	
 	" File system explorer
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -115,7 +120,7 @@ let g:coc_global_extensions = [
 " Airline
 let g:airline_theme='zenburn'
 let g:airline#extensions#fugitiveline#enabled=1
-let g:airline#extensions#fzf#enabled=1
+"let g:airline#extensions#fzf#enabled=1
 
 " NERDTree
 

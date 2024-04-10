@@ -19,26 +19,36 @@ call plug#begin('~/.vim/plugged')
 	" Code completion
 	" Dependencies:
 	"	- nodejs
-	"	- python3 with vim support (pip install pyvim/pynvim) 
+	"	- python3 (need to install pyvim/pynvim for Jedi ??)
 	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
-	"Plug 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
-	
+	Plug 'davidhalter/jedi-vim'
+
 	" Syntax checking and semantic errors
+	" Dependencies:
+	"	-
 	Plug 'dense-analysis/ale'
 	
 	" Git
+	" Depedencies:
+	"	-
 	Plug 'tpope/vim-fugitive'
 	
 	" Fuzzy Finder
+	" Depedencies:
+	"	-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 	
 	" Status
+	" Dependencies:
+	"	-
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	
 	" File system explorer
+	" Dependencies:
+	"	-
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'ryanoasis/vim-devicons'

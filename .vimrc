@@ -16,7 +16,14 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'OmniSharp/omnisharp-vim'
 Bundle 'tpope/vim-dispatch'
 
-" Status/Tabline for Vim
+" Fugitive
+Bundle 'tpope/vim-fugitive'
+
+" FZF
+Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Bundle 'junegunn/fzf.vim'
+
+" Airline
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 
@@ -54,8 +61,16 @@ augroup omnisharp_commands
 	autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 augroup END
 
+" Fugitive
+
+" FZF
+
 " Airline
 let g:airline_theme='zenburn'
+let g:airline#extensions#fugitiveline#enabled=1
+let g:airline#extensions#fzf#enabled=1
+
+" NERDTree
 
 set updatetime=500
 set cmdheight=2

@@ -40,6 +40,14 @@ If you have an error, that means you have not installed Vim or NeoVim properly o
 
 #### Step 3
 
+Make sure to have git installed before moving forward.
+
+You might need to install lua as well for NeoVim.
+
+*Please consider reading the [Getting started](#step-1) documentation :book: above.*
+
+#### Step 4
+
 Open a Terminal application and go to this repository directory.
 
 This repository contains submodules, you need to init and update them to use my Vim or NeoVim setup:
@@ -50,7 +58,7 @@ This repository contains submodules, you need to init and update them to use my 
 
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
-#### Step 4
+#### Step 5
 
 Open a Terminal application and go to this repository directory if not already.
 
@@ -68,7 +76,7 @@ If you have an error, that means your terminal or emulator cannot read Shell scr
 
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
-#### Step 5
+#### Step 6
 
 Open Vim or NeoVim in a Terminal application to install the plugins. 
 

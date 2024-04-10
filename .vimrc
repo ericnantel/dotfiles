@@ -16,6 +16,9 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'OmniSharp/omnisharp-vim'
 Bundle 'tpope/vim-dispatch'
 
+" Ale
+Bundle 'dense-analysis/ale'
+
 " Fugitive
 Bundle 'tpope/vim-fugitive'
 

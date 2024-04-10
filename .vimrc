@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
 	" Fuzzy Finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 	
 	" Status
 	Plug 'vim-airline/vim-airline'
@@ -102,10 +103,11 @@ set updatetime=500
 " Brief help
 " :CocInstall coc-json coc-tsserver		- installs plugins
 let g:coc_global_extensions = [
-	\'coc-snippets', 'coc-json', 'coc-tsserver',
-	\'coc-css', 'coc-eslint', 'coc-react-refactor',
-	\'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
-	\'coc-prisma']
+	\'coc-vimlsp', 'coc-snippets', 'coc-tsserver', 'coc-css', 'coc-html',
+	\'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
+	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-yank',
+	\'coc-prisma', 'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
+	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
 
 " OmniSharp
 "let g:OmniSharp_timeout=1				" Timeout in seconds to wait for a response from the server

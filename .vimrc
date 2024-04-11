@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 	"	- nodejs
 	"	- python3 (need to install pyvim/pynvim for Jedi ??)
 	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
+	Plug 'HerringtonDarkholme/yats.vim'
 	Plug 'davidhalter/jedi-vim'
 
 	" Syntax checking and semantic errors
@@ -60,8 +61,9 @@ call plug#begin('~/.vim/plugged')
 "	- syntax on
 call plug#end()
 
-set cmdheight=1
+set cmdheight=2
 set splitbelow
+set hidden
 set noshowmatch
 set updatetime=500
 
@@ -93,6 +95,7 @@ let g:airline#extensions#fugitiveline#enabled=1
 "let g:airline#extensions#fzf#enabled=1
 
 " NERDTree
+let g:NERDTreeIgnore=['^node_modules$']
 let g:NERDTreeFileExtensionHighlightFullName=1
 let g:NERDTreeExactMatchHighlightFullName=1
 let g:NERDTreePatternMatchHighlightFullName=1

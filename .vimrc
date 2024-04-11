@@ -51,6 +51,7 @@ call plug#begin('~/.vim/plugged')
 	"	-
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
@@ -92,6 +93,9 @@ let g:airline#extensions#fugitiveline#enabled=1
 "let g:airline#extensions#fzf#enabled=1
 
 " NERDTree
+let g:NERDTreeFileExtensionHighlightFullName=1
+let g:NERDTreeExactMatchHighlightFullName=1
+let g:NERDTreePatternMatchHighlightFullName=1
 
 "inoremap <C-space> <C-x><C-o>
 "inoremap <C-@> <C-Space>

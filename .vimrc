@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 	" Code completion
 	" Dependencies:
 	"	- nodejs
+	"	- yarn ??
 	"	- python3 (need to install pyvim/pynvim for Jedi ??)
 	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 	Plug 'HerringtonDarkholme/yats.vim'
@@ -62,6 +63,18 @@ call plug#begin('~/.vim/plugged')
 	" Dependencies:
 	"	-
 	Plug 'lambdalisue/wifi.vim'
+
+	" Web API
+	" Dependencies:
+	"	-
+	Plug 'mattn/webapi-vim'
+
+	" Weather
+	" Dependencies:
+	"	- Vim Plugins:
+	"		- Airline
+	"		- Web API
+	Plug 'Wildog/airline-weather.vim'
 
 	" File system explorer
 	" Dependencies:
@@ -115,13 +128,14 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
 let g:airline#extensions#ale#enabled=1
-let g:airline#extensions#ale#error_symbol='E:'
-let g:airline#extensions#ale#warning_symbol='W:'
+let g:airline#extensions#ale#error_symbol='Error'
+let g:airline#extensions#ale#warning_symbol='Warning:'
 let g:airline#extensions#ale#show_line_numbers=1
 let g:airline#extensions#battery#enabled=1
 let g:airline#extensions#wifi#enabled=1
+let g:airline#extensions#weather#enabled=1
 let g:airline#extensions#fugitiveline#enabled=1
-"let g:airline#extensions#fzf#enabled=1
+let g:airline#extensions#fzf#enabled=1
 
 " Battery
 let g:battery#update_tabline=1
@@ -130,6 +144,35 @@ let g:battery#update_statusline=0
 " Wifi
 let g:wifi#update_tabline=1
 let g:wifi#update_statusline=0
+
+" Web API
+
+" Weather
+let g:weather#area='montreal,ca'
+let g:weather#unit='metric'
+let g:weather#cache_file='~/.cache/.weather'
+let g:weather#cache_ttl='3600'
+let g:weather#format='%s %.0f¯C'
+let g:weather#status_map = {
+	\ "01d": "☀",
+	\ "02d": "☁",
+	\ "03d": "☁",
+	\ "04d": "☁",
+	\ "09d": "☂",
+	\ "10d": "☂",
+	\ "11d": "☈",
+	\ "13d": "❅",
+	\ "50d": "≡",
+	\ "01n": "☽",
+	\ "02n": "☁",
+	\ "03n": "☁",
+	\ "04n": "☁",
+	\ "09n": "☂",
+	\ "10n": "☂",
+	\ "11n": "☈",
+	\ "13n": "❅",
+	\ "50n": "≡",
+	\}
 
 " NERDTree
 let g:NERDTreeIgnore=['^node_modules$']

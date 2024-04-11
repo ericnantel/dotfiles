@@ -22,6 +22,7 @@ Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
 - nodejs
+- yarn
 - python3
 - bat (optional)
 

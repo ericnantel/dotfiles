@@ -41,13 +41,14 @@ call plug#begin('~/.vim/plugged')
 	" Note: Currently disabled due to an error
 	"Plug 'cdelledonne/vim-cmake'
 
-	" Fuzzy Finder
+	" FZF
 	" Dependencies:
 	"	-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
-	
+	Plug 'airblade/vim-rooter'
+
 	" Status
 	" Dependencies:
 	"	-
@@ -120,6 +121,9 @@ let g:coc_global_extensions = [
 " Fugitive
 
 " FZF
+let g:fzf_vim={}
+let g:fzf_vim.preview_window=['right,50%','ctrl-/']
+let g:rooter_targets='/,*'
 
 " Airline
 let g:airline_theme='zenburn'

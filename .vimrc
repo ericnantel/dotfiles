@@ -84,6 +84,7 @@ set nowritebackup
 set noshowmatch
 set cmdheight=2
 set updatetime=300
+set signcolumn=yes
 
 " CoC
 " Brief help

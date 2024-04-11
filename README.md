@@ -17,50 +17,22 @@ Be sure to read the 'Getting started' :book: below, so that you have everything 
 
 #### Step 2
 
-Your system might already have Vi or Vim installed. Regardless, use a package manager and install vim or neovim.
+Your system might already have Vi or Vim and/or Git installed. 
+Regardless, use a package manager and install the following packages:
+- git (unless you have it already)
+- vim or neovim
+- nodejs
+- python3
+- bat (optional)
 
-Open a Terminal application and type the command:
-- For Vim or NeoVim
-```vim
-    vim
-```
-- For NeoVim only
-```
-    nvim
-```
-
-If you have an error, that means you have not installed Vim or NeoVim properly on your system.
-
-:bulb: Press the following command to quit Normal mode:
-```vim
-    :q
-```
+Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
+To close vim/neovim, press ':q' to return to the console.
 
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
 #### Step 3
 
-Make sure to have git installed before moving forward.
-
-You might need to install lua as well for NeoVim.
-
-*Please consider reading the [Getting started](#step-1) documentation :book: above.*
-
-#### Step 4
-
 Open a Terminal application and go to this repository directory.
-
-This repository contains submodules, you need to init and update them to use my Vim or NeoVim setup:
-```git
-    git submodule init
-    git submodule update
-```
-
-*Please consider reading the [Getting started](#step-1) documentation :book: above.*
-
-#### Step 5
-
-Open a Terminal application and go to this repository directory if not already.
 
 Run the following Shell script (.sh) to install my config:
 - For Vim
@@ -72,29 +44,26 @@ Run the following Shell script (.sh) to install my config:
     sh install_neovim_config.h
 ```
 
-If you have an error, that means your terminal or emulator cannot read Shell scripts (.sh) or execute Unix commands. If you are using Windows 11, I suggest you to install WSL 2 (Windows Subsystem Linux 2).
+If you have an error, that means your terminal or emulator cannot read Shell scripts (.sh) or execute Unix commands. 
+If you are using Windows 11, I suggest you to install WSL 2 (Windows Subsystem Linux 2).
+Or it could be that you have not installed git yet on your machine.
 
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
-#### Step 6
+#### Step 4
 
 Open Vim or NeoVim in a Terminal application to install the plugins. 
 
 *If you see an error in the Terminal console for Vim, ignore it and press a key to continue.*
 
-Enter the following command in Normal mode:
-- For Vim
-```
-    :PluginInstall
-```
-- For NeoVim
-```
-    TODO..
-```
+Enter the following command(s) in Normal mode:
 
-If you have an error, that means you might have forgotten to update the submodules or there is an issue within the config file.
+```
+    :PlugInstall
+```
+### Conclusion
 
-Hopefully, everything went as planned. You might need to quit and reopen Vim to see the changes.
+Hopefully, everything went as planned. You might need to quit (:q) and reopen Vim to see the changes.
 
 Let's code faster ! :smile:
 

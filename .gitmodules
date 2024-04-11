@@ -1,8 +1,4 @@
 
-[submodule ".vim/bundle/Vundle.vim"]
-	path = .vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim
-	ignore = dirty
 [submodule "fonts/JetBrainsMono"]
 	path = fonts/JetBrainsMono
 	url = https://github.com/JetBrains/JetBrainsMono

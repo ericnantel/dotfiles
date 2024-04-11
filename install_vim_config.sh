@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# deinit submodules ?
+#git submodule deinit --all
+
 # init and update submodules
 git submodule init
 git submodule update

@@ -24,6 +24,7 @@ Regardless, use a package manager and install the following packages:
 - nodejs
 - yarn
 - python3
+- curl
 - bat (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.

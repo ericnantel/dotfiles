@@ -61,11 +61,13 @@ call plug#begin('~/.vim/plugged')
 "	- syntax on
 call plug#end()
 
-set cmdheight=2
 set splitbelow
 set hidden
+set nobackup
+set nowritebackup
 set noshowmatch
-set updatetime=500
+set cmdheight=2
+set updatetime=300
 
 " CoC
 " Brief help

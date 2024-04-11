@@ -59,51 +59,6 @@ call plug#begin('~/.vim/plugged')
 "	- syntax on
 call plug#end()
 
-" Begin Initialize Vundle
-"call vundle#begin('~/.vim/bundle')
-	" Let Vundle manage Vundle, required (for Vundle)
-	"Plugin 'VundleVim/Vundle.vim'
-
-	" Code Completion (requires nodejs)
-	"Bundle 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
-	"Bundle 'rodrigore/coc-tailwind-intellisense', { 'do': 'npm install' }
-
-	" C# however ..
-	"Bundle 'OmniSharp/omnisharp-vim'
-	"Bundle 'tpope/vim-dispatch'
-
-	" Ale
-	"Bundle 'dense-analysis/ale'
-
-	" Fugitive
-	"Bundle 'tpope/vim-fugitive'
-
-	" FZF
-	"Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	"Bundle 'junegunn/fzf.vim'
-
-	" Airline
-	"Bundle 'vim-airline/vim-airline'
-	"Bundle 'vim-airline/vim-airline-themes'
-
-	" File system explorer
-	"Bundle 'preservim/nerdtree'
-
-	" File system explorer Git status
-	"Bundle 'Xuyuanp/nerdtree-git-plugin'
-
-	" Always load the Vim DevIcons as the very last one
-	"Bundle 'ryanoasis/vim-devicons'
-
-" All of your Plugins must be added before the following line
-"call vundle#end()						" required (for Vundle)
-"filetype indent plugin on				" required (for Vundle)
-" Brief help
-" :PluginList							- lists configured plugins
-" :PluginInstall						- installs plugins; append '|' to update or just :PluginUpdate
-" :PluginSearch foo						- searches for foo; append '|' to refresh local cache
-" :PluginClean							- confirms removal of unused plugins; append '|' to auto-approve removal
-
 set cmdheight=1
 set splitbelow
 set noshowmatch

@@ -30,12 +30,18 @@ call plug#begin('~/.vim/plugged')
 	Plug 'dense-analysis/ale'
 	
 	" Git
-	" Depedencies:
+	" Dependencies:
 	"	-
 	Plug 'tpope/vim-fugitive'
-	
+
+	" Compilation
+	" Dependencies:
+	"	- Cmake
+	" Note: Currently disabled due to an error
+	"Plug 'cdelledonne/vim-cmake'
+
 	" Fuzzy Finder
-	" Depedencies:
+	" Dependencies:
 	"	-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -46,7 +52,17 @@ call plug#begin('~/.vim/plugged')
 	"	-
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	
+
+	" Battery
+	" Dependencies:
+	"	-
+	Plug 'lambdalisue/battery.vim'
+
+	" Wifi
+	" Dependencies:
+	"	-
+	Plug 'lambdalisue/wifi.vim'
+
 	" File system explorer
 	" Dependencies:
 	"	-
@@ -93,8 +109,26 @@ let g:coc_global_extensions = [
 
 " Airline
 let g:airline_theme='zenburn'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
+let g:airline#extensions#ale#enabled=1
+let g:airline#extensions#ale#error_symbol='E:'
+let g:airline#extensions#ale#warning_symbol='W:'
+let g:airline#extensions#ale#show_line_numbers=1
+let g:airline#extensions#battery#enabled=1
+let g:airline#extensions#wifi#enabled=1
 let g:airline#extensions#fugitiveline#enabled=1
 "let g:airline#extensions#fzf#enabled=1
+
+" Battery
+let g:battery#update_tabline=1
+let g:battery#update_statusline=0
+
+" Wifi
+let g:wifi#update_tabline=1
+let g:wifi#update_statusline=0
 
 " NERDTree
 let g:NERDTreeIgnore=['^node_modules$']

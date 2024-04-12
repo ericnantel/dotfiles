@@ -26,7 +26,7 @@ Regardless, use a package manager and install the following packages:
 - nodejs
 - yarn
 - python3
-- lua
+- lua (lua5.4 or newer if asked by Apt)
 - ruby (possibly installed by Homebrew on MacOS for Vim)
 - php
 - curl (used as key-only by Homebrew on MacOS)

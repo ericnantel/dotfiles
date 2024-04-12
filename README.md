@@ -26,6 +26,7 @@ Regardless, use a package manager and install the following packages:
 - nodejs
 - yarn
 - python3
+- ruby (possibly installed by Homebrew on MacOS for Vim)
 - curl (used as key-only by Homebrew on MacOS)
 - bat (optional)
 - htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)

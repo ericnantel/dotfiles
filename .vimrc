@@ -94,8 +94,7 @@ call plug#begin('~/.vim/plugged')
 	" Dependencies:
 	"	- git
 	" Note: gitgutter works but coc-git does a great job for showing signs
-	" But it is possible to use gitgutter settings for coc-git.
-	"Plug 'airblade/vim-gitgutter'
+	Plug 'airblade/vim-gitgutter'
 
 	" Compilation
 	" Dependencies:
@@ -188,6 +187,11 @@ let g:coc_global_extensions = [
 	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
 
 " Fugitive
+
+" Git-Gutter
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 0
+let g:gitgutter_async = 1
 
 " FZF
 let g:fzf_vim = {}

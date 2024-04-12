@@ -21,13 +21,16 @@ Your system might already have Vi or Vim and/or Git installed.
 Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
+- make (renamed gmake by Homebrew)
 - cmake
 - ninja (ninja-build for Apt)
 - nodejs
 - yarn
 - python3
-- curl
+- curl (used as key-only by Homebrew on MacOS)
 - bat (optional)
+- htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
+- neofetch (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

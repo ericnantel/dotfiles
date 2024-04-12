@@ -22,7 +22,7 @@ Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
 - cmake
-- ninja
+- ninja (ninja-build for Apt)
 - nodejs
 - yarn
 - python3

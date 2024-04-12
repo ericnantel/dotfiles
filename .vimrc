@@ -52,6 +52,9 @@ call plug#begin('~/.vim/plugged')
 	"	- nodejs
 	"	- yarn
 	"	- python3
+	"	- lua
+	"	- ruby
+	"	- php
 	Plug 'prettier/vim-prettier', {
 		\'do': 'yarn install --frozen-lockfile --production',
 		\'for': [
@@ -69,6 +72,8 @@ call plug#begin('~/.vim/plugged')
 			\'xml',
 			\'json',
 			\'lua',
+			\'ruby',
+			\'php',
 		\]
 	\}
 

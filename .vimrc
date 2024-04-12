@@ -6,9 +6,6 @@ filetype off							" required (for Vundle)
 " Add .vim to the runtime path (for colors)
 set rtp+=~/.vim
 
-" Add Vundle.vim to the runtime path
-"set rtp+=~/.vim/bundle/Vundle.vim
-
 " Add Plug.vim to the runtime path
 set rtp+=~/.vim/plugged/vim-plug
 

@@ -1,6 +1,8 @@
 
 ### Hello. Bonjour
 
+![Screenshot 1](/resources/images/Capture%20d’écran%202024-04-12%20175656.png "Screenshot 1")
+
 My name is Eric Nantel. I am a SENIOR Rendering Architect.
 
 Do you wish to make your life simpler as a developer?

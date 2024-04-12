@@ -29,8 +29,11 @@ call plug#begin('~/.vim/plugged')
 	
 	" Git
 	" Dependencies:
-	"	-
+	"	- git
 	Plug 'tpope/vim-fugitive'
+	" Note: gitgutter works however coc-git does a better job for showing
+	" signs; however gitgutter could have options coc-git doesn't have.
+	"Plug 'airblade/vim-gitgutter'
 
 	" Compilation
 	" Dependencies:
@@ -54,29 +57,36 @@ call plug#begin('~/.vim/plugged')
 
 	" Battery
 	" Dependencies:
-	"	-
-	Plug 'lambdalisue/battery.vim'
+	"	- Vim Plugins:
+	"		- Airline
+	" Note: Currently disabled since does not show on tabline
+	"Plug 'lambdalisue/battery.vim'
 
 	" Wifi
 	" Dependencies:
-	"	-
-	Plug 'lambdalisue/wifi.vim'
+	"	- Vim Plugins:
+	"		- Airline
+	" Note: Currently disabled since does not show on status nor tabline
+	"Plug 'lambdalisue/wifi.vim'
 
 	" Web API
 	" Dependencies:
 	"	-
-	Plug 'mattn/webapi-vim'
+	" Note: Currently disabled until Weather uses it
+	"Plug 'mattn/webapi-vim'
 
 	" Weather
 	" Dependencies:
 	"	- Vim Plugins:
 	"		- Airline
 	"		- Web API
-	Plug 'Wildog/airline-weather.vim'
+	" Note: Currently disabled since appears to not update, also does not show
+	" on tabline (only statusline)
+	"Plug 'Wildog/airline-weather.vim'
 
 	" File system explorer
 	" Dependencies:
-	"	-
+	"	- Nerd Icons (although it can work without)
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'

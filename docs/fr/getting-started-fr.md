@@ -271,6 +271,8 @@ Vous devriez voir une option 'Police' et un bouton 'Modifier...', cliquez sur ce
 Par la suite, je vous suggère de choisir l'option 'Toutes les Polices' pour voir vos polices de charactères.
 ![Étape 2 Configuration Police de charactères pour Terminal MacOS](/resources/images/Capture%20d’écran,%20le%202024-04-09%20à%2011.38.52.png "Étape 2 Configuration Police de charactères pour Terminal MacOS")
 
+Finalement, fermez et reouvrez votre Terminal pour rafraîchir la console.
+
 [Retour vers README](/README.md)
 [Haut](#getting-started)
 

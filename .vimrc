@@ -3,14 +3,28 @@
 set nocompatible
 filetype off
 
+set showcmd
+set showmode
+set splitright
 set splitbelow
 set hidden
 set nobackup
 set nowritebackup
+set undofile
 set noshowmatch
 set cmdheight=2
 set updatetime=300
+set timeoutlen=300
 set signcolumn=yes
+set cursorline
+set scrolloff=10
+
+set ignorecase
+set smartcase
+set history=1000
+set incsearch
+set hlsearch
+nmap <Esc> <cmd>nohlsearch<CR>
 
 set relativenumber
 set number
@@ -26,7 +40,7 @@ set nowrap
 set backspace=indent,eol,start
 
 " Add .swp to wild ignore (for NERDTree)
-set wildignore+=*.swp
+set wildignore+=*.swp,*.git
 
 " Add .vim to the runtime path (for colors)
 set rtp+=~/.vim
@@ -144,6 +158,10 @@ call plug#begin('~/.vim/plugged')
 	" Note: Currently disabled since appears to not update, also does not show
 	" on tabline (only statusline)
 	"Plug 'Wildog/airline-weather.vim'
+
+	" Traces (Live preview for :substitute)
+	" Dependencies:
+	Plug 'markonm/traces.vim'
 
 	" File system explorer
 	" Dependencies:

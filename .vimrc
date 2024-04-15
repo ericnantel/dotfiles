@@ -40,7 +40,7 @@ set nowrap
 set backspace=indent,eol,start
 
 " Add .swp to wild ignore (for NERDTree)
-set wildignore+=*.swp,*.git
+set wildignore+=*.swp
 
 " Add .vim to the runtime path (for colors)
 set rtp+=~/.vim
@@ -302,8 +302,9 @@ let g:NERDTreeIgnore = [
 	\'^.cache'
 \]
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeFileLines = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1

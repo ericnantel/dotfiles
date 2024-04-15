@@ -33,6 +33,7 @@ Regardless, use a package manager and install the following packages:
 - php
 - curl (used as key-only by Homebrew on MacOS)
 - bat (optional)
+- eza (optional)
 - htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
 - neofetch (optional)
 - make (optional - renamed gmake by Homebrew on MacOS)

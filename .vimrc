@@ -110,11 +110,16 @@ call plug#begin('~/.vim/plugged')
 	" Note: gitgutter works but coc-git does a great job for showing signs
 	Plug 'airblade/vim-gitgutter'
 
-	" Compilation
+	" Dispatch (Async build and test dispatcher)
+	" Dependencies:
+	"	-
+	Plug 'tpope/vim-dispatch'
+
+	" CMake (CMake projects)
 	" Dependencies:
 	"	- Cmake
-	" Note: Currently disabled due to an error
-	"Plug 'cdelledonne/vim-cmake'
+	"	- vim-dispatch (optional but recommended)
+	Plug 'ilyachur/cmake4vim'
 
 	" FZF
 	" Dependencies:

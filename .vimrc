@@ -208,6 +208,22 @@ let g:coc_global_extensions = [
 	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-yank',
 	\'coc-prisma', 'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
 	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
+" TODO Code Completion Keybinding..
+" Use <c-space> to trigger completion
+if has('nvim')
+	inoremap <silent><expr> <c-space> coc#refresh()
+else
+	inoremap <silent><expr> <c-@> coc#refresh()
+endif
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
 
 " Fugitive
 

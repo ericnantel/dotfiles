@@ -289,6 +289,5 @@ let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
-nmap <C-n> :NERDTreeToggle<CR>
-"inoremap <C-space> <C-x><C-o>
-"inoremap <C-@> <C-Space>
+nmap <C-n> :NERDTreeToggle %<CR>
+

@@ -10,7 +10,7 @@ set splitbelow
 set hidden
 set nobackup
 set nowritebackup
-set undofile
+"set undofile
 set noshowmatch
 set cmdheight=2
 set updatetime=300
@@ -282,6 +282,8 @@ let g:NERDTreeIgnore = [
 	\'^node_modules$',
 	\'^build',
 	\'^out',
+	\'^.git',
+	\'^.cache'
 \]
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeQuitOnOpen = 1

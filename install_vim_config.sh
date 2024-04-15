@@ -7,6 +7,9 @@
 git submodule init
 git submodule update
 
+# copy .zshrc to ~/.zshrc
+cp .zshrc ~/.zshrc
+
 # copy .vimrc to ~/.vimrc
 cp .vimrc ~/.vimrc
 

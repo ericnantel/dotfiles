@@ -33,7 +33,7 @@ Regardless, use a package manager and install the following packages:
 - php
 - curl (used as key-only by Homebrew on MacOS)
 - bat (optional)
-- eza (optional)
+- eza (optional - still named exa by Apt)
 - ripgrep (optional)
 - htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
 - neofetch (optional)
@@ -62,6 +62,19 @@ If you have an error, that means your terminal or emulator cannot read Shell scr
 If you are using Windows 11, I suggest you to install WSL 2 (Windows Subsystem Linux 2).
 Or it could be that you have not installed git yet on your machine.
 
+Close the Terminal application to apply config changes; or run the following commands:
+- For Windows 11, GNU/Linux, MacOS, etc
+```shell
+    source ~/.vimrc
+```
+- For GNU/Linux
+```bash
+    source ~/.bashrc
+```
+- For MacOS
+```zsh
+    source ~/.zshrc
+```
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
 #### Step 4

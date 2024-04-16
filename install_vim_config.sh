@@ -7,11 +7,20 @@
 git submodule init
 git submodule update
 
+# copy .bashrc to ~/.bashrc
+cp .bashrc ~/.bashrc
+
+#source ~/.bashrc
+
 # copy .zshrc to ~/.zshrc
 cp .zshrc ~/.zshrc
 
+#source ~/.zshrc
+
 # copy .vimrc to ~/.vimrc
 cp .vimrc ~/.vimrc
+
+#source ~/.vimrc
 
 # make directory ~/.vim
 mkdir -p ~/.vim

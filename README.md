@@ -63,18 +63,17 @@ If you are using Windows 11, I suggest you to install WSL 2 (Windows Subsystem L
 Or it could be that you have not installed git yet on your machine.
 
 Close the Terminal application to apply config changes; or run the following commands:
-- For Windows 11, GNU/Linux, MacOS, etc
-```shell
-    source ~/.vimrc
-```
 - For GNU/Linux
 ```bash
+    source ~/.vimrc
     source ~/.bashrc
 ```
 - For MacOS
-```zsh
+```shell
+    source ~/.vimrc
     source ~/.zshrc
 ```
+
 *Please consider reading the [Getting started](#step-1) documentation :book: above.*
 
 #### Step 4

@@ -40,7 +40,7 @@ set nowrap
 set backspace=indent,eol,start
 
 " Add .swp to wild ignore (for NERDTree)
-set wildignore+=*.swp,*.DS_Store
+set wildignore+=*.swp,*.DS_Store,*.meta
 
 " Add .vim to the runtime path (for colors)
 set rtp+=~/.vim

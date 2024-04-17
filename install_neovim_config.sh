@@ -17,11 +17,20 @@ cp .zshrc ~/.zshrc
 
 #source ~/.zshrc
 
-# make directory ~/.config/nvim
-mkdir -p ~/.config/nvim
+os=$(uname -o)
+if [[ "$os" == 'Msys' ]]; then
+	# make directory ~/AppData/Local/nvim
+	mkdir -p ~/AppData/Local/nvim
 
-# copy .config/nvim to ~/.config/nvim
-cp -rp .config/nvim/* ~/.config/nvim
+	# copy .config/nvim to ~/AppData/Local/nvim
+	cp -rp .config/nvim/* ~/AppData/Local/nvim
+else
+	# make directory ~/.config/nvim
+	mkdir -p ~/.config/nvim
+
+	# copy .config/nvim to ~/.config/nvim
+	cp -rp .config/nvim/* ~/.config/nvim
+fi
 
 # autoload ?
 #

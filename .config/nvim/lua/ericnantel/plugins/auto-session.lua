@@ -5,6 +5,7 @@ return {
 
         auto_session.setup({
 			log_level = "error",
+			auto_save_enabled = true,
             auto_restore_enabled = false,
             auto_sessions_suppress_dirs = {
                 "~/",

@@ -23,4 +23,3 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to Next Tab"})
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to Previous Tab"})
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open Current Buffer in New Tab"})
 
--- 14:38 TODO

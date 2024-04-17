@@ -26,10 +26,6 @@ opt.hlsearch = true
 -- later
 -- opt.history = 1000
 
--- later
--- opt.termguicolors = true
--- opt.background = "dark"
-
 -- backspace
 opt.backspace = "indent,eol,start"
 
@@ -40,4 +36,7 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- color settings
+-- opt.termguicolors = true
+opt.background = "dark"
 

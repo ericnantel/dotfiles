@@ -4,13 +4,15 @@ return {
         local auto_session = require("auto-session")
 
         auto_session.setup({
+			log_level = "error",
             auto_restore_enabled = false,
             auto_sessions_suppress_dirs = {
                 "~/",
-                "~/Dev/",
+				"~/Dev",
+				"~/Projects",
                 "~/Downloads",
                 "~/Documents",
-                "~/Desktop/",
+                "/",
             },
         })
 

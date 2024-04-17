@@ -83,13 +83,13 @@ Open Vim or NeoVim in a Terminal application to install the plugins.
 *If you see an error in the Terminal console for Vim, ignore it and press a key to continue.*
 
 Enter the following command(s) in Normal mode:
-
+- For Vim only (NeoVim uses Lazy)
 ```
     :PlugInstall
 ```
 ### Conclusion
 
-Hopefully, everything went as planned. You might need to quit (:q) and reopen Vim to see the changes.
+Hopefully, everything went as planned. You might need to quit (:q) and reopen Vim or NeoVim to see the changes.
 
 Let's code faster ! :smile:
 

@@ -7,6 +7,15 @@ opt.relativenumber = true
 opt.number = true
 opt.signcolumn = "yes"
 
+-- command
+opt.showcmd = true
+opt.showmode = true
+opt.cmdheight = 2
+
+-- cursor
+opt.cursorline = true
+-- opt.scrolloff = 10
+
 -- tabs & indentation
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -23,8 +32,9 @@ opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
 
--- later
+-- misc
 -- opt.history = 1000
+-- opt.showmatch = true
 
 -- backspace
 opt.backspace = "indent,eol,start"

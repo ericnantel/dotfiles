@@ -7,7 +7,7 @@ return {
     main = "ibl",
     opts = {
         indent = {
-            char = "|",
+            char = "",
         },
     },
 }

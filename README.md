@@ -33,6 +33,7 @@ Regardless, use a package manager and install the following packages:
 - php
 - curl (used as key-only by Homebrew on MacOS)
 - bat (optional)
+- delta (optional - named git-delta by Homebrew)
 - eza (optional - still named exa by Apt)
 - ripgrep (optional)
 - fzf (optional)

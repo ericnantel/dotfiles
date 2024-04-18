@@ -15,6 +15,14 @@ return {
                 section_separators = "",
             },
             sections = {
+				lualine_a = {
+					{ "mode" },
+				},
+				lualine_b = {
+					{ "branch" },
+					{ "diff" },
+					{ "diagnostics" },
+				},
                 lualine_x = {
                     {
                         lazy_status.updates,
@@ -27,7 +35,29 @@ return {
                     { "fileformat" },
                     { "filetype" },
                 },
+				lualine_y = {
+					{ "os.date('%a %H:%M')" },
+				},
+				lualine_z = {
+					{ "progress" },
+					{ "location" },
+				},
             },
+			-- tabline = {
+			-- 	lualine_a = {
+			-- 		{ "buffers" },
+			-- 	},
+			-- 	lualine_y = {
+			-- 		{ "tabs" },
+			-- 	},
+			-- 	lualine_z = {
+			-- 		{ "os.date('%a %H:%M')" },
+			-- 	},
+			-- },
+			winbar = {
+			},
+			extensions = {
+			},
         })
     end
 }

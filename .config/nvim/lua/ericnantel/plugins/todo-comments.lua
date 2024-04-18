@@ -7,6 +7,8 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
+	opts = {
+	},
 	config = function()
 		-- import todo-comments plugin
 		local todo_comments = require("todo-comments")

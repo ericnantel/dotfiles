@@ -11,22 +11,60 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		nvimtree.setup({
+			sort = {
+				sorter = "case_sensitive",
+			},
 			view = {
-				width = 35,
+				side = "left",
+				number = true,
 				relativenumber = true,
+				signcolumn = "yes",
+				width = 35,
+				float = {
+					enable = false,
+				},
 			},
 			-- change folder arrow icons
 			renderer = {
+				indent_width = 2,
 				indent_markers = {
 					enable = true,
+					inline_arrows = true,
 				},
 				icons = {
+					web_devicons = {
+						file = {
+							enable = true,
+							color = true,
+						},
+						folder = {
+							enable = true,
+							color = true,
+						},
+					},
+					padding = " ",
 					glyphs = {
 						folder = {
 							arrow_closed = "→",
 							arrow_open = "↓",
 						},
 					},
+				},
+			},
+			git = {
+				ignore = false,
+			},
+			filters = {
+				enable = true,
+				git_ignored = true,
+				dotfiles = false,
+				custom = {
+					".DS_Store",
+					".meta",
+					".swp",
+				},
+				exclude = {
+					".gitmodule",
 				},
 			},
 			-- disable window_picker for
@@ -38,14 +76,6 @@ return {
 						enable = false,
 					},
 				},
-			},
-			filters = {
-				custom = {
-					".DS_Store"
-				},
-			},
-			git = {
-				ignore = false,
 			},
 		})
 

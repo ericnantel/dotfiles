@@ -2,7 +2,7 @@ return {
     "rmagatti/auto-session",
     config = function()
         local auto_session = require("auto-session")
-
+		-- NOTE: Somehow this doesn't work on my end..
         auto_session.setup({
 			log_level = "error",
 			auto_save_enabled = true,

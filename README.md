@@ -35,6 +35,7 @@ Regardless, use a package manager and install the following packages:
 - bat (optional)
 - eza (optional - still named exa by Apt)
 - ripgrep (optional)
+- fzf (optional)
 - htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
 - neofetch (optional)
 - make (optional - renamed gmake by Homebrew on MacOS)

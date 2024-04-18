@@ -3,6 +3,12 @@ return {
     config = function()
         local auto_session = require("auto-session")
 		-- NOTE: Somehow this doesn't work on my end..
+		-- It seems to work only if I open Nvim in the same
+		-- directory I saved my session.
+		-- So if I do 'nvim .' ;it might not work.
+		-- I think this is related to the paths saved being relative;
+		-- not absolute paths. 
+		-- TODO: need to look further in the documentation.
         auto_session.setup({
 			log_level = "error",
 			auto_save_enabled = true,

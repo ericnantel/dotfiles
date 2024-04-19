@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { import = "ericnantel.plugins" },
     { import = "ericnantel.plugins.lsp" },
+    { import = "ericnantel.plugins.colorscheme" },
 }, {
     checker = {
         enabled = true,

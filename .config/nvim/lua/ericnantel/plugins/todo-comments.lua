@@ -5,7 +5,7 @@ return {
 		"BufNewFile",
 	},
 	dependencies = {
-		"nvim-lua/plenary.nvim",
+		{ "nvim-lua/plenary.nvim" },
 	},
 	opts = {
 	},

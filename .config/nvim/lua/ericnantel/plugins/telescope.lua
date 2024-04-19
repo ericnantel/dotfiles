@@ -2,7 +2,7 @@ return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = {
-        "nvim-lua/plenary.nvim",
+        { "nvim-lua/plenary.nvim" },
         {
             "nvim-telescope/telescope-fzf-native.nvim",
             -- build = "make",
@@ -10,8 +10,8 @@ return {
             -- It builds for Windows; however having issues when opening telescope in some lua files..
             build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
         },
-        "nvim-tree/nvim-web-devicons",
-		"folke/todo-comments.nvim",
+        { "nvim-tree/nvim-web-devicons" },
+		{ "folke/todo-comments.nvim" },
     },
     config = function()
         local telescope = require("telescope")

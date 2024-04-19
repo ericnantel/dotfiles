@@ -38,6 +38,7 @@ return {
                 "xml",
                 "html",
                 "css",
+                "scss",
                 "prisma",
                 "markdown",
                 "markdown_inline",

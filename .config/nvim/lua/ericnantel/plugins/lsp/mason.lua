@@ -37,6 +37,12 @@ return {
                 "emmet_ls",
                 "prismals",
                 "pyright",
+                "yamlls",
+                "clangd",
+                --"ruby_ls",
+                "rust_analyzer",
+                --"golangci_lint_ls",
+                "glsl_analyzer",
             },
         })
 
@@ -48,6 +54,13 @@ return {
                 "black",
                 "pylint",
                 "eslint_d",
+                "yamllint",
+                "cpptools",
+                "cpplint",
+                --"ruby",
+                --"php",
+                --"golangcilint",
+                --"glslc",
             },
         })
     end,

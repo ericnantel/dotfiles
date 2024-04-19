@@ -2,8 +2,14 @@
 ### Hello. Bonjour
 
 #### Screenshots
-Vim ![Screenshot 1](/resources/images/Capture%20d’écran%202024-04-12%20175656.png "Screenshot 1")
-NeoVim ![Screenshot 2](/resources/images/Capture%20d’écran,%20le%202024-04-17%20à%2022.44.11.png "Screenshot 2")
+NeoVim (Catppuccin)
+![Screenshot 1](/resources/images/Capture%20d’écran,%20le%202024-04-19%20à%2010.51.11.png "NeoVim Catppuccin")
+NeoVim (Catppuccin-Mocha)
+![Screenshot 2](/resources/images/Capture%20d’écran,%20le%202024-04-19%20à%2010.52.16.png "NeoVim Catppuccin-Mocha")
+NeoVim (Darcula)
+![Screenshot 3](/resources/images/Capture%20d’écran,%20le%202024-04-19%20à%2010.55.13.png "NeoVim Darcula")
+Vim (Darcula)
+![Screenshot 4](/resources/images/Capture%20d’écran%202024-04-12%20175656.png "Screenshot 4")
 
 My name is Eric Nantel. I am a SENIOR Rendering Architect.
 

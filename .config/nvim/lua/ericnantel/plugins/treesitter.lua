@@ -55,7 +55,7 @@ return {
                 "c",
                 "cpp",
                 "c_sharp",
-                "go",
+                --"go",
                 "rust",
                 "zig",
                 -- "mrald", one day..

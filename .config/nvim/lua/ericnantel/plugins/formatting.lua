@@ -17,14 +17,15 @@ return {
                 json = { "prettier" },
                 yaml = { "prettier" },
                 toml = { "prettier" },
-                markdown = { "prettier" },
+                markdown = { "mdformat, prettier" },
                 graphql = { "prettier" },
                 lua = { "stylua" },
-                go = { "goimports", "gofmt" },
+                --go = { "golines", "goimports", "goimports-reviser" },
                 python = {
                     "isort",
                     "black",
                 },
+                sh = { "shellcheck" },
             },
             format_on_save = {
                 lsp_fallback = true,

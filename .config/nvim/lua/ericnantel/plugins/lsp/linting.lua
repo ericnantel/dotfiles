@@ -13,10 +13,12 @@ return {
             svelte = { "eslint_d" },
             python = { "pylint" },
             yaml = { "yamllint" },
+            json = { "jsonlint" },
+            markdown = { "markdownlint" },
             cpp = { "cpplint" },
             ruby = { "ruby" },
             php = { "php" },
-            go = { "golangcilint" },
+            --go = { "golangcilint" },
             glsl = { "glslc" },
         }
 

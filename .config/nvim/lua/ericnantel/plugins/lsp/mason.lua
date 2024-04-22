@@ -59,6 +59,7 @@ return {
                 "mdformat",
                 "cpptools",
                 "cpplint",
+                "clang-format",
                 --"ruby",
                 --"php",
                 --"golangci-lint",

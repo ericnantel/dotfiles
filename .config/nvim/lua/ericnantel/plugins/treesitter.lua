@@ -46,6 +46,7 @@ return {
                 "graphql",
                 "sql",
                 "bash",
+                "tmux",
                 "lua",
                 "vim",
                 "dockerfile",

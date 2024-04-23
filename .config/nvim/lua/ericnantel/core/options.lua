@@ -14,7 +14,7 @@ opt.cmdheight = 2
 
 -- cursor
 opt.cursorline = true
-opt.scrolloff = 10
+opt.scrolloff = 15
 
 -- tabs & indentation
 opt.tabstop = 4

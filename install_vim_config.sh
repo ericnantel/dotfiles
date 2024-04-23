@@ -1,26 +1,26 @@
 #!/bin/sh
 
-# deinit submodules ?
-#git submodule deinit --all
-
 # init and update submodules
 git submodule init
 git submodule update
 
 # copy .bashrc to ~/.bashrc
-cp .bashrc ~/.bashrc
-
+##cp .bashrc ~/.bashrc
 #source ~/.bashrc
 
 # copy .zshrc to ~/.zshrc
-cp .zshrc ~/.zshrc
-
+#cp .zshrc ~/.zshrc
 #source ~/.zshrc
 
 # copy .vimrc to ~/.vimrc
-cp .vimrc ~/.vimrc
-
+#cp .vimrc ~/.vimrc
 #source ~/.vimrc
+
+# copy .clang-format to ~/.clang-format
+#cp .clang-format ~/.clang-format
+#source ~.clang-format
+
+#TODO: .tmux/config
 
 # make directory ~/.vim
 mkdir -p ~/.vim
@@ -33,3 +33,4 @@ mkdir -p ~/.vim/autoload
 
 # copy vim-plug/plug.vim to ~/.vim/autoload/plug.vim
 cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
+

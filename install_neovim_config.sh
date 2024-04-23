@@ -1,21 +1,22 @@
 #!/bin/sh
 
-# deinit submodules ?
-#git submodule deinit --all
-
 # init and update submodules
 git submodule init
 git submodule update
 
 # copy .bashrc to ~/.bashrc
-cp .bashrc ~/.bashrc
-
+#cp .bashrc ~/.bashrc
 #source ~/.bashrc
 
 # copy .zshrc to ~/.zshrc
-cp .zshrc ~/.zshrc
-
+#cp .zshrc ~/.zshrc
 #source ~/.zshrc
+
+# copy .clang-format to ~/.clang-format
+#cp .clang-format ~/.clang-format
+#source ~.clang-format
+
+#TODO: .tmux/config
 
 os=$(uname -o)
 if [[ "$os" == 'Msys' ]]; then
@@ -32,6 +33,3 @@ else
 	cp -rp .config/nvim/* ~/.config/nvim
 fi
 
-# autoload ?
-#
-# vim-plug ?

@@ -13,7 +13,7 @@ git submodule update
 #source ~/.zshrc
 
 # copy .vimrc to ~/.vimrc
-#cp .vimrc ~/.vimrc
+cp .vimrc ~/.vimrc
 #source ~/.vimrc
 
 # copy .clang-format to ~/.clang-format

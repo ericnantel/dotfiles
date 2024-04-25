@@ -12,9 +12,13 @@ git submodule update
 #cp .zshrc ~/.zshrc
 #source ~/.zshrc
 
+# copy .wezterm.lua to ~/.wezterm.lua
+#cp .wezterm.lua ~/.wezterm.lua
+#source ~/.wezterm.lua
+
 # copy .clang-format to ~/.clang-format
 #cp .clang-format ~/.clang-format
-#source ~.clang-format
+#source ~/.clang-format
 
 #TODO: .tmux/config
 

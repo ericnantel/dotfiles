@@ -5,12 +5,16 @@ git submodule init
 git submodule update
 
 # copy .bashrc to ~/.bashrc
-##cp .bashrc ~/.bashrc
+#cp .bashrc ~/.bashrc
 #source ~/.bashrc
 
 # copy .zshrc to ~/.zshrc
 #cp .zshrc ~/.zshrc
 #source ~/.zshrc
+
+# copy .wezterm.lua to ~/.wezterm.lua
+#cp .wezterm.lua ~/.wezterm.lua
+#source ~/.wezterm.lua
 
 # copy .vimrc to ~/.vimrc
 cp .vimrc ~/.vimrc
@@ -18,7 +22,7 @@ cp .vimrc ~/.vimrc
 
 # copy .clang-format to ~/.clang-format
 #cp .clang-format ~/.clang-format
-#source ~.clang-format
+#source ~/.clang-format
 
 #TODO: .tmux/config
 

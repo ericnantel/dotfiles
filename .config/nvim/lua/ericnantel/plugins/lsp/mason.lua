@@ -58,7 +58,7 @@ return {
                 "markdownlint",
                 "mdformat",
                 "cpptools",
-                "cpplint",
+                --"cpplint",
                 "clang-format",
                 --"ruby",
                 --"php",

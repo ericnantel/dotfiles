@@ -16,4 +16,7 @@ config.use_fancy_tab_bar = false
 --config.font = wezterm.font("JetBrainsMonoNL Nerd Font Propo", { weight = "Bold", stretch = "Normal", italic = false })
 config.font_size = 16
 
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
+
 return config

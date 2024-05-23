@@ -48,8 +48,8 @@ set rtp+=~/.vim
 set rtp+=~/.vim/plugged/vim-plug
 
 " Keymaps
-let mapleader = ' '
-let maplocalleader = ' '
+let g:mapleader = ' '
+let g:maplocalleader = ' '
 imap jk <ESC>							" Exit Insert Mode
 nmap <leader>nh <cmd>nohl<CR>			" Clear Search Highlight
 nmap <leader>+ <C-a>					" Increment Number

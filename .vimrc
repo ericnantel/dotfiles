@@ -65,20 +65,41 @@ nmap <leader>tx <cmd>tabclose<CR>
 nmap <leader>tn <cmd>tabn<CR>
 nmap <leader>tp <cmd>tabp<CR>
 
+" NERDTree Keymaps
+nmap <leader>ee <cmd>NERDTreeToggle %<CR>
+
+" NERDTree settings
+let g:NERDTreeIgnore = [
+\	'^node_modules$',
+\	'^build',
+\	'^out',
+\	'^.git',
+\	'^.cache'
+\]
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeQuitOnOpen = 0
+let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeFileLines = 1
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> <cmd>WhichKeyVisual '<Space>'<CR>
 vnoremap <silent> <localleader> <cmd>WhichKeyVisual '<Space>'<CR>
+
+" Which-key settings
 let g:which_key_map = {}
 let g:which_key_map['+'] =
 \	['<C-a>', "Increment Number"]
 let g:which_key_map['-'] =
 \	['<C-x>', "Decrement Number"]
-let g:which_key_map.n = {
-\	'name': 'Misc Management',
-\	'h': [':nohl', 'Clear Search Highlight'],
-\}
+let g:which_key_map['ee'] =
+\	[':NERDTreeToggle %', "Toggle File Explorer Tree"]
+let g:which_key_map['nh'] =
+\	[':nohl', "Clear Search Highlight"]
 let g:which_key_map.s = {
 \	'name': 'Window Management',
 \	'v': ['<C-w>v', 'Split Window Vertically'],
@@ -244,6 +265,7 @@ syntax on
 "set termguicolors
 set t_Co=256
 
+" Registering Which-key keymaps
 call which_key#register('<Space>', "g:which_key_map")
 
 let g:oceanic_gutter_like_bg = 0
@@ -351,21 +373,4 @@ let g:weather#status_map = {
 	\ "13n": "❅",
 	\ "50n": "≡",
 \}
-
-" NERDTree
-let g:NERDTreeIgnore = [
-	\'^node_modules$',
-	\'^build',
-	\'^out',
-	\'^.git',
-	\'^.cache'
-\]
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeQuitOnOpen = 0
-let g:NERDTreeRespectWildIgnore = 1
-let g:NERDTreeFileLines = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-nmap <C-n> :NERDTreeToggle %<CR>
 

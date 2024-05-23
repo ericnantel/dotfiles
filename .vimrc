@@ -24,7 +24,6 @@ set smartcase
 set history=1000
 set incsearch
 set hlsearch
-nmap <Esc> <cmd>nohlsearch<CR>
 
 set relativenumber
 set number
@@ -47,6 +46,23 @@ set rtp+=~/.vim
 
 " Add Plug.vim to the runtime path
 set rtp+=~/.vim/plugged/vim-plug
+
+" Keymaps
+let mapleader = ' '
+let maplocalleader = ' '
+imap jk <ESC>							" Exit Insert Mode
+nmap <leader>nh <cmd>nohl<CR>			" Clear Search Highlight
+nmap <leader>+ <C-a>					" Increment Number
+nmap <leader>- <C-x>					" Decrement Number
+nmap <leader>sv <C-w>v					" Split Window Vertically
+nmap <leader>sh <C-w>s					" Split Window Horizontally
+nmap <leader>se <C-w>=					" Make Splits Equal Size
+nmap <leader>sx <cmd>close<CR>			" Close Current Split
+nmap <leader>to <cmd>tabnew<CR>			" Open New Tab
+nmap <leader>tf <cmd>tabnew %<CR>		" Open New Tab with Current Buffer
+nmap <leader>tx <cmd>tabclose<CR>		" Close Current Tab
+nmap <leader>tn <cmd>tabn<CR>			" Goto Next Tab
+nmap <leader>tp <cmd>tabp<CR>			" Goto Previous Tab
 
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')

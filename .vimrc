@@ -14,6 +14,7 @@ set nowritebackup
 set noshowmatch
 set cmdheight=2
 set updatetime=300
+set timeout
 set timeoutlen=300
 set signcolumn=yes
 set cursorline
@@ -50,23 +51,63 @@ set rtp+=~/.vim/plugged/vim-plug
 " Keymaps
 let g:mapleader = ' '
 let g:maplocalleader = ' '
-imap jk <ESC>							" Exit Insert Mode
-nmap <leader>nh <cmd>nohl<CR>			" Clear Search Highlight
-nmap <leader>+ <C-a>					" Increment Number
-nmap <leader>- <C-x>					" Decrement Number
-nmap <leader>sv <C-w>v					" Split Window Vertically
-nmap <leader>sh <C-w>s					" Split Window Horizontally
-nmap <leader>se <C-w>=					" Make Splits Equal Size
-nmap <leader>sx <cmd>close<CR>			" Close Current Split
-nmap <leader>to <cmd>tabnew<CR>			" Open New Tab
-nmap <leader>tf <cmd>tabnew %<CR>		" Open New Tab with Current Buffer
-nmap <leader>tx <cmd>tabclose<CR>		" Close Current Tab
-nmap <leader>tn <cmd>tabn<CR>			" Goto Next Tab
-nmap <leader>tp <cmd>tabp<CR>			" Goto Previous Tab
+imap jk <ESC>
+nmap <leader>+ <C-a>
+nmap <leader>- <C-x>
+nmap <leader>nh <cmd>nohl<CR>
+nmap <leader>sv <C-w>v
+nmap <leader>sh <C-w>s
+nmap <leader>se <C-w>=
+nmap <leader>sx <cmd>close<CR>
+nmap <leader>to <cmd>tabnew<CR>
+nmap <leader>tf <cmd>tabnew %<CR>
+nmap <leader>tx <cmd>tabclose<CR>
+nmap <leader>tn <cmd>tabn<CR>
+nmap <leader>tp <cmd>tabp<CR>
+
+" Which-key keymaps
+nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> <cmd>WhichKeyVisual '<Space>'<CR>
+vnoremap <silent> <localleader> <cmd>WhichKeyVisual '<Space>'<CR>
+let g:which_key_map = {}
+let g:which_key_map['+'] =
+\	['<C-a>', "Increment Number"]
+let g:which_key_map['-'] =
+\	['<C-x>', "Decrement Number"]
+let g:which_key_map.n = {
+\	'name': 'Misc Management',
+\	'h': [':nohl', 'Clear Search Highlight'],
+\}
+let g:which_key_map.s = {
+\	'name': 'Window Management',
+\	'v': ['<C-w>v', 'Split Window Vertically'],
+\	'h': ['<C-w>s', 'Split Window Horizontally'],
+\	'e': ['<C-w>=', 'Make Splits Equal Size'],
+\	'x': [':close', 'Close Current Split'],
+\}
+let g:which_key_map.t = {
+\	'name': 'Tab Management',
+\	'o': [':tabnew', 'Open New Tab'],
+\	'f': [':tabnew %', 'Open New Tab with Current Buffer'],
+\	'x': [':tabclose', 'Close Current Tab'],
+\	'n': [':tabn', 'Goto Next Tab'],
+\	'p': [':tabp', 'Goto Previous Tab'],
+\}
+let g:which_key_use_floating_win = 1
+let g:which_key_max_size = 0
+let g:which_key_sep = "->"
 
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
+
+	" Which-key
+	" Dependencies:
+	" Description:
+	" Vim plugin that shows keybindings in popup
+	" Note:
+	Plug 'liuchengxu/vim-which-key'
 
 	" Code completion
 	" Dependencies:
@@ -202,6 +243,8 @@ set background=dark
 syntax on
 "set termguicolors
 set t_Co=256
+
+call which_key#register('<Space>', "g:which_key_map")
 
 let g:oceanic_gutter_like_bg = 0
 let g:oceanic_transparent_bg = 0

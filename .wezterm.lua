@@ -2,6 +2,8 @@ local wezterm = require("wezterm")
 
 local config = {}
 
+config.window_background_opacity = 1.0
+
 --config.color_scheme = "catppuccin"
 --config.color_scheme = "Brogrammer"
 config.color_scheme = "Pro"

@@ -84,6 +84,19 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
+" Tmux Navigator keymaps
+nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
+nnoremap <silent> <c-j> <cmd>TmuxNavigateDown<CR>
+nnoremap <silent> <c-k> <cmd>TmuxNavigateUp<CR>
+nnoremap <silent> <c-l> <cmd>TmuxNavigateRight<CR>
+
+" Tmux Navigator settings
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 0
+"let g:tmux_navigator_disable_when_zoomed = 1
+"let g:tmux_navigator_preserve_zoom = 1
+let g:tmux_navigator_no_wrap = 1
+
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
@@ -122,6 +135,13 @@ let g:which_key_sep = "->"
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
+
+	" Tmux Navigator
+	" Dependencies:
+	" Description:
+	" Seamless navigation between tmux panes and vim splits
+	" Note:
+	Plug 'christoomey/vim-tmux-navigator'
 
 	" Which-key
 	" Dependencies:

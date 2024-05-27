@@ -107,10 +107,17 @@ let g:tmux_navigator_no_wrap = 1
 "
 
 " vim-startify settings
-"let g:startify_change_to_dir = 1
-"let g:startify_update_oldfiles = 1
-"let g:startify_relative_path = 1
-"let g:startify_skiplist = []
+let g:startify_change_to_dir = 1
+let g:startify_update_oldfiles = 1
+let g:startify_relative_path = 1
+let g:startify_session_dir = '~/.vim/session'
+let g:startify_session_autoload = 0
+let g:startify_session_before_save = [
+\ 'silent! NERDTreeClose'
+\]
+let g:startify_session_persistence = 1
+let g:startify_session_sort = 1
+let g:startify_skiplist = []
 let g:startify_bookmarks = [
 \ '~/.bashrc',
 \ '~/.config/nvim/',
@@ -120,6 +127,7 @@ let g:startify_bookmarks = [
 \ '~/.wezterm.lua',
 \ '~/.zshrc',
 \]
+let g:startify_commands = []
 let g:startify_custom_header = [
 \ "Wake up, Neo...",
 \ "The Matrix has you...",
@@ -132,6 +140,8 @@ let g:startify_custom_header = [
 let g:startify_lists = [
 \ {'type': 'sessions',	'header': ['	Sessions']},
 \ {'type': 'bookmarks', 'header': ['	Bookmarks']},
+\ {'type': 'commands',	'header': ['	Commands']},
+"\ {'type': 'files',		'header': ['	MRU']},
 "\ {'type': 'dir',		'header': ['	MRU '. getcwd()]},
 \]
 let g:startify_custom_footer = []

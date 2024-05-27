@@ -103,6 +103,12 @@ let g:tmux_navigator_save_on_switch = 0
 "let g:tmux_navigator_preserve_zoom = 1
 let g:tmux_navigator_no_wrap = 1
 
+" vim-startify keymaps
+"
+
+" vim-startify settings
+"
+
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
@@ -156,6 +162,13 @@ call plug#begin('~/.vim/plugged')
 	" Seamless navigation between tmux panes and vim splits
 	" Note:
 	Plug 'christoomey/vim-tmux-navigator'
+
+	" vim-startify
+	" Dependencies:
+	" Description:
+	" The fancy start screen for Vim.
+	" Note:
+	Plug 'mhinz/vim-startify'
 
 	" Which-key
 	" Dependencies:

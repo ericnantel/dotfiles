@@ -76,13 +76,16 @@ let g:NERDTreeIgnore = [
 \	'^.git',
 \	'^.cache'
 \]
+let g:NERDTreeDirArrowExpandable = '→'
+let g:NERDTreeDirArrowColapsible = '↓'
+let g:NERDTreeMinimalMenu = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeRespectWildIgnore = 1
-let g:NERDTreeFileLines = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeFileLines = 0
+"let g:NERDTreeFileExtensionHighlightFullName = 1
+"let g:NERDTreeExactMatchHighlightFullName = 1
+"let g:NERDTreePatternMatchHighlightFullName = 1
 
 " vim-maximizer keymaps
 nmap <leader>sm <cmd>MaximizerToggle<CR>

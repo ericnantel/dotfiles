@@ -107,7 +107,32 @@ let g:tmux_navigator_no_wrap = 1
 "
 
 " vim-startify settings
-"
+let g:startify_change_to_dir = 1
+let g:startify_update_oldfiles = 1
+let g:startify_relative_path = 1
+let g:startify_skiplist = []
+let g:startify_bookmarks = [
+\ '~/.config/nvim/',
+\ '~/.config/zellij/config.kdl',
+\ '~/.tmux/conf',
+\ '~/.vimrc',
+\ '~/.wezterm.lua',
+\]
+let g:startify_custom_header = [
+\ "Wake up, Neo...",
+\ "The Matrix has you...",
+\ "Follow the white rabbit.",
+\ "",
+\ "",
+\ "Knock, knock, Neo.",
+\ "",
+\]
+let g:startify_lists = [
+\ {'type': 'sessions',	'header': ['	Sessions']},
+\ {'type': 'bookmarks', 'header': ['	Bookmarks']},
+\ {'type': 'dir',		'header': ['	MRU '. getcwd()]},
+\]
+let g:startify_custom_footer = []
 
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>

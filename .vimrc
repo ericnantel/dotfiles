@@ -65,7 +65,7 @@ nmap <leader>tx <cmd>tabclose<CR>
 nmap <leader>tn <cmd>tabn<CR>
 nmap <leader>tp <cmd>tabp<CR>
 
-" NERDTree Keymaps
+" NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
 " NERDTree settings
@@ -83,6 +83,12 @@ let g:NERDTreeFileLines = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+" vim-maximizer Keymaps
+nmap <leader>sm <cmd>MaximizerToggle<CR>
+
+" vim-maximizer settings
+let g:maximizer_set_default_mapping = 1
 
 " Tmux Navigator keymaps
 nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
@@ -119,6 +125,7 @@ let g:which_key_map.s = {
 \	'h': ['<C-w>s', 'Split Window Horizontally'],
 \	'e': ['<C-w>=', 'Make Splits Equal Size'],
 \	'x': [':close', 'Close Current Split'],
+\	'm': [':MaximizerToggle', 'Maximize/Minimize Split Window'],
 \}
 let g:which_key_map.t = {
 \	'name': 'Tab Management',
@@ -135,6 +142,13 @@ let g:which_key_sep = "->"
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
+
+	" vim-maximizer
+	" Dependencies:
+	" Description:
+	" Maximizes and restores the current window in Vim
+	" Note:
+	Plug 'szw/vim-maximizer'
 
 	" Tmux Navigator
 	" Dependencies:

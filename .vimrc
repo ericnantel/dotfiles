@@ -107,16 +107,18 @@ let g:tmux_navigator_no_wrap = 1
 "
 
 " vim-startify settings
-let g:startify_change_to_dir = 1
-let g:startify_update_oldfiles = 1
-let g:startify_relative_path = 1
-let g:startify_skiplist = []
+"let g:startify_change_to_dir = 1
+"let g:startify_update_oldfiles = 1
+"let g:startify_relative_path = 1
+"let g:startify_skiplist = []
 let g:startify_bookmarks = [
+\ '~/.bashrc',
 \ '~/.config/nvim/',
 \ '~/.config/zellij/config.kdl',
 \ '~/.tmux/conf',
 \ '~/.vimrc',
 \ '~/.wezterm.lua',
+\ '~/.zshrc',
 \]
 let g:startify_custom_header = [
 \ "Wake up, Neo...",
@@ -130,7 +132,7 @@ let g:startify_custom_header = [
 let g:startify_lists = [
 \ {'type': 'sessions',	'header': ['	Sessions']},
 \ {'type': 'bookmarks', 'header': ['	Bookmarks']},
-\ {'type': 'dir',		'header': ['	MRU '. getcwd()]},
+"\ {'type': 'dir',		'header': ['	MRU '. getcwd()]},
 \]
 let g:startify_custom_footer = []
 

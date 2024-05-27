@@ -147,7 +147,9 @@ let g:startify_lists = [
 let g:startify_custom_footer = []
 
 " vim-commentary keymap
-"
+nmap <silent> z gc
+nmap <silent> zz gcc
+vmap <silent> z gc
 
 " vim-commentary settings
 "

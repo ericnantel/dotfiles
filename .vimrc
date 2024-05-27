@@ -65,28 +65,6 @@ nmap <leader>tx <cmd>tabclose<CR>
 nmap <leader>tn <cmd>tabn<CR>
 nmap <leader>tp <cmd>tabp<CR>
 
-" NERDTree keymaps
-nmap <leader>ee <cmd>NERDTreeToggle %<CR>
-
-" NERDTree settings
-let g:NERDTreeIgnore = [
-\	'^node_modules$',
-\	'^build',
-\	'^out',
-\	'^.git',
-\	'^.cache'
-\]
-let g:NERDTreeDirArrowExpandable = '→'
-let g:NERDTreeDirArrowColapsible = '↓'
-let g:NERDTreeMinimalMenu = 0
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeQuitOnOpen = 0
-let g:NERDTreeRespectWildIgnore = 1
-let g:NERDTreeFileLines = 0
-"let g:NERDTreeFileExtensionHighlightFullName = 1
-"let g:NERDTreeExactMatchHighlightFullName = 1
-"let g:NERDTreePatternMatchHighlightFullName = 1
-
 " vim-maximizer keymaps
 nmap <leader>sm <cmd>MaximizerToggle<CR>
 
@@ -157,6 +135,28 @@ vmap <silent> z gc
 " vim-commentary settings
 "
 
+" NERDTree keymaps
+nmap <leader>ee <cmd>NERDTreeToggle %<CR>
+
+" NERDTree settings
+let g:NERDTreeIgnore = [
+\	'^node_modules$',
+\	'^build',
+\	'^out',
+\	'^.git',
+\	'^.cache'
+\]
+let g:NERDTreeDirArrowExpandable = '→'
+let g:NERDTreeDirArrowColapsible = '↓'
+let g:NERDTreeMinimalMenu = 0
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeQuitOnOpen = 0
+let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeFileLines = 0
+"let g:NERDTreeFileExtensionHighlightFullName = 1
+"let g:NERDTreeExactMatchHighlightFullName = 1
+"let g:NERDTreePatternMatchHighlightFullName = 1
+
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
@@ -224,6 +224,13 @@ call plug#begin('~/.vim/plugged')
 	" Comment stuff out
 	" Note:
 	Plug 'tpope/vim-commentary'
+
+	" NERDTree
+	" Dependencies:
+	" Description:
+	" A tree explorer plugin for vim.
+	" Note:
+	Plug 'preservim/nerdtree'
 
 	" Which-key
 	" Dependencies:
@@ -351,7 +358,6 @@ call plug#begin('~/.vim/plugged')
 	" File system explorer
 	" Dependencies:
 	"	- Nerd Icons (although it can work without)
-	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ryanoasis/vim-devicons'

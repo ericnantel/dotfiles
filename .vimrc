@@ -135,6 +135,12 @@ vmap <silent> z gc
 " vim-commentary settings
 "
 
+" vim-fugitive keymap
+"
+
+" vim-fugitive settings
+"
+
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
@@ -153,9 +159,40 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeFileLines = 0
-"let g:NERDTreeFileExtensionHighlightFullName = 1
-"let g:NERDTreeExactMatchHighlightFullName = 1
-"let g:NERDTreePatternMatchHighlightFullName = 1
+
+" nerdtree-git-plugin keymaps
+"
+
+" nerdtree-git-plugin settings
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+\	'Modified'	:'✹',
+\	'Staged'	:'✚',
+\	'Untracked'	:'✭',
+\	'Renamed'	:'➜',
+\	'Unmerged'	:'═',
+\	'Deleted'	:'✖',
+\	'Dirty'		:'✗',
+\	'Ignored'	:'☒',
+\	'Clean'		:'✔︎',
+\}
+
+let g:NERDTreeGitStatusUseNerdFonts = 1
+
+" vim-airline keymaps
+"
+
+" vim-airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#fugitiveline#enabled = 1
+
+" vim-airline-themes keymaps
+"
+
+" vim-airline-themes settings
+let g:airline_theme = 'zenburn'
 
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
@@ -193,6 +230,12 @@ let g:which_key_use_floating_win = 1
 let g:which_key_max_size = 0
 let g:which_key_sep = "->"
 
+" vim-devicons keymaps
+"
+
+" vim-devicons settings
+"
+
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
@@ -225,6 +268,13 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'tpope/vim-commentary'
 
+	" vim-fugitive
+	" Dependencies:
+	" Description:
+	" A Git wrapper so awesome, it should be illegal
+	" Note:
+	Plug 'tpope/vim-fugitive'
+
 	" NERDTree
 	" Dependencies:
 	" Description:
@@ -232,6 +282,28 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'preservim/nerdtree'
 
+	" nerdtree-git-plugin
+	" Dependencies:
+	" Description:
+	" A plugin of NERDTree showing git status
+	" Note:
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+
+	" vim-airline
+	" Dependencies:
+	" Description:
+	" lean & mean status/tabline for vim that's light as air
+	" Note:
+	Plug 'vim-airline/vim-airline'
+
+	" vim-airline-themes
+	" Dependencies: 
+	" vim-airline
+	" Description:
+	" A collection of themes for vim-airline
+	" Note:
+	Plug 'vim-airline/vim-airline-themes'
+	
 	" Which-key
 	" Dependencies:
 	" Description:
@@ -239,6 +311,14 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'liuchengxu/vim-which-key'
 
+	" vim-devicons
+	" Dependencies:
+	" Description:
+	" Adds file type icons to Vim plugins such as NERDTree, vim-airline, and many more
+	" Note:
+	" We shall put this plugin as last
+	Plug 'ryanoasis/vim-devicons'
+	
 	" Code completion
 	" Dependencies:
 	"	- nodejs
@@ -286,11 +366,6 @@ call plug#begin('~/.vim/plugged')
 	"	-
 	Plug 'dense-analysis/ale'
 
-	" Fugitive (Git commands)
-	" Dependencies:
-	"	- git
-	Plug 'tpope/vim-fugitive'
-
 	" Git-Gutter (Git signs and commands)
 	" Dependencies:
 	"	- git
@@ -315,12 +390,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 	Plug 'airblade/vim-rooter'
-
-	" Status
-	" Dependencies:
-	"	-
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 
 	" Battery
 	" Dependencies:
@@ -354,13 +423,6 @@ call plug#begin('~/.vim/plugged')
 	" Traces (Live preview for :substitute)
 	" Dependencies:
 	Plug 'markonm/traces.vim'
-
-	" File system explorer
-	" Dependencies:
-	"	- Nerd Icons (although it can work without)
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 " - Automatically executes:
@@ -414,8 +476,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 
-" Fugitive
-
 " Git-Gutter
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 0
@@ -430,11 +490,6 @@ let g:fzf_vim.preview_window = [
 let g:rooter_targets = '/,*'
 
 " Airline
-let g:airline_theme = 'zenburn'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = 'Error'
 let g:airline#extensions#ale#warning_symbol = 'Warning:'
@@ -442,7 +497,6 @@ let g:airline#extensions#ale#show_line_numbers = 1
 let g:airline#extensions#battery#enabled = 1
 let g:airline#extensions#wifi#enabled = 1
 let g:airline#extensions#weather#enabled = 1
-let g:airline#extensions#fugitiveline#enabled = 1
 let g:airline#extensions#fzf#enabled = 1
 
 " Battery

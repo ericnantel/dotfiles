@@ -84,7 +84,7 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
-" vim-maximizer Keymaps
+" vim-maximizer keymaps
 nmap <leader>sm <cmd>MaximizerToggle<CR>
 
 " vim-maximizer settings
@@ -146,6 +146,12 @@ let g:startify_lists = [
 \]
 let g:startify_custom_footer = []
 
+" vim-commentary keymap
+"
+
+" vim-commentary settings
+"
+
 " Which-key keymaps
 nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
@@ -206,6 +212,13 @@ call plug#begin('~/.vim/plugged')
 	" The fancy start screen for Vim.
 	" Note:
 	Plug 'mhinz/vim-startify'
+
+	" vim-commentary
+	" Dependencies:
+	" Description:
+	" Comment stuff out
+	" Note:
+	Plug 'tpope/vim-commentary'
 
 	" Which-key
 	" Dependencies:

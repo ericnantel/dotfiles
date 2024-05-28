@@ -23,7 +23,7 @@ git submodule update
 #TODO: .tmux/config
 
 os=$(uname -o)
-if [[ "$os" == 'Msys' ]]; then
+if [ "$os" = 'Msys' ]; then
 	# make directory ~/AppData/Local/nvim
 	mkdir -p ~/AppData/Local/nvim
 

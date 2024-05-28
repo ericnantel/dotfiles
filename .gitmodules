@@ -22,9 +22,12 @@
 [submodule "colorschemes/vim-gruvbox8"]
 	path = colorschemes/vim-gruvbox8
 	url = https://github.com/lifepillar/vim-gruvbox8
+	ignore = dirty
 [submodule "colorschemes/oceanic-next-vim"]
 	path = colorschemes/oceanic-next-vim
 	url = https://github.com/adrian5/oceanic-next-vim
+	ignore = dirty
 [submodule "colorschemes/darcula"]
 	path = colorschemes/darcula
 	url = https://github.com/doums/darcula
+	ignore = dirty

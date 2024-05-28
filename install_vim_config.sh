@@ -28,13 +28,36 @@ cp .vimrc ~/.vimrc
 
 # make directory ~/.vim
 mkdir -p ~/.vim
-
-# copy .vim to ~.vim
-cp -rp .vim/* ~/.vim
-
 # make directory ~/.vim/autoload
 mkdir -p ~/.vim/autoload
+# make directory ~/.vim/bundle
+mkdir -p ~/.vim/bundle
+# make directory ~/.vim/colors
+mkdir -p ~/.vim/colors
+# make directory ~/.vim/plugged
+mkdir -p ~/.vim/plugged
 
 # copy vim-plug/plug.vim to ~/.vim/autoload/plug.vim
 cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
+
+# copy colorschemes/candle-grey/colors/candle-grey.vim to ~.vim/colors/candle-grey.vim
+cp -rp colorschemes/candle-grey/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
+
+# copy colorschemes/darcula/colors/darcula.vim to ~.vim/colors/darcula.vim
+cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
+
+# copy colorschemes/oceanic-next-vim/colors/oceanicnext.vim to ~.vim/colors/oceanicnext.vim
+cp -rp colorschemes/oceanic-next-vim/colors/oceanicnext.vim ~/.vim/colors/oceanicnext.vim
+
+# copy colorschemes/vim-gruvbox8/colors/gruvbox8.vim to ~.vim/colors/gruvbox8.vim
+cp -rp colorschemes/vim-gruvbox8/colors/gruvbox8.vim ~/.vim/colors/gruvbox8.vim
+
+# copy colorschemes/vim-yin-yang/colors/yang.vim to ~.vim/colors/yang.vim
+cp -rp colorschemes/vim-yin-yang/colors/yang.vim ~/.vim/colors/yang.vim
+
+# copy colorschemes/vim-yin-yang/colors/yin.vim to ~.vim/colors/yin.vim
+cp -rp colorschemes/vim-yin-yang/colors/yin.vim ~/.vim/colors/yin.vim
+
+# copy colorschemes/Zenburn/colors/zenburn.vim to ~.vim/colors/zenburn.vim
+cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/.vim/colors/zenburn.vim
 

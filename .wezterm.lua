@@ -2,6 +2,11 @@ local wezterm = require("wezterm")
 
 local config = {}
 
+--- Set Pwsh as the default on Windows
+-- config.default_prog = {
+-- 	'pwsh.exe', '-NoLogo'
+-- }
+
 config.window_background_opacity = 1.0
 
 --config.color_scheme = "catppuccin"

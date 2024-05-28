@@ -7,3 +7,12 @@
 	path = vim-plug
 	url = https://github.com/junegunn/vim-plug
 	ignore = dirty
+[submodule "colorschemes/Zenburn"]
+	path = colorschemes/Zenburn
+	url = https://github.com/jnurmine/Zenburn
+[submodule "colorschemes/candle-grey"]
+	path = colorschemes/candle-grey
+	url = https://github.com/aditya-azad/candle-grey
+[submodule "colorschemes/vim-yin-yang"]
+	path = colorschemes/vim-yin-yang
+	url = https://github.com/pgdouyon/vim-yin-yang

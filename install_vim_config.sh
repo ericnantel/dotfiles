@@ -49,6 +49,9 @@ cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
 # copy colorschemes/oceanic-next-vim/colors/oceanicnext.vim to ~.vim/colors/oceanicnext.vim
 cp -rp colorschemes/oceanic-next-vim/colors/oceanicnext.vim ~/.vim/colors/oceanicnext.vim
 
+# copy colorschemes/nightshade.vim/colors/nightshade.vim to ~.vim/colors/nightshade.vim
+cp -rp colorschemes/nightshade.vim/colors/nightshade.vim ~/.vim/colors/nightshade.vim
+
 # copy colorschemes/vim-gruvbox8/colors/gruvbox8.vim to ~.vim/colors/gruvbox8.vim
 cp -rp colorschemes/vim-gruvbox8/colors/gruvbox8.vim ~/.vim/colors/gruvbox8.vim
 

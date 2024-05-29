@@ -31,3 +31,7 @@
 	path = colorschemes/darcula
 	url = https://github.com/doums/darcula
 	ignore = dirty
+[submodule "colorschemes/nightshade.vim"]
+	path = colorschemes/nightshade.vim
+	url = https://github.com/vim-scripts/nightshade.vim
+	ignore = dirty

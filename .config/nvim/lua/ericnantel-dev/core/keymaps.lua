@@ -24,4 +24,10 @@ vim.keymap.set('n', '<c-j>', '<cmd>TmuxNavigateDown<CR>', {desc = "Tmux Navigate
 vim.keymap.set('n', '<c-k>', '<cmd>TmuxNavigateUp<CR>', {desc = "Tmux Navigate Up", silent = true})
 vim.keymap.set('n', '<c-l>', '<cmd>TmuxNavigateRight<CR>', {desc = "Tmux Navigate Right", silent = true})
 
--- TODO Complete keymaps here.
+-- vim-commentary keymaps
+vim.keymap.set('n', 'z', 'gc', {desc = "", remap = true, silent = true})
+vim.keymap.set('n', 'zz', 'gcc', {desc = "", remap = true, silent = true})
+vim.keymap.set('v', 'z', 'gc', {desc = "", remap = true, silent = true})
+
+-- vim-fugitive keymaps
+--

@@ -10,4 +10,10 @@ return {
 
 	-- Tmux Navigator
     "christoomey/vim-tmux-navigator",
+	
+	-- vim-commentary
+    "tpope/vim-commentary",
+	
+	-- vim-fugitive
+    "tpope/vim-fugitive",
 }

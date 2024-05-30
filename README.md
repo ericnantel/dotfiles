@@ -31,6 +31,7 @@ Your system might already have Vi or Vim and/or Git installed.
 Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
+- gcc or llvm (on Windows)
 - cmake
 - ninja (ninja-build for Apt)
 - nodejs

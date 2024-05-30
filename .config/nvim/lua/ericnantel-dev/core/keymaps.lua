@@ -42,3 +42,45 @@ vim.keymap.set('v', 'z', 'gc', {desc = "", remap = true, silent = true})
 -- vim-gitgutter keymaps?
 --
 
+-- NERDTree keymaps?
+--
+
+-- nerdtree-git-plugin keymaps?
+--
+
+-- vim-airline keymaps?
+--
+
+-- vim-airline-themes keymaps?
+--
+
+-- Which-key (vim) keymaps?
+--
+
+-- which-key (nvim) keymaps?
+--
+
+-- dressing keymaps?
+--
+
+-- todo-comments keymaps?
+-- 
+
+-- LAZY KEYMAPS
+
+-- alpha keymaps?
+--
+-- lazy keymaps?
+--
+-- lualine keymaps?
+--
+
+-- nvim-tree keymaps
+vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>', {desc = "Toggle File Explorer Tree"})
+
+-- nvim-treesitter keymaps?
+--
+
+-- telescope keymaps?
+--
+

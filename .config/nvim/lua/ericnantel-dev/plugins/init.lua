@@ -2,7 +2,9 @@ return {
 	-- plenary
 	-- all the lua functions I don't want to write twice
 	"nvim-lua/plenary.nvim",
-
+-- TODO 
+-- ththth
+--
 	-- nvim-web-devicons
 	-- lua 'fork' of vim-web-devicons for neovim
     "nvim-tree/nvim-web-devicons",
@@ -50,4 +52,22 @@ return {
 	-- Which-key ?
 	-- vim plugin that shows keybindings in popup
 	-- "liuchengxu/vim-which-key",
+
+	-- which-key
+	-- lua plugin for Neovim 0.5 that displays a pop with possible keybindings
+	{	"folke/which-key.nvim", opts = {}	},
+
+	-- dressing
+	-- Neovim plugin to improve the default vim.ui interfaces
+	{	"stevearc/dressing.nvim", opts = {}	},
+
+	-- todo-comments
+	-- highlight, list and search todo comments in your projects
+	{
+		"folke/todo-comments.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim"
+		},
+		opts = {},
+	},
 }

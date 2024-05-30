@@ -24,7 +24,9 @@ cp .vimrc ~/.vimrc
 #cp .clang-format ~/.clang-format
 #source ~/.clang-format
 
-#TODO: .tmux/config
+# copy .tmux.conf to ~/.tmux.conf
+#cp .tmux.conf ~/.tmux.conf
+#source ~/.tmux.conf
 
 # make directory ~/.vim
 mkdir -p ~/.vim

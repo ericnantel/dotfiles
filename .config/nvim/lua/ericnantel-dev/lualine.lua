@@ -10,5 +10,10 @@ lualine.setup {
 	extensions = {
 		'fugitive',
 		'lazy',
+		-- 'mason',
+		-- 'nerdtree',
+		'nvim-tree',
+		-- 'oil',
+		-- 'trouble',
 	},
 }

@@ -1,20 +1,52 @@
 
--- vim.opt.inccommand = "split"
 -- vim.opt.formatoptions:remove "o"
 -- vim.opt.shada = { "'10", "<0", "s10", "h" }
 
-vim.opt.clipboard = "unnamedplus"
+-- vim.cmd [[ let g:netrw_liststyle=3 ]]
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
-vim.opt.smartcase = true
-vim.opt.ignorecase = true
+vim.opt.syntax = on
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.background = "dark"
+-- vim.opt.termguicolors = true
+vim.cmd [[ colorscheme darcula ]]
 
+vim.opt.clipboard:append("unnamedplus")
+-- vim.opt.encoding = UTF-8
+vim.opt.wrap = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.opt.updatetime = 300
+
+vim.opt.timeout = true
+vim.opt.timeoutlen = 300
+
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 
-vim.opt.hlsearch = true
+vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+vim.opt.backspace = "indent,eol,start"
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+-- vim.opt.shiftround = true
+-- vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.incsearch = true
+vim.opt.hlsearch = true
+
+-- vim.opt.inccommand = "split"
+
+vim.opt.showcmd = true
+vim.opt.showmode = true
+vim.opt.history = 20
+vim.opt.cmdheight = 2
+

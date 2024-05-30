@@ -18,7 +18,7 @@ set timeout
 set timeoutlen=300
 set signcolumn=yes
 set cursorline
-set scrolloff=15
+set scrolloff=8
 
 set ignorecase
 set smartcase

@@ -20,7 +20,9 @@ git submodule update
 #cp .clang-format ~/.clang-format
 #source ~/.clang-format
 
-#TODO: .tmux/config
+# copy .tmux.conf to ~/.tmux.conf
+#cp .tmux.conf ~/.tmux.conf
+#source ~/.tmux.conf
 
 os=$(uname -o)
 if [ "$os" = 'Msys' ]; then

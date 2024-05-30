@@ -7,6 +7,10 @@ vim.keymap.set('n', '<leader>nh', '<cmd>nohl<CR>', {desc = "Clear Search Highlig
 vim.keymap.set('n', '<leader>sv', '<C-w>v', {desc = "Split Window Vertically"})
 vim.keymap.set('n', '<leader>sh', '<C-w>s', {desc = "Split Window Horizontally"})
 vim.keymap.set('n', '<leader>se', '<C-w>=', {desc = "Make Splits Equal Size"})
+vim.keymap.set('n', '<leader>s,', '<C-w>5<', {desc = "Decrement Current Split Width"})
+vim.keymap.set('n', '<leader>s.', '<C-w>5>', {desc = "Increment Current Split Width"})
+vim.keymap.set('n', '<leader>s-', '<C-w>-', {desc = "Decrement Current Split Height"})
+vim.keymap.set('n', '<leader>s+', '<C-w>+', {desc = "Increment Current Split Height"})
 vim.keymap.set('n', '<leader>sx', '<cmd>close<CR>', {desc = "Close Current Split"})
 vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>', {desc = "Open New Tab"})
 vim.keymap.set('n', '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open New Tab with Current Buffer"})
@@ -24,6 +28,9 @@ vim.keymap.set('n', '<c-j>', '<cmd>TmuxNavigateDown<CR>', {desc = "Tmux Navigate
 vim.keymap.set('n', '<c-k>', '<cmd>TmuxNavigateUp<CR>', {desc = "Tmux Navigate Up", silent = true})
 vim.keymap.set('n', '<c-l>', '<cmd>TmuxNavigateRight<CR>', {desc = "Tmux Navigate Right", silent = true})
 
+-- vim-startify keymaps?
+--
+
 -- vim-commentary keymaps
 vim.keymap.set('n', 'z', 'gc', {desc = "", remap = true, silent = true})
 vim.keymap.set('n', 'zz', 'gcc', {desc = "", remap = true, silent = true})
@@ -31,3 +38,7 @@ vim.keymap.set('v', 'z', 'gc', {desc = "", remap = true, silent = true})
 
 -- vim-fugitive keymaps
 --
+
+-- vim-gitgutter keymaps?
+--
+

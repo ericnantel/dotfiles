@@ -58,6 +58,10 @@ nmap <leader>nh <cmd>nohl<CR>
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s
 nmap <leader>se <C-w>=
+nmap <leader>s, <C-w>5<
+nmap <leader>s. <C-w>5>
+nmap <leader>s- <C-w>-
+nmap <leader>s+ <C-w>+
 nmap <leader>sx <cmd>close<CR>
 nmap <leader>to <cmd>tabnew<CR>
 nmap <leader>tf <cmd>tabnew %<CR>
@@ -216,6 +220,10 @@ let g:which_key_map.s = {
 \	'v': ['<C-w>v', 'Split Window Vertically'],
 \	'h': ['<C-w>s', 'Split Window Horizontally'],
 \	'e': ['<C-w>=', 'Make Splits Equal Size'],
+\	'.': ['<C-w>5<', 'Decrement Current Split Width'],
+\	',': ['<C-w>5>', 'Increment Current Split Width'],
+\	'-': ['<C-w>-', 'Decrement Current Split Height'],
+\	'+': ['<C-w>+', 'Increment Current Split Height'],
 \	'x': [':close', 'Close Current Split'],
 \	'm': [':MaximizerToggle', 'Maximize/Minimize Split Window'],
 \}

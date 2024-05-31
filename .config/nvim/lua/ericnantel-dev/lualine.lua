@@ -14,6 +14,6 @@ lualine.setup {
 		-- 'nerdtree',
 		'nvim-tree',
 		-- 'oil',
-		-- 'trouble',
+		'trouble',
 	},
 }

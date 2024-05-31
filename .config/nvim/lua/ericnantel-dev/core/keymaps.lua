@@ -70,8 +70,10 @@ vim.keymap.set('v', 'z', 'gc', {desc = "", remap = true, silent = true})
 
 -- alpha keymaps?
 --
+
 -- lazy keymaps?
 --
+
 -- lualine keymaps?
 --
 
@@ -83,4 +85,10 @@ vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>', {desc = "Toggle Fil
 
 -- telescope keymaps?
 --
+
+-- trouble keymaps
+-- NOTE: This is the older TroubleAPI (v2.10.0)
+-- Having issues with the cursor not focusing on Trouble with latest TroubleAPI (v3.0.0)
+vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<CR>', {desc = "Toggle Trouble"})
+vim.keymap.set('n', '<leader>xt', '<cmd>TodoTrouble<CR>', {desc = "Toggle TODOs in Trouble"})
 

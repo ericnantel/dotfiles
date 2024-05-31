@@ -108,7 +108,7 @@ let g:startify_bookmarks = [
 \ '~/.bashrc',
 \ '~/.config/nvim/',
 \ '~/.config/zellij/config.kdl',
-\ '~/.tmux/conf',
+\ '~/.tmux.conf',
 \ '~/.vimrc',
 \ '~/.wezterm.lua',
 \ '~/.zshrc',

@@ -1,6 +1,18 @@
 local data = assert(vim.fn.stdpath "data")
 
 require('telescope').setup {
+    defaults = {
+      layout_strategy = 'horizontal',
+      layout_config = {
+		  anchor = 'N',
+		  height = 0.75,
+		  mirror = true,
+		  preview_width = 0.50,
+		  prompt_position = 'top',
+		  width = 0.75,
+	  },
+	  sorting_strategy = 'ascending',
+    },
 	extensions = {
 		wrap_results = true,
 		fzf = {},

@@ -13,6 +13,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({import = 'ericnantel-dev/plugins'}, {
+	ui = {
+		size = {
+			width = 0.75,
+			height = 0.75,
+		},
+		title_pos = 'center',
+	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
 	change_detection = {
 		notify = false,
 	},

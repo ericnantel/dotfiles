@@ -159,6 +159,8 @@ let g:NERDTreeIgnore = [
 \]
 let g:NERDTreeDirArrowExpandable = '→'
 let g:NERDTreeDirArrowColapsible = '↓'
+let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinSize = 38
 let g:NERDTreeMinimalMenu = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeQuitOnOpen = 0

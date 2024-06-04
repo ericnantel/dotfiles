@@ -1,5 +1,4 @@
 
--- vim.opt.formatoptions:remove "o"
 -- vim.opt.shada = { "'10", "<0", "s10", "h" }
 
 -- vim.cmd [[ let g:netrw_liststyle=3 ]]
@@ -12,11 +11,18 @@ vim.opt.background = "dark"
 -- vim.opt.termguicolors = true
 vim.cmd [[ colorscheme darcula ]]
 
+vim.opt.title = false
 vim.opt.clipboard:append("unnamedplus")
--- vim.opt.encoding = UTF-8
+vim.opt.encoding = "utf-8"
 vim.opt.wrap = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+-- vim.opt.splitkeep = "cursor"
+-- vim.opt.mouse = ""
+-- vim.opt.formatoptions:remove "o"
+vim.opt.formatoptions:append({"r"})
+vim.opt.path:append({"**"})
+vim.opt.wildignore:append({"*/node_modules/*", "*.swp", "*.DS_Store", "*.meta"})
 
 vim.opt.updatetime = 300
 
@@ -29,7 +35,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
-vim.opt.backspace = "indent,eol,start"
+vim.opt.backspace = {"indent", "eol", "start"}
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4

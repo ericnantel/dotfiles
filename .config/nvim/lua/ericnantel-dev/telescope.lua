@@ -12,6 +12,11 @@ require('telescope').setup {
 		  width = 0.75,
 	  },
 	  sorting_strategy = 'ascending',
+	  file_ignore_patterns = {
+		  '.git', '.hg', '.svn',
+		  '*.o', '*.obj', '*.zip', '*.exe', '*.dll', '*.a', '*.so', '*.pyc',
+		  '*.bmp', '*.jpg', '*.jpeg', '*.png', '*.psd',
+	  },
     },
 	extensions = {
 		wrap_results = true,

@@ -20,9 +20,15 @@ vim.opt.splitright = true
 -- vim.opt.splitkeep = "cursor"
 -- vim.opt.mouse = ""
 -- vim.opt.formatoptions:remove "o"
-vim.opt.formatoptions:append({"r"})
+-- vim.opt.formatoptions:append({"r"})
 vim.opt.path:append({"**"})
-vim.opt.wildignore:append({"*/node_modules/*", "*.swp", "*.DS_Store", "*.meta"})
+vim.opt.wildignore:append({
+	".git", ".hg", ".svn",
+	"*.o", "*.obj", "*.zip", "*.exe", "*.dll", "*.a", "*.so", "*.pyc",
+	"*.class", ".idea", "*.swp", "*.DS_Store", "*.meta",
+	'*.bmp', '*.jpg', '*.jpeg', '*.png', '*.psd',
+	"*/out/*", "*/build/*", "*/node_modules/*",
+})
 
 vim.opt.updatetime = 300
 

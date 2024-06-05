@@ -1,7 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	lazy = false,
 	dependencies = {
-		-- lazy, telescope?, fugitive, fzf?, etc..
 		"nvim-tree/nvim-web-devicons",
 		"tpope/vim-fugitive",
 	},

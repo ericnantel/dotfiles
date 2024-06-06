@@ -49,6 +49,10 @@ return {
 	-- a collection of themes for vim-airline
 	-- "vim-airline/vim-airline-themes",
 
+	-- vim-z80
+	-- Vim syntax for Z80 Assembler
+	"samsaga2/vim-z80",
+
 	-- Which-key ?
 	-- vim plugin that shows keybindings in popup
 	-- "liuchengxu/vim-which-key",

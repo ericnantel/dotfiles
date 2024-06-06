@@ -11,6 +11,9 @@ vim.opt.background = "dark"
 -- vim.opt.termguicolors = true
 vim.cmd [[ colorscheme darcula ]]
 
+vim.cmd [[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]]
+vim.cmd [[autocmd FileType alpha setlocal nofoldenable]]
+
 vim.opt.title = false
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.encoding = "utf-8"

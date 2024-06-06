@@ -315,6 +315,13 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'vim-airline/vim-airline-themes'
 	
+	" vim-z80
+	" Dependencies:
+	" Description:
+	" Vim syntax for Z80 Assembler
+	" Note:
+	Plug 'samsaga2/vim-z80'
+
 	" Which-key
 	" Dependencies:
 	" Description:
@@ -329,7 +336,7 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	" We shall put this plugin as last
 	Plug 'ryanoasis/vim-devicons'
-	
+
 	" Code completion
 	" Dependencies:
 	"	- nodejs
@@ -445,6 +452,9 @@ set background=dark
 syntax on
 "set termguicolors
 set t_Co=256
+
+" Recognizing custom filetypes
+autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 
 " Registering Which-key keymaps
 call which_key#register('<Space>', "g:which_key_map")

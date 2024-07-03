@@ -28,10 +28,10 @@ vim.opt.splitright = true
 vim.opt.path:append({"**"})
 vim.opt.wildignore:append({
 	".git", ".hg", ".svn",
-	"*.o", "*.obj", '*.fbx', '*.FBX', "*.zip", "*.exe", "*.dll", "*.a", "*.so", "*.pyc",
+	"*.o", "*.obj", "*.fbx", "*.FBX", "*.mp3", "*.wav", "*.ogg", "*.zip", "*.exe", "*.dll", "*.a", "*.so", "*.pyc",
 	"*.class", ".idea", "*.swp", "*.DS_Store", "*.meta",
-	'*.ico', '*.bmp', '*.jpg', '*.jpeg', '*.png', '*.psd', '*.svg',
-	'*.bak', '*.cache',
+	"*.ico", "*.bmp", "*.jpg", "*.jpeg", "*.png", "*.psd", "*.svg",
+	"*.bak", "*.cache",
 	"*/out/*", "*/build/*", "*/dist/", "*/node_modules/*",
 })
 

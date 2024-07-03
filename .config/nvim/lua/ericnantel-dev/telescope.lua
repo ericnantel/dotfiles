@@ -15,7 +15,7 @@ require('telescope').setup {
 	  file_ignore_patterns = {
 		  '.git', '.hg', '.svn',
 		  '%.o', '%.obj', '%.fbx', '%.FBX', '%.mp3', '%.wav', '%.ogg', '%.zip', '%.exe', '%.dll', '%.a', '%.so', '%.pyc',
-		  '%.ico', '%.bmp', '%.jpg', '%.jpeg', '%.png', '%.psd', '%.svg',
+		  '%.ico', '%.tif', '%.bmp', '%.jpg', '%.jpeg', '%.png', '%.tga', '%.psd', '%.svg',
 		  '%.bak', '%.cache', '%.class', '%.idea', '%.swp', '%.DS_Store', '%.meta',
 		  --'^node_modules/', '^build/', '^dist/', '^out/',
 		  'node_modules/.*', 'build/.*', 'dist/.*', 'out/.*',

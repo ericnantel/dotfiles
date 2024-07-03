@@ -153,8 +153,12 @@ nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 let g:NERDTreeIgnore = [
 \	'^node_modules$',
 \	'^build',
+\	'^dist',
 \	'^out',
 \	'^.git',
+\	'^.hg',
+\	'^.svn',
+\	'^.bak',
 \	'^.cache'
 \]
 let g:NERDTreeDirArrowExpandable = '→'

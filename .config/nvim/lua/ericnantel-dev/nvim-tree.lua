@@ -7,5 +7,13 @@ nvimtree.setup {
 		number = false,
 		relativenumber = true,
 		signcolumn = "yes",
-	}
+	},
+	git = {
+		enable = true,
+	},
+	filters = {
+		enable = true,
+		git_ignored = true,
+	},
+	-- TODO: filesystem_watchers.ignore_dirs
 }

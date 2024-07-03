@@ -14,8 +14,11 @@ require('telescope').setup {
 	  sorting_strategy = 'ascending',
 	  file_ignore_patterns = {
 		  '.git', '.hg', '.svn',
-		  '*.o', '*.obj', '*.zip', '*.exe', '*.dll', '*.a', '*.so', '*.pyc',
-		  '*.bmp', '*.jpg', '*.jpeg', '*.png', '*.psd',
+		  '%.o', '%.obj', '%.fbx', '%.FBX', '%.zip', '%.exe', '%.dll', '%.a', '%.so', '%.pyc',
+		  '%.ico', '%.bmp', '%.jpg', '%.jpeg', '%.png', '%.psd', '%.svg',
+		  '%.bak', '%.cache', '%.class', '%.idea', '%.swp', '%.DS_Store', '%.meta',
+		  --'^node_modules/', '^build/', '^dist/', '^out/',
+		  'node_modules/.*', 'build/.*', 'dist/.*', 'out/.*',
 	  },
     },
 	extensions = {

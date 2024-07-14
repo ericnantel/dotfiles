@@ -36,6 +36,7 @@ Regardless, use a package manager and install the following packages:
 - ninja (ninja-build for Apt)
 - nodejs
 - yarn
+- webpack
 - python3
 - lua (lua5.4 or newer if asked by Apt)
 - ruby (possibly installed by Homebrew on MacOS for Vim)

@@ -344,44 +344,10 @@ call plug#begin('~/.vim/plugged')
 	" Code completion
 	" Dependencies:
 	"	- nodejs
-	"	- yarn ??
-	"	- python3 (need to install pyvim/pynvim for Jedi ??)
-	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
-	Plug 'HerringtonDarkholme/yats.vim'
-	Plug 'davidhalter/jedi-vim'
-
-	" Prettier (Code formatter)
-	" Dependencies:
-	"	- nodejs
 	"	- yarn
-	"	- python3
-	"	- lua
-	"	- ruby
-	"	- php
-	Plug 'prettier/vim-prettier', {
-		\'do': 'yarn install --frozen-lockfile --production',
-		\'for': [
-			\'javascript',
-			\'typescript',
-			\'css',
-			\'less',
-			\'scss',
-			\'graphql',
-			\'markdown',
-			\'vue',
-			\'svelte',
-			\'yaml',
-			\'html',
-			\'xml',
-			\'json',
-			\'lua',
-			\'ruby',
-			\'php',
-		\]
-	\}
-
-	" Black (Python formatter)
-	" TODO
+	"	- webpack
+	"	- python3 ?
+	Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 
 	" ALE (Syntax checking & semantic errors)
 	" Dependencies:
@@ -472,8 +438,6 @@ colorscheme darcula
 
 "colorscheme gruvbox8
 "colorscheme oceanicnext
-
-" Prettier settings
 
 " ALE settings
 let g:ale_fix_on_save = 1

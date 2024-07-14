@@ -32,6 +32,7 @@ Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
 - gcc or llvm (on Windows)
+- clang, clang-format, clang-tidy and clangd (on GNU Linux)
 - cmake
 - ninja (ninja-build for Apt)
 - nodejs

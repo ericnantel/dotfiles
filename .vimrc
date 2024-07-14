@@ -444,7 +444,7 @@ let g:ale_fix_on_save = 1
 
 " CoC settings
 let g:coc_global_extensions = [
-	\'coc-vimlsp', 'coc-snippets', 'coc-tsserver', 'coc-css', 'coc-html',
+	\'coc-vimlsp', 'coc-tsserver', 'coc-css', 'coc-html',
 	\'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
 	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-yank',
 	\'coc-prisma', 'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',

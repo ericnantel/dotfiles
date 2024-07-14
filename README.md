@@ -35,6 +35,7 @@ Regardless, use a package manager and install the following packages:
 - cmake
 - ninja (ninja-build for Apt)
 - nodejs
+- npm
 - yarn
 - webpack
 - python3

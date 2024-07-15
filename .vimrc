@@ -256,6 +256,9 @@ let g:which_key_sep = "->"
 
 " vim-clang-format settings
 let g:clang_format#auto_format = 1
+let g:clang_format#auto_filetypes = [ "c", "cpp" ]
+let g:clang_format#detect_style_file = 1
+let g:clang_format#enable_fallback_style = 0
 
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')

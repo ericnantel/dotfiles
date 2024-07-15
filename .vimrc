@@ -251,6 +251,12 @@ let g:which_key_sep = "->"
 " vim-devicons settings
 "
 
+" vim-clang-format keymaps
+"
+
+" vim-clang-format settings
+let g:clang_format#auto_format = 1
+
 " Begin Initialize Plug
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
@@ -340,6 +346,15 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	" We shall put this plugin as last
 	Plug 'ryanoasis/vim-devicons'
+
+	" vim-clang-format
+	" Dependencies:
+	" - clang-format
+	" - python3
+	" Description:
+	" A formatter for C, C++, and so on.
+	" Note:
+	Plug 'rhysd/vim-clang-format'
 
 	" Code completion
 	" Dependencies:
@@ -446,8 +461,8 @@ let g:ale_fix_on_save = 1
 let g:coc_global_extensions = [
 	\'coc-vimlsp', 'coc-tsserver', 'coc-css', 'coc-html',
 	\'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
-	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-yank',
-	\'coc-prisma', 'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
+	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight', 'coc-yank',
+	\'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
 	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
 " TODO Code Completion Keybinding..
 " Use <c-space> to trigger completion

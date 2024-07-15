@@ -39,6 +39,9 @@ mkdir -p ~/.vim/colors
 # make directory ~/.vim/plugged
 mkdir -p ~/.vim/plugged
 
+# copy .vim/coc-settings.json to ~/.vim/coc-settings.json
+cp .vim/coc-settings.json ~/.vim/coc-settings.json
+
 # copy vim-plug/plug.vim to ~/.vim/autoload/plug.vim
 cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
 

@@ -1,4 +1,4 @@
 {
-	"snippets.utilsnips.pythonPrompt": false,
-	"coc.preferences.formatOnSave": true,
+  "snippets.utilsnips.pythonPrompt": false,
+  "coc.preferences.formatOnSave": false
 }

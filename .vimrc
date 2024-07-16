@@ -146,6 +146,12 @@ vmap <silent> z gc
 " vim-fugitive settings
 "
 
+" vim-markdown keymap
+"
+
+" vim-markdown settings
+let g:vim_markdown_folding_disabled = 1
+
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
@@ -299,6 +305,13 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'tpope/vim-fugitive'
 
+	" vim-markdown
+	" Dependencies:
+	" Description:
+	" Markdown Vim Mode
+	" Note:
+	Plug 'preservim/vim-markdown'
+
 	" NERDTree
 	" Dependencies:
 	" Description:
@@ -394,8 +407,7 @@ call plug#begin('~/.vim/plugged')
 	"	-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
-	Plug 'airblade/vim-rooter'
+	"Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
 	" Battery
 	" Dependencies:
@@ -462,11 +474,11 @@ let g:ale_fix_on_save = 1
 
 " CoC settings
 let g:coc_global_extensions = [
-	\'coc-vimlsp', 'coc-tsserver', 'coc-css', 'coc-html',
-	\'coc-eslint', 'coc-markdownlint', 'coc-react-refactor',
-	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight', 'coc-yank',
+	\'coc-clangd', 'coc-vimlsp', 'coc-tsserver', 'coc-css', 'coc-html',
+	\'coc-eslint', 'coc-react-refactor',
+	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight',
 	\'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
-	\'coc-clangd', 'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
+	\'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
 " TODO Code Completion Keybinding..
 " Use <c-space> to trigger completion
 if has('nvim')

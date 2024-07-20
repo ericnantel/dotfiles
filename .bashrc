@@ -18,6 +18,6 @@
 # alias mv='mv -i'
 #
 # For exa/eza
-alias ls="exa --icons"
-alias ll="exa -laF --icons"
-alias lt="exa --tree --icons"
+# alias ls="exa --icons"
+# alias ll="exa -laF --icons"
+# alias lt="exa --tree --icons"

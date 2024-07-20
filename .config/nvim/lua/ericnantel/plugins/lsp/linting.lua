@@ -17,8 +17,6 @@ return {
             markdown = { "markdownlint" },
             --cpp = { "cpplint" },
             cpp = { "clangtidy" },
-            ruby = { "ruby" },
-            php = { "php" },
             --go = { "golangcilint" },
             glsl = { "glslc" },
         }

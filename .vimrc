@@ -411,39 +411,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	"Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
-	" Battery
-	" Dependencies:
-	"	- Vim Plugins:
-	"		- Airline
-	" Note: Currently disabled since does not show on tabline
-	"Plug 'lambdalisue/battery.vim'
-
-	" Wifi
-	" Dependencies:
-	"	- Vim Plugins:
-	"		- Airline
-	" Note: Currently disabled since does not show on status nor tabline
-	"Plug 'lambdalisue/wifi.vim'
-
-	" Web API
-	" Dependencies:
-	"	- curl
-	" Note: Currently disabled until Weather uses it
-	"Plug 'mattn/webapi-vim'
-
-	" Weather
-	" Dependencies:
-	"	- Vim Plugins:
-	"		- Airline
-	"		- Web API
-	" Note: Currently disabled since appears to not update, also does not show
-	" on tabline (only statusline)
-	"Plug 'Wildog/airline-weather.vim'
-
-	" Traces (Live preview for :substitute)
-	" Dependencies:
-	Plug 'markonm/traces.vim'
-
 " Initialize plugin system
 " - Automatically executes:
 "	- filetype indent plugin on
@@ -475,12 +442,18 @@ colorscheme darcula
 let g:ale_fix_on_save = 1
 
 " CoC settings
+" TODO: OmniSharp, Java, Tmux, Markdown Preview ?
 let g:coc_global_extensions = [
-	\'coc-clangd', 'coc-vimlsp', 'coc-tsserver', 'coc-css', 'coc-html',
-	\'coc-eslint', 'coc-react-refactor',
-	\'coc-pretty-ts-errors', 'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight',
-	\'coc-lua', 'coc-python', 'coc-go', 'coc-rust-analyzer',
-	\'coc-json', 'coc-yaml', 'coc-cmake', 'coc-sh', 'coc-git']
+	\'coc-clangd',
+	\'coc-tsserver', 'coc-eslint', 'coc-react-refactor', 'coc-pretty-ts-errors',
+	\'coc-rust-analyzer', 'coc-go',
+	\'coc-lua', 'coc-python',
+	\'coc-json', 'coc-yaml', 'coc-toml',
+	\'coc-vimlsp', 'coc-cmake', 'coc-sh', 'coc-docker',
+	\'coc-git',
+	\'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight'
+\]
+
 " TODO Code Completion Keybinding..
 " Use <c-space> to trigger completion
 if has('nvim')
@@ -509,52 +482,11 @@ let g:fzf_vim.preview_window = [
 	\'right,50%',
 	\'ctrl-/',
 \]
-let g:rooter_targets = '/,*'
 
 " Airline
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = 'Error'
 let g:airline#extensions#ale#warning_symbol = 'Warning:'
 let g:airline#extensions#ale#show_line_numbers = 1
-let g:airline#extensions#battery#enabled = 1
-let g:airline#extensions#wifi#enabled = 1
-let g:airline#extensions#weather#enabled = 1
 let g:airline#extensions#fzf#enabled = 1
-
-" Battery
-let g:battery#update_tabline = 1
-let g:battery#update_statusline = 0
-
-" Wifi
-let g:wifi#update_tabline = 1
-let g:wifi#update_statusline = 0
-
-" Web API
-
-" Weather
-let g:weather#area = 'montreal,ca'
-let g:weather#unit = 'metric'
-let g:weather#cache_file = '~/.cache/.weather'
-let g:weather#cache_ttl = '3600'
-let g:weather#format = '%s %.0f¯C'
-let g:weather#status_map = {
-	\ "01d": "☀",
-	\ "02d": "☁",
-	\ "03d": "☁",
-	\ "04d": "☁",
-	\ "09d": "☂",
-	\ "10d": "☂",
-	\ "11d": "☈",
-	\ "13d": "❅",
-	\ "50d": "≡",
-	\ "01n": "☽",
-	\ "02n": "☁",
-	\ "03n": "☁",
-	\ "04n": "☁",
-	\ "09n": "☂",
-	\ "10n": "☂",
-	\ "11n": "☈",
-	\ "13n": "❅",
-	\ "50n": "≡",
-\}
 

@@ -39,7 +39,6 @@ return {
                 "html",
                 "css",
                 "scss",
-                "prisma",
                 "markdown",
                 "markdown_inline",
                 "svelte",
@@ -55,15 +54,10 @@ return {
                 "vimdoc",
                 "c",
                 "cpp",
-                "c_sharp",
                 --"go",
                 "rust",
-                "zig",
                 -- "mrald", one day..
                 "python",
-                "ruby",
-                "php",
-                "java",
             },
             sync_install = false,
             incremental_selection = {

@@ -2,9 +2,7 @@ return {
 	-- plenary
 	-- all the lua functions I don't want to write twice
 	"nvim-lua/plenary.nvim",
--- TODO 
--- ththth
---
+
 	-- nvim-web-devicons
 	-- lua 'fork' of vim-web-devicons for neovim
     "nvim-tree/nvim-web-devicons",
@@ -28,6 +26,9 @@ return {
 	-- vim-fugitive
 	-- a git wrapper so awesome, it should be illegal
     "tpope/vim-fugitive",
+
+	-- TODO: vim-markdown, vim-clang-format, cmake4vim
+	--
 
 	-- vim-gitgutter
 	-- a vim plugin which shows git diff markers in the sign column

@@ -59,6 +59,7 @@ set rtp+=~/.vim/plugged/vim-plug
 let g:mapleader = ' '
 let g:maplocalleader = ' '
 imap jk <ESC>
+vmap jk <ESC>
 nmap <leader>+ <C-a>
 nmap <leader>- <C-x>
 nmap <leader>nh <cmd>nohl<CR>

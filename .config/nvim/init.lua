@@ -1,4 +1,4 @@
--- require("ericnantel.core")
--- require("ericnantel.lazy")
-require 'ericnantel-dev.core'
+require 'ericnantel-dev.keymaps'
+require 'ericnantel-dev.options'
 require 'ericnantel-dev.lazy'
+-- require 'ericnantel-dev.plugins.lazy'

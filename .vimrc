@@ -45,6 +45,13 @@ set wildignore+=*.swp,*.DS_Store,*.meta
 " Add .vim to the runtime path (for colors)
 set rtp+=~/.vim
 
+" Add llvm binaries to the runtime path (for clang-format and clang-tidy)
+if has("win32")
+	if isdirectory(expand("~/scoop/apps/llvm/current/bin"))
+		set rtp+=~/scoop/apps/llvm/current/bin
+	endif
+endif
+
 " Add Plug.vim to the runtime path
 set rtp+=~/.vim/plugged/vim-plug
 

@@ -31,9 +31,10 @@ Your system might already have Vi or Vim and/or Git installed.
 Regardless, use a package manager and install the following packages:
 - git (unless you have it already)
 - vim or neovim
-- gcc or llvm (on Windows)
+- gcc or clang (on GNU Linux) or llvm (recommended on Windows for Vim for clang-format and clang-tidy)
 - clang-format (on MacOS for Vim)
-- clang, clang-format, clang-tidy and clangd (on GNU Linux)
+- clang-tidy (on GNU Linux for Vim)
+- clang, clang-format, clang-tidy(on GNU Linux)
 - cmake
 - ninja (ninja-build for Apt)
 - nodejs

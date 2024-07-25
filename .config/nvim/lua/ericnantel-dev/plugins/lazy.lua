@@ -187,10 +187,13 @@ require('lazy').setup({
 					sync_install = false,
 					auto_install = true,
 					ignore_install = {
-						'markdown', 'markdown_inline'
+						'markdown', 'markdown_inline',
 					},
 					highlight = {
 						enable = true,
+						disable = {
+							'markdown', 'markdown_inline',
+						},
 						additional_vim_regex_highlighting = false,
 					},
 				})

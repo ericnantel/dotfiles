@@ -45,6 +45,13 @@ require('lazy').setup({
 		{
 			"tpope/vim-fugitive",
 		},
+		-- vim-markdown
+		-- markdown vim mode
+		{
+			"preservim/vim-markdown",
+		},
+		-- TODO: markdown preview
+		--
 		-- vim-gitgutter
 		-- a vim plugin which shows git diff markers in the sign column
 		{
@@ -179,6 +186,9 @@ require('lazy').setup({
 					},
 					sync_install = false,
 					auto_install = true,
+					ignore_install = {
+						'markdown', 'markdown_inline'
+					},
 					highlight = {
 						enable = true,
 						additional_vim_regex_highlighting = false,

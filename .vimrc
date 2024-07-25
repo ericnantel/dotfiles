@@ -446,9 +446,6 @@ colorscheme darcula
 "colorscheme gruvbox8
 "colorscheme oceanicnext
 
-" ALE settings
-let g:ale_fix_on_save = 1
-
 " CoC settings
 " TODO: OmniSharp, Java, Tmux, Markdown Preview ?
 let g:coc_global_extensions = [
@@ -479,7 +476,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 
+" ALE settings
+let g:ale_fix_on_save = 1
+
 " Git-Gutter
+" NOTE: gitgutter signs are disabled because we are using coc-git signs instead
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 0
 let g:gitgutter_async = 1

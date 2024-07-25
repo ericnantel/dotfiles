@@ -12,7 +12,7 @@ set nobackup
 set nowritebackup
 "set undofile
 set noshowmatch
-set cmdheight=2
+set cmdheight=1
 set updatetime=300
 set timeout
 set timeoutlen=300

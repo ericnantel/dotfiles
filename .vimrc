@@ -19,6 +19,7 @@ set timeoutlen=300
 set signcolumn=yes
 set cursorline
 set scrolloff=8
+"set sidescrolloff=8
 
 set ignorecase
 set smartcase
@@ -33,6 +34,8 @@ set wildmode=longest:full,full
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+"set shiftround
+set expandtab
 set autoindent
 set smartindent
 set encoding=UTF-8
@@ -60,6 +63,8 @@ let g:mapleader = ' '
 let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
+" TODO: clipboard support but only if installed
+" TODO: disable mouse and ttymouse but need to test over ssh
 nmap <leader>+ <C-a>
 nmap <leader>- <C-x>
 nmap <leader>nh <cmd>nohl<CR>

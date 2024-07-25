@@ -16,7 +16,9 @@ vim.cmd [[autocmd FileType z80 setlocal commentstring=;\ %s]]
 vim.cmd [[autocmd FileType alpha setlocal nofoldenable]]
 
 vim.opt.title = false
-vim.opt.clipboard:append("unnamedplus")
+-- TODO: clipboard support but only if installed
+-- vim.opt.clipboard:append("unnamedplus")
+-- TODO: disable mouse and ttymouse but need to test over ssh
 vim.opt.encoding = "utf-8"
 vim.opt.wrap = false
 vim.opt.splitbelow = true
@@ -46,12 +48,13 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
+-- vim.opt.sidescrolloff = 8
 vim.opt.backspace = {"indent", "eol", "start"}
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 -- vim.opt.shiftround = true
--- vim.opt.expandtab = true
+vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 

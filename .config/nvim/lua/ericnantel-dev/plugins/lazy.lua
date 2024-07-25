@@ -233,7 +233,13 @@ require('lazy').setup({
 						path_display = {
 							'smart',
 						},
-						-- mappings TODO ?
+						-- mappings = {
+						-- 	i = {
+						-- 		["<C-k>"] = actions.move_selection_previous,
+						-- 		["<C-j>"] = actions.move_selection_next,
+						-- 		["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						-- 	},
+						-- },
 					},
 					extensions = {
 						wrap_results = true,
@@ -254,14 +260,19 @@ require('lazy').setup({
 		},
 		-- bufferline
 		--
-		{
-			"akinsho/bufferline.nvim",
-			lazy = false,
-			dependencies = {
-				"nvim-tree/nvim-web-devicons",
-			},
-			opts = {},
-		},
+		-- {
+		-- 	"akinsho/bufferline.nvim",
+		-- 	lazy = false,
+		-- 	dependencies = {
+		-- 		"nvim-tree/nvim-web-devicons",
+		-- 	},
+		-- 	opts = {
+		-- 		options = {
+		-- 			-- mode = "tabs",
+		-- 			-- separator_style = "slant",
+		-- 		},
+		-- 	},
+		-- },
 		-- lualine
 		--
 		{

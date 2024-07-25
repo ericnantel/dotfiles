@@ -65,5 +65,5 @@ vim.opt.hlsearch = true
 vim.opt.showcmd = true
 vim.opt.showmode = true
 vim.opt.history = 20
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 

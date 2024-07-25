@@ -52,6 +52,11 @@ require('lazy').setup({
 		},
 		-- TODO: markdown preview
 		--
+		-- vim-glsl
+		-- Vim syntax highlighting for GLSL
+		{
+			"tikhomirov/vim-glsl",
+		},
 		-- vim-gitgutter
 		-- a vim plugin which shows git diff markers in the sign column
 		{
@@ -187,11 +192,13 @@ require('lazy').setup({
 					sync_install = false,
 					auto_install = true,
 					ignore_install = {
+						'glsl',
 						'markdown', 'markdown_inline',
 					},
 					highlight = {
 						enable = true,
 						disable = {
+							'glsl',
 							'markdown', 'markdown_inline',
 						},
 						additional_vim_regex_highlighting = false,

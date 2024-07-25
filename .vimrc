@@ -160,6 +160,12 @@ vmap <silent> z gc
 " vim-markdown settings
 let g:vim_markdown_folding_disabled = 1
 
+" vim-glsl keymap
+"
+
+" vim-glsl settings
+" 
+
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
@@ -321,6 +327,13 @@ call plug#begin('~/.vim/plugged')
 	" Markdown Vim Mode
 	" Note:
 	Plug 'preservim/vim-markdown'
+
+	" vim-glsl
+	" Dependencies:
+	" Description:
+	" Vim syntax highlighting for OpenGL Shading Language
+	" Note:
+	Plug 'tikhomirov/vim-glsl'
 
 	" NERDTree
 	" Dependencies:

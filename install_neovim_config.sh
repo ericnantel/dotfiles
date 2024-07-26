@@ -24,6 +24,11 @@ git submodule update
 #cp .tmux.conf ~/.tmux.conf
 #source ~/.tmux.conf
 
+# make directory ~/.vim
+mkdir -p ~/.vim
+# make directory ~/.vim/undodir
+mkdir -p ~/.vim/undodir
+
 os=$(uname -o)
 if [ "$os" = 'Msys' ]; then
 	# make directory ~/AppData/Local/nvim

@@ -18,7 +18,9 @@ vim.cmd [[autocmd FileType alpha setlocal nofoldenable]]
 vim.opt.title = false
 -- TODO: clipboard support but only if installed
 -- vim.opt.clipboard:append("unnamedplus")
--- TODO: disable mouse and ttymouse but need to test over ssh
+vim.opt.mouse = ""
+-- vim.opt.ttymouse = ""
+vim.opt.mousescroll = "ver:0,hor:0"
 vim.opt.encoding = "utf-8"
 vim.opt.wrap = false
 vim.opt.splitbelow = true
@@ -44,6 +46,8 @@ vim.opt.timeoutlen = 300
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.numberwidth = 2
+vim.opt.ruler = false
 vim.opt.signcolumn = "yes"
 
 vim.opt.cursorline = true
@@ -54,7 +58,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 -- vim.opt.shiftround = true
-vim.opt.expandtab = true
+-- vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
@@ -67,6 +71,11 @@ vim.opt.hlsearch = true
 
 vim.opt.showcmd = true
 vim.opt.showmode = true
+vim.opt.hidden = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.undodir = "~/.vim/undodir"
+vim.opt.undofile = true
 vim.opt.history = 20
 vim.opt.cmdheight = 1
 

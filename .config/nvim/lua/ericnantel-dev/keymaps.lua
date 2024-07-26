@@ -1,5 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+-- TODO: clipboard support but only if installed
 vim.keymap.set('i', 'jk', '<ESC>', {desc = "Exit Insert Mode"})
 vim.keymap.set('v', 'jk', '<ESC>', {desc = "Exit Visual Mode"})
 vim.keymap.set('n', '<leader>+', '<C-a>', {desc = "Increment Number"})

@@ -38,6 +38,8 @@ mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/colors
 # make directory ~/.vim/plugged
 mkdir -p ~/.vim/plugged
+# make directory ~/.vim/undodir
+mkdir -p ~/.vim/undodir
 
 # copy .vim/coc-settings.json to ~/.vim/coc-settings.json
 cp .vim/coc-settings.json ~/.vim/coc-settings.json

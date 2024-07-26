@@ -10,8 +10,10 @@ set splitbelow
 set hidden
 set nobackup
 set nowritebackup
-"set undofile
+set undodir=~/.vim/undodir
+set undofile
 set noshowmatch
+set history=20
 set cmdheight=1
 set updatetime=300
 set timeout
@@ -19,25 +21,31 @@ set timeoutlen=300
 set signcolumn=yes
 set cursorline
 set scrolloff=8
-"set sidescrolloff=8
+set sidescrolloff=8
 
 set ignorecase
 set smartcase
-set history=1000
 set incsearch
 set hlsearch
 
-set relativenumber
 set number
+set relativenumber
+set numberwidth=2
+set noruler
 set wildmenu
 set wildmode=longest:full,full
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 "set shiftround
-set expandtab
+"set expandtab
 set autoindent
 set smartindent
+
+set notitle
+set mouse=
+set ttymouse=
+"set mousescroll=ver:0,hor:0
 set encoding=UTF-8
 set nowrap
 set backspace=indent,eol,start
@@ -64,7 +72,6 @@ let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
 " TODO: clipboard support but only if installed
-" TODO: disable mouse and ttymouse but need to test over ssh
 nmap <leader>+ <C-a>
 nmap <leader>- <C-x>
 nmap <leader>nh <cmd>nohl<CR>
@@ -192,6 +199,7 @@ let g:NERDTreeWinPos = 'right'
 let g:NERDTreeWinSize = 38
 let g:NERDTreeMinimalMenu = 0
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeFileLines = 0

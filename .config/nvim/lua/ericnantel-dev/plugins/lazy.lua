@@ -71,15 +71,15 @@ require('lazy').setup({
 		-- lua plugin for Neovim 0.5 that displays a pop with possible keybindings
 		{
 			"folke/which-key.nvim",
-			lazy = true,
-			opts = {}
+			event = "VeryLazy",
+			opts = {},
 		},
 		-- dressing
 		-- Neovim plugin to improve the default vim.ui interfaces
 		{
 			"stevearc/dressing.nvim",
 			event = "VeryLazy",
-			opts = {}
+			opts = {},
 		},
 		-- todo-comments
 		-- highlight, list and search todo comments in your projects

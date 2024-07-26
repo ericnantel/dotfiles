@@ -459,6 +459,7 @@ set t_Co=256
 " Recognizing custom filetypes
 autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 autocmd FileType z80 setlocal commentstring=;\ %s
+autocmd FileType glsl setlocal commentstring=//\ %s
 
 " Registering Which-key keymaps
 call which_key#register('<Space>', "g:which_key_map")

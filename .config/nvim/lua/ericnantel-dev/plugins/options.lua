@@ -15,4 +15,3 @@ vim.g.vim_markdown_folding_disabled = 1
 vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_signs = 1
 vim.g.gitgutter_async = 1
-

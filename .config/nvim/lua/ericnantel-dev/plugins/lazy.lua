@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
-	vim.fn.system ({
+	vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
@@ -12,7 +12,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
+local lazy = require("lazy")
+lazy.setup({
 	spec = {
 		-- plenary
 		-- all the lua functions I don't want to write twice
@@ -86,7 +87,7 @@ require('lazy').setup({
 		{
 			"folke/todo-comments.nvim",
 			dependencies = {
-				"nvim-lua/plenary.nvim"
+				"nvim-lua/plenary.nvim",
 			},
 			opts = {},
 		},
@@ -108,16 +109,16 @@ require('lazy').setup({
 			"windwp/nvim-autopairs",
 			event = "InsertEnter",
 			config = function()
-				local nvimautopairs = require 'nvim-autopairs'
+				local nvimautopairs = require("nvim-autopairs")
 				nvimautopairs.setup({
 					disable_filetype = {
-						'TelescopePrompt',
-						'vim',
+						"TelescopePrompt",
+						"vim",
 					},
 					check_ts = true,
 					ts_config = {
-						lua = { 'string' },
-						javascript = { 'template_string' },
+						lua = { "string" },
+						javascript = { "template_string" },
 						java = false,
 					},
 					map_cr = true,
@@ -134,8 +135,8 @@ require('lazy').setup({
 				"nvim-tree/nvim-web-devicons",
 			},
 			config = function()
-				local alpha = require 'alpha'
-				local startify = require 'alpha.themes.startify'
+				local alpha = require("alpha")
+				local startify = require("alpha.themes.startify")
 				alpha.setup(startify.config)
 			end,
 		},
@@ -148,7 +149,7 @@ require('lazy').setup({
 				"nvim-tree/nvim-web-devicons",
 			},
 			config = function()
-				local nvimtree = require 'nvim-tree'
+				local nvimtree = require("nvim-tree")
 				nvimtree.setup({
 					view = {
 						side = "right",
@@ -172,34 +173,50 @@ require('lazy').setup({
 		--
 		{
 			"nvim-treesitter/nvim-treesitter",
-			-- event = { "BufReadPre", "BufNewFile" },
+			event = { "BufReadPre", "BufNewFile" },
 			build = ":TSUpdate",
 			config = function()
-				local nvimtreesitter = require 'nvim-treesitter.configs'
+				local nvimtreesitter = require("nvim-treesitter.configs")
 				nvimtreesitter.setup({
 					ensure_installed = {
-						'c', 'cpp',
-						'javascript', 'typescript', 'tsx',
+						"c",
+						"cpp",
+						"javascript",
+						"typescript",
+						"tsx",
 						-- 'c_sharp', 'java',
-						'rust', 'go',
-						'lua', 'python',
-						'json', 'yaml', 'toml',
-						'vim', 'vimdoc', 'cmake', 'bash', 'dockerfile',
-						'git_config', 'git_rebase',
-						'gitattributes', 'gitcommit', 'gitignore',
-						'tmux',
+						"rust",
+						"go",
+						"lua",
+						"python",
+						"json",
+						"yaml",
+						"toml",
+						"vim",
+						"vimdoc",
+						"cmake",
+						"bash",
+						"dockerfile",
+						"git_config",
+						"git_rebase",
+						"gitattributes",
+						"gitcommit",
+						"gitignore",
+						"tmux",
 					},
 					sync_install = false,
 					auto_install = true,
 					ignore_install = {
-						'glsl',
-						'markdown', 'markdown_inline',
+						"glsl",
+						"markdown",
+						"markdown_inline",
 					},
 					highlight = {
 						enable = true,
 						disable = {
-							'glsl',
-							'markdown', 'markdown_inline',
+							"glsl",
+							"markdown",
+							"markdown_inline",
 						},
 						additional_vim_regex_highlighting = false,
 					},
@@ -216,7 +233,7 @@ require('lazy').setup({
 				"nvim-tree/nvim-web-devicons",
 				{
 					"nvim-telescope/telescope-fzf-native.nvim",
-					build = "make"
+					build = "make",
 				},
 				"nvim-telescope/telescope-smart-history.nvim",
 				"nvim-telescope/telescope-ui-select.nvim",
@@ -225,33 +242,65 @@ require('lazy').setup({
 			config = function()
 				local data = assert(vim.fn.stdpath("data"))
 				local history_path = vim.fs.joinpath(data, "telescope_history.sqlite3")
-				local telescope = require 'telescope'
-				local themes = require 'telescope.themes'
-				local builtin = require 'telescope.builtin'
-				local actions = require 'telescope.actions'
-				local utils = require 'telescope.utils'
+				local telescope = require("telescope")
+				local themes = require("telescope.themes")
+				local builtin = require("telescope.builtin")
+				local actions = require("telescope.actions")
+				local utils = require("telescope.utils")
 				telescope.setup({
 					defaults = {
-						layout_strategy = 'horizontal',
+						layout_strategy = "horizontal",
 						layout_config = {
-							anchor = 'N',
+							anchor = "N",
 							height = 0.75,
 							mirror = true,
 							preview_width = 0.50,
-							prompt_position = 'top',
+							prompt_position = "top",
 							width = 0.75,
 						},
-						sorting_strategy = 'ascending',
+						sorting_strategy = "ascending",
 						file_ignore_patterns = {
-							'.git', '.hg', '.svn',
-							'%.o', '%.obj', '%.fbx', '%.FBX', '%.ttf','%.mp3', '%.wav', '%.ogg', '%.zip', '%.exe', '%.dll', '%.a', '%.so', '%.pyc',
-							'%.ico', '%.tif', '%.bmp', '%.jpg', '%.jpeg', '%.png', '%.tga', '%.psd', '%.svg',
-							'%.bak', '%.cache', '%.class', '%.idea', '%.swp', '%.DS_Store', '%.meta',
+							".git",
+							".hg",
+							".svn",
+							"%.o",
+							"%.obj",
+							"%.fbx",
+							"%.FBX",
+							"%.ttf",
+							"%.mp3",
+							"%.wav",
+							"%.ogg",
+							"%.zip",
+							"%.exe",
+							"%.dll",
+							"%.a",
+							"%.so",
+							"%.pyc",
+							"%.ico",
+							"%.tif",
+							"%.bmp",
+							"%.jpg",
+							"%.jpeg",
+							"%.png",
+							"%.tga",
+							"%.psd",
+							"%.svg",
+							"%.bak",
+							"%.cache",
+							"%.class",
+							"%.idea",
+							"%.swp",
+							"%.DS_Store",
+							"%.meta",
 							--'^node_modules/', '^build/', '^dist/', '^out/',
-							'node_modules/.*', 'build/.*', 'dist/.*', 'out/.*',
+							"node_modules/.*",
+							"build/.*",
+							"dist/.*",
+							"out/.*",
 						},
 						path_display = {
-							'smart',
+							"smart",
 						},
 						-- mappings = {
 						-- 	i = {
@@ -268,14 +317,14 @@ require('lazy').setup({
 							path = history_path,
 							limit = 100,
 						},
-						['ui-select'] = {
-							themes.get_dropdown {},
+						["ui-select"] = {
+							themes.get_dropdown({}),
 						},
 					},
 				})
-				pcall(telescope.load_extension, 'fzf')
-				pcall(telescope.load_extension, 'smart_history')
-				pcall(telescope.load_extension, 'ui-select')
+				pcall(telescope.load_extension, "fzf")
+				pcall(telescope.load_extension, "smart_history")
+				pcall(telescope.load_extension, "ui-select")
 			end,
 		},
 		-- bufferline
@@ -303,68 +352,73 @@ require('lazy').setup({
 				"tpope/vim-fugitive",
 			},
 			config = function()
-				local lualine = require 'lualine'
-				local lazystatus = require 'lazy.status'
+				local lualine = require("lualine")
+				local lazystatus = require("lazy.status")
 				lualine.setup({
 					options = {
 						icons_enabled = true,
-						theme = 'auto',
-						component_separators = '',
-						section_separators = '',
+						theme = "auto",
+						component_separators = "",
+						section_separators = "",
 						disabled_filetypes = {
-							'alpha',
+							"alpha",
 						},
 					},
 					sections = {
 						lualine_a = {
-							'mode',
+							"mode",
 						},
 						lualine_b = {
-							'branch', 'diff', 'diagnostics',
+							"branch",
+							"diff",
+							"diagnostics",
 						},
 						lualine_c = {
-							'filename',
+							"filename",
 						},
 						lualine_x = {
 							{
 								lazystatus.updates,
 								cond = lazystatus.has_updates,
 								color = {
-									fg = '#ff9e64'
+									fg = "#ff9e64",
 								},
 							},
-							'encoding', 'fileformat', 'filetype',
+							"encoding",
+							"fileformat",
+							"filetype",
 						},
 						lualine_y = {
 							{
-								'datetime',
-								style = '%a %H:%M',
+								"datetime",
+								style = "%a %H:%M",
 							},
 						},
 						lualine_z = {
-							'progress', 'location',
+							"progress",
+							"location",
 						},
 					},
 					inactive_sections = {
 						lualine_a = {},
 						lualine_b = {},
 						lualine_c = {
-							'filename',
+							"filename",
 						},
 						lualine_x = {
-							'location',
+							"location",
 						},
 						lualine_y = {},
 						lualine_z = {},
 					},
 					extensions = {
-						'fugitive',
-						'lazy',
-						-- 'mason',
+						"fugitive",
+						"lazy",
+						"mason",
 						-- 'nerdtree',
-						'nvim-tree',
+						"nvim-tree",
 						-- 'oil',
-						'trouble',
+						"trouble",
 					},
 				})
 			end,
@@ -376,19 +430,19 @@ require('lazy').setup({
 			name = "catppuccin",
 			lazy = true,
 			config = function()
-				local catppuccin = require 'catppuccin'
+				local catppuccin = require("catppuccin")
 				catppuccin.setup({
-					flavour = 'auto',
+					flavour = "auto",
 					background = {
-						light = 'latte',
-						dark = 'mocha',
+						light = "latte",
+						dark = "mocha",
 					},
 					integrations = {
 						alpha = true,
-						-- cmp = true,
+						cmp = true,
 						-- harpoon = true,
 						gitgutter = true,
-						-- mason = true,
+						mason = true,
 						nvimtree = true,
 						telescope = true,
 						treesitter = true,
@@ -409,7 +463,7 @@ require('lazy').setup({
 			"oxfist/night-owl.nvim",
 			lazy = true,
 			config = function()
-				local nightowl = require 'night-owl'
+				local nightowl = require("night-owl")
 				nightowl.setup()
 			end,
 		},
@@ -424,11 +478,227 @@ require('lazy').setup({
 		{
 			"uga-rosa/ccc.nvim",
 			config = function()
-				local ccc = require 'ccc'
+				local ccc = require("ccc")
 				ccc.setup({
 					highlighter = {
 						auto_enable = true,
 						lsp = true,
+					},
+				})
+			end,
+		},
+		-- lspconfig and mason
+		--
+		{
+			"neovim/nvim-lspconfig",
+			event = { "BufReadPre", "BufNewFile" },
+			dependencies = {
+				"hrsh7th/cmp-nvim-lsp",
+				{
+					"antosha417/nvim-lsp-file-operations",
+					config = true,
+				},
+				{
+					"folke/neodev.nvim",
+					opts = {},
+				},
+				"williamboman/mason.nvim",
+				"williamboman/mason-lspconfig.nvim",
+				"mfussenegger/nvim-dap",
+				"jay-babu/mason-nvim-dap.nvim",
+				{
+					"mfussenegger/nvim-lint",
+					event = { "BufReadPre", "BufNewFile" },
+				},
+				"rshkarin/mason-nvim-lint",
+				{
+					"stevearc/conform.nvim",
+					event = { "BufReadPre", "BufNewFile" },
+				},
+				"zapling/mason-conform.nvim",
+				"WhoIsSethDaniel/mason-tool-installer.nvim",
+			},
+			config = function()
+				local lspconfig = require("lspconfig")
+				local cmp_nvim_lsp = require("cmp_nvim_lsp")
+				local capabilities = cmp_nvim_lsp.default_capabilities()
+
+				local signs = {
+					Error = "☒",
+					Warn = "⚠",
+					Hint = "⚡",
+					Info = "ⓘ",
+				}
+
+				for type, icon in pairs(signs) do
+					local hl = "DiagnosticSign" .. type
+					vim.fn.sign_define(hl, {
+						text = icon,
+						texthl = hl,
+						numhl = "",
+					})
+				end
+
+				local mason = require("mason")
+				local mason_lspconfig = require("mason-lspconfig")
+
+				mason.setup({
+					ui = {
+						icons = {
+							package_installed = "✓",
+							package_pending = "→",
+							package_uninstalled = "𐄂",
+						},
+					},
+				})
+
+				-- TODO: LspAttach local mappings
+
+				mason_lspconfig.setup({
+					ensure_installed = {
+						"clangd",
+						"tsserver",
+						"rust_analyzer", -- TODO: go
+						"lua_ls",
+						"pyright",
+						"yamlls",
+						"vimls",
+						"glsl_analyzer",
+					},
+				})
+				mason_lspconfig.setup_handlers({
+					function(server_name)
+						lspconfig[server_name].setup({
+							capabilities = capabilities,
+						})
+					end,
+					["lua_ls"] = function()
+						lspconfig["lua_ls"].setup({
+							capabilities = capabilities,
+							settings = {
+								Lua = {
+									diagnostics = {
+										globals = {
+											"vim",
+										},
+									},
+									completion = {
+										callSnippet = "Replace",
+									},
+								},
+							},
+						})
+					end,
+				})
+
+				local dap = require("dap")
+				local mason_nvim_dap = require("mason-nvim-dap")
+				mason_nvim_dap.setup({
+					ensure_installed = {},
+					handlers = {},
+				})
+
+				local lint = require("lint")
+				lint.linters_by_ft = {
+					-- c = { "clangtidy", "cpplint" },
+					-- cpp = { "clangtidy", "cpplint" },
+					javascript = { "eslint_d" },
+					typescript = { "eslint_d" },
+					javascriptreact = { "eslint_d" },
+					typescriptreact = { "eslint_d" },
+					-- TODO: rust, go ?
+					-- lua = { "luacheck" },
+					python = { "pylint" },
+					yaml = { "yamllint" },
+					-- glsl = { "glslc" },
+				}
+
+				local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+				vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+					group = lint_augroup,
+					callback = function()
+						lint.try_lint()
+					end,
+				})
+
+				local mason_nvim_lint = require("mason-nvim-lint")
+				mason_nvim_lint.setup({
+					ensure_installed = {},
+				})
+
+				local conform = require("conform")
+				conform.setup({
+					formatters_by_ft = {
+						c = { "clang-format" },
+						cpp = { "clang-format" },
+						-- javascript = { "prettierd", "prettier" },
+						-- typescript = { "prettier" },
+						-- javascriptreact = { "prettier" },
+						-- typescriptreact = { "prettier" },
+						-- TODO: rust, go ?
+						lua = { "stylua" },
+						python = { "isort", "black" },
+						yaml = { "prettier" },
+					},
+					format_on_save = {
+						lsp_fallback = true,
+						async = false,
+						timeout_ms = 500,
+					},
+				})
+
+				local mason_conform = require("mason-conform")
+				mason_conform.setup({
+					ignore_install = {},
+				})
+
+				local mason_tool_installer = require("mason-tool-installer")
+				mason_tool_installer.setup({
+					ensure_installed = {},
+				})
+			end,
+		},
+		-- cmp
+		--
+		{
+			"hrsh7th/nvim-cmp",
+			event = "InsertEnter",
+			dependencies = {
+				"hrsh7th/cmp-nvim-lsp",
+				"hrsh7th/cmp-buffer",
+				"hrsh7th/cmp-path",
+				"L3MON4D3/LuaSnip",
+				"saadparwaiz1/cmp_luasnip",
+				"rafamadriz/friendly-snippets",
+				"onsails/lspkind.nvim",
+			},
+			config = function()
+				local cmp = require("cmp")
+				local luasnip = require("luasnip")
+				local luasnip_loader = require("luasnip.loaders.from_vscode")
+				luasnip_loader.lazy_load()
+				local lspkind = require("lspkind")
+				cmp.setup({
+					completion = {
+						completeopt = "menu,menuone,preview,noselect",
+					},
+					snippet = {
+						expand = function(args)
+							luasnip.lsp_expand(args.body)
+						end,
+					},
+					-- TODO local mappings
+					sources = cmp.config.sources({
+						{ name = "nvim_lsp" },
+						{ name = "luasnip" },
+						{ name = "buffer" },
+						{ name = "path" },
+					}),
+					formatting = {
+						format = lspkind.cmp_format({
+							maxwidth = 50,
+							ellipsis_char = "...",
+						}),
 					},
 				})
 			end,
@@ -438,21 +708,21 @@ require('lazy').setup({
 		lazy = false,
 	},
 	git = {
-		log = { '-6' },
+		log = { "-6" },
 	},
 	dev = {
 		fallback = false,
 	},
 	install = {
 		missing = true,
-		colorscheme = { 'darcula' },
+		colorscheme = { "darcula" },
 	},
 	ui = {
 		size = {
 			width = 0.75,
 			height = 0.75,
 		},
-		title_pos = 'center',
+		title_pos = "center",
 	},
 	checker = {
 		enabled = true,

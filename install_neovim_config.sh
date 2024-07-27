@@ -26,8 +26,8 @@ git submodule update
 
 # make directory ~/.vim
 mkdir -p ~/.vim
-# make directory ~/.vim/undodir
-mkdir -p ~/.vim/undodir
+# make directory ~/.vim/undodir-nvim
+mkdir -p ~/.vim/undodir-nvim
 
 os=$(uname -o)
 if [ "$os" = 'Msys' ]; then

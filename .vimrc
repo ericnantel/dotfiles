@@ -20,8 +20,7 @@ set timeout
 set timeoutlen=300
 set signcolumn=yes
 set cursorline
-set scrolloff=8
-set sidescrolloff=8
+set scrolloff=5
 
 set ignorecase
 set smartcase
@@ -440,10 +439,10 @@ call plug#begin('~/.vim/plugged')
 
 	" FZF
 	" Dependencies:
-	"	-
+	"	- nodejs (fzf-preview)
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	"Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
 " Initialize plugin system
 " - Automatically executes:
@@ -483,7 +482,7 @@ let g:coc_global_extensions = [
 	\'coc-json', 'coc-yaml', 'coc-toml',
 	\'coc-vimlsp', 'coc-cmake', 'coc-sh', 'coc-docker',
 	\'coc-git',
-	\'coc-diagnostic', 'coc-fzf-preview', 'coc-highlight'
+	\'coc-diagnostic', 'coc-highlight'
 \]
 
 " TODO Code Completion Keybinding..

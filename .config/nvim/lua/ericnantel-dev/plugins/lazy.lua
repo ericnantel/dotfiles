@@ -126,6 +126,13 @@ lazy.setup({
 				})
 			end,
 		},
+		-- nvim-ts-autotag
+		--
+		{
+			"windwp/nvim-ts-autotag",
+			event = { "BufReadPre", "BufNewFile" },
+			opts = {},
+		},
 		-- alpha
 		--
 		{
@@ -175,6 +182,13 @@ lazy.setup({
 			"nvim-treesitter/nvim-treesitter",
 			event = { "BufReadPre", "BufNewFile" },
 			build = ":TSUpdate",
+			dependencies = {
+				{
+					"nvim-treesitter/nvim-treesitter-context",
+					opts = {},
+				},
+				-- TODO: ufo (folding)
+			},
 			config = function()
 				local nvimtreesitter = require("nvim-treesitter.configs")
 				nvimtreesitter.setup({
@@ -223,7 +237,7 @@ lazy.setup({
 				})
 			end,
 		},
-		-- nvim-telescope
+		-- telescope
 		--
 		{
 			"nvim-telescope/telescope.nvim",
@@ -500,6 +514,10 @@ lazy.setup({
 				},
 				{
 					"folke/neodev.nvim",
+					opts = {},
+				},
+				{
+					"j-hui/fidget.nvim",
 					opts = {},
 				},
 				"williamboman/mason.nvim",

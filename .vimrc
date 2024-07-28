@@ -71,6 +71,14 @@ let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
 " TODO: clipboard support but only if installed
+
+" TODO: Visual Mode or use surround plugin but remap
+let @a = "wbi\"\<ESC>ea\"\<ESC>"
+nnoremap <silent> " @a
+nnoremap <silent> "" I"<ESC>A"<ESC>
+" nnoremap <silent> " ciw"<C-R>-"<ESC>
+" nnoremap <silent> " ciw""<ESC>P
+
 nmap <leader>+ <C-a>
 nmap <leader>- <C-x>
 nmap <leader>nh <cmd>nohl<CR>

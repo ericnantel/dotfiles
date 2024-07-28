@@ -1,6 +1,16 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- TODO: clipboard support but only if installed
+
+----" TODO: Visual Mode or use surround plugin but remap
+--- NOTE: perhaps no need to have macro b..
+--let @a = "wbi\"\<ESC>ea\"\<ESC>"
+--let @b = "I\"\<ESC>A\"\<ESC>"
+--nnoremap <silent> " @a
+--nnoremap <silent> "" @b
+---- nnoremap <silent> " ciw"<C-R>-"<ESC>
+---- nnoremap <silent> " ciw""<ESC>P
+
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit Insert Mode" })
 vim.keymap.set("v", "jk", "<ESC>", { desc = "Exit Visual Mode" })
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment Number" })

@@ -434,6 +434,11 @@ call plug#begin('~/.vim/plugged')
 	" Note: gitgutter works but coc-git does a great job for showing signs
 	Plug 'airblade/vim-gitgutter'
 
+	" vim-signature (Toggle, Display & Navigate Marks)
+	" Dependencies:
+	" Note:
+	Plug 'kshenoy/vim-signature'
+
 	" Dispatch (Async build and test dispatcher)
 	" Dependencies:
 	"	-

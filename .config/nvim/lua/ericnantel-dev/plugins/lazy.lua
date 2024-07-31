@@ -63,6 +63,11 @@ lazy.setup({
 		{
 			"airblade/vim-gitgutter",
 		},
+		-- vim-signature
+		-- a vim plugin to toggle, display & navigate marks
+		{
+			"kshenoy/vim-signature",
+		},
 		-- vim-z80
 		-- Vim syntax for Z80 Assembler
 		{

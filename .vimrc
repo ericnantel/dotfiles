@@ -524,6 +524,10 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 0
 let g:gitgutter_async = 1
 
+" vim-signature
+" NOTE: highlight signs or marks dynamically based upon state indicated by vim-gitgutter
+let g:SignatureMarkTextHLDynamic = 1
+
 " FZF
 let g:fzf_vim = {}
 let g:fzf_vim.preview_window = [

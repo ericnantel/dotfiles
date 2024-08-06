@@ -97,8 +97,8 @@ nmap <leader>tn <cmd>tabn<CR>
 nmap <leader>tp <cmd>tabp<CR>
 
 " vim-maximizer keymaps
-nmap <leader>sm <cmd>MaximizerToggle<CR>
-vmap <leader>sm <cmd>MaximizerToggle<CR>gv
+nnoremap <leader>sm <cmd>MaximizerToggle<CR>
+vnoremap <leader>sm <cmd>MaximizerToggle<CR>gv
 
 " vim-maximizer settings
 let g:maximizer_set_default_mapping = 1

@@ -1,6 +1,16 @@
 -- vim-maximizer keymaps
-vim.keymap.set("n", "<leader>sm", "<cmd>MaximizerToggle<CR>", { desc = "Maximize/Minimize Split Window" })
-vim.keymap.set("v", "<leader>sm", "<cmd>MaximizerToggle<CR>gv", { desc = "Maximize/Minimize Split Window" })
+vim.keymap.set(
+	"n",
+	"<leader>sm",
+	"<cmd>MaximizerToggle<CR>",
+	{ desc = "Maximize/Minimize Split Window", remap = false }
+)
+vim.keymap.set(
+	"v",
+	"<leader>sm",
+	"<cmd>MaximizerToggle<CR>gv",
+	{ desc = "Maximize/Minimize Split Window", remap = false }
+)
 
 -- Tmux Navigator keymaps
 vim.keymap.set("n", "<c-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Tmux Navigate Left", silent = true })

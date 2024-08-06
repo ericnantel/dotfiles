@@ -115,6 +115,7 @@ lazy.setup({
 			event = "InsertEnter",
 			config = function()
 				local nvimautopairs = require("nvim-autopairs")
+				-- TODO: local nvimautopairs_completion = require("nvim-autopairs.completion")
 				nvimautopairs.setup({
 					disable_filetype = {
 						"TelescopePrompt",
@@ -126,6 +127,10 @@ lazy.setup({
 						javascript = { "template_string" },
 						java = false,
 					},
+					-- NOTE: There is an issue when you paste code
+					-- in Javascript that it moves the {}
+					-- even though formatting is disabled
+					-- could it be linked to map_cr ?
 					map_cr = true,
 					map_bs = true,
 				})

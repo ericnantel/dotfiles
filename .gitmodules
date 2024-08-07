@@ -38,3 +38,4 @@
 [submodule "colorschemes/papercolor-theme"]
 	path = colorschemes/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
+	ignore = dirty

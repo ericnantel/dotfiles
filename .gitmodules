@@ -35,3 +35,6 @@
 	path = colorschemes/nightshade.vim
 	url = https://github.com/vim-scripts/nightshade.vim
 	ignore = dirty
+[submodule "colorschemes/papercolor-theme"]
+	path = colorschemes/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme

@@ -96,5 +96,7 @@ else
 	# copy colorschemes/Zenburn/colors/zenburn.vim to ~/.config/nvim/colors/zenburn.vim
 	cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/.config/nvim/colors/zenburn.vim
 
+	# copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~/.config/nvim/colors/PaperColor.vim
+	cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/.config/nvim/colors/PaperColor.vim
 fi
 

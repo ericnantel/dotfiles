@@ -71,3 +71,5 @@ cp -rp colorschemes/vim-yin-yang/colors/yin.vim ~/.vim/colors/yin.vim
 # copy colorschemes/Zenburn/colors/zenburn.vim to ~.vim/colors/zenburn.vim
 cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/.vim/colors/zenburn.vim
 
+# copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~.vim/colors/PaperColor.vim
+cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/.vim/colors/PaperColor.vim

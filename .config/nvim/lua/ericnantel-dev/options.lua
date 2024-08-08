@@ -11,6 +11,7 @@ vim.opt.background = "dark"
 vim.cmd([[ colorscheme darcula ]])
 
 vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])
+-- vim.cmd([[autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab]])
 vim.cmd([[autocmd FileType z80 setlocal commentstring=;\ %s]])
 vim.cmd([[autocmd FileType glsl setlocal commentstring=//\ %s]])
 vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
@@ -88,7 +89,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 -- vim.opt.shiftround = true
--- vim.opt.expandtab = true
+vim.opt.expandtab = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 

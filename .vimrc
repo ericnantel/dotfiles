@@ -37,7 +37,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 "set shiftround
-"set expandtab
+set noexpandtab
 set autoindent
 set smartindent
 
@@ -470,6 +470,7 @@ set t_Co=256
 
 " Recognizing custom filetypes
 autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
+autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd FileType z80 setlocal commentstring=;\ %s
 autocmd FileType glsl setlocal commentstring=//\ %s
 

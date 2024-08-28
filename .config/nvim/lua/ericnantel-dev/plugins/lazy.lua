@@ -73,6 +73,11 @@ lazy.setup({
 		{
 			"samsaga2/vim-z80",
 		},
+		-- vim-z80-docs
+		-- Vim docs for Z80 Assembly Programming
+		{
+			"ericnantel/vim-z80-docs",
+		},
 		-- which-key
 		-- lua plugin for Neovim 0.5 that displays a pop with possible keybindings
 		{

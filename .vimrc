@@ -391,6 +391,13 @@ call plug#begin('~/.vim/plugged')
 	" Note:
 	Plug 'samsaga2/vim-z80'
 
+	" vim-z80-docs
+	" Dependencies:
+	" Description:
+	" Vim docs for Z80 Assembly Programming
+	" Note:
+	Plug 'ericnantel/vim-z80-docs'
+
 	" Which-key
 	" Dependencies:
 	" Description:

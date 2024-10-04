@@ -2,6 +2,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- TODO: clipboard support but only if installed
 
+-- Fixing Windows Paste in Normal Mode
+if vim.fn.has("win32") then
+vim.keymap.set(
+	"n",
+	"<C-V>",
+	"<C-V>",
+	{ desc = "Fixing Windows Paste in Normal Mode", remap = false }
+)
+end
+
 ----" TODO: Visual Mode or use surround plugin but remap
 --- NOTE: perhaps no need to have macro b..
 --let @a = "wbi\"\<ESC>ea\"\<ESC>"

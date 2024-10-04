@@ -72,6 +72,11 @@ imap jk <ESC>
 vmap jk <ESC>
 " TODO: clipboard support but only if installed
 
+" Fixing Windows Paste in Normal Mode
+if has("win32")
+	nnoremap <C-V> <C-V>
+endif
+
 " TODO: Visual Mode or use surround plugin but remap
 let @a = "wbi\"\<ESC>ea\"\<ESC>"
 nnoremap <silent> " @a

@@ -502,6 +502,12 @@ lazy.setup({
 			"nyoom-engineering/oxocarbon.nvim",
 			lazy = true,
 		},
+		-- lillilac
+		--
+		{
+			"Love-Pengy/lillilac.nvim",
+			lazy = true,
+		},
 		-- ccc
 		--
 		{

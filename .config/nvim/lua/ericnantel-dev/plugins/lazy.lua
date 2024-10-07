@@ -339,6 +339,11 @@ lazy.setup({
 						-- 	},
 						-- },
 					},
+					pickers = {
+						find_files = {
+							hidden = true,
+						},
+					},
 					extensions = {
 						wrap_results = true,
 						fzf = {},
@@ -596,7 +601,7 @@ lazy.setup({
 				mason_lspconfig.setup({
 					ensure_installed = {
 						"clangd",
-						"tsserver",
+						"ts_ls",
 						"rust_analyzer", -- TODO: go
 						"lua_ls",
 						"pyright",

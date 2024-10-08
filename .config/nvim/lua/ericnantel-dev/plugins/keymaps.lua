@@ -23,6 +23,10 @@ vim.keymap.set("n", "z", "gc", { desc = "", remap = true, silent = true })
 vim.keymap.set("n", "zz", "gcc", { desc = "", remap = true, silent = true })
 vim.keymap.set("v", "z", "gc", { desc = "", remap = true, silent = true })
 
+-- vim-signature keymaps
+vim.keymap.set("n", "m;", "]`", { desc = "", remap = true, silent = true })
+-- TODO: Previous mark ?
+
 -- nvim-tree keymaps
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer Tree" })
 
@@ -31,6 +35,41 @@ vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle Fi
 -- Having issues with the cursor not focusing on Trouble with latest TroubleAPI (v3.0.0)
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>", { desc = "Toggle Trouble" })
 vim.keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<CR>", { desc = "Toggle TODOs in Trouble" })
+
+-- harpoon keymaps
+-- NOTE: Problem with Harpoon2 current state is that it is missing marks
+vim.keymap.set("n", "<leader>hh", function()
+	local harpoon = require("harpoon")
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end, { desc = "Harpoon Toggle Quick Menu" })
+vim.keymap.set("n", "<leader>ha", function()
+	local harpoon = require("harpoon")
+	harpoon:list():add()
+end, { desc = "Harpoon Add File To List" })
+-- vim.keymap.set("n", "<leader>hm", function()
+-- 	local harpoon = require("harpoon")
+-- 	harpoon.mark:add_file()
+-- end, { desc = "Harpoon Add Mark To List" })
+vim.keymap.set("n", "<leader>hx", function()
+	local harpoon = require("harpoon")
+	harpoon:list():clear()
+end, { desc = "Harpoon Clear List" })
+vim.keymap.set("n", "<leader>h1", function()
+	local harpoon = require("harpoon")
+	harpoon:list():select(1)
+end, { desc = "Harpoon Select File 1" })
+vim.keymap.set("n", "<leader>h2", function()
+	local harpoon = require("harpoon")
+	harpoon:list():select(2)
+end, { desc = "Harpoon Select File 2" })
+vim.keymap.set("n", "<leader>h3", function()
+	local harpoon = require("harpoon")
+	harpoon:list():select(3)
+end, { desc = "Harpoon Select File 3" })
+vim.keymap.set("n", "<leader>h4", function()
+	local harpoon = require("harpoon")
+	harpoon:list():select(4)
+end, { desc = "Harpoon Select File 4" })
 
 -- telescope keymaps
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope Fuzzy Find Files in CWD" })

@@ -172,6 +172,10 @@ vmap <silent> z gc
 " vim-commentary settings
 "
 
+" vim-signature keymap
+nmap <silent> m; ]`
+" TODO: Previous mark ?
+
 " vim-fugitive keymap
 "
 
@@ -539,6 +543,7 @@ let g:gitgutter_async = 1
 
 " vim-signature
 " NOTE: highlight signs or marks dynamically based upon state indicated by vim-gitgutter
+let g:SignatureWrapJumps = 1
 let g:SignatureMarkTextHLDynamic = 1
 
 " FZF

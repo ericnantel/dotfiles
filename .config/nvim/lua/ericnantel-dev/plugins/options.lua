@@ -17,4 +17,5 @@ vim.g.gitgutter_signs = 1
 vim.g.gitgutter_async = 1
 
 -- vim-signature options
+vim.g.SignatureWrapJumps = 1
 vim.g.SignatureMarkTextHLDynamic = 1

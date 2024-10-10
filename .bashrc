@@ -24,5 +24,6 @@
 #
 # For shell prompt
 # NOTE: This assumes you have starship installed
-# eval "$(starship init zsh)"
+export PATH=~/.local/bin:$PATH
+eval "$(starship init bash)"
 

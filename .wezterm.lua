@@ -13,7 +13,7 @@ config = {
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "INTEGRATED_BUTTONS | RESIZE",
 	window_background_opacity = 1.0,
-	window_padding = { left = 3, right = 3, top = 24, bottom = 0 },
+	window_padding = { left = 3, right = 3, top = "1cell", bottom = 0 },
 	-- background = {
 	-- 	{
 	-- 		source = {

@@ -24,5 +24,5 @@
 #
 # For shell prompt
 # NOTE: This assumes you have starship installed
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 

@@ -273,6 +273,10 @@ Par la suite, je vous suggère de choisir l'option 'Toutes les Polices' pour voi
 
 Finalement, fermez et reouvrez votre Terminal pour rafraîchir la console.
 
+//NOTE: Faire chapitre sur Multiplexer (tmux)
+//Ainsi que sur les applications pour shells
+//Ainsi que sur les shell prompts
+
 [Retour vers README](/README.md)
 [Haut](#getting-started)
 

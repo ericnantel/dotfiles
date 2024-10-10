@@ -49,6 +49,7 @@ Regardless, use a package manager and install the following packages:
 - htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
 - neofetch (optional)
 - make (optional - renamed gmake by Homebrew on MacOS)
+- zsh-syntax-highlighting (optional - on MacOS)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

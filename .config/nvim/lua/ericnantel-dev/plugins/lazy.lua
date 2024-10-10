@@ -519,13 +519,17 @@ lazy.setup({
 			lazy = true,
 		},
 		-- night-owl
-		--
+		-- NOTE: Requires a terminal that supports truecolor (24Bit)
+		-- Otherwise, make it lazy and comment priority
 		{
 			"oxfist/night-owl.nvim",
-			lazy = true,
+			lazy = false,
+			priority = 1000,
 			config = function()
 				local nightowl = require("night-owl")
 				nightowl.setup()
+
+				vim.cmd.colorscheme("night-owl")
 			end,
 		},
 		-- oxocarbon

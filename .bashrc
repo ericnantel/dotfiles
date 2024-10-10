@@ -21,3 +21,8 @@
 # alias ls="exa --icons"
 # alias ll="exa -laF --icons"
 # alias lt="exa --tree --icons"
+#
+# For shell prompt
+# NOTE: This assumes you have starship installed
+eval "$(starship init zsh)"
+

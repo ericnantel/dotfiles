@@ -28,6 +28,10 @@ cp .vimrc ~/.vimrc
 #cp .tmux.conf ~/.tmux.conf
 #source ~/.tmux.conf
 
+# copy .config/starship.toml to ~/.config/starship.toml
+#cp .config/starship.toml ~/.config/starship.toml
+#source ~/.config/starship.toml
+
 # make directory ~/.vim
 mkdir -p ~/.vim
 # make directory ~/.vim/autoload

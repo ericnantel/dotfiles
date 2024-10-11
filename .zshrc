@@ -1,8 +1,9 @@
 
 # For exa, eza
-# alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-# alias ll="eza -alF --icons"
-# alias lt="eza --tree --icons"
+# NOTE: This assumes you have eza installed
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ll="eza -alF --icons"
+alias lt="eza --tree --icons"
 
 # For shell prompt
 # NOTE: This assumes you have starship installed

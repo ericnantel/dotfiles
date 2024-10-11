@@ -52,6 +52,7 @@ Regardless, use a package manager and install the following packages:
 - curl (optional)
 - zsh-syntax-highlighting (optional - on MacOS)
 - starship (optional on MacOS and GNU/Linux)
+- ssh (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

@@ -126,6 +126,53 @@ lazy.setup({
 				harpoon:setup()
 			end,
 		},
+		-- screenkey
+		-- Screencast your keys in Neovim
+		{
+			"NStefan002/screenkey.nvim",
+			lazy = false,
+			version = "*",
+			config = function()
+				local screenkey = require("screenkey")
+				screenkey.setup({
+					win_opts = {
+						row = vim.o.lines - vim.o.cmdheight - 1,
+						col = vim.o.columns - 1,
+						relative = "editor",
+						anchor = "SE",
+						width = 24,
+						height = 1,
+						border = "single",
+						title = "Screenkey",
+						title_pos = "center",
+						style = "minimal",
+						focusable = false,
+						noautocmd = true,
+					},
+					compress_after = 3,
+					clear_after = 3,
+					disable = {
+						filetypes = {},
+						buftypes = {},
+						events = false,
+					},
+					show_leader = true,
+					group_mappings = true,
+					display_infront = {},
+					display_behind = {},
+					-- filter = function(keys)
+					-- 	return keys
+					-- end,
+					-- keys = {},
+				})
+
+				vim.api.nvim_create_autocmd({ "VimEnter" }, {
+					group = vim.api.nvim_create_augroup("AutostartScreenkey", {}),
+					command = "Screenkey toggle",
+					desc = "Autostart Screenkey on VimEnter",
+				})
+			end,
+		},
 		-- nvim-autopairs
 		--
 		{

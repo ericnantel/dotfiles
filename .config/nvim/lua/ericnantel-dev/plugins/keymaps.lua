@@ -47,6 +47,7 @@ vim.keymap.set("n", "<leader>ha", function()
 	harpoon:list():add()
 end, { desc = "Harpoon Add File To List" })
 -- vim.keymap.set("n", "<leader>hm", function()
+-- -- NOTE: Marks were not added to version 2..
 -- 	local harpoon = require("harpoon")
 -- 	harpoon.mark:add_file()
 -- end, { desc = "Harpoon Add Mark To List" })
@@ -70,6 +71,11 @@ vim.keymap.set("n", "<leader>h4", function()
 	local harpoon = require("harpoon")
 	harpoon:list():select(4)
 end, { desc = "Harpoon Select File 4" })
+vim.keymap.set("n", "<leader>h;", function()
+	-- NOTE: This doesn't cycle like version 1..
+	local harpoon = require("harpoon")
+	harpoon:list():next()
+end, { desc = "Harpoon Navigate List Next" })
 
 -- telescope keymaps
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope Fuzzy Find Files in CWD" })

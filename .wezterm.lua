@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 -- NOTE: Added some padding at the top for integrated buttons
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Using PowerShell with Starship
-	default_prog = { "powershell" }
+	default_prog = { "powershell", "-NoLogo" }
 end
 
 local window_decorations = "INTEGRATED_BUTTONS | RESIZE"

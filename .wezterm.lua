@@ -4,16 +4,29 @@ local config = wezterm.config_builder()
 
 -- NOTE: Disable font and color_scheme if missing in your system
 -- NOTE: Added some padding at the top for integrated buttons
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	-- NOTE: On Windows, Using PowerShell with Starship
+	default_prog = { "powershell" }
+end
+
+local window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+local window_padding = { left = 3, right = 3, top = "1cell", bottom = 0 }
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	-- NOTE: On Windows, Integrated Buttons are not working
+	window_decorations = "TITLE | RESIZE"
+	window_padding = { left = 3, right = 3, top = 0, bottom = 0 }
+end
 
 config = {
+	default_prog = default_prog,
 	automatically_reload_config = true,
 	enable_scroll_bar = false,
 	enable_tab_bar = false,
 	use_fancy_tab_bar = false,
-	window_close_confirmation = "NeverPrompt",
-	window_decorations = "INTEGRATED_BUTTONS | RESIZE",
 	window_background_opacity = 1.0,
-	window_padding = { left = 3, right = 3, top = "1cell", bottom = 0 },
+	window_close_confirmation = "NeverPrompt",
+	window_decorations = window_decorations,
+	window_padding = window_padding,
 	-- background = {
 	-- 	{
 	-- 		source = {

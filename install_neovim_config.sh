@@ -1,5 +1,7 @@
 #!/bin/sh
 
+os=$(uname -o)
+
 # init and update submodules
 git submodule init
 git submodule update
@@ -11,6 +13,14 @@ git submodule update
 # copy .zshrc to ~/.zshrc
 #cp .zshrc ~/.zshrc
 #source ~/.zshrc
+
+# if [ "$os" = 'Msys' ]; then
+# 	mkdir -p (dirname "$PROFILE")
+# 	cp .config/powershell/Microsoft.PowerShell_profile.ps1 "$PROFILE"
+# else
+# 	mkdir -p ~/.config/powershell
+# 	cp .config/powershell/Microsoft.PowerShell_profile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+# fi
 
 # copy .wezterm.lua to ~/.wezterm.lua
 #cp .wezterm.lua ~/.wezterm.lua
@@ -33,7 +43,6 @@ mkdir -p ~/.vim
 # make directory ~/.vim/undodir-nvim
 mkdir -p ~/.vim/undodir-nvim
 
-os=$(uname -o)
 if [ "$os" = 'Msys' ]; then
 	# make directory ~/AppData/Local/nvim
 	mkdir -p ~/AppData/Local/nvim

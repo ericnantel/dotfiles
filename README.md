@@ -50,7 +50,7 @@ Regardless, use a package manager and install the following packages:
 - neofetch (optional)
 - make (optional - renamed gmake by Homebrew on MacOS)
 - curl (optional)
-- eza (optional - named eza on GNU/Linux)
+- eza (optional - named exa on GNU/Linux)
 - zsh-syntax-highlighting (optional - on MacOS)
 - starship (optional on MacOS and GNU/Linux)
 - ssh (optional)

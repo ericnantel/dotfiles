@@ -5,4 +5,5 @@ Invoke-Expression (&starship init powershell)
 # Import-Module -Name Terminal-Icons
 
 #Assumes eza is installed
-# Set-Alias -Name ls -Value eza --icons
+Set-Alias -Name ls -Value Eza_Icons
+function Eza_Icons { eza --icons $args }

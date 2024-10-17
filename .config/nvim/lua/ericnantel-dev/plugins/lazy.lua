@@ -763,9 +763,16 @@ lazy.setup({
 						yaml = { "prettier" },
 					},
 					format_on_save = {
-						lsp_never = true,
+						lsp_format = "never",
 						async = false,
 						timeout_ms = 500,
+					},
+					-- NOTE: Use DEBUG to output cmd w/ args in logfile (:ConformInfo)
+					log_level = vim.log.levels.INFO,
+					formatters = {
+						["clang-format"] = {
+							prepend_args = { "-fallback-style=none" },
+						},
 					},
 				})
 

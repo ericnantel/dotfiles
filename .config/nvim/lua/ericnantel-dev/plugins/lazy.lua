@@ -355,13 +355,28 @@ lazy.setup({
 						layout_strategy = "horizontal",
 						layout_config = {
 							anchor = "N",
-							height = 0.75,
+							height = 0.85,
 							mirror = true,
-							preview_width = 0.50,
+							preview_width = 0.55,
 							prompt_position = "top",
-							width = 0.75,
+							width = 0.85,
 						},
 						sorting_strategy = "ascending",
+						path_display = {
+							-- "smart",
+							"truncate",
+						},
+						-- mappings = {
+						-- 	i = {
+						-- 		["<C-k>"] = actions.move_selection_previous,
+						-- 		["<C-j>"] = actions.move_selection_next,
+						-- 		["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						-- 	},
+						-- },
+						preview = {
+							treesitter = true,
+						},
+						color_devicons = true,
 						file_ignore_patterns = {
 							".git",
 							".hg",
@@ -402,16 +417,6 @@ lazy.setup({
 							"dist/.*",
 							"out/.*",
 						},
-						path_display = {
-							"smart",
-						},
-						-- mappings = {
-						-- 	i = {
-						-- 		["<C-k>"] = actions.move_selection_previous,
-						-- 		["<C-j>"] = actions.move_selection_next,
-						-- 		["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-						-- 	},
-						-- },
 					},
 					pickers = {
 						find_files = {

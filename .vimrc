@@ -73,6 +73,7 @@ vmap jk <ESC>
 " TODO: clipboard support but only if installed
 
 " Fixing Windows Paste in Normal Mode
+" Although it works with Wezterm; it doesn't with the Windows Terminal app
 if has("win32")
 	nnoremap <C-V> <C-V>
 endif

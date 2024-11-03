@@ -15,6 +15,10 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Integrated Buttons are not working
 	window_decorations = "TITLE | RESIZE"
 	window_padding = { left = 3, right = 3, top = 0, bottom = 0 }
+elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+	-- NOTE: On Ubuntu 24.10, Integrated Buttons are not working
+	window_decorations = "TITLE | RESIZE"
+	window_padding = { left = 3, right = 3, top = 0, bottom = 0 }
 end
 
 config = {
@@ -38,6 +42,7 @@ config = {
 	-- 	},
 	-- },
 	default_cursor_style = "SteadyBlock",
+	-- font = wezterm.font("JetBrainsMono"),
 	font = wezterm.font("JetBrainsMonoNL Nerd Font Propo", { weight = "Bold", stretch = "Normal", italic = false }),
 	font_size = 16,
 	-- color_scheme = "Pro",

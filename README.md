@@ -50,9 +50,9 @@ Regardless, use a package manager and install the following packages:
 - neofetch (optional)
 - make (optional - renamed gmake by Homebrew on MacOS)
 - curl (optional)
-- eza (optional - named exa on GNU/Linux)
+- eza (optional but require a nerd-font)
 - zsh-syntax-highlighting (optional - on MacOS)
-- starship (optional on MacOS and GNU/Linux)
+- starship (optional on MacOS and GNU/Linux but require a nerd-font)
 - ssh (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.

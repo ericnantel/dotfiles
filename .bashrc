@@ -16,12 +16,13 @@
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
-#
-# For exa/eza
-# alias ls="exa --icons"
-# alias ll="exa -laF --icons"
-# alias lt="exa --tree --icons"
-#
+
+# For eza
+# NOTE: This assumes you have eza installed
+alias ls="eza --icons"
+alias ll="eza -laF --icons"
+alias lt="eza --tree --icons"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH

@@ -343,8 +343,8 @@ lazy.setup({
 				-- "kkharji/sqlite.lua",
 			},
 			config = function()
-				local data = assert(vim.fn.stdpath("data"))
-				local history_path = vim.fs.joinpath(data, "telescope_history.sqlite3")
+				local data = vim.fn.stdpath("data")
+				local history_path = data .. "/telescope_history.sqlite3"
 				local telescope = require("telescope")
 				local themes = require("telescope.themes")
 				local builtin = require("telescope.builtin")

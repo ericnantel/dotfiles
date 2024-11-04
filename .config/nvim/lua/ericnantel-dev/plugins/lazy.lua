@@ -645,6 +645,7 @@ lazy.setup({
 				"rshkarin/mason-nvim-lint",
 				{
 					"stevearc/conform.nvim",
+					branch = "nvim-0.9", -- NOTE: Fixing Debian/Ubuntu
 					event = { "BufReadPre", "BufNewFile" },
 				},
 				"zapling/mason-conform.nvim",

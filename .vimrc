@@ -217,7 +217,7 @@ let g:NERDTreeWinSize = 38
 let g:NERDTreeMinimalMenu = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeQuitOnOpen = 0
+let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeFileLines = 0
 

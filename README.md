@@ -38,8 +38,8 @@ Regardless, use a package manager and install the following packages:
 - ninja (ninja-build for Apt)
 - nodejs
 - npm
-- python3 and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)
-- lua (lua5.4 or newer if asked by Apt) and luajit (optional)
+- python3 and python3-pip (optional) and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)
+- lua (lua5.4 or newer if asked by Apt) and luajit (optional) and luarocks (optional)
 - delta (optional - named git-delta by Homebrew)
 - ripgrep (optional)
 - fzf (optional)

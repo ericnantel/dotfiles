@@ -255,6 +255,8 @@ lazy.setup({
 		--
 		{
 			"nvim-treesitter/nvim-treesitter",
+			branch = "master",
+			tag = "v0.9.3",
 			event = { "BufReadPre", "BufNewFile" },
 			build = ":TSUpdate",
 			dependencies = {

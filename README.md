@@ -29,30 +29,25 @@ Be sure to read the 'Getting started' :book: below, so that you have everything 
 
 Your system might already have Vi or Vim and/or Git installed. 
 Regardless, use a package manager and install the following packages:
-- git (unless you have it already)
-- vim or neovim
-- gcc or clang (on GNU Linux) or llvm (recommended on Windows for Vim for clang-format and clang-tidy)
+- git and git-lfs (optional)
+- vim and/or neovim (0.9.5+ minimal - 0.10.0 recommended)
+- gcc or clang (on GNU/Linux) or llvm (recommended on Windows for Vim for clang-format)
 - clang-format (on MacOS for Vim)
-- clang-tidy (on GNU Linux for Vim)
-- clang, clang-format, clang-tidy(on GNU Linux)
-- cmake
+- clang, clang-format (on GNU/Linux)
+- cmake and make (unless you have it already)
 - ninja (ninja-build for Apt)
 - nodejs
 - npm
-- yarn
-- webpack
-- python3
-- lua (lua5.4 or newer if asked by Apt)
+- python3 and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)
+- lua (lua5.4 or newer if asked by Apt) and luajit (optional)
 - delta (optional - named git-delta by Homebrew)
 - ripgrep (optional)
 - fzf (optional)
-- htop (optional - install ntop if using Scoop - requires sudo privileges on MacOS)
-- neofetch (optional)
-- make (optional - renamed gmake by Homebrew on MacOS)
-- curl (optional)
+- curl (recommended)
+- tmux (on MacOS and GNU/Linux)
 - eza (optional but require a nerd-font)
 - zsh-syntax-highlighting (optional - on MacOS)
-- starship (optional on MacOS and GNU/Linux but require a nerd-font)
+- starship (optional - available on most platform shells - requires a nerd-font)
 - ssh (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.

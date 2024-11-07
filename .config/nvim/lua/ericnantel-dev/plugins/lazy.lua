@@ -248,6 +248,11 @@ lazy.setup({
 						git_ignored = true,
 					},
 					-- TODO: filesystem_watchers.ignore_dirs
+					actions = {
+						open_file = {
+							quit_on_open = true,
+						},
+					},
 				})
 			end,
 		},

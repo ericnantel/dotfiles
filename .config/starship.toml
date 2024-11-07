@@ -1,1 +1,4 @@
 # NOTE: https://starship.rs/presets/
+
+add_newline = true
+follow_symlinks = false

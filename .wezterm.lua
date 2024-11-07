@@ -45,7 +45,7 @@ config = {
 	default_cursor_style = "SteadyBlock",
 	-- font = wezterm.font("JetBrainsMono"),
 	font = wezterm.font("JetBrainsMonoNL Nerd Font Propo", { weight = "Bold", stretch = "Normal", italic = false }),
-	font_size = 16,
+	font_size = 14,
 	-- color_scheme = "Pro",
 	-- color_scheme = "Catppuccin Mocha",
 	color_scheme = "Night Owl (Gogh)",

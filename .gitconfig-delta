@@ -1,0 +1,13 @@
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true # use n and N to move between diff sections
+	line-numbers = true # show line-numbers
+	side-by-side = true # show diffs in side-by-side panels
+	hyperlinks = false # if set then it creates clickable links
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default

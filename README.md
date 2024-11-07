@@ -30,6 +30,8 @@ Be sure to read the 'Getting started' :book: below, so that you have everything 
 Your system might already have Vi or Vim and/or Git installed. 
 Regardless, use a package manager and install the following packages:
 - git and git-lfs (optional)
+- git-delta (optional - named delta on Scoop for Windows)
+- less (optional - recommended on Windows if git-delta installed)
 - vim and/or neovim (0.9.5+ minimal - 0.10.0 recommended)
 - gcc or clang (on GNU/Linux) or llvm (recommended on Windows for Vim for clang-format)
 - clang-format (on MacOS for Vim)
@@ -40,7 +42,6 @@ Regardless, use a package manager and install the following packages:
 - npm
 - python3 and python3-pip (optional) and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)
 - lua (lua5.4 or newer if asked by Apt) and luajit (optional) and luarocks (optional)
-- delta (optional - named git-delta by Homebrew)
 - ripgrep (optional)
 - fzf (optional)
 - curl (recommended)

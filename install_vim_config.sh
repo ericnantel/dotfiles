@@ -6,6 +6,12 @@ os=$(uname -o)
 git submodule init
 git submodule update
 
+# copy ~/.gitconfig to ~/.gitconfig-backup
+#cp ~/.gitconfig ~/.gitconfig-backup
+# copy .gitconfig-delta to ~/.gitconfig
+#cp .gitconfig-delta ~/.gitconfig
+#source ~/.gitconfig
+
 # copy .bashrc to ~/.bashrc
 #cp .bashrc ~/.bashrc
 #source ~/.bashrc

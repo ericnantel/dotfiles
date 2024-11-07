@@ -140,6 +140,7 @@ let g:startify_skiplist = []
 let g:startify_bookmarks = [
 \ '~/.bashrc',
 \ '~/.config/nvim/',
+\ '~/.config/starship.toml',
 \ '~/.config/zellij/config.kdl',
 \ '~/.tmux.conf',
 \ '~/.vimrc',

@@ -27,6 +27,7 @@ config = {
 	enable_scroll_bar = false,
 	enable_tab_bar = false,
 	use_fancy_tab_bar = false,
+	-- max_fps = 120,
 	window_background_opacity = 1.0,
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = window_decorations,

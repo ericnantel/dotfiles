@@ -11,14 +11,17 @@ end
 
 local window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 local window_padding = { left = 3, right = 3, top = "1cell", bottom = 0 }
+local font_size = 16
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Integrated Buttons are not working
 	window_decorations = "TITLE | RESIZE"
 	window_padding = { left = 3, right = 3, top = 0, bottom = 0 }
+	font_size = 14
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	-- NOTE: On Ubuntu 24.10, Integrated Buttons are not working
 	window_decorations = "TITLE | RESIZE"
 	window_padding = { left = 3, right = 3, top = 0, bottom = 0 }
+	font_size = 14
 end
 
 config = {
@@ -45,7 +48,7 @@ config = {
 	default_cursor_style = "SteadyBlock",
 	-- font = wezterm.font("JetBrainsMono"),
 	font = wezterm.font("JetBrainsMonoNL Nerd Font Propo", { weight = "Bold", stretch = "Normal", italic = false }),
-	font_size = 14,
+	font_size = font_size,
 	-- color_scheme = "Pro",
 	-- color_scheme = "Catppuccin Mocha",
 	color_scheme = "Night Owl (Gogh)",

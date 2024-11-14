@@ -1,0 +1,79 @@
+""" Rider/IntelliJ ~/.ideavimrc
+
+""" Common settings
+set showcmd
+set showmode
+set cmdheight=1
+set history=20
+set number
+set relativenumber
+set numberwidth=2
+set signcolumn=yes
+set cursorline
+set noruler
+set scrolloff=5
+set splitright
+set splitbelow
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+set autoindent
+set smartindent
+set encoding=UTF-8
+set nowrap
+set backspace=indent,eol,start
+
+""" Idea specific settings
+
+""" Rider specific settings
+
+""" Map leader
+let mapleader=" "
+let maplocalleader=" "
+
+""" Mappings
+imap jk <ESC>
+vmap jk <ESC>
+nmap <leader>+ <C-a>
+nmap <leader>- <C-x>
+"nmap <leader>nh <cmd>nohl<CR> NOTE: Does not seem to be supported ..
+nmap <leader>sv <C-w>v
+nmap <leader>sh <C-w>s
+nmap <leader>se <C-w>=
+nmap <leader>s, <C-w>5<
+nmap <leader>s. <C-w>5>
+nmap <leader>s- <C-w>-
+nmap <leader>s+ <C-w>+
+nmap <leader>sx <cmd>close<CR>
+
+""" Plugins
+set commentary
+
+""" Plugin mappings
+
+""" vim-maximizer mappings
+"nnoremap <leader>sm <cmd>MaximizerToggle<CR>
+"vnoremap <leader>sm <cmd>MaximizerToggle<CR>gv
+
+""" vim-commentary mappings
+nmap <silent> z gc
+nmap <silent> zz gcc
+vmap <silent> z gc
+
+"TODO: vim-signature ? (marks)
+"TODO: vim-fugitive ? (git)
+"TODO: vim-nerdtree ? (file explorer)
+"TODO: nerdtree-git-plugin ? (git status on file explorer)
+"TODO: which-key ?
+"TODO: clang-formatter ?
+
+""" Plugin settings
+
+""" vim-maximizer settings
+let g:maximizer_set_default_mapping = 1
+

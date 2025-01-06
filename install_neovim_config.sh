@@ -28,11 +28,19 @@ git submodule update
 # 	cp .config/powershell/Microsoft.PowerShell_profile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 # fi
 
-# make directory ~/.config/ghostty
-#mkdir -p ~/.config/ghostty
-# copy .config/ghostty/config to ~/.config/ghostty/config
-#cp .config/ghostty/config ~/.config/ghostty/config
-#source ~/.config/ghostty/config
+# if [ "$os" = 'Msys' ]; then
+# else
+	# make directory ~/.config/ghostty
+	#mkdir -p ~/.config/ghostty
+	# copy .config/ghostty/config to ~/.config/ghostty/config
+	#cp .config/ghostty/config ~/.config/ghostty/config
+	#source ~/.config/ghostty/config
+
+	# make directory ~/.config/ghostty/themes
+	#mkdir -p ~/.config/ghostty/themes
+	# copy ghostty-themes/ghostty-night-owl/NightOwlDark to ~.config/ghostty/themes/NightOwlDark
+	#cp ghostty-themes/ghostty-night-owl/NightOwlDark to ~/.config/ghostty-themes/NightOwlDark
+# fi
 
 # copy .wezterm.lua to ~/.wezterm.lua
 #cp .wezterm.lua ~/.wezterm.lua

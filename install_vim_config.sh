@@ -28,6 +28,12 @@ git submodule update
 # 	cp .config/powershell/Microsoft.PowerShell_profile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 # fi
 
+# make directory ~/.config/ghostty
+#mkdir -p ~/.config/ghostty
+# copy .config/ghostty/config to ~/.config/ghostty/config
+#cp .config/ghostty/config ~/.config/ghostty/config
+#source ~/.config/ghostty/config
+
 # copy .wezterm.lua to ~/.wezterm.lua
 #cp .wezterm.lua ~/.wezterm.lua
 #source ~/.wezterm.lua

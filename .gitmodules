@@ -42,3 +42,4 @@
 [submodule "ghostty-themes/ghostty-night-owl"]
 	path = ghostty-themes/ghostty-night-owl
 	url = https://github.com/m1yon/ghostty-night-owl
+	ignore = dirty

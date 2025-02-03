@@ -101,6 +101,12 @@ if [ "$os" = 'Msys' ]; then
 	# copy colorschemes/Zenburn/colors/zenburn.vim to ~/AppData/Local/nvim/colors/zenburn.vim
 	cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/AppData/Local/nvim/colors/zenburn.vim
 
+	# NOTE: Doesn't seem to work properly with Neovim
+	# # copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~/AppData/Local/nvim/colors/PaperColor.vim
+	# cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/AppData/Local/nvim/colors/PaperColor.vim
+
+	# copy colorschemes/dmg/colors/dmg.vim to ~/AppData/Local/nvim/colors/dmg.vim
+	cp -rp colorschemes/dmg/colors/dmg.vim ~/AppData/Local/nvim/colors/dmg.vim
 else
 	# make directory ~/.config/nvim
 	mkdir -p ~/.config/nvim
@@ -134,7 +140,11 @@ else
 	# copy colorschemes/Zenburn/colors/zenburn.vim to ~/.config/nvim/colors/zenburn.vim
 	cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/.config/nvim/colors/zenburn.vim
 
-	# copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~/.config/nvim/colors/PaperColor.vim
-	cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/.config/nvim/colors/PaperColor.vim
+	# NOTE: Doesn't seem to work properly with Neovim
+	# # copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~/.config/nvim/colors/PaperColor.vim
+	# cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/.config/nvim/colors/PaperColor.vim
+
+	# copy colorschemes/dmg/colors/dmg.vim to ~/.config/nvim/colors/dmg.vim
+	cp -rp colorschemes/dmg/colors/dmg.vim ~/.config/nvim/colors/dmg.vim
 fi
 

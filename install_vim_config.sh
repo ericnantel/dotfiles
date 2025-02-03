@@ -112,3 +112,7 @@ cp -rp colorschemes/Zenburn/colors/zenburn.vim ~/.vim/colors/zenburn.vim
 
 # copy colorschemes/papercolor-theme/colors/PaperColor.vim to ~.vim/colors/PaperColor.vim
 cp -rp colorschemes/papercolor-theme/colors/PaperColor.vim ~/.vim/colors/PaperColor.vim
+
+# NOTE: Doesn't seem to work properly with Vim
+# # copy colorschemes/dmg/colors/dmg.vim to ~.vim/colors/dmg.vim
+# cp -rp colorschemes/dmg/colors/dmg.vim ~/.vim/colors/dmg.vim

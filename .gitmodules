@@ -39,6 +39,10 @@
 	path = colorschemes/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
 	ignore = dirty
+[submodule "colorschemes/dmg"]
+	path = colorschemes/dmg
+	url = https://github.com/mstcl/dmg
+	ignore = dirty
 [submodule "ghostty-themes/ghostty-night-owl"]
 	path = ghostty-themes/ghostty-night-owl
 	url = https://github.com/m1yon/ghostty-night-owl

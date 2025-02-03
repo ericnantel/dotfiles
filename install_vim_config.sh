@@ -54,6 +54,11 @@ cp .vimrc ~/.vimrc
 #cp .clang-format ~/.clang-format
 #source ~/.clang-format
 
+# make directory ~/.tmux/plugins/tpm
+#mkdir -p ~/.tmux/plugins/tpm
+# copy .tmux/plugins/tpm/* to ~/.tmux/plugins/tpm
+#cp -rp .tmux/plugins/tpm/* ~/.tmux/plugins/tpm
+
 # copy .tmux.conf to ~/.tmux.conf
 #cp .tmux.conf ~/.tmux.conf
 #source ~/.tmux.conf

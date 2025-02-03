@@ -130,7 +130,7 @@ lazy.setup({
 		-- Screencast your keys in Neovim
 		{
 			"NStefan002/screenkey.nvim",
-			lazy = false,
+			lazy = true,
 			version = "*",
 			config = function()
 				local screenkey = require("screenkey")

@@ -4,9 +4,9 @@ vim.g.maplocalleader = " "
 
 -- Fixing Windows Paste in Normal Mode
 -- Although it works with Wezterm; it doesn't with the Windows Terminal app
-if vim.fn.has("win32") then
-	vim.keymap.set("n", "<C-V>", "<C-V>", { desc = "Fixing Windows Paste in Normal Mode", remap = false })
-end
+-- if vim.fn.has("win32") then
+-- 	vim.keymap.set("n", "<C-V>", "<C-V>", { desc = "Fixing Windows Paste in Normal Mode", remap = false })
+-- end
 
 ----" TODO: Visual Mode or use surround plugin but remap
 --- NOTE: perhaps no need to have macro b..

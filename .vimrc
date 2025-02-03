@@ -42,8 +42,8 @@ set autoindent
 set smartindent
 
 set notitle
-set mouse=
-set ttymouse=
+"set mouse=
+"set ttymouse=
 "set mousescroll=ver:0,hor:0
 set encoding=UTF-8
 set nowrap
@@ -70,13 +70,15 @@ let g:mapleader = ' '
 let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
-" TODO: clipboard support but only if installed
+
+" Clipboard
+set clipboard^=unnamed,unnamedplus
 
 " Fixing Windows Paste in Normal Mode
 " Although it works with Wezterm; it doesn't with the Windows Terminal app
-if has("win32")
-	nnoremap <C-V> <C-V>
-endif
+" if has("win32")
+" 	nnoremap <C-V> <C-V>
+" endif
 
 " TODO: Visual Mode or use surround plugin but remap
 let @a = "wbi\"\<ESC>ea\"\<ESC>"

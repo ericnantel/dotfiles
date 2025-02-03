@@ -17,11 +17,10 @@ vim.cmd([[autocmd FileType glsl setlocal commentstring=//\ %s]])
 vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 
 vim.opt.title = false
--- TODO: clipboard support but only if installed
--- vim.opt.clipboard:append("unnamedplus")
-vim.opt.mouse = ""
+vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
+-- vim.opt.mouse = ""
 -- vim.opt.ttymouse = ""
-vim.opt.mousescroll = "ver:0,hor:0"
+-- vim.opt.mousescroll = "ver:0,hor:0"
 vim.opt.encoding = "utf-8"
 vim.opt.wrap = false
 vim.opt.splitbelow = true

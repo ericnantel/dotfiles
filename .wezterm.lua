@@ -24,10 +24,11 @@ elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	font_size = 14
 end
 
-local leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
-local keys = {}
+local leader = config.leader
+local keys = config.keys
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Tmux is not available
+	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 	keys = {
 		-- vertical split
 		{

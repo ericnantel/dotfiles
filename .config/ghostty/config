@@ -1,7 +1,7 @@
 theme = NightOwlDark
 font-family = "JetBrains Mono"
 font-size = 16
-#font-size = 14
+#font-size = 14 Similarily to Wezterm for Linux and Window
 shell-integration-features = no-cursor
 cursor-opacity = 1
 cursor-style = block

@@ -39,7 +39,7 @@ git submodule update
 	# make directory ~/.config/ghostty/themes
 	#mkdir -p ~/.config/ghostty/themes
 	# copy ghostty-themes/ghostty-night-owl/NightOwlDark to ~.config/ghostty/themes/NightOwlDark
-	#cp ghostty-themes/ghostty-night-owl/NightOwlDark to ~/.config/ghostty-themes/NightOwlDark
+	#cp ghostty-themes/ghostty-night-owl/NightOwlDark to ~/.config/ghostty/themes/NightOwlDark
 # fi
 
 # copy .wezterm.lua to ~/.wezterm.lua

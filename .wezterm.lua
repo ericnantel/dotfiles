@@ -108,6 +108,87 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 			mods = "LEADER",
 			action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
 		},
+		-- create new window
+		{
+			key = "c",
+			mods = "LEADER",
+			action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+		},
+		-- move to previous window
+		{
+			key = "p",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTabRelative(-1),
+		},
+		-- move to next window
+		{
+			key = "n",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTabRelative(1),
+		},
+		-- NOTE: we use 0 for 0 now
+		-- TODO: However the tab index shows 1 for index 0
+
+		-- move to window at index 0
+		{
+			key = "0",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(0),
+		},
+		-- move to window at index 1
+		{
+			key = "1",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(1),
+		},
+		-- move to window at index 2
+		{
+			key = "2",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(2),
+		},
+		-- move to window at index 3
+		{
+			key = "3",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(3),
+		},
+		-- move to window at index 4
+		{
+			key = "4",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(4),
+		},
+		-- move to window at index 5
+		{
+			key = "5",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(5),
+		},
+		-- move to window at index 6
+		{
+			key = "6",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(6),
+		},
+		-- move to window at index 7
+		{
+			key = "7",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(7),
+		},
+		-- move to window at index 8
+		{
+			key = "8",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(8),
+		},
+		-- move to window at index 9
+		{
+			key = "9",
+			mods = "LEADER",
+			action = wezterm.action.ActivateTab(9),
+		},
 	}
 else
 	-- NOTE: It is possible to know if we are using tmux

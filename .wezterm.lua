@@ -7,6 +7,10 @@ local config = wezterm.config_builder()
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Using PowerShell with Starship
 	default_prog = { "powershell", "-NoLogo" }
+elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+	-- NOTE: On Linux, Using ZSH with Starship
+	-- Bash can still be the default one
+	default_prog = { "zsh" }
 end
 
 local window_decorations = "INTEGRATED_BUTTONS | RESIZE"

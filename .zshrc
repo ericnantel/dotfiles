@@ -1,3 +1,6 @@
+#!/usr/bin/zsh
+
+os=$(uname -o)
 
 # For eza
 # NOTE: This assumes you have eza installed
@@ -10,7 +13,11 @@ alias lt="eza --tree --icons"
 eval "$(starship init zsh)"
 
 # For syntax highlighting
-# NOTE: This assumes you have homebrew and zsh-syntax-highlighting installed
-# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# NOTE: This assumes you are on Linux and zsh-syntax-highlighting installed
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# NOTE: This assumes you have zsh-syntax-highlighting installed
+if [[ "$os" == "GNU/Linux" ]]; then
+	# NOTE: This assumes you are on Linux
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+	# NOTE: This assumes you have homebrew installed (MacOS or Linux)
+	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

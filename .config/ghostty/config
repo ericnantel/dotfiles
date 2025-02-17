@@ -1,7 +1,15 @@
+# NOTE: To Reload Config
+# On Linux Press 'CTRL' + 'SHIFT' + '+' + ','
+# On MacOS Press 'CMD' + 'SHIFT' + '+' + ','
+# NOTE: To Preview ColorSchemes
+# Type ghostty +list-themes
+# Type 'q' to exit preview
+
 theme = NightOwlDark
+background-opacity = 0.8
 font-family = "JetBrains Mono"
 font-size = 16
-#font-size = 14 Similarily to Wezterm for Linux and Window
+#font-size = 14
 shell-integration-features = no-cursor
 cursor-opacity = 1
 cursor-style = block

@@ -39,8 +39,9 @@ let maplocalleader=" "
 """ Mappings
 imap jk <ESC>
 vmap jk <ESC>
-nmap <leader>+ <C-a>
-nmap <leader>- <C-x>
+nmap + <C-a>
+nmap - <C-x>
+
 "nmap <leader>nh <cmd>nohl<CR> NOTE: Does not seem to be supported ..
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s

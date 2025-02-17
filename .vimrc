@@ -70,6 +70,8 @@ let g:mapleader = ' '
 let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
+nmap + <C-a>
+nmap - <C-x>
 
 " Clipboard
 set clipboard^=unnamed,unnamedplus
@@ -87,8 +89,6 @@ nnoremap <silent> "" I"<ESC>A"<ESC>
 " nnoremap <silent> " ciw"<C-R>-"<ESC>
 " nnoremap <silent> " ciw""<ESC>P
 
-nmap <leader>+ <C-a>
-nmap <leader>- <C-x>
 nmap <leader>nh <cmd>nohl<CR>
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s

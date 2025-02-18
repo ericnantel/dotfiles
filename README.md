@@ -47,7 +47,8 @@ Regardless, use a package manager and install the following packages:
 - curl (recommended)
 - tmux (on MacOS and GNU/Linux)
 - eza (optional but require a nerd-font)
-- zsh-syntax-highlighting (optional - on MacOS)
+- zsh (optional - on GNU/Linux)
+- zsh-syntax-highlighting (optional - on MacOS and GNU/Linux)
 - starship (optional - available on most platform shells - requires a nerd-font)
 - ssh (optional)
 

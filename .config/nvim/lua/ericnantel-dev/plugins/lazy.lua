@@ -126,6 +126,14 @@ lazy.setup({
 				harpoon:setup()
 			end,
 		},
+		-- neorg
+		-- Neovim organization
+		{
+			"nvim-neorg/neorg",
+			lazy = false,
+			version = "*",
+			config = true,
+		},
 		-- screenkey
 		-- Screencast your keys in Neovim
 		{

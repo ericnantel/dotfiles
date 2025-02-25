@@ -23,6 +23,10 @@ alias ls="eza --icons"
 alias ll="eza -laF --icons"
 alias lt="eza --tree --icons"
 
+# For neorg
+# NOTE: This assumes you have neovim, neorg.nvim installed
+alias notes="nvim ~/Notes/neorg/index.norg"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH

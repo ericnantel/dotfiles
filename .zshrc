@@ -8,6 +8,10 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 alias ll="eza -alF --icons"
 alias lt="eza --tree --icons"
 
+# For neorg
+# NOTE: This assumes you have neovim, neorg.nvim installed
+alias notes="nvim ~/Notes/neorg/index.norg"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 eval "$(starship init zsh)"

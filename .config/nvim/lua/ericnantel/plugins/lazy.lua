@@ -132,7 +132,36 @@ lazy.setup({
 			"nvim-neorg/neorg",
 			lazy = false,
 			version = "*",
-			config = true,
+			cmd = "Neorg", -- Optional ?
+			ft = "norg", -- Optional ?
+			build = ":Neorg sync-parsers",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+			},
+			config = function()
+				local neorg = require("neorg")
+				neorg.setup({
+					load = {
+						["core.defaults"] = { -- Loads default behaviour
+							-- config = {},
+						},
+						["core.concealer"] = { -- Adds pretty icons to your documents
+							-- config = {
+							-- 	icons = {},
+							-- },
+						},
+						["core.dirman"] = { -- Manages Neorg workspaces
+							config = {
+								workspaces = {
+									-- NOTE: Perhaps I have notes in other formats, so that is why
+									notes = "~/Notes/neorg",
+								},
+								default_workspace = "notes",
+							},
+						},
+					},
+				})
+			end,
 		},
 		-- screenkey
 		-- Screencast your keys in Neovim
@@ -307,6 +336,8 @@ lazy.setup({
 						"gitcommit",
 						"gitignore",
 						"tmux",
+						"norg",
+						"norg_meta",
 					},
 					sync_install = false,
 					auto_install = true,

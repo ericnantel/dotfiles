@@ -131,7 +131,9 @@ lazy.setup({
 		{
 			"nvim-neorg/neorg",
 			lazy = false,
-			version = "*",
+			-- version = "*", -- On Linux, nvim might not be version 10
+			branch = "main",
+			tag = "v8.9.0",
 			cmd = "Neorg", -- Optional ?
 			ft = "norg", -- Optional ?
 			build = ":Neorg sync-parsers",

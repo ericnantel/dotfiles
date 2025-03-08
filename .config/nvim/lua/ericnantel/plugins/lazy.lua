@@ -144,6 +144,11 @@ lazy.setup({
 				local neorg = require("neorg")
 				neorg.setup({
 					load = {
+						["core.export.markdown"] = { -- Loads markdown exporter
+							config = {
+								extension = "md",
+							},
+						},
 						["core.defaults"] = { -- Loads default behaviour
 							-- config = {},
 						},
@@ -151,6 +156,14 @@ lazy.setup({
 							-- config = {
 							-- 	icons = {},
 							-- },
+						},
+						["core.summary"] = { -- Loads summary module
+							-- config = {},
+						},
+						["core.completion"] = { -- Loads completion module
+							config = {
+								engine = "nvim-cmp",
+							},
 						},
 						["core.dirman"] = { -- Manages Neorg workspaces
 							config = {

@@ -10,5 +10,7 @@ function Eza_Icons { eza --icons $args }
 
 # Assumes neovim and neorg.nvim are installed
 Set-Alias -Name notes -Value Nvim_Notes -Option AllScope
-function Nvim_Notes { nvim ~/Notes/neorg/index.norg $args }
+function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
+Set-Alias -Name work -Value Nvim_Work -Option AllScope
+function Nvim_Work { nvim ~/Notes/neorg/work/index.norg $args }
 

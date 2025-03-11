@@ -169,9 +169,11 @@ lazy.setup({
 							config = {
 								workspaces = {
 									-- NOTE: Perhaps I have notes in other formats, so that is why
-									notes = "~/Notes/neorg",
+									notes = "~/Notes/neorg/personal",
+									work = "~/Notes/neorg/work",
 								},
 								default_workspace = "notes",
+								index = "index.norg",
 							},
 						},
 					},

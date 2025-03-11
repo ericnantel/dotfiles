@@ -144,28 +144,27 @@ lazy.setup({
 				local neorg = require("neorg")
 				neorg.setup({
 					load = {
-						["core.export.markdown"] = { -- Loads markdown exporter
+						-- Default modules
+						["core.journal"] = {
 							config = {
-								extension = "md",
+								journal_folder = "journal",
+								strategy = "flat",
+								use_template = false,
+								workspace = nil, -- "notes",
 							},
 						},
-						["core.defaults"] = { -- Loads default behaviour
-							-- config = {},
-						},
-						["core.concealer"] = { -- Adds pretty icons to your documents
-							-- config = {
-							-- 	icons = {},
-							-- },
-						},
-						["core.summary"] = { -- Loads summary module
-							-- config = {},
-						},
-						["core.completion"] = { -- Loads completion module
+						-- Other modules
+						["core.completion"] = {
 							config = {
 								engine = "nvim-cmp",
 							},
 						},
-						["core.dirman"] = { -- Manages Neorg workspaces
+						["core.concealer"] = {
+							-- config = {
+							-- 	icons = {},
+							-- },
+						},
+						["core.dirman"] = {
 							config = {
 								workspaces = {
 									-- NOTE: Perhaps I have notes in other formats, so that is why
@@ -175,6 +174,18 @@ lazy.setup({
 								default_workspace = "notes",
 								index = "index.norg",
 							},
+						},
+						["core.export.markdown"] = {
+							config = {
+								extension = "md",
+							},
+						},
+						["core.summary"] = {
+							-- config = {},
+						},
+						-- Developer modules
+						["core.defaults"] = {
+							-- config = {},
 						},
 					},
 				})

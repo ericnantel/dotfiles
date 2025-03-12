@@ -134,6 +134,8 @@ lazy.setup({
 			branch = "master",
 			tag = "0.3.61",
 			event = "VeryLazy",
+			-- build
+			-- dependencies
 			ft = "org", -- Optional ?
 			config = function()
 				local org = require("orgmode")
@@ -147,6 +149,10 @@ lazy.setup({
 				})
 			end,
 		},
+
+		-- org-roam ?
+		-- telescope-orgmode ?
+
 		-- neorg
 		-- Neovim organization
 		{

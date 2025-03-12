@@ -126,6 +126,27 @@ lazy.setup({
 				harpoon:setup()
 			end,
 		},
+		-- orgmode
+		-- Neovim Orgmode clone
+		{
+			"nvim-orgmode/orgmode",
+			-- version = "*", -- On Linux, nvim might not be version 10
+			branch = "master",
+			tag = "0.3.61",
+			event = "VeryLazy",
+			ft = "org", -- Optional ?
+			config = function()
+				local org = require("orgmode")
+				-- org.setup_ts_grammar() TODO: Verify if needed
+				org.setup({
+					org_agenda_files = {
+						-- "~/org/*",
+						"~/Notes/orgfiles/**/*",
+					},
+					org_default_notes_file = "~/Notes/orgfiles/refile.org",
+				})
+			end,
+		},
 		-- neorg
 		-- Neovim organization
 		{
@@ -373,6 +394,7 @@ lazy.setup({
 						"glsl",
 						"markdown",
 						"markdown_inline",
+						"org",
 					},
 					highlight = {
 						enable = true,
@@ -907,6 +929,7 @@ lazy.setup({
 						{ name = "luasnip" },
 						{ name = "buffer" },
 						{ name = "path" },
+						{ name = "orgmode" },
 					}),
 					formatting = {
 						format = lspkind.cmp_format({

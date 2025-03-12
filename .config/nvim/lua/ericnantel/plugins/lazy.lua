@@ -146,11 +146,14 @@ lazy.setup({
 				local org = require("orgmode")
 				-- org.setup_ts_grammar() TODO: Verify if needed
 				org.setup({
+					-- TODO: Set personal and work as workspace
+					-- Each have their own agenda, archive, etc.
 					org_agenda_files = {
 						-- "~/org/*",
-						"~/Notes/orgfiles/**/*",
+						"~/Notes/orgfiles/personal/*",
 					},
-					org_default_notes_file = "~/Notes/orgfiles/refile.org",
+					org_default_notes_file = "~/Notes/orgfiles/personal/notes.org",
+					org_archive_location = "~/Notes/orgfiles/personal/archive/" .. "%s_archive",
 				})
 			end,
 		},

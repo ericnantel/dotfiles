@@ -134,8 +134,13 @@ lazy.setup({
 			branch = "master",
 			tag = "0.3.61",
 			event = "VeryLazy",
-			-- build
-			-- dependencies
+			--build = ":Org blabla",
+			--dependencies = {
+			--	"nvim-telescope/telescope.nvim",
+			--	"nvim-orgmode/telescope-orgmode.nvim", -- NOTE: Perhaps we should add this dependency to telescope instead ..
+			--	"nvim-orgmode/org-bullets.nvim", -- NOTE: Requires treesitter org installed
+			--	"Saghen/blink.cmp", -- NOTE: No need we use nvim-cmp
+			--},
 			ft = "org", -- Optional ?
 			config = function()
 				local org = require("orgmode")
@@ -151,7 +156,6 @@ lazy.setup({
 		},
 
 		-- org-roam ?
-		-- telescope-orgmode ?
 
 		-- neorg
 		-- Neovim organization

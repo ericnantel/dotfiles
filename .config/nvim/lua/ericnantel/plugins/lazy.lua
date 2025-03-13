@@ -140,20 +140,50 @@ lazy.setup({
 			--	"nvim-orgmode/telescope-orgmode.nvim", -- NOTE: Perhaps we should add this dependency to telescope instead ..
 			--	"nvim-orgmode/org-bullets.nvim", -- NOTE: Requires treesitter org installed
 			--	"Saghen/blink.cmp", -- NOTE: No need we use nvim-cmp
-			--},
+			--}
 			ft = "org", -- Optional ?
 			config = function()
 				local org = require("orgmode")
 				-- org.setup_ts_grammar() TODO: Verify if needed
 				org.setup({
-					-- TODO: Set personal and work as workspace
-					-- Each have their own agenda, archive, etc.
+					-- TODO: org_agenda_custom_commands
 					org_agenda_files = {
 						-- "~/org/*",
-						"~/Notes/orgfiles/personal/*",
+						-- "~/Notes/orgfiles/**/*",
+						"~/Notes/orgfiles/personal.org",
+						"~/Notes/orgfiles/work.org",
+						"~/Notes/orgfiles/school.org",
+						-- What about roam files ?
 					},
-					org_default_notes_file = "~/Notes/orgfiles/personal/notes.org",
-					org_archive_location = "~/Notes/orgfiles/personal/archive/" .. "%s_archive",
+					org_agenda_start_on_weekday = false,
+
+					org_archive_location = "~/Notes/orgfiles/archive/" .. "%s_archive",
+
+					org_capture_templates = {
+						t = {
+							description = "Refile",
+							template = "* TODO %?\nDEADLINE: %T",
+						},
+						p = {
+							description = "Personal",
+							template = "* TODO %?\nDEADLINE: %T",
+							target = "~/Notes/orgfiles/personal.org",
+						},
+						w = {
+							description = "Work",
+							template = "* TODO %?\nDEADLINE: %T",
+							target = "~/Notes/orgfiles/work.org",
+						},
+						s = {
+							description = "School",
+							template = "* TODO %?\nDEADLINE: %T",
+							target = "~/Notes/orgfiles/school.org",
+						},
+					},
+
+					org_default_notes_file = "~/Notes/orgfiles/refile.org",
+
+					org_log_into_drawer = "LOGBOOK",
 				})
 			end,
 		},

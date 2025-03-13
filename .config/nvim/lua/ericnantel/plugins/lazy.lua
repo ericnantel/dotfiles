@@ -135,12 +135,12 @@ lazy.setup({
 			tag = "0.3.61",
 			event = "VeryLazy",
 			--build = ":Org blabla",
-			--dependencies = {
-			--	"nvim-telescope/telescope.nvim",
-			--	"nvim-orgmode/telescope-orgmode.nvim", -- NOTE: Perhaps we should add this dependency to telescope instead ..
-			--	"nvim-orgmode/org-bullets.nvim", -- NOTE: Requires treesitter org installed
-			--	"Saghen/blink.cmp", -- NOTE: No need we use nvim-cmp
-			--}
+			dependencies = {
+				--	"nvim-telescope/telescope.nvim",
+				--	"nvim-orgmode/telescope-orgmode.nvim", -- NOTE: Perhaps we should add this dependency to telescope instead ..
+				"nvim-orgmode/org-bullets.nvim", -- NOTE: Requires treesitter org installed
+				--	"Saghen/blink.cmp", -- NOTE: No need we use nvim-cmp
+			},
 			ft = "org", -- Optional ?
 			config = function()
 				local org = require("orgmode")
@@ -183,7 +183,19 @@ lazy.setup({
 
 					org_default_notes_file = "~/Notes/orgfiles/refile.org",
 
+					org_hide_emphasis_markers = true,
+
 					org_log_into_drawer = "LOGBOOK",
+
+					org_startup_indented = true, -- NOTE: Only enabled for Neovim 0.10+
+				})
+
+				local orgbullets = require("org-bullets")
+				orgbullets.setup({
+					concealcursor = true,
+					--symbols = {
+					--	checkboxes = {},
+					--},
 				})
 			end,
 		},

@@ -39,7 +39,8 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
-(setq org-directory "~/Notes/org")
+;; (setq org-directory "~/Notes/org")
+(setq org-directory "~/Notes/orgfiles")
 (setopt org-startup-indented t
 		org-hide-emphasis-markers t
 		org-pretty-entities t

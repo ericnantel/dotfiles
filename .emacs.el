@@ -24,6 +24,12 @@
 			 :ensure t
 			 :init
 			 (load-theme 'night-owl t))
+
+;; background opacity
+;; NOTE: First value is when focused; vs not-focused
+(set-frame-parameter (selected-frame) 'alpha '(80 . 80))
+(add-to-list 'default-frame-alist '(alpha . (80 . 80)))
+
 ;; org-mode
 (require 'org)
 (require 'org-agenda)

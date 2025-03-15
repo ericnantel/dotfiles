@@ -1,7 +1,8 @@
 
 ;; (setq inhibit-splash-screen t)
-
+;; (font-lock-mode 1)
 ;; (transient-mark-mode 1)
+;; (add-hook 'org-mode-hook #'turn-on-font-lock)
 
 ;; encoding
 (set-language-environment "UTF-8")
@@ -13,26 +14,56 @@
 
 ;; package-management
 (custom-set-variables '(package-archives
-						 '(("melpa"     . "https://melpa.org/packages/")
-						   ("elpa"      . "https://elpa.gnu.org/packages/"))))
+						 '(("melpa" . "https://melpa.org/packages/")
+						   ("elpa" . "https://elpa.gnu.org/packages/"))))
 
+;; TODO: font size
+
+;; night-owl theme
+(use-package night-owl-theme
+			 :ensure t
+			 :init
+			 (load-theme 'night-owl t))
 ;; org-mode
 (require 'org)
-
-;;(org-directory "~/org")
+(require 'org-agenda)
+(require 'org-capture)
 
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
-(setq-default org-enforce-todo-dependencies t)
-
-(setq-default org-export-with-todo-keywords nil)
-
-(setq org-hide-emphasis-markers t)
+(setq org-directory "~/Notes/org")
+(setopt org-startup-indented t
+		org-hide-emphasis-markers t
+		org-pretty-entities t
+		org-src-fontify-natively t
+		org-fontify-whole-heading-line t
+		org-fontify-quote-and-verse-blocks t
+		ord-edit-src-content-indentation 0
+		org-hide-block-startup nil
+		org-src-tab-acts-natively t
+		org-src-preserve-indentation nil
+		;; org-startup-folded t
+		org-cycle-separator-lines 2
+		org-hide-leading-stars t
+		org-highlight-latex-and-related '(native)
+		org-goto-auto-isearch nil)
 (setq org-log-done 'time)
 (setq org-log-into-drawer t)
-(setq org-startup-indented t)
+(setq org-startup-folded t)
+
+(setq org-agenda-files (list (concat org-directory "/personal.org")
+							 (concat org-directory "/work.org")
+							 (concat org-directory "/school.org")))
+(setq org-agenda-span 7)
+(setq org-agenda-start-on-weekday 1)
+
+(setq org-default-notes-file (concat org-directory "/refile.org"))
+;; TODO: org-capture-templates
+
+;; (setq-default org-enforce-todo-dependencies t)
+;; (setq-default org-export-with-todo-keywords nil)
 
 ;; org-bullets
 (use-package org-bullets
@@ -40,14 +71,13 @@
 			 :config
 			 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(setq org-hide-leading-stars t)
 
 ;; org-indent
-(use-package org-indent
-			 :ensure nil
-			 :diminish
-			 :custom
-			 (org-indent-indentation-per-level 4))
+;; (use-package org-indent
+;; 			 :ensure nil
+;; 			 :diminish
+;; 			 :custom
+;; 			 (org-indent-indentation-per-level 4))
 
 ;; which-key
 (use-package which-key

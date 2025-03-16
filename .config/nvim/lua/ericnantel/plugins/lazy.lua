@@ -153,9 +153,13 @@ lazy.setup({
 						"~/Notes/orgfiles/personal.org",
 						"~/Notes/orgfiles/work.org",
 						"~/Notes/orgfiles/school.org",
+						"~/Notes/orgfiles/diary.org",
 						-- What about roam files ?
 					},
+					-- org_agend_include_diary = false, -- NOTE: Because we are including calendar holidays in diary.org
+					org_agenda_span = "week",
 					org_agenda_start_on_weekday = false,
+					org_agenda_start_day = "-1d",
 
 					org_archive_location = "~/Notes/orgfiles/archive/" .. "%s_archive",
 

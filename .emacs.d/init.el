@@ -75,9 +75,12 @@
 
 (setq org-agenda-files (list (concat org-directory "/personal.org")
 							 (concat org-directory "/work.org")
-							 (concat org-directory "/school.org")))
+							 (concat org-directory "/school.org")
+							 (concat org-directory "/diary.org")))
+(setq org-agenda-include-diary nil) ; NOTE: We are including calendar holidays in diary.org
 (setq org-agenda-span 7)
-(setq org-agenda-start-on-weekday 1)
+(setq org-agenda-start-on-weekday nil)
+(setq org-agenda-start-day "-1d")
 
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 ;; TODO: org-capture-templates

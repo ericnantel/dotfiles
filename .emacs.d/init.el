@@ -1,5 +1,18 @@
 
-;; (setq inhibit-splash-screen t)
+;; hide splash screen
+(setq inhibit-splash-screen t)
+
+;; hide flash bell
+(setq visible-bell nil)
+
+;; hide other ui elements
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; show line numbers
+(global-display-line-numbers-mode 1)
+
 ;; (font-lock-mode 1)
 ;; (transient-mark-mode 1)
 ;; (add-hook 'org-mode-hook #'turn-on-font-lock)

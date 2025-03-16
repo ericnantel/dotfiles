@@ -6,7 +6,9 @@ os=$(uname -o)
 git submodule init
 git submodule update
 
-# copy .emacs.el to ~/.emacs.el
-cp .emacs.el ~/.emacs.el
-#source ~/.emacs.el
+# make directory ~/.emacs.d
+mkdir -p ~/.emacs.d
+# copy .emacs.d/init.el to ~/.emacs.d/init.el
+cp .emacs.d/init.el ~/.emacs.d/init.el
+#source ~/.emacs.d/init.el
 

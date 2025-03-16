@@ -187,8 +187,11 @@ lazy.setup({
 
 					org_default_notes_file = "~/Notes/orgfiles/refile.org",
 
+					org_ellipsis = " ▼",
+
 					org_hide_emphasis_markers = true,
 
+					org_log_done = "time",
 					org_log_into_drawer = "LOGBOOK",
 
 					org_startup_indented = true, -- NOTE: Only enabled for Neovim 0.10+

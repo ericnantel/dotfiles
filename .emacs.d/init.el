@@ -55,6 +55,7 @@
 ;; (setq org-directory "~/Notes/org")
 (setq org-directory "~/Notes/orgfiles")
 (setopt org-startup-indented t
+		org-ellipsis " ▼"
 		org-hide-emphasis-markers t
 		org-pretty-entities t
 		org-src-fontify-natively t

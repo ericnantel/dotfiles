@@ -52,10 +52,16 @@
 						   ("elpa" . "https://elpa.gnu.org/packages/"))))
 
 ;; font
-;; NOTE: Verify height on Windows or GNU/Linux
+;; NOTE: Comment or replace :font if necessary
+;; NOTE: Make sure to use a font that has italic
+;; TODO: Verify height on Windows or GNU/Linux
 (set-face-attribute 'default nil
 					 :font "JetBrains Mono"
 					 :height 160)
+(set-face-attribute 'font-lock-comment-face nil
+					:slant 'italic)
+(set-face-attribute 'font-lock-keyword-face nil
+					:slant 'italic)
 
 ;; night-owl theme
 (use-package night-owl-theme

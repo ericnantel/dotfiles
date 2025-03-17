@@ -109,6 +109,7 @@
 (setq org-agenda-files (list (concat org-directory "/personal.org")
 							 (concat org-directory "/work.org")
 							 (concat org-directory "/school.org")
+							 (concat org-directory "/content.org")
 							 (concat org-directory "/diary.org")))
 (setq org-agenda-include-diary nil) ; NOTE: We are including calendar holidays in diary.org
 (setq org-agenda-span 7)
@@ -118,7 +119,8 @@
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 ;; TODO: org-capture-templates
 
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
 (setq org-mobile-use-encryption nil)
 ;; (setq org-mobile-encryption-password "")
 ;; (setq org-mobile-files (list ()))

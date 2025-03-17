@@ -204,6 +204,8 @@ lazy.setup({
 					--	checkboxes = {},
 					--},
 				})
+
+				-- NOTE: What about org-mobile (push/pop) ?
 			end,
 		},
 

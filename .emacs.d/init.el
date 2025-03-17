@@ -78,7 +78,7 @@
 (require 'org)
 (require 'org-agenda)
 (require 'org-capture)
-;; (require 'org-mobile)
+(require 'org-mobile)
 
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
@@ -117,6 +117,13 @@
 
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 ;; TODO: org-capture-templates
+
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-use-encryption nil)
+;; (setq org-mobile-encryption-password "")
+;; (setq org-mobile-files (list ()))
+(setq org-mobile-force-id-on-agenda-items nil)
+(setq org-mobile-inbox-for-pull (concat org-directory "/mobile-flagged.org"))
 
 ;; (setq-default org-enforce-todo-dependencies t)
 ;; (setq-default org-export-with-todo-keywords nil)

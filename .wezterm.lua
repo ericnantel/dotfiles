@@ -218,7 +218,7 @@ config = {
 	-- 	},
 	-- },
 	default_cursor_style = "SteadyBlock",
-	-- font = wezterm.font("JetBrainsMono"),
+	-- font = wezterm.font("JetBrains Mono"),
 	font = wezterm.font("JetBrainsMonoNL Nerd Font Propo", { weight = "Bold", stretch = "Normal", italic = false }),
 	font_size = font_size,
 	-- color_scheme = "Pro",

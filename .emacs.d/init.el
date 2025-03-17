@@ -5,6 +5,21 @@
 ;; hide flash bell
 (setq visible-bell nil)
 
+;; disable cursor blink
+(setq blink-cursor-mode nil)
+
+;; disable dialog pop-up
+(setq use-dialog-box nil)
+
+;; remember last cursor location of opened files
+(save-place-mode 1)
+
+;; revert buffers when underlying file has changed
+(global-auto-revert-mode 1)
+
+;; revert Dired and other buffers
+(setq global-auto-revert-non-file-buffers t)
+
 ;; hide other ui elements
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -12,10 +27,15 @@
 
 ;; show line numbers
 (global-display-line-numbers-mode 1)
+(global-visual-line-mode t)
 
 ;; (font-lock-mode 1)
 ;; (transient-mark-mode 1)
 ;; (add-hook 'org-mode-hook #'turn-on-font-lock)
+
+;; custom file
+(setq custom-file (locate-user-emacs-file "custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
 
 ;; encoding
 (set-language-environment "UTF-8")
@@ -23,6 +43,7 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+(setq org-export-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 
 ;; package-management
@@ -30,7 +51,11 @@
 						 '(("melpa" . "https://melpa.org/packages/")
 						   ("elpa" . "https://elpa.gnu.org/packages/"))))
 
-;; TODO: font size
+;; font
+;; NOTE: Verify height on Windows or GNU/Linux
+(set-face-attribute 'default nil
+					 :font "JetBrains Mono"
+					 :height 160)
 
 ;; night-owl theme
 (use-package night-owl-theme
@@ -47,6 +72,7 @@
 (require 'org)
 (require 'org-agenda)
 (require 'org-capture)
+;; (require 'org-mobile)
 
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)

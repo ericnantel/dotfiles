@@ -119,8 +119,8 @@
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 ;; TODO: org-capture-templates
 
-;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
-(setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+;; (setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
 (setq org-mobile-use-encryption nil)
 ;; (setq org-mobile-encryption-password "")
 ;; (setq org-mobile-files (list ()))

@@ -69,6 +69,12 @@
 			 :init
 			 (load-theme 'night-owl t))
 
+;; catppuccin theme
+;; (use-package catppuccin-theme
+;; 			 :ensure t
+;; 			 :init
+;; 			 (load-theme 'catppuccin :no-confirm))
+
 ;; background opacity
 ;; NOTE: First value is when focused; vs not-focused
 (set-frame-parameter (selected-frame) 'alpha '(80 . 80))

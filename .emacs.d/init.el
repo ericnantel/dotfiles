@@ -63,6 +63,12 @@
 (set-face-attribute 'font-lock-keyword-face nil
 					:slant 'italic)
 
+;; status bar
+;; NOTE: Icons are a bit wierd here..
+;; (use-package ergoemacs-status
+;; 			 :config
+;; 			 (ergoemacs-status-mode))
+
 ;; night-owl theme
 (use-package night-owl-theme
 			 :ensure t
@@ -79,6 +85,11 @@
 ;; NOTE: First value is when focused; vs not-focused
 (set-frame-parameter (selected-frame) 'alpha '(80 . 80))
 (add-to-list 'default-frame-alist '(alpha . (80 . 80)))
+
+;; tree-sitter
+;; NOTE: M-x treesit-install-language-grammar
+;; (setq treesit-language-source-alist
+;; 	  '((elisp "https://github.com/Wilfred/tree-sitter-elisp")))
 
 ;; org-mode
 (require 'org)

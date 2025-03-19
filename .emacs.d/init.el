@@ -82,9 +82,10 @@
 ;; 			 (load-theme 'catppuccin :no-confirm))
 
 ;; background opacity
+;; TODO: Fix background issue on Ubuntu
 ;; NOTE: First value is when focused; vs not-focused
-(set-frame-parameter (selected-frame) 'alpha '(80 . 80))
-(add-to-list 'default-frame-alist '(alpha . (80 . 80)))
+;; (set-frame-parameter (selected-frame) 'alpha '(80 . 80))
+;; (add-to-list 'default-frame-alist '(alpha . (80 . 80)))
 
 ;; tree-sitter
 ;; NOTE: M-x treesit-install-language-grammar

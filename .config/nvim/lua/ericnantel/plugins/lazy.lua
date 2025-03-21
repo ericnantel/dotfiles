@@ -153,7 +153,6 @@ lazy.setup({
 						"~/Notes/orgfiles/personal.org",
 						"~/Notes/orgfiles/work.org",
 						"~/Notes/orgfiles/school.org",
-						"~/Notes/orgfiles/content.org",
 						"~/Notes/orgfiles/diary.org",
 						-- What about roam files ?
 					},
@@ -183,11 +182,6 @@ lazy.setup({
 							description = "School",
 							template = "* TODO %?\nDEADLINE: %T",
 							target = "~/Notes/orgfiles/school.org",
-						},
-						c = {
-							description = "Content",
-							template = "* TODO %?\nDEADLINE: %T",
-							target = "~/Notes/orgfiles/content.org",
 						},
 					},
 

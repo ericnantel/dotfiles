@@ -72,12 +72,50 @@
 ;; night-owl theme
 (use-package night-owl-theme
 			 :ensure t
+			 :pin melpa
 			 :init
 			 (load-theme 'night-owl t))
+
+;; exotica theme
+;; (use-package exotica-theme
+;; 			 :ensure t
+;; 			 :pin melpa
+;; 			 :init
+;; 			 (load-theme 'exotica t))
+
+;; nordic night theme
+;; (use-package nordic-night-theme
+;; 			 :ensure t
+;; 			 :pin melpa
+;; 			 :init
+;; 			 (load-theme 'nordic-night t))
+
+;; doom themes
+;; (use-package doom-themes
+;; 			 :ensure t
+;; 			 :pin melpa
+;; 			 :config
+;; 			 (setq doom-themes-enable-bold t)
+;; 			 (setq doom-themes-enable-italic t)
+;; 			 (load-theme 'doom-one t)
+;; 			 ;; Corrects (and improves) org-mode's native fontification
+;; 			 (doom-themes-org-config))
+
+;; modus themes
+;; (load-theme 'modus-vivendi-tinted t)
+
+;; cappuccino-noir theme
+;; NOTE: Available at https://gligan.net/emacs-themes
+;; (load-theme 'cappuccino-noir t)
+
+;; somnus theme
+;; NOTE: Available at https://gligan.net/emacs-themes
+;; (load-theme 'somnus t)
 
 ;; catppuccin theme
 ;; (use-package catppuccin-theme
 ;; 			 :ensure t
+;; 			 :pin melpa
 ;; 			 :init
 ;; 			 (load-theme 'catppuccin :no-confirm))
 

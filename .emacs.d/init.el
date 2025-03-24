@@ -168,6 +168,7 @@
 							 (concat org-directory "/work.org")
 							 (concat org-directory "/school.org")
 							 (concat org-directory "/diary.org")))
+(setq org-deadline-warning-days 7)
 (setq org-agenda-include-diary nil) ; NOTE: We are including calendar holidays in diary.org
 (setq org-agenda-span 7)
 (setq org-agenda-start-on-weekday nil)

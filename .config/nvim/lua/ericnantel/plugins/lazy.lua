@@ -156,11 +156,13 @@ lazy.setup({
 						"~/Notes/orgfiles/diary.org",
 						-- What about roam files ?
 					},
+					org_deadline_warning_days = 7,
 					-- org_agenda_include_diary = false, -- NOTE: Because we are including calendar holidays in diary.org
 					org_agenda_span = "week",
 					org_agenda_start_on_weekday = false,
 					org_agenda_start_day = "-1d",
 					-- org_agenda_custom_commands ..
+					-- org_agenda_window_setup = "only-window" ..
 
 					org_archive_location = "~/Notes/orgfiles/archive/" .. "%s_archive",
 

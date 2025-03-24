@@ -51,6 +51,7 @@ Regardless, use a package manager and install the following packages:
 - zsh-syntax-highlighting (optional - on MacOS and GNU/Linux)
 - starship (optional - available on most platform shells - requires a nerd-font)
 - ssh (optional)
+- yq (used by a tmux plugin - optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

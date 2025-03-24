@@ -174,6 +174,7 @@
 (setq org-agenda-start-day "-1d")
 (setq org-agenda-start-with-log-mode t)
 ;; TODO: org-agenda-custom-commands
+(setq org-agenda-window-setup 'only-window)
 
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 (setq org-capture-templates

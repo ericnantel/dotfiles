@@ -234,69 +234,69 @@ lazy.setup({
 
 		-- neorg
 		-- Neovim organization
-		{
-			"nvim-neorg/neorg",
-			lazy = false,
-			-- version = "*", -- On Linux, nvim might not be version 10
-			branch = "main",
-			tag = "v8.9.0",
-			cmd = "Neorg", -- Optional ?
-			ft = "norg", -- Optional ?
-			build = ":Neorg sync-parsers",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-			},
-			config = function()
-				local neorg = require("neorg")
-				neorg.setup({
-					load = {
-						-- Default modules
-						["core.journal"] = {
-							config = {
-								journal_folder = "journal",
-								strategy = "flat",
-								use_template = false,
-								workspace = nil, -- "notes",
-							},
-						},
-						-- Other modules
-						["core.completion"] = {
-							config = {
-								engine = "nvim-cmp",
-							},
-						},
-						["core.concealer"] = {
-							-- config = {
-							-- 	icons = {},
-							-- },
-						},
-						["core.dirman"] = {
-							config = {
-								workspaces = {
-									-- NOTE: Perhaps I have notes in other formats, so that is why
-									notes = "~/Notes/neorg/personal",
-									work = "~/Notes/neorg/work",
-								},
-								default_workspace = "notes",
-								index = "index.norg",
-							},
-						},
-						["core.export.markdown"] = {
-							config = {
-								extension = "md",
-							},
-						},
-						["core.summary"] = {
-							-- config = {},
-						},
-						-- Developer modules
-						["core.defaults"] = {
-							-- config = {},
-						},
-					},
-				})
-			end,
-		},
+		-- {
+		-- 	"nvim-neorg/neorg",
+		-- 	lazy = false,
+		-- 	-- version = "*", -- On Linux, nvim might not be version 10
+		-- 	branch = "main",
+		-- 	tag = "v8.9.0",
+		-- 	cmd = "Neorg", -- Optional ?
+		-- 	ft = "norg", -- Optional ?
+		-- 	build = ":Neorg sync-parsers",
+		-- 	dependencies = {
+		-- 		"nvim-lua/plenary.nvim",
+		-- 	},
+		-- 	config = function()
+		-- 		local neorg = require("neorg")
+		-- 		neorg.setup({
+		-- 			load = {
+		-- 				-- Default modules
+		-- 				["core.journal"] = {
+		-- 					config = {
+		-- 						journal_folder = "journal",
+		-- 						strategy = "flat",
+		-- 						use_template = false,
+		-- 						workspace = nil, -- "notes",
+		-- 					},
+		-- 				},
+		-- 				-- Other modules
+		-- 				["core.completion"] = {
+		-- 					config = {
+		-- 						engine = "nvim-cmp",
+		-- 					},
+		-- 				},
+		-- 				["core.concealer"] = {
+		-- 					-- config = {
+		-- 					-- 	icons = {},
+		-- 					-- },
+		-- 				},
+		-- 				["core.dirman"] = {
+		-- 					config = {
+		-- 						workspaces = {
+		-- 							-- NOTE: Perhaps I have notes in other formats, so that is why
+		-- 							notes = "~/Notes/neorg/personal",
+		-- 							work = "~/Notes/neorg/work",
+		-- 						},
+		-- 						default_workspace = "notes",
+		-- 						index = "index.norg",
+		-- 					},
+		-- 				},
+		-- 				["core.export.markdown"] = {
+		-- 					config = {
+		-- 						extension = "md",
+		-- 					},
+		-- 				},
+		-- 				["core.summary"] = {
+		-- 					-- config = {},
+		-- 				},
+		-- 				-- Developer modules
+		-- 				["core.defaults"] = {
+		-- 					-- config = {},
+		-- 				},
+		-- 			},
+		-- 		})
+		-- 	end,
+		-- },
 		-- screenkey
 		-- Screencast your keys in Neovim
 		{
@@ -470,8 +470,8 @@ lazy.setup({
 						"gitcommit",
 						"gitignore",
 						"tmux",
-						"norg",
-						"norg_meta",
+						-- "norg",
+						-- "norg_meta",
 					},
 					sync_install = false,
 					auto_install = true,

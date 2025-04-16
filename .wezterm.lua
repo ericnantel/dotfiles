@@ -28,8 +28,15 @@ local leader = config.leader
 local keys = config.keys
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- NOTE: On Windows, Tmux is not available
+	-- NOTE: On Windows, CTRL-v is more intuitive than CTRL-SHIFT-v
 	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 	keys = {
+		-- paste from clipboard
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
 		-- vertical split
 		{
 			key = "v",

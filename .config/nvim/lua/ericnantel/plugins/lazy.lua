@@ -795,6 +795,8 @@ lazy.setup({
 		--
 		{
 			"uga-rosa/ccc.nvim",
+			branch = "main",
+			tag = "v2.0.3",
 			config = function()
 				local ccc = require("ccc")
 				ccc.setup({

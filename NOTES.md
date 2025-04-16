@@ -4,13 +4,13 @@
 #### Recommended Neovim version
 Date: 2025-04-16
 Windows 11: Neovim 0.10.4 (scoop install neovim@0.10.4)
-MacOS:
+MacOS Sequoia 15.4: Neovim 0.10.4 (but brew installs latest 0.11.0)
 GNU/Linux Ubuntu 24.10.1:
 
 ### Recommended Vim version
 Date: 2025-04-16
 Windows 11:
-MacOS:
+MacOS Sequoia 15.4:
 GNU/Linux Ubuntu 24.10.1:
 
 #### Logs

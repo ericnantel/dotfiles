@@ -18,3 +18,7 @@ function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
 Set-Alias -Name k -Value Kubectl_Cmd -Option AllScope
 function Kubectl_Cmd { kubecolor $args }
 #function Kubectl_Cmd { kubectl $args }
+
+# Assumes git is installed
+Set-Alias -Name g -Value Git_Cmd -Option AllScope
+function Git_Cmd { git $args }

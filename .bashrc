@@ -33,6 +33,10 @@ alias notes="nvim ~/Notes/neorg/personal/index.norg"
 alias k="kubecolor"
 #alias k="kubectl"
 
+# For git
+# NOTE: This assumes you have git installed
+alias g="git"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH

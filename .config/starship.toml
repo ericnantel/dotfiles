@@ -2,3 +2,25 @@
 
 add_newline = true
 follow_symlinks = false
+
+[git_branch]
+truncation_length = 48
+truncation_symbol = "*"
+
+[cmake]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[lua]
+disabled = true
+
+[kubernetes]
+disabled = true
+#symbol = "⎈"
+#format = 'on [$symbol](bright-black) [$context( \($namespace\))](dimmed green) '
+

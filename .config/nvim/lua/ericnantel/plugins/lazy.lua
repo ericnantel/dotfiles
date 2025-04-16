@@ -441,6 +441,7 @@ lazy.setup({
 					opts = {},
 				},
 				-- TODO: ufo (folding)
+				"HiPhish/rainbow-delimiters.nvim",
 			},
 			config = function()
 				local nvimtreesitter = require("nvim-treesitter.configs")
@@ -504,6 +505,14 @@ lazy.setup({
 					separator = nil,
 					zindex = 20,
 					on_attach = nil,
+				})
+
+				local rainbowdelimiters = require("rainbow-delimiters.setup")
+				rainbowdelimiters.setup({
+					blacklist = {
+						"c",
+						"cpp",
+					},
 				})
 			end,
 		},

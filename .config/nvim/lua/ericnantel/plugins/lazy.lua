@@ -1019,7 +1019,22 @@ lazy.setup({
 							luasnip.lsp_expand(args.body)
 						end,
 					},
-					-- TODO local mappings
+					mapping = {
+						["<TAB>"] = function(fallback)
+							if cmp.visible() then
+								cmp.select_next_item()
+							else
+								fallback()
+							end
+						end,
+						["<S-TAB>"] = function(fallback)
+							if cmp.visible() then
+								cmp.select_prev_item()
+							else
+								fallback()
+							end
+						end,
+					},
 					sources = cmp.config.sources({
 						{ name = "nvim_lsp" },
 						{ name = "luasnip" },

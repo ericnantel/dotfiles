@@ -13,6 +13,11 @@ alias lt="eza --tree --icons"
 alias notes="nvim ~/Notes/neorg/personal/index.norg"
 #alias work="nvim ~/Notes/neorg/work/index.norg"
 
+# For kubectl
+# NOTE: This assumes you have kubectl, kubecolor installed
+alias k="kubecolor"
+#alias k="kubectl"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 eval "$(starship init zsh)"

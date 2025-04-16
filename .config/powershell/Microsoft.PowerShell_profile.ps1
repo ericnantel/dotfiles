@@ -14,3 +14,7 @@ function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
 #Set-Alias -Name work -Value Nvim_Work -Option AllScope
 #function Nvim_Work { nvim ~/Notes/neorg/work/index.norg $args }
 
+# Assumes kubectl and kubecolor are installed
+Set-Alias -Name k -Value Kubectl_Cmd -Option AllScope
+function Kubectl_Cmd { kubecolor $args }
+#function Kubectl_Cmd { kubectl $args }

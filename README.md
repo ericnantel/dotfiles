@@ -50,6 +50,7 @@ Regardless, use a package manager and install the following packages:
 - zsh (optional - on GNU/Linux)
 - zsh-syntax-highlighting (optional - on MacOS and GNU/Linux)
 - starship (optional - available on most platform shells - requires a nerd-font)
+- kubecolor (optional - colorize kubectl output)
 - ssh (optional)
 - yq (used by a tmux plugin - optional)
 - gnome-tweaks (GNU/Linux Gnome DE - optional but helpful to swap CapLocks and Ctrl)

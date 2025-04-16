@@ -22,3 +22,6 @@ Date: 2025-04-16
 I noticed in Neovim 0.10.4 that the plugin ccc (color highlighter)
 wasn't working properly with/without lsp, so I set a specific tag
 v2.0.3 and the issues are gone.
+Date: 2025-04-16
+I removed start-screen plugins: vim-startify and alpha-nvim because
+they were barely used and I wanted to reduce loadtime a bit.

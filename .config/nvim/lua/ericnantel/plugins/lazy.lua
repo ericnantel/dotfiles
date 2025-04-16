@@ -381,18 +381,18 @@ lazy.setup({
 		},
 		-- alpha
 		--
-		{
-			"goolord/alpha-nvim",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-				"nvim-tree/nvim-web-devicons",
-			},
-			config = function()
-				local alpha = require("alpha")
-				local startify = require("alpha.themes.startify")
-				alpha.setup(startify.config)
-			end,
-		},
+		-- {
+		-- 	"goolord/alpha-nvim",
+		-- 	dependencies = {
+		-- 		"nvim-lua/plenary.nvim",
+		-- 		"nvim-tree/nvim-web-devicons",
+		-- 	},
+		-- 	config = function()
+		-- 		local alpha = require("alpha")
+		-- 		local startify = require("alpha.themes.startify")
+		-- 		alpha.setup(startify.config)
+		-- 	end,
+		-- },
 		-- nvim-tree
 		--
 		{
@@ -746,7 +746,7 @@ lazy.setup({
 						dark = "mocha",
 					},
 					integrations = {
-						alpha = true,
+						-- alpha = true,
 						cmp = true,
 						harpoon = true,
 						gitgutter = true,

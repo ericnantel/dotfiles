@@ -10,7 +10,7 @@ GNU/Linux Ubuntu 24.10.1: Neovim 0.9.5-7 (sudo apt install neovim)
 ### Recommended Vim version
 Date: 2025-04-16
 Windows 11:
-MacOS Sequoia 15.4:
+MacOS Sequoia 15.4: Vim 9.1 (brew install vim)
 GNU/Linux Ubuntu 24.10.1: Vim 9.1 (sudo apt install vim)
 
 #### Logs

@@ -197,7 +197,20 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 			action = wezterm.action.ActivateTab(9),
 		},
 	}
-else
+elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+	-- NOTE: It is possible to know if we are using tmux
+	-- See WEZTERM_IN_TMUX in documentation
+	-- However, I would recommend simply using tmux keybindings with tmux on MacOS or GNU Linux
+	-- NOTE: On GNU/Linux, CTRL-v is more intuitive than CTRL-SHIFT-v
+	keys = {
+		-- paste from clipboard
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
+	}
+else -- MacOS or BSD ?
 	-- NOTE: It is possible to know if we are using tmux
 	-- See WEZTERM_IN_TMUX in documentation
 	-- However, I would recommend simply using tmux keybindings with tmux on MacOS or GNU Linux

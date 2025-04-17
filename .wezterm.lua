@@ -2,6 +2,15 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+-- NOTE: On Windows, Navigation between pane and vim/neovim splits does
+-- not work properly yet, we need to add a plugin for neovim (wezterm-move.nvim)
+-- and is it available for vim too ? and add more code here as well..
+local function is_vim(pane)
+	local process_info = pane:get_foreground_process_info()
+	local process_name = process_info and process_info.name
+	return process_name == "nvim" or process_name == "vim"
+end
+
 -- NOTE: Disable font and color_scheme if missing in your system
 -- NOTE: Added some padding at the top for integrated buttons
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then

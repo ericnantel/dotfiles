@@ -811,6 +811,8 @@ lazy.setup({
 		--
 		{
 			"neovim/nvim-lspconfig",
+			branch = "master",
+			tag = "v1.8.0",
 			event = { "BufReadPre", "BufNewFile" },
 			dependencies = {
 				"hrsh7th/cmp-nvim-lsp",

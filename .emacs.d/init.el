@@ -46,10 +46,18 @@
 (setq org-export-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 
-;; package-management
-(custom-set-variables '(package-archives
-						 '(("melpa" . "https://melpa.org/packages/")
-						   ("elpa" . "https://elpa.gnu.org/packages/"))))
+;; package management
+;; initialize package sources
+(require 'package)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+						   ("elpa" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(require 'use-package)
+(setq use-package-always-ensure t)
 
 ;; font
 ;; NOTE: Comment or replace :font if necessary

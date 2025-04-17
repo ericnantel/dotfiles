@@ -150,8 +150,14 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
-;; (setq org-directory "~/Notes/org")
-(setq org-directory "~/Notes/orgfiles")
+;; windows home directory
+;; NOTE: For some reason $HOME or ~ doesn't work on Windows even if we have wsl installed..
+(if (eq system-type 'windows-nt)
+	(setq home-directory (getenv "USERPROFILE"))
+	(setq home-directory "~"))
+
+;; (setq org-directory (concat home-directory "/Notes/org"))
+(setq org-directory (concat home-directory "/Notes/orgfiles"))
 (setopt org-startup-indented t
 		org-ellipsis " ▼"
 		org-hide-emphasis-markers t
@@ -196,8 +202,8 @@
 		("s" "School" entry (file (lambda () (concat org-directory "/school.org")))
 		 "* TODO %?\n %U\n" :empty-lines 1)))
 
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
-;; (setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
+(setq org-mobile-directory (concat home-directory "/Dropbox/Apps/MobileOrg"))
+;; (setq org-mobile-directory (concat home-directory "/Dropbox/Applications/MobileOrg"))
 (setq org-mobile-use-encryption nil)
 ;; (setq org-mobile-encryption-password "")
 ;; (setq org-mobile-files (list ()))

@@ -846,6 +846,11 @@ lazy.setup({
 				"WhoIsSethDaniel/mason-tool-installer.nvim",
 			},
 			config = function()
+				-- NOTE: Rounded border
+				vim.diagnostic.config({
+					float = { border = "rounded" },
+				})
+
 				local lspconfig = require("lspconfig")
 				local cmp_nvim_lsp = require("cmp_nvim_lsp")
 				local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -1036,6 +1041,18 @@ lazy.setup({
 								fallback()
 							end
 						end,
+					},
+					window = {
+						completion = {
+							scrollbar = false,
+							border = "rounded",
+							winhighlight = "Normal:CmpNormal",
+						},
+						documentation = {
+							scrollbar = false,
+							border = "rounded",
+							winhighlight = "Normal:CmpNormal",
+						},
 					},
 					sources = cmp.config.sources({
 						{ name = "nvim_lsp" },

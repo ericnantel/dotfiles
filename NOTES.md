@@ -17,7 +17,7 @@ GNU/Linux Ubuntu 24.10.1: Vim 9.1 (sudo apt install vim)
 Date: 2025-04-16
 If you are using Neovim 0.11.0 you may notice an annoying message,
 saying sqlite module not found when using Lazy and/or Telescope.
-Reverting Neovim version to 0.10.4 fixed the issue on Windows 11.
+Reverting Neovim version to 0.10.4 fixed the issue on Windows 11 & MacOS.
 Date: 2025-04-16
 I noticed in Neovim 0.10.4 that the plugin ccc (color highlighter)
 wasn't working properly with/without lsp, so I set a specific tag
@@ -30,3 +30,9 @@ On GNU/Linux Ubuntu 24.10.1, Neovim 0.9.5-7 is available, but lsp
 plugin (nvim-lspconfig) requires 0.10 in master latest, so I reverted
 the plugin version to tag v1.8.0 so that it works with Neovim 0.9+.
 In the future, I might set plugin's branches and tags based on OS.
+Date: 2025-04-24
+On Windows 11, I removed Wezterm navigation (Ctrl-hjkl) since it broke
+Vim and Neovim split navigation. We might need to add a Neovim plugin to
+handle Wezterm and add additional code in .wezterm.lua config to switch back
+to Vim/Neovim process..Ideally I would rather fix this using a tmux-like
+application on Windows 11.

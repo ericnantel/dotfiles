@@ -76,30 +76,32 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 			mods = "LEADER",
 			action = wezterm.action.TogglePaneZoomState,
 		},
-		-- move to left pane
-		{
-			key = "h",
-			mods = "CTRL",
-			action = wezterm.action.ActivatePaneDirection("Left"),
-		},
-		-- move to right pane
-		{
-			key = "l",
-			mods = "CTRL",
-			action = wezterm.action.ActivatePaneDirection("Right"),
-		},
-		-- move to up pane
-		{
-			key = "k",
-			mods = "CTRL",
-			action = wezterm.action.ActivatePaneDirection("Up"),
-		},
-		-- move to down pane
-		{
-			key = "j",
-			mods = "CTRL",
-			action = wezterm.action.ActivatePaneDirection("Down"),
-		},
+		-- NOTE: Since Tmux is not Available on Windows, this breaks navigation within Vim/Neovim
+		-- Until we find a fix, we shall not use those keybinds in Wezterm..
+		-- -- move to left pane
+		-- {
+		-- 	key = "h",
+		-- 	mods = "CTRL",
+		-- 	action = wezterm.action.ActivatePaneDirection("Left"),
+		-- },
+		-- -- move to right pane
+		-- {
+		-- 	key = "l",
+		-- 	mods = "CTRL",
+		-- 	action = wezterm.action.ActivatePaneDirection("Right"),
+		-- },
+		-- -- move to up pane
+		-- {
+		-- 	key = "k",
+		-- 	mods = "CTRL",
+		-- 	action = wezterm.action.ActivatePaneDirection("Up"),
+		-- },
+		-- -- move to down pane
+		-- {
+		-- 	key = "j",
+		-- 	mods = "CTRL",
+		-- 	action = wezterm.action.ActivatePaneDirection("Down"),
+		-- },
 		-- resize left current pane
 		{
 			key = "LeftArrow",

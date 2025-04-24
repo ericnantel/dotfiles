@@ -98,8 +98,6 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
--- vim.opt.inccommand = "split"
-
 vim.opt.showcmd = true
 vim.opt.showmode = true
 vim.opt.hidden = true
@@ -110,3 +108,5 @@ vim.opt.undodir = vim.fn.stdpath("config") .. "/undodir-nvim"
 vim.opt.undofile = true
 vim.opt.history = 20
 vim.opt.cmdheight = 1
+vim.opt.laststatus = 2
+vim.opt.inccommand = "split"

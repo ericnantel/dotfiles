@@ -15,6 +15,8 @@ set undofile
 set noshowmatch
 set history=20
 set cmdheight=1
+set laststatus=2
+"set inccommand=split
 set updatetime=300
 set timeout
 set timeoutlen=300

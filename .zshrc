@@ -20,7 +20,26 @@ alias k="kubecolor"
 
 # For git
 # NOTE: This assumes you have git installed
-alias g="git"
+alias Gadd="git add"
+alias Gamend="git amend"
+alias Gblame="git blame"
+alias Gbranch="git branch"
+alias Gcheckout="git checkout"
+alias Gcherrypick="git cherry-pick"
+alias Gclone="git clone"
+alias Gcommit="git commit"
+alias Gdiff="git diff"
+alias Gfetch="git fetch"
+alias Ginit="git init"
+alias Glog="git log"
+alias Gmerge="git merge"
+alias Gpull="git pull"
+alias Gpush="git push"
+alias Grebase="git rebase"
+alias Gshow="git show"
+alias Gstatus="git status"
+alias Gswitch="git switch"
+
 
 # For shell prompt
 # NOTE: This assumes you have starship installed

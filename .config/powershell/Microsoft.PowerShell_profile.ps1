@@ -20,5 +20,41 @@ function Kubectl_Cmd { kubecolor $args }
 #function Kubectl_Cmd { kubectl $args }
 
 # Assumes git is installed
-Set-Alias -Name g -Value Git_Cmd -Option AllScope
-function Git_Cmd { git $args }
+Set-Alias -Name Gadd -Value GitAdd_Cmd -Option AllScope
+function GitAdd_Cmd { git add $args }
+Set-Alias -Name Gamend -Value GitAmend_Cmd -Option AllScope
+function GitAmend_Cmd { git amend $args }
+Set-Alias -Name Gblame -Value GitBlame_Cmd -Option AllScope
+function GitBlame_Cmd { git blame $args }
+Set-Alias -Name Gbranch -Value GitBranch_Cmd -Option AllScope
+function GitBranch_Cmd { git branch $args }
+Set-Alias -Name Gcheckout -Value GitCheckout_Cmd -Option AllScope
+function GitCheckout_Cmd { git checkout $args }
+Set-Alias -Name Gcherrypick -Value GitCherryPick_Cmd -Option AllScope
+function GitCherryPick_Cmd { git cherry-pick $args }
+Set-Alias -Name Gclone -Value GitClone_Cmd -Option AllScope
+function GitClone_Cmd { git clone $args }
+Set-Alias -Name Gcommit -Value GitCommit_Cmd -Option AllScope
+function GitCommit_Cmd { git commit $args }
+Set-Alias -Name Gdiff -Value GitDiff_Cmd -Option AllScope
+function GitDiff_Cmd { git diff $args }
+Set-Alias -Name Gfetch -Value GitFetch_Cmd -Option AllScope
+function GitFetch_Cmd { git fetch $args }
+Set-Alias -Name Ginit -Value GitInit_Cmd -Option AllScope
+function GitInit_Cmd { git init $args }
+Set-Alias -Name Glog -Value GitLog_Cmd -Option AllScope
+function GitLog_Cmd { git log $args }
+Set-Alias -Name Gmerge -Value GitMerge_Cmd -Option AllScope
+function GitMerge_Cmd { git merge $args }
+Set-Alias -Name Gpull -Value GitPull_Cmd -Option AllScope
+function GitPull_Cmd { git pull $args }
+Set-Alias -Name Gpush -Value GitPush_Cmd -Option AllScope
+function GitPush_Cmd { git push $args }
+Set-Alias -Name Grebase -Value GitRebase_Cmd -Option AllScope
+function GitRebase_Cmd { git rebase $args }
+Set-Alias -Name Gshow -Value GitShow_Cmd -Option AllScope
+function GitShow_Cmd { git show $args }
+Set-Alias -Name Gstatus -Value GitStatus_Cmd -Option AllScope
+function GitStatus_Cmd { git status $args }
+Set-Alias -Name Gswitch -Value GitSwitch_Cmd -Option AllScope
+function GitSwitch_Cmd { git switch $args }

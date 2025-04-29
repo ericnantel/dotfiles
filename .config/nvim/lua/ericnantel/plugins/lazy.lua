@@ -844,7 +844,64 @@ lazy.setup({
 				},
 				"williamboman/mason.nvim",
 				"williamboman/mason-lspconfig.nvim",
-				"mfussenegger/nvim-dap",
+				{
+					"mfussenegger/nvim-dap",
+					branch = "master",
+					tag = "0.10.0",
+					dependencies = {
+						"nvim-neotest/nvim-nio",
+						"rcarriga/nvim-dap-ui",
+						"theHamsta/nvim-dap-virtual-text",
+						-- "mfussenegger/nvim-dap-python", NOTE: debugpy + implicit uv
+					},
+					config = function()
+						local dap = require("dap")
+						local dap_ui = require("dapui")
+						local dap_virtual_text = require("nvim-dap-virtual-text")
+						-- local dap_python = require("dap-python")
+
+						dap_ui.setup()
+						dap_virtual_text.setup({
+							commented = true, -- Show virtual text alongside comment
+						})
+						-- dap_python.setup("python3")
+
+						vim.fn.sign_define("DapBreakpoint", {
+							text = "◉",
+							texthl = "DiagnosticSignError",
+							linehl = "",
+							numhl = "",
+						})
+						vim.fn.sign_define("DapBreakpointRejected", {
+							text = "⌀",
+							texthl = "DiagnosticSignError",
+							linehl = "",
+							numhl = "",
+						})
+						vim.fn.sign_define("DapStopped", {
+							text = "→",
+							texthl = "DiagnosticSignWarn",
+							linehl = "Visual",
+							numhl = "DiagnosticSignWarn",
+						})
+
+						dap.listeners.before.attach.dapui_config = function()
+							dap_ui.open()
+						end
+						dap.listeners.before.launch.dapui_config = function()
+							dap_ui.open()
+						end
+						dap.listeners.before.event_terminated.dapui_config = function()
+							dap_ui.close()
+						end
+						dap.listeners.before.event_exited.dapui_config = function()
+							dap_ui.close()
+						end
+
+						-- TODO: Keymaps
+						-- TODO: Setup dap configurations (would also like to set up tests)
+					end,
+				},
 				"jay-babu/mason-nvim-dap.nvim",
 				{
 					"mfussenegger/nvim-lint",
@@ -940,7 +997,13 @@ lazy.setup({
 				local dap = require("dap")
 				local mason_nvim_dap = require("mason-nvim-dap")
 				mason_nvim_dap.setup({
-					ensure_installed = {},
+					ensure_installed = {
+						"codelldb", -- C, C++, Rust
+						-- "chrome-debug-adapter", "firefox-debug-adapter", -- Js and Ts
+						-- "delve", -- Go
+						-- "stylua", is there a debug-adapter for lua ?
+						"debugpy",
+					},
 					handlers = {},
 				})
 

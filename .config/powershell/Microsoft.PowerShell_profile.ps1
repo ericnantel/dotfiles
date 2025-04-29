@@ -32,6 +32,8 @@ Set-Alias -Name Gcheckout -Value GitCheckout_Cmd -Option AllScope
 function GitCheckout_Cmd { git checkout $args }
 Set-Alias -Name Gcherrypick -Value GitCherryPick_Cmd -Option AllScope
 function GitCherryPick_Cmd { git cherry-pick $args }
+Set-Alias -Name Gclean -Value GitClean_Cmd -Option AllScope
+function GitClean_Cmd { git clean $args }
 Set-Alias -Name Gclone -Value GitClone_Cmd -Option AllScope
 function GitClone_Cmd { git clone $args }
 Set-Alias -Name Gcommit -Value GitCommit_Cmd -Option AllScope
@@ -52,8 +54,14 @@ Set-Alias -Name Gpush -Value GitPush_Cmd -Option AllScope
 function GitPush_Cmd { git push $args }
 Set-Alias -Name Grebase -Value GitRebase_Cmd -Option AllScope
 function GitRebase_Cmd { git rebase $args }
+Set-Alias -Name Greset -Value GitReset_Cmd -Option AllScope
+function GitReset_Cmd { git reset $args }
+Set-Alias -Name Grestore -Value GitRestore_Cmd -Option AllScope
+function GitRestore_Cmd { git restore $args }
 Set-Alias -Name Gshow -Value GitShow_Cmd -Option AllScope
 function GitShow_Cmd { git show $args }
+Set-Alias -Name Gstash -Value GitStash_Cmd -Option AllScope
+function GitStash_Cmd { git stash $args }
 Set-Alias -Name Gstatus -Value GitStatus_Cmd -Option AllScope
 function GitStatus_Cmd { git status $args }
 Set-Alias -Name Gswitch -Value GitSwitch_Cmd -Option AllScope

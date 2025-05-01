@@ -19,9 +19,10 @@
 
 # For eza
 # NOTE: This assumes you have eza installed
-alias ls="eza --icons"
-alias ll="eza -laF --icons"
-alias lt="eza --tree --icons"
+# NOTE: On Debian you may have to use exa instead
+#alias ls="eza --icons"
+#alias ll="eza -laF --icons"
+#alias lt="eza --tree --icons"
 
 # For neorg
 # NOTE: This assumes you have neovim, neorg.nvim installed

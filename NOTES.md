@@ -12,6 +12,12 @@ Date: 2025-04-16
 Windows 11: Vim 9.1 (scoop install vim)
 MacOS Sequoia 15.4: Vim 9.1 (brew install vim)
 GNU/Linux Ubuntu 24.10.1: Vim 9.1 (sudo apt install vim)
+GNU/Linux Debian 12 (bookworm): Vim 9.0 (sudo apt install vim)
+
+### NOT recommended Neovim version
+Date: 2025-05-01
+GNU/Linux Debian 12 (bookworm): Neovim 0.7.2 (sudo apt install neovim)
+Note: Most popular Neovim Lua plugins requires at least Neovim >= 0.8
 
 #### Logs
 Date: 2025-04-16
@@ -36,3 +42,6 @@ Vim and Neovim split navigation. We might need to add a Neovim plugin to
 handle Wezterm and add additional code in .wezterm.lua config to switch back
 to Vim/Neovim process..Ideally I would rather fix this using a tmux-like
 application on Windows 11.
+Date: 2025-05-01
+On GNU/Linux Debian 12 (bookworm), eza is not available but exa is.
+So for that reason, I am commenting aliases using eza in .bashrc

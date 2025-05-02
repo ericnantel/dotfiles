@@ -63,6 +63,10 @@ git submodule update
 #cp .config/starship.toml ~/.config/starship.toml
 #source ~/.config/starship.toml
 
+# copy .kube/color.yaml to ~/.kube/color.yaml
+#cp .kube/color.yaml ~/.kube/color.yaml
+#source ~/.kube/color.yaml
+
 # make directory ~/.vim
 mkdir -p ~/.vim
 # make directory ~/.vim/undodir-nvim

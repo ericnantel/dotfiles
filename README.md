@@ -50,6 +50,7 @@ Regardless, use a package manager and install the following packages:
 - zsh (optional - on GNU/Linux)
 - zsh-syntax-highlighting (optional - on MacOS and GNU/Linux)
 - starship (optional - available on most platform shells - requires a nerd-font)
+- kubectl (optional - on Ubuntu you can install it via snap)
 - kubecolor (optional - colorize kubectl output)
 - most (optional - on MacOS and GNU/Linux - colorize man pages)
 - ssh (optional)

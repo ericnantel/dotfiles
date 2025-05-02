@@ -5,13 +5,13 @@
 Date: 2025-04-16
 Windows 11: Neovim 0.10.4 (scoop install neovim@0.10.4)
 MacOS Sequoia 15.4: Neovim 0.10.4 (but brew installs latest 0.11.0)
-GNU/Linux Ubuntu 24.10.1: Neovim 0.9.5-7 (sudo apt install neovim)
+GNU/Linux Ubuntu 25.04: Neovim 0.9.5-10 (sudo apt install neovim)
 
 ### Recommended Vim version
 Date: 2025-04-16
 Windows 11: Vim 9.1 (scoop install vim)
 MacOS Sequoia 15.4: Vim 9.1 (brew install vim)
-GNU/Linux Ubuntu 24.10.1: Vim 9.1 (sudo apt install vim)
+GNU/Linux Ubuntu 25.04: Vim 9.1.9 (sudo apt install vim)
 GNU/Linux Debian 12 (bookworm): Vim 9.0 (sudo apt install vim)
 
 ### NOT recommended Neovim version
@@ -45,3 +45,7 @@ application on Windows 11.
 Date: 2025-05-01
 On GNU/Linux Debian 12 (bookworm), eza is not available but exa is.
 So for that reason, I am commenting aliases using eza in .bashrc
+Date: 2025-05-02
+On GNU/Linux Ubuntu 25.04, the tool 'most' does not seem to colorize
+man pages, either with bash or zsh. And it seems 'less' as well, so
+it could a bug with Ubuntu or 'man'.

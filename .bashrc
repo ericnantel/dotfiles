@@ -69,7 +69,9 @@ alias Gstash="git stash"
 alias Gstatus="git status"
 alias Gswitch="git switch"
 
-
+# For man
+# NOTE: This assumes most is installed
+export MANPAGER="most"
 
 # For shell prompt
 # NOTE: This assumes you have starship installed

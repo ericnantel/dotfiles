@@ -15,9 +15,18 @@ function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
 #function Nvim_Work { nvim ~/Notes/neorg/work/index.norg $args }
 
 # Assumes kubectl and kubecolor are installed
-Set-Alias -Name k -Value Kubectl_Cmd -Option AllScope
-function Kubectl_Cmd { kubecolor $args }
-#function Kubectl_Cmd { kubectl $args }
+Set-Alias -Name kubectl -Value kubecolor
+Set-Alias -Name k -Value kubectl # TODO: Keep ?
+Set-Alias -Name Kget -Value kubectl get
+Set-Alias -Name Kportforward -Value kubectl port-forward
+# Completion for kubectl
+# This needs to be added before Register-ArgumentCompleter
+if (Get-Command kubectl -ErrorAction SilentlyContinue) {
+	# This also registers the $__kubectlCompleterBlock variable
+	kubectl completion powershell | Out-String | Invoke-Expression
+}
+# Reuse the kubectl completion on kubecolor and the aliases
+Register-ArgumentCompleter -CommandName 'k', 'Kget','Kportforward', 'kubectl', 'kubecolor' -ScriptBlock $__kubectlCompleterBlock
 
 # Assumes git is installed
 Set-Alias -Name Gadd -Value GitAdd_Cmd -Option AllScope

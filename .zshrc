@@ -13,10 +13,16 @@ alias lt="eza --tree --icons"
 alias notes="nvim ~/Notes/neorg/personal/index.norg"
 #alias work="nvim ~/Notes/neorg/work/index.norg"
 
-# For kubectl
-# NOTE: This assumes you have kubectl, kubecolor installed
-alias k="kubecolor"
-#alias k="kubectl"
+autoload -Uz compinit
+compinit
+
+# For kubectl and kubecolor completion
+# NOTE: This assumes you have kubectl installed
+alias k="sudo kubecolor" # TODO: Keep ?
+alias Kget="sudo kubecolor get"
+alias Kportforward="sudo kubecolor port-forward"
+source <(kubectl completion zsh)
+compdef kubecolor=kubectl
 
 # For git
 # NOTE: This assumes you have git installed

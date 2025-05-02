@@ -29,10 +29,19 @@
 alias notes="nvim ~/Notes/neorg/personal/index.norg"
 #alias work="nvim ~/Notes/neorg/work/index.norg"
 
-# For kubectl
+#autoload -Uz compinit
+#compinit
+
+# For kubectl and kubecolor completion
 # NOTE: This assumes you have kubectl, kubecolor installed
-alias k="kubecolor"
-#alias k="kubectl"
+alias k="sudo kubecolor" # TODO: Keep ?
+alias Kget="sudo kubecolor get"
+alias Kportforward="sudo kubecolor port-forward"
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl kubecolor
+complete -o default -F __start_kubectl k
+complete -o default -F __start_kubectl Kget
+complete -o default -F __start_kubectl Kportforward
 
 # For git
 # NOTE: This assumes you have git installed

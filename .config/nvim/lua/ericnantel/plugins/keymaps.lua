@@ -1,3 +1,9 @@
+-- vim-tmux-navigator keymaps
+vim.keymap.set("n", "<c-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Tmux Navigate Left", silent = true })
+vim.keymap.set("n", "<c-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Tmux Navigate Down", silent = true })
+vim.keymap.set("n", "<c-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Tmux Navigate Up", silent = true })
+vim.keymap.set("n", "<c-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Tmux Navigate Right", silent = true })
+
 -- vim-maximizer keymaps
 vim.keymap.set(
 	"n",
@@ -12,20 +18,14 @@ vim.keymap.set(
 	{ desc = "Maximize/Minimize Split Window", remap = false }
 )
 
--- Tmux Navigator keymaps
-vim.keymap.set("n", "<c-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Tmux Navigate Left", silent = true })
-vim.keymap.set("n", "<c-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Tmux Navigate Down", silent = true })
-vim.keymap.set("n", "<c-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Tmux Navigate Up", silent = true })
-vim.keymap.set("n", "<c-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Tmux Navigate Right", silent = true })
+-- vim-signature keymaps
+vim.keymap.set("n", "m;", "]`", { desc = "", remap = true, silent = true })
+-- TODO: Previous mark ?
 
 -- vim-commentary keymaps
 vim.keymap.set("n", "z", "gc", { desc = "", remap = true, silent = true })
 vim.keymap.set("n", "zz", "gcc", { desc = "", remap = true, silent = true })
 vim.keymap.set("v", "z", "gc", { desc = "", remap = true, silent = true })
-
--- vim-signature keymaps
-vim.keymap.set("n", "m;", "]`", { desc = "", remap = true, silent = true })
--- TODO: Previous mark ?
 
 -- nvim-tree keymaps
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer Tree" })

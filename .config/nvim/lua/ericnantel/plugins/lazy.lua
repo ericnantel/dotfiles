@@ -26,47 +26,40 @@ lazy.setup({
 			"nvim-tree/nvim-web-devicons",
 			lazy = true,
 		},
+		-- vim-tmux-navigator
+		-- seamless navigation between tmux panes and vim splits
+		{
+			"christoomey/vim-tmux-navigator",
+		},
 		-- vim-maximizer
 		-- maximizes and restores the current window in vim
 		{
 			"szw/vim-maximizer",
 		},
-		-- Tmux Navigator
-		-- seamless navigation between tmux panes and vim splits
+		-- vim-signature
+		-- a vim plugin to toggle, display & navigate marks
 		{
-			"christoomey/vim-tmux-navigator",
+			"kshenoy/vim-signature",
 		},
 		-- vim-commentary
 		-- comment stuff out
 		{
 			"tpope/vim-commentary",
 		},
-		-- vim-fugitive
-		-- a git wrapper so awesome, it should be illegal
-		{
-			"tpope/vim-fugitive",
-		},
-		-- vim-markdown
-		-- markdown vim mode
-		{
-			"preservim/vim-markdown",
-		},
-		-- TODO: markdown preview
-		--
-		-- vim-glsl
-		-- Vim syntax highlighting for GLSL
-		{
-			"tikhomirov/vim-glsl",
-		},
 		-- vim-gitgutter
 		-- a vim plugin which shows git diff markers in the sign column
 		{
 			"airblade/vim-gitgutter",
 		},
-		-- vim-signature
-		-- a vim plugin to toggle, display & navigate marks
+		-- vim-fugitive
+		-- a git wrapper so awesome, it should be illegal
 		{
-			"kshenoy/vim-signature",
+			"tpope/vim-fugitive",
+		},
+		-- vim-glsl
+		-- Vim syntax highlighting for GLSL
+		{
+			"tikhomirov/vim-glsl",
 		},
 		-- vim-z80
 		-- Vim syntax for Z80 Assembler

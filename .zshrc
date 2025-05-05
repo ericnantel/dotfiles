@@ -18,7 +18,7 @@ compinit
 
 # For kubectl and kubecolor completion
 # NOTE: This assumes you have kubectl installed
-alias k="sudo kubecolor" # TODO: Keep ?
+alias K="sudo kubecolor"
 alias Kget="sudo kubecolor get"
 alias Kportforward="sudo kubecolor port-forward"
 source <(kubectl completion zsh)

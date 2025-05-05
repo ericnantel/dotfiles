@@ -16,9 +16,11 @@ function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
 
 # Assumes kubectl and kubecolor are installed
 Set-Alias -Name kubectl -Value kubecolor
-Set-Alias -Name k -Value kubectl # TODO: Keep ?
-Set-Alias -Name Kget -Value kubectl get
-Set-Alias -Name Kportforward -Value kubectl port-forward
+Set-Alias -Name K -Value kubectl
+# NOTE: Those aliases are not working properly
+# I tried using functions but it didn't work with completion..
+#Set-Alias -Name Kget -Value kubectl get
+#Set-Alias -Name Kportforward -Value kubectl port-forward
 # Completion for kubectl
 # This needs to be added before Register-ArgumentCompleter
 if (Get-Command kubectl -ErrorAction SilentlyContinue) {
@@ -26,7 +28,7 @@ if (Get-Command kubectl -ErrorAction SilentlyContinue) {
 	kubectl completion powershell | Out-String | Invoke-Expression
 }
 # Reuse the kubectl completion on kubecolor and the aliases
-Register-ArgumentCompleter -CommandName 'k', 'Kget','Kportforward', 'kubectl', 'kubecolor' -ScriptBlock $__kubectlCompleterBlock
+Register-ArgumentCompleter -CommandName 'K', 'kubectl', 'kubecolor' -ScriptBlock $__kubectlCompleterBlock
 
 # Assumes git is installed
 Set-Alias -Name Gadd -Value GitAdd_Cmd -Option AllScope

@@ -34,7 +34,7 @@ alias notes="nvim ~/Notes/neorg/personal/index.norg"
 
 # For kubectl and kubecolor completion
 # NOTE: This assumes you have kubectl, kubecolor installed
-alias k="sudo kubecolor" # TODO: Keep ?
+alias K="sudo kubecolor"
 alias Kget="sudo kubecolor get"
 alias Kportforward="sudo kubecolor port-forward"
 source <(kubectl completion bash)

@@ -836,7 +836,11 @@ lazy.setup({
 					opts = {},
 				},
 				"williamboman/mason.nvim",
-				"williamboman/mason-lspconfig.nvim",
+				{
+					"williamboman/mason-lspconfig.nvim",
+					branch = "main",
+					tag = "v1.32.0",
+				},
 				{
 					"mfussenegger/nvim-dap",
 					branch = "master",

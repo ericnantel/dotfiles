@@ -49,3 +49,8 @@ Date: 2025-05-02
 On GNU/Linux Ubuntu 25.04, the tool 'most' does not seem to colorize
 man pages, either with bash or zsh. And it seems 'less' as well, so
 it could a bug with Ubuntu or 'man'.
+Date: 2025-05-06
+I refactored Vim & Neovim Configs to keep things simpler.
+Date: 2025-05-06
+I reverted the Neovim plugin 'mason-lspconfig' to tag v1.32.0
+because lastest commit was broken and didn't setup_handlers properly.

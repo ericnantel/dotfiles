@@ -54,3 +54,7 @@ I refactored Vim & Neovim Configs to keep things simpler.
 Date: 2025-05-06
 I reverted the Neovim plugin 'mason-lspconfig' to tag v1.32.0
 because lastest commit was broken and didn't setup_handlers properly.
+Date: 2025-05-08
+This time 'mason' was broken, so I replaced the organization 'mason' with
+'mason-org' and set version '^1.0.0' for both 'mason.nvim' and 'mason-lspconfig.nvim'
+plugins.

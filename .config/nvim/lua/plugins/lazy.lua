@@ -835,12 +835,20 @@ lazy.setup({
 					"j-hui/fidget.nvim",
 					opts = {},
 				},
-				"williamboman/mason.nvim",
 				{
-					"williamboman/mason-lspconfig.nvim",
-					branch = "main",
-					tag = "v1.32.0",
+					"mason-org/mason.nvim",
+					version = "^1.0.0",
 				},
+				{
+					"mason-org/mason-lspconfig.nvim",
+					version = "^1.0.0",
+				},
+				-- "williamboman/mason.nvim",
+				-- {
+				-- 	"williamboman/mason-lspconfig.nvim",
+				-- 	branch = "main",
+				-- 	tag = "v1.32.0",
+				-- },
 				{
 					"mfussenegger/nvim-dap",
 					branch = "master",

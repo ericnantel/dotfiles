@@ -87,25 +87,19 @@ let g:maplocalleader = ' '
 imap jk <ESC>
 vmap jk <ESC>
 
-nmap + <C-a>
-nmap - <C-x>
-
-nmap <leader>nh <cmd>nohl<CR>
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s
 nmap <leader>se <C-w>=
+nmap <leader>sx <cmd>close<CR>
 nmap <leader>s<Left> <C-w>5<
 nmap <leader>s<Right> <C-w>5>
 nmap <leader>s<Up> <C-w>-
 nmap <leader>s<Down> <C-w>+
-nmap <leader>sx <cmd>close<CR>
 
-nmap <leader>to <cmd>tabnew<CR>
-nmap <leader>tf <cmd>tabnew %<CR>
-nmap <leader>tx <cmd>tabclose<CR>
-nmap <leader>tn <cmd>tabn<CR>
-nmap <leader>tp <cmd>tabp<CR>
+nmap <leader>nh <cmd>nohlsearch<CR>
 
 " vim-tmux-navigator
 nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
@@ -156,6 +150,49 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 0
 let g:gitgutter_async = 1
 
+" vim-fugitive
+"
+
+" vim-which-key
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+let g:which_key_ignore_outside_mappings = 0
+let g:which_key_use_floating_win = 1
+let g:which_key_max_size = 0
+let g:which_key_sep = "->"
+let g:which_key_map = {}
+let g:which_key_map['+'] = ['<C-a>', "number-increment"]
+let g:which_key_map['-'] = ['<C-x>', "number-decrement"]
+let g:which_key_map.s = {
+	\ 'name': "+split",
+	\ 'v': ['<C-w>v', "split-vertical"],
+	\ 'h': ['<C-w>s', "split-horizontal"],
+	\ 'e': ['<C-w>=', "split-equal"],
+	\ 'm': [':MaximizerToggle', "split-maximize-toggle"],
+	\ 'x': [':close', "split-close"],
+	\ '<Right>': ['<C-w>5>', "split-increment-width"],
+	\ '<Left>': ['<C-w>5<', "split-decrement-width"],
+	\ '<Down>': ['<C-w>+', "split-increment-height"],
+	\ '<Up>': ['<C-w>-', "split-decrement-height"],
+  \ }
+let g:which_key_map['nh'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
+let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
+let g:which_key_map_visual = {}
+let g:which_key_map_visual['+'] = ['g<C-a>', "number-increment-block"]
+let g:which_key_map_visual['-'] = ['g<C-x>', "number-decrement-block"]
+let g:which_key_map_visual.s = {
+	\ 'name': "+split",
+	\ 'v': ['<C-w>v', "split-vertical"],
+	\ 'h': ['<C-w>s', "split-horizontal"],
+	\ 'e': ['<C-w>=', "split-equal"],
+	\ 'm': [':MaximizerToggle<CR>gv', "split-maximize-toggle"],
+	\ 'x': [':close', "split-close"],
+	\ '<Right>': ['<C-w>5>', "split-increment-width"],
+	\ '<Left>': ['<C-w>5<', "split-decrement-width"],
+	\ '<Down>': ['<C-w>+', "split-increment-height"],
+	\ '<Up>': ['<C-w>-', "split-decrement-height"],
+  \ }
+
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
@@ -197,46 +234,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
-" Which-key keymaps
-nnoremap <silent> <leader> <cmd>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> <cmd>WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> <cmd>WhichKeyVisual '<Space>'<CR>
-vnoremap <silent> <localleader> <cmd>WhichKeyVisual '<Space>'<CR>
-
-" Which-key settings
-let g:which_key_map = {}
-let g:which_key_map['+'] =
-\	['<C-a>', "Increment Number"]
-let g:which_key_map['-'] =
-\	['<C-x>', "Decrement Number"]
-let g:which_key_map['ee'] =
-\	[':NERDTreeToggle %', "Toggle File Explorer Tree"]
-let g:which_key_map['nh'] =
-\	[':nohl', "Clear Search Highlight"]
-let g:which_key_map.s = {
-\	'name': 'Window Management',
-\	'v': ['<C-w>v', 'Split Window Vertically'],
-\	'h': ['<C-w>s', 'Split Window Horizontally'],
-\	'e': ['<C-w>=', 'Make Splits Equal Size'],
-\	'Left': ['<C-w>5<', 'Decrement Current Split Width'],
-\	'Right': ['<C-w>5>', 'Increment Current Split Width'],
-\	'Up': ['<C-w>-', 'Decrement Current Split Height'],
-\	'Down': ['<C-w>+', 'Increment Current Split Height'],
-\	'x': [':close', 'Close Current Split'],
-\	'm': [':MaximizerToggle', 'Maximize/Minimize Split Window'],
-\}
-let g:which_key_map.t = {
-\	'name': 'Tab Management',
-\	'o': [':tabnew', 'Open New Tab'],
-\	'f': [':tabnew %', 'Open New Tab with Current Buffer'],
-\	'x': [':tabclose', 'Close Current Tab'],
-\	'n': [':tabn', 'Goto Next Tab'],
-\	'p': [':tabp', 'Goto Previous Tab'],
-\}
-let g:which_key_use_floating_win = 1
-let g:which_key_max_size = 0
-let g:which_key_sep = "->"
-
 " vim-clang-format settings
 let g:clang_format#command = "clang-format"
 "let g:clang_format#extra_args = "--verbose"
@@ -257,6 +254,7 @@ let g:clang_format#enable_fallback_style = 0
 " vim-airline-themes ->
 " vim-gitgutter -> git
 " vim-fugitive -> git
+" vim-which-key ->
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
 	Plug 'christoomey/vim-tmux-navigator'
@@ -268,6 +266,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
+	Plug 'liuchengxu/vim-which-key'
 
 	Plug 'samsaga2/vim-z80'
 	Plug 'ericnantel/vim-z80-docs'
@@ -292,15 +291,6 @@ call plug#begin('~/.vim/plugged')
 	" A plugin of NERDTree showing git status
 	" Note:
 	Plug 'Xuyuanp/nerdtree-git-plugin'
-
-	
-
-	" Which-key
-	" Dependencies:
-	" Description:
-	" Vim plugin that shows keybindings in popup
-	" Note:
-	Plug 'liuchengxu/vim-which-key'
 
 	" vim-clang-format
 	" Dependencies:
@@ -338,8 +328,8 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" Registering Which-key keymaps
-call which_key#register('<Space>', "g:which_key_map")
+call which_key#register('<Space>', "g:which_key_map", 'n')
+call which_key#register('<Space>', "g:which_key_map_visual", 'v')
 
 " CoC settings
 " TODO: OmniSharp, Java, Tmux, Markdown Preview ?

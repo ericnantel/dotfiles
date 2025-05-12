@@ -395,6 +395,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+" Add (Neo)Vim's native status line support
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" TODO: Mappings for CoCList
 
 " ALE settings
 let g:ale_fix_on_save = 1

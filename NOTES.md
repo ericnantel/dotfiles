@@ -58,3 +58,6 @@ Date: 2025-05-08
 This time 'mason' was broken, so I replaced the organization 'mason' with
 'mason-org' and set version '^1.0.0' for both 'mason.nvim' and 'mason-lspconfig.nvim'
 plugins.
+Date: 2025-05-12
+I enabled termguicolors in Vim config, because airline/airline_theme was not showing
+modes (INSERT, NORMAL, etc.) properly.

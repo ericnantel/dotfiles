@@ -44,7 +44,9 @@ set clipboard^=unnamed,unnamedplus
 set background=dark
 syntax on
 set t_Co=256
-"set termguicolors
+" Comment this if your terminal doesn't support it
+" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
+set termguicolors
 
 set scrolloff=5
 set showcmd

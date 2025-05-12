@@ -133,6 +133,10 @@ autocmd FileType z80 setlocal commentstring=;\ %s
 autocmd FileType glsl setlocal commentstring=//\ %s
 autocmd FileType lisp setlocal commentstring=;;\ %s
 
+" vim-devicons
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+
 " vim-airline + vim-airline-themes
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = 'Error'
@@ -144,6 +148,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline_powerline_fonts = 1
 let g:airline_theme = 'zenburn'
 
 " vim-gitgutter

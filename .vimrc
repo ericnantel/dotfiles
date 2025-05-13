@@ -92,6 +92,9 @@ vmap jk <ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+nnoremap é <cmd>cnext<CR>
+nnoremap É <cmd>cprevious<CR>
+
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s
 nmap <leader>se <C-w>=

@@ -7,6 +7,9 @@ vim.keymap.set("v", "jk", "<ESC>", { desc = "Exit Visual Mode" })
 vim.keymap.set("n", "+", "<C-a>", { desc = "Increment Number", remap = false })
 vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement Number", remap = false })
 
+vim.keymap.set("n", "é", "<cmd>cnext<CR>", { desc = "quickfix-next", remap = false })
+vim.keymap.set("n", "É", "<cmd>cprevious<CR>", { desc = "quickfix-previous", remap = false })
+
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split Window Vertically" })
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split Window Horizontally" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make Splits Equal Size" })

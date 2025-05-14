@@ -563,13 +563,14 @@ lazy.setup({
 							-- "smart",
 							"truncate",
 						},
-						-- mappings = {
-						-- 	i = {
-						-- 		["<C-k>"] = actions.move_selection_previous,
-						-- 		["<C-j>"] = actions.move_selection_next,
-						-- 		["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-						-- 	},
-						-- },
+						mappings = {
+							i = {
+								-- NOTE: Find another keybind to toggle select (default was TAB)
+								["<TAB>"] = actions.move_selection_next,
+								["<S-TAB>"] = actions.move_selection_previous,
+								["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+							},
+						},
 						preview = {
 							treesitter = true,
 						},

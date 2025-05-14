@@ -92,8 +92,30 @@ vmap jk <ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+" For French-Canadian keyboard layout '¸' is next to '^'
+nnoremap ¸ $
+
+" For French-Canadian keyboard layout 'é' and 'É' are unused
+" So let's use it for quickfix list
 nnoremap é <cmd>cnext<CR>
 nnoremap É <cmd>cprevious<CR>
+
+" NOTE: Ignore and comment this if your keyboard layout is fine
+" BUG: On MacOS, my personal keyboard layout is missing dead keys
+" BUG: On Windows or Linux, remember to double-type '`', '^', '¸', '¨'
+" However, when double-typing '`' it is recognized as '``' (undesired jump)
+" So for marks, do not double-type '`', it should work..
+if has("macunix")
+	nnoremap ç $
+	nnoremap à `
+	nnoremap àà ``
+else
+	nnoremap à `a
+	nnoremap è `e
+	nnoremap ù `u
+	nnoremap ì `i
+	nnoremap ò `o
+endif
 
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s

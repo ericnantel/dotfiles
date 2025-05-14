@@ -56,6 +56,7 @@ Regardless, use a package manager and install the following packages:
 - ssh (optional)
 - yq (used by a tmux plugin - optional)
 - gnome-tweaks (GNU/Linux Gnome DE - optional but helpful to swap CapLocks and Ctrl)
+- fastfetch (optional)
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

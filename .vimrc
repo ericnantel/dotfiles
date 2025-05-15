@@ -209,6 +209,12 @@ let g:which_key_map.s = {
 	\ '<Down>': ['<C-w>+', "split-increment-height"],
 	\ '<Up>': ['<C-w>-', "split-decrement-height"],
   \ }
+let g:which_key_map.f = {
+	\ 'name': "+find",
+	\ 'f': [':Files<CR>', "find-files"],
+	\ 's': [':Rg<CR>', "find-grep"],
+	\ 'c': [':Rg <C-r><C-w><CR>', "find-files"],
+	\ }
 let g:which_key_map['nh'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
 let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
 let g:which_key_map_visual = {}
@@ -226,6 +232,48 @@ let g:which_key_map_visual.s = {
 	\ '<Down>': ['<C-w>+', "split-increment-height"],
 	\ '<Up>': ['<C-w>-', "split-decrement-height"],
   \ }
+
+" fzf.vim
+" TODO: Fix ripgrep or gitignore because it does not show dotfiles
+" TODO: f/ search in current file with preview
+nnoremap <leader>ff <cmd>Files<CR>
+nnoremap <leader>fs <cmd>Rg<CR>
+nnoremap <leader>fc :Rg <C-r><C-w><CR>
+let g:fzf_vim = {}
+let g:fzf_vim.buffers_jump = 1
+let g:fzf_vim.buffers_options = '--style full --border-label "Open Buffers "'
+let g:fzf_vim.grep_multi_line = 0
+let g:fzf_vim.listproc = { list -> fzf#vim#listproc#quickfix(list) }
+function! s:build_quickfix_list(lines)
+	call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
+	copen
+	cc
+endfunction
+" TODO: Add smart selection to quickfix list
+" Which is if we don't select anything, then select all
+let g:fzf_action = {
+	\ 'ctrl-q': function('s:build_quickfix_list')
+	\ }
+let g:fzf_layout = {
+	\ 'window': { 'width': 0.85, 'height': 0.85, 'relative': v:true, 'yoffset': 0.0 }
+	\ }
+let g:fzf_colors = {
+	\ 'fg': ['fg', 'Normal'],
+	\ 'bg': ['bg', 'Normal'],
+	\ 'query': ['fg', 'Normal'],
+	\ 'hl': ['fg', 'Comment'],
+	\ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+	\ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
+	\ 'hl+': ['fg', 'Statement'],
+	\ 'info': ['fg', 'PreProc'],
+	\ 'border': ['fg', 'Ignore'],
+	\ 'prompt': ['fg', 'Conditional'],
+	\ 'pointer': ['fg', 'Exception'],
+	\ 'marker': ['fg', 'Keyword'],
+	\ 'spinner': ['fg', 'Label'],
+	\ 'header': ['fg', 'Comment']
+	\ }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
@@ -289,6 +337,7 @@ let g:clang_format#enable_fallback_style = 0
 " vim-gitgutter -> git
 " vim-fugitive -> git
 " vim-which-key ->
+" fzf.vim -> fzf, ripgrep, bat
 call plug#begin('~/.vim/plugged')
 	" Make sure to use single quotes
 	Plug 'christoomey/vim-tmux-navigator'
@@ -301,6 +350,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
 	Plug 'liuchengxu/vim-which-key'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+
+	" Dependencies nodejs
+	" Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+
 
 	Plug 'samsaga2/vim-z80'
 	Plug 'ericnantel/vim-z80-docs'
@@ -352,13 +407,6 @@ call plug#begin('~/.vim/plugged')
 	" Dependencies:
 	"	-
 	Plug 'tpope/vim-dispatch'
-
-	" FZF
-	" Dependencies:
-	"	- nodejs (fzf-preview)
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-	Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
 call plug#end()
 
@@ -431,10 +479,9 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " ALE settings
 let g:ale_fix_on_save = 1
 
-" FZF
-let g:fzf_vim = {}
-let g:fzf_vim.preview_window = [
-	\'right,50%',
-	\'ctrl-/',
-\]
+" " FZF-Preview
+" let g:fzf_vim.preview_window = [
+" 	\'right,50%',
+" 	\'ctrl-/',
+" \]
 

@@ -69,6 +69,11 @@ alias Gstash="git stash"
 alias Gstatus="git status"
 alias Gswitch="git switch"
 
+# For language
+# NOTE: This assumes you are using French-Canada in your settings
+# NOTE: This fixed an issue with É not being captured in (Neo)Vim on GNU/Linux
+export LANG=fr_CA.utf-8
+
 # For man
 # NOTE: This assumes most is installed
 export MANPAGER="most"
@@ -77,4 +82,3 @@ export MANPAGER="most"
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH
 eval "$(starship init bash)"
-

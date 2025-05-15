@@ -77,3 +77,9 @@ Set-Alias -Name Gstatus -Value GitStatus_Cmd -Option AllScope
 function GitStatus_Cmd { git status $args }
 Set-Alias -Name Gswitch -Value GitSwitch_Cmd -Option AllScope
 function GitSwitch_Cmd { git switch $args }
+
+# For language
+# NOTE: This assumes you are using French-Canada in your settings
+# NOTE: This fixed an issue with É not being captured in (Neo)Vim on GNU/Linux
+$Env:Lang = "fr_CA.utf-8"
+

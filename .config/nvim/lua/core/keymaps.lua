@@ -9,6 +9,7 @@ vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement Number", remap = false })
 
 -- For French-Canadian keyboard layout '¸' is next to '^'
 vim.keymap.set("n", "¸", "$", { desc = "jump-to-end-of-line", remap = false })
+vim.keymap.set("v", "¸", "$", { desc = "jump-to-end-of-line-visual", remap = false })
 
 -- For French-Canadian keyboard layout 'é' and 'É' are unused
 -- So let's use it for quickfix list
@@ -23,6 +24,7 @@ vim.keymap.set("n", "É", "<cmd>cprevious<CR>", { desc = "quickfix-previous", re
 -- if vim.fn.has("macunix") then -- NOTE: That did not work for some reason..
 if vim.loop.os_uname().sysname == "Darwin" then
 	vim.keymap.set("n", "ç", "$", { desc = "", remap = false })
+	vim.keymap.set("v", "ç", "$", { desc = "", remap = false })
 	vim.keymap.set("n", "à", "`", { desc = "", remap = false })
 	vim.keymap.set("n", "àà", "``", { desc = "", remap = false })
 else

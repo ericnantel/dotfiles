@@ -94,6 +94,7 @@ nnoremap - <C-x>
 
 " For French-Canadian keyboard layout '¸' is next to '^'
 nnoremap ¸ $
+vnoremap ¸ $
 
 " For French-Canadian keyboard layout 'é' and 'É' are unused
 " So let's use it for quickfix list
@@ -107,6 +108,7 @@ nnoremap É <cmd>cprevious<CR>
 " So for marks, do not double-type '`', it should work..
 if has("macunix")
 	nnoremap ç $
+	vnoremap ç $
 	nnoremap à `
 	nnoremap àà ``
 else

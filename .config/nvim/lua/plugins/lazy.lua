@@ -568,6 +568,7 @@ lazy.setup({
 								-- NOTE: Find another keybind to toggle select (default was TAB)
 								["<TAB>"] = actions.move_selection_next,
 								["<S-TAB>"] = actions.move_selection_previous,
+								["<C-s>"] = actions.toggle_selection,
 								["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
 							},
 						},

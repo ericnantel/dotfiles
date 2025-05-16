@@ -1,80 +1,254 @@
 """ Rider/IntelliJ ~/.ideavimrc
 
 """ Common settings
-set showcmd
-set showmode
-set cmdheight=1
-set history=20
-set number
-set relativenumber
-set numberwidth=2
-set signcolumn=yes
-set cursorline
-set noruler
-set scrolloff=5
 set splitright
 set splitbelow
+
+"set undodir=~/.vim/undodir-Idea
+"set undofile
+
+set number
+set relativenumber
+set signcolumn=yes
+set numberwidth=2
+
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+"set shiftround
 set noexpandtab
 set autoindent
 set smartindent
-set encoding=UTF-8
+
 set nowrap
+set noshowmatch
+set noruler
+set notitle
+set nocursorline
+"set nobackup
+"set nowritebackup
+
+"set mouse=
+"set ttymouse=
+"set mousescroll=ver:0,hor:0
+set encoding=UTF-8
 set backspace=indent,eol,start
+set clipboard^=unnamed,unnamedplus
 
+" For French-Canadian keyboard layout
+" You may export the env. variable in your shell
+" But this is a less intrusive way to fix the
+" 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
+let $LANG = "fr_CA.UTF-8"
+
+set background=dark
+syntax on
+set t_Co=256
+" Comment this if your terminal doesn't support it
+" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
+set termguicolors
+
+set scrolloff=5
+set showcmd
+set showmode
+set cmdheight=1
+set laststatus=2
+set updatetime=300
+" set timeout
+" set timeoutlen=300
+set notimeout
+set timeoutlen=5000
+set history=20
+
+set hidden
+
+"set wildmenu
+"set wildmode=longest:full,full
+"set wildignore+=*.swp,*.DS_Store,*.meta
+
+" Runtime paths for colorschemes, plugins, clang tools
+"set rtp+=~/.vim
+"set rtp+=~/.vim/plugged/vim-plug
+"if has("win32")
+"	if isdirectory(expand("~/scoop/apps/llvm/current/bin"))
+"		set rtp+=~/scoop/apps/llvm/current/bin
+"	endif
+"endif
+
+" Make sure to have ~/.vim/colors/darcula.vim
+" You can find it in my dotfiles submodules
+" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
+" or comment the line below
+"colorscheme darcula
+
+"" Z80
+"autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
+""autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab
+
+
+set ideajoin
+set ideaput
+set ideamarks
 """ Idea specific settings
-
 """ Rider specific settings
+
 
 """ Map leader
 let mapleader=" "
 let maplocalleader=" "
 
+
 """ Mappings
 imap jk <ESC>
 vmap jk <ESC>
-nmap + <C-a>
-nmap - <C-x>
 
-"nmap <leader>nh <cmd>nohl<CR> NOTE: Does not seem to be supported ..
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" For French-Canadian keyboard layout '¸' is next to '^'
+nnoremap ¸ $
+vnoremap ¸ $
+
+" For French-Canadian keyboard layout 'é' and 'É' are unused
+" So let's use it for quickfix list
+nnoremap é <cmd>cnext<CR>
+nnoremap É <cmd>cprevious<CR>
+
+" NOTE: Ignore and comment this if your keyboard layout is fine
+" BUG: On MacOS, my personal keyboard layout is missing dead keys
+" BUG: On Windows or Linux, remember to double-type '`', '^', '¸', '¨'
+" However, when double-typing '`' it is recognized as '``' (undesired jump)
+" So for marks, do not double-type '`', it should work..
+if has("macunix")
+	nnoremap ç $
+	vnoremap ç $
+	nnoremap à `
+	nnoremap àà ``
+else
+	nnoremap à `a
+	nnoremap è `e
+	nnoremap ù `u
+	nnoremap ì `i
+	nnoremap ò `o
+endif
+
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s
 nmap <leader>se <C-w>=
-nmap <leader>s, <C-w>5<
-nmap <leader>s. <C-w>5>
-nmap <leader>s- <C-w>-
-nmap <leader>s+ <C-w>+
 nmap <leader>sx <cmd>close<CR>
+"nmap <leader>s<Left> <C-w>5<
+"nmap <leader>s<Right> <C-w>5>
+"nmap <leader>s<Up> <C-w>-
+"nmap <leader>s<Down> <C-w>+
 
-""" Plugins
-set commentary
+"nmap <leader>nh <cmd>nohlsearch<CR>
 
-""" Plugin mappings
+"" vim-tmux-navigator
+"nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
+"nnoremap <silent> <c-j> <cmd>TmuxNavigateDown<CR>
+"nnoremap <silent> <c-k> <cmd>TmuxNavigateUp<CR>
+"nnoremap <silent> <c-l> <cmd>TmuxNavigateRight<CR>
+"let g:tmux_navigator_no_mappings = 1
+"let g:tmux_navigator_save_on_switch = 0
+""let g:tmux_navigator_disable_when_zoomed = 1
+""let g:tmux_navigator_preserve_zoom = 1
+"let g:tmux_navigator_no_wrap = 1
 
-""" vim-maximizer mappings
-"nnoremap <leader>sm <cmd>MaximizerToggle<CR>
-"vnoremap <leader>sm <cmd>MaximizerToggle<CR>gv
+" vim-maximizer
+nnoremap <leader>sm <cmd>MaximizerToggle<CR>
+vnoremap <leader>sm <cmd>MaximizerToggle<CR>gv
+let g:maximizer_set_default_mapping = 1
 
-""" vim-commentary mappings
+" vim-signature
+nmap <silent> m; ]`
+let g:SignatureWrapJumps = 1
+let g:SignatureMarkTextHLDynamic = 1
+
+" vim-commentary
 nmap <silent> z gc
 nmap <silent> zz gcc
 vmap <silent> z gc
+"autocmd FileType z80 setlocal commentstring=;\ %s
+"autocmd FileType glsl setlocal commentstring=//\ %s
+"autocmd FileType lisp setlocal commentstring=;;\ %s
 
-"TODO: vim-signature ? (marks)
-"TODO: vim-fugitive ? (git)
-"TODO: vim-nerdtree ? (file explorer)
-"TODO: nerdtree-git-plugin ? (git status on file explorer)
-"TODO: which-key ?
-"TODO: clang-formatter ?
+" vim-devicons
 
-""" Plugin settings
+" vim-airline + vim-airline-themes
 
-""" vim-maximizer settings
-let g:maximizer_set_default_mapping = 1
+" vim-gitgutter
+
+" vim-fugitive
+
+" vim-which-key
+" nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+" vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+" let g:which_key_ignore_outside_mappings = 0
+" let g:which_key_use_floating_win = 1
+" let g:which_key_max_size = 0
+" let g:which_key_sep = "->"
+" let g:which_key_map = {}
+" let g:which_key_map['+'] = ['<C-a>', "number-increment"]
+" let g:which_key_map['-'] = ['<C-x>', "number-decrement"]
+" let g:which_key_map.s = {
+" 	\ 'name': "+split",
+" 	\ 'v': ['<C-w>v', "split-vertical"],
+" 	\ 'h': ['<C-w>s', "split-horizontal"],
+" 	\ 'e': ['<C-w>=', "split-equal"],
+" 	\ 'm': [':MaximizerToggle', "split-maximize-toggle"],
+" 	\ 'x': [':close', "split-close"],
+" 	\ '<Right>': ['<C-w>5>', "split-increment-width"],
+" 	\ '<Left>': ['<C-w>5<', "split-decrement-width"],
+" 	\ '<Down>': ['<C-w>+', "split-increment-height"],
+" 	\ '<Up>': ['<C-w>-', "split-decrement-height"],
+"   \ }
+" let g:which_key_map.f = {
+" 	\ 'name': "+find",
+" 	\ 'f': [':Files<CR>', "find-files"],
+" 	\ 's': [':Rg<CR>', "find-grep"],
+" 	\ 'c': [':Rg <C-r><C-w><CR>', "find-files"],
+" 	\ }
+" let g:which_key_map['nh'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
+" let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
+" let g:which_key_map_visual = {}
+" let g:which_key_map_visual['+'] = ['g<C-a>', "number-increment-block"]
+" let g:which_key_map_visual['-'] = ['g<C-x>', "number-decrement-block"]
+" let g:which_key_map_visual.s = {
+" 	\ 'name': "+split",
+" 	\ 'v': ['<C-w>v', "split-vertical"],
+" 	\ 'h': ['<C-w>s', "split-horizontal"],
+" 	\ 'e': ['<C-w>=', "split-equal"],
+" 	\ 'm': [':MaximizerToggle<CR>gv', "split-maximize-toggle"],
+" 	\ 'x': [':close', "split-close"],
+" 	\ '<Right>': ['<C-w>5>', "split-increment-width"],
+" 	\ '<Left>': ['<C-w>5<', "split-decrement-width"],
+" 	\ '<Down>': ['<C-w>+', "split-increment-height"],
+" 	\ '<Up>': ['<C-w>-', "split-decrement-height"],
+"   \ }
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_ShowTypedSequence = "false"
+let g:WhichKey_DefaultDelay  = 600
+let g:WhichKeyDesc_split = "<leader>s +split"
+let g:WhichKeyDesc_split_vertical = "<leader>sv split-vertical"
+let g:WhichKeyDesc_split_horizontal = "<leader>sh split-horizontal"
+let g:WhichKeyDesc_split_equal = "<leader>se split-equal"
+
+" fzf.vim
+
+""" Plugins
+"Plug 'szw/vim-maximizer'
+"Plug 'kshenoy/vim-signature'
+set commentary
+"set vim-devicons
+"set vim-airline
+"set vim-airline-themes
+"set vim-gitgutter
+"set vim-fugitive
+set which-key
+"set fzf.vim
 

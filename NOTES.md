@@ -62,5 +62,8 @@ Date: 2025-05-12
 I enabled termguicolors in Vim config, because airline/airline_theme was not showing
 modes (INSERT, NORMAL, etc.) properly.
 Date: 2025-05-14
-I added $LANG=fr_CA.utf-8 environment variable in .bashrc & .zshrc as it turns
+I added $LANG=fr_CA.UTF-8 environment variable in .bashrc & .zshrc as it turns
 out 'É' was not being properly captured inside (Neo)Vim.
+Date: 2025-05-16
+I found out that Wezterm without Tmux running does not seem to
+fix the $LANG issue (É) on GNU/Linux. So that could be a bug.

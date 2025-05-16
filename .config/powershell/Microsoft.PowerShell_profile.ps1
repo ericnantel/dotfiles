@@ -79,5 +79,5 @@ Set-Alias -Name Gswitch -Value GitSwitch_Cmd -Option AllScope
 function GitSwitch_Cmd { git switch $args }
 
 # For language
-#$Env:LANG = "fr_CA.utf-8"
+#$Env:LANG = "fr_CA.UTF-8"
 

@@ -51,7 +51,7 @@ alias Gstatus="git status"
 alias Gswitch="git switch"
 
 # For language
-#export LANG=fr_CA.utf-8
+#export LANG=fr_CA.UTF-8
 
 # For man
 # NOTE: This assumes most is installed

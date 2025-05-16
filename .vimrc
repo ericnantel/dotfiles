@@ -45,7 +45,7 @@ set clipboard^=unnamed,unnamedplus
 " You may export the env. variable in your shell
 " But this is a less intrusive way to fix the
 " 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
-let $LANG = "fr_CA.utf-8"
+let $LANG = "fr_CA.UTF-8"
 
 set background=dark
 syntax on

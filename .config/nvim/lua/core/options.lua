@@ -46,8 +46,8 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 -- NOTE: For French-Canadian keyboard layout
 -- You may export the env. variable in your shell
 -- But this is a less intrusive way to fix the
--- 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
-vim.env.LANG = "fr_CA.utf-8"
+-- 'É' key not firing when $LANG is not set to 'fr_CA.UTF-8'
+vim.env.LANG = "fr_CA.UTF-8"
 
 vim.opt.scrolloff = 5
 vim.opt.showcmd = true

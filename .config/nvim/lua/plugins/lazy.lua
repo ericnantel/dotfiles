@@ -962,7 +962,10 @@ lazy.setup({
 					},
 				})
 
-				-- TODO: LspAttach local mappings
+				vim.api.nvim_create_autocmd("LspAttach", {
+					group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+					callback = LspAttach,
+				})
 
 				mason_lspconfig.setup({
 					ensure_installed = {

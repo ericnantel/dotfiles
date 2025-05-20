@@ -70,6 +70,10 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.swp,*.DS_Store,*.meta
 
+" NOTE: The motion 'gf'(Goto File) does not appear to work
+" in Vim; however it works in Neovim when we append '**' to path
+"set path+=**
+
 " Runtime paths for colorschemes, plugins, clang tools
 set rtp+=~/.vim
 set rtp+=~/.vim/plugged/vim-plug

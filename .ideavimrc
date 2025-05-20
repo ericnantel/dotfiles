@@ -110,6 +110,9 @@ vmap jk <ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+vnoremap < <gv
+vnoremap > >gv
+
 " For French-Canadian keyboard layout '¸' is next to '^'
 nnoremap ¸ $
 vnoremap ¸ $
@@ -230,13 +233,6 @@ vmap <silent> z gc
 " 	\ '<Down>': ['<C-w>+', "split-increment-height"],
 " 	\ '<Up>': ['<C-w>-', "split-decrement-height"],
 "   \ }
-let g:WhichKey_ShowVimActions = "true"
-let g:WhichKey_ShowTypedSequence = "false"
-let g:WhichKey_DefaultDelay  = 600
-let g:WhichKeyDesc_split = "<leader>s +split"
-let g:WhichKeyDesc_split_vertical = "<leader>sv split-vertical"
-let g:WhichKeyDesc_split_horizontal = "<leader>sh split-horizontal"
-let g:WhichKeyDesc_split_equal = "<leader>se split-equal"
 
 " fzf.vim
 
@@ -249,6 +245,6 @@ set commentary
 "set vim-airline-themes
 "set vim-gitgutter
 "set vim-fugitive
-set which-key
+"set which-key
 "set fzf.vim
 

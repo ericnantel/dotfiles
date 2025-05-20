@@ -102,6 +102,9 @@ vmap jk <ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+vnoremap < <gv
+vnoremap > >gv
+
 " For French-Canadian keyboard layout '¸' is next to '^'
 nnoremap ¸ $
 vnoremap ¸ $

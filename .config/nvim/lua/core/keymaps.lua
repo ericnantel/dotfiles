@@ -7,6 +7,9 @@ vim.keymap.set("v", "jk", "<ESC>", { desc = "Exit Visual Mode" })
 vim.keymap.set("n", "+", "<C-a>", { desc = "Increment Number", remap = false })
 vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement Number", remap = false })
 
+vim.keymap.set("v", "<", "<gv", { desc = "", remap = false })
+vim.keymap.set("v", ">", ">gv", { desc = "", remap = false })
+
 -- For French-Canadian keyboard layout '¸' is next to '^'
 vim.keymap.set("n", "¸", "$", { desc = "jump-to-end-of-line", remap = false })
 vim.keymap.set("v", "¸", "$", { desc = "jump-to-end-of-line-visual", remap = false })

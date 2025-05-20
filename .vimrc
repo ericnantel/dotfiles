@@ -467,7 +467,7 @@ endif
 " GoTo code navigation
 " NOTE: I am hoping to add references to show in fzf
 nmap <silent><nowait> gr <Plug>(coc-references)
-"nmap <silent><nowait> gD <Plug>(coc-declaration)
+nmap <silent><nowait> gD <Plug>(coc-declaration)
 nmap <silent><nowait> gd <Plug>(coc-definition)
 nmap <silent><nowait> gi <Plug>(coc-implementation)
 nmap <silent><nowait> gt <Plug>(coc-type-definition)

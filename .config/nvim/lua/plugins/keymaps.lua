@@ -105,6 +105,19 @@ function LspAttach(ev)
 		"<cmd>Telescope lsp_references<CR>",
 		{ desc = "find-references", buffer = ev.buf, silent = true }
 	)
+	vim.keymap.set(
+		"n",
+		"grr",
+		vim.lsp.buf.references,
+		{ desc = "goto-references-quickfix", buffer = ev.buf, silent = true }
+	)
+	vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "goto-rename-quickfix", buffer = ev.buf, silent = true })
+	vim.keymap.set(
+		"n",
+		"gri",
+		vim.lsp.buf.implementation,
+		{ desc = "goto-implementation-quickfix", buffer = ev.buf, silent = true }
+	)
 	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "goto-declaration", buffer = ev.buf, silent = true })
 	vim.keymap.set(
 		"n",

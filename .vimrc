@@ -467,6 +467,7 @@ else
 endif
 " TODO: navigate diagnostic [g ]g I don't like those..
 " TODO: We need to show with fzf diagnostics so that we can add those to quickfix
+" TODO: Add :CocDiagnostics but see if fzf knows what to do
 " GoTo code navigation
 " NOTE: I am hoping to add references to show in fzf
 nmap <silent><nowait> gr <Plug>(coc-references)

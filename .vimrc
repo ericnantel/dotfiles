@@ -462,12 +462,15 @@ if has('nvim')
 else
 	inoremap <silent><expr> <c-@> coc#refresh()
 endif
-" TODO navigate diagnostic [g ]g I don't like those..
+" TODO: navigate diagnostic [g ]g I don't like those..
+" TODO: We need to show with fzf diagnostics so that we can add those to quickfix
 " GoTo code navigation
-nmap <silent><nowait> gd <Plug>(coc-definition)
-nmap <silent><nowait> gy <Plug>(coc-type-definition)
-nmap <silent><nowait> gi <Plug>(coc-implementation)
+" NOTE: I am hoping to add references to show in fzf
 nmap <silent><nowait> gr <Plug>(coc-references)
+"nmap <silent><nowait> gD <Plug>(coc-declaration)
+nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> gi <Plug>(coc-implementation)
+nmap <silent><nowait> gt <Plug>(coc-type-definition)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
 function! ShowDocumentation()

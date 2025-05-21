@@ -430,6 +430,7 @@ call which_key#register('<Space>', "g:which_key_map_visual", 'v')
 
 " CoC settings
 " TODO: OmniSharp, Java, Tmux, Markdown Preview ?
+let g:coc_config_home = "~/.vim"
 let g:coc_global_extensions = [
 	\'coc-clangd',
 	\'coc-tsserver', 'coc-eslint', 'coc-react-refactor', 'coc-pretty-ts-errors',
@@ -470,8 +471,10 @@ endif
 " TODO: We need to show with fzf diagnostics so that we can add those to quickfix
 " TODO: Add :CocDiagnostics but see if fzf knows what to do
 " GoTo code navigation
-" NOTE: I am hoping to add references to show in fzf
-nmap <silent><nowait> gr <Plug>(coc-references)
+" NOTE: I am hoping to add references to show in fzf using <leader>fr
+" NOTE: Make sure that "coc.preferences.useQuickfixForLocations": true
+" Is in the :CocConfig so that coc-references uses quickfix list
+nmap <silent><nowait> grr <Plug>(coc-references)
 nmap <silent><nowait> gD <Plug>(coc-declaration)
 nmap <silent><nowait> gd <Plug>(coc-definition)
 nmap <silent><nowait> gi <Plug>(coc-implementation)

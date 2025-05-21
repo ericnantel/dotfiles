@@ -1,4 +1,5 @@
 {
   "snippets.utilsnips.pythonPrompt": false,
-  "coc.preferences.formatOnSave": false
+  "coc.preferences.formatOnSave": false,
+  "coc.preferences.useQuickfixForLocations": true
 }

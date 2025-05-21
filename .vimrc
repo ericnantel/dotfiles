@@ -418,11 +418,6 @@ call plug#begin('~/.vim/plugged')
 	"	-
 	Plug 'dense-analysis/ale'
 
-	" Dispatch (Async build and test dispatcher)
-	" Dependencies:
-	"	-
-	Plug 'tpope/vim-dispatch'
-
 call plug#end()
 
 call which_key#register('<Space>', "g:which_key_map", 'n')

@@ -76,3 +76,8 @@ Date: 2025-05-21
 I found out that Vim set path+=** works on Windows and GNU/Linux;
 but not on MacOS (why?). Neovim has no issue with the path (on all OS).
 Could it be a bug ?
+Date: 2025-05-22
+Clangd Lsp Goto-Definitions and/or Goto-Implementations Is also not working properly
+on Vim (coc) and Neovim (builtin lsp) for C++ on MacOS. But other languages (Lua, Js)
+seem to work fine however. Perhaps this is not Clangd, but Cmake when it's making
+compile_commands.json files.

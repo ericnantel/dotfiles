@@ -73,6 +73,6 @@ For instance, mapping keys to call a command will not work.
 Even calling Actions like their tutorials are not working..
 Too bad, it had potential to be good..
 Date: 2025-05-21
-I found out that Vim set path+=** works on Windows; unlike
-MacOS or GNU/Linux. Neovim has no issue with the path.
+I found out that Vim set path+=** works on Windows and GNU/Linux;
+but not on MacOS (why?). Neovim has no issue with the path (on all OS).
 Could it be a bug ?

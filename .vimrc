@@ -97,6 +97,7 @@ autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 let g:mapleader = ' '
 let g:maplocalleader = ' '
 
+" NOTE: Let's not forget <Ctrl-c>
 imap jk <ESC>
 vmap jk <ESC>
 
@@ -109,6 +110,13 @@ vnoremap > >gv
 " For French-Canadian keyboard layout '¸' is next to '^'
 nnoremap ¸ $
 vnoremap ¸ $
+
+" For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
+" So because '#' is to search word under cursor backward; I will use '|' for '*'
+" NOTE: This could change in the future; my strategy is to ease-access
+" TODO: The '%' is not easy to type without looking..
+nnoremap \| *
+vnoremap \| *
 
 " For French-Canadian keyboard layout 'é' and 'É' are unused
 " So let's use it for quickfix list

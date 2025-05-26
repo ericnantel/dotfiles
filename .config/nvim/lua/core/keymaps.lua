@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- NOTE: Let's not forget <Ctrl-c>
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit Insert Mode" })
 vim.keymap.set("v", "jk", "<ESC>", { desc = "Exit Visual Mode" })
 
@@ -13,6 +14,13 @@ vim.keymap.set("v", ">", ">gv", { desc = "", remap = false })
 -- For French-Canadian keyboard layout '¸' is next to '^'
 vim.keymap.set("n", "¸", "$", { desc = "jump-to-end-of-line", remap = false })
 vim.keymap.set("v", "¸", "$", { desc = "jump-to-end-of-line-visual", remap = false })
+
+-- For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
+-- So because '#' is to search word under cursor backward; I will use '|' for '*'
+-- NOTE: This could change in the future; my strategy is to ease-access
+-- TODO: The '%' is not easy to type without looking..
+vim.keymap.set("n", "|", "*", { desc = "search-word-under-cursor-forward", remap = false })
+vim.keymap.set("v", "|", "*", { desc = "search-word-under-cursor-forward-visual", remap = false })
 
 -- For French-Canadian keyboard layout 'é' and 'É' are unused
 -- So let's use it for quickfix list

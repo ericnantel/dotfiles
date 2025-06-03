@@ -117,6 +117,13 @@ vnoremap > >gv
 nnoremap ¸ $
 vnoremap ¸ $
 
+" For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
+" So because '#' is to search word under cursor backward; I will use '|' for '*'
+" NOTE: This could change in the future; my strategy is to ease-access
+" TODO: The '%' is not easy to type without looking..
+nnoremap \| *
+vnoremap \| *
+
 " For French-Canadian keyboard layout 'é' and 'É' are unused
 " So let's use it for quickfix list
 nnoremap é <cmd>cnext<CR>

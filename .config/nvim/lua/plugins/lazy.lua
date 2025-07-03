@@ -466,6 +466,7 @@ lazy.setup({
 						"tmux",
 						-- "norg",
 						-- "norg_meta",
+						"org",
 					},
 					sync_install = false,
 					auto_install = true,
@@ -473,7 +474,7 @@ lazy.setup({
 						"glsl",
 						"markdown",
 						"markdown_inline",
-						"org",
+						-- "org",
 					},
 					highlight = {
 						enable = true,

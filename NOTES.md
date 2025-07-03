@@ -81,3 +81,5 @@ Clangd Lsp Goto-Definitions and/or Goto-Implementations Is also not working prop
 on Vim (coc) and Neovim (builtin lsp) for C++ on MacOS. But other languages (Lua, Js)
 seem to work fine however. Perhaps this is not Clangd, but Cmake when it's making
 compile_commands.json files.
+Date: 2025-07-03
+I added 'org' to treesitter ensured-installed to fix 'org-bullet' Neovim plugin errors.

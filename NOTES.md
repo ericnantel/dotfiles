@@ -83,3 +83,10 @@ seem to work fine however. Perhaps this is not Clangd, but Cmake when it's makin
 compile_commands.json files.
 Date: 2025-07-03
 I added 'org' to treesitter ensured-installed to fix 'org-bullet' Neovim plugin errors.
+Date: 2025-07-07
+There are still errors related to Neovim treesitter 'org' support on GNU/Linux.
+Unsure if we need to clean cache, but perhaps we should simply remove 'org'
+support in Neovim if errors persist.
+Date: 2025-07-07
+There are errors related to Neovim treesitter-context 'LspRequest' in GNU/Linux when
+I open a Markdown file. Unsure if this is only happening with Markdown files.

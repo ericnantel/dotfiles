@@ -90,6 +90,12 @@ support in Neovim if errors persist.
 Date: 2025-07-07
 There are errors related to Neovim treesitter-context 'LspRequest' in GNU/Linux when
 I open a Markdown file. Unsure if this is only happening with Markdown files.
-DateL 2025-09-16
+Date: 2025-09-16
 Wezterm may not showup properly in Hyprland Environment on some version,
 but the fix is simply to set config.enable_wayland = false in the config.
+Date: 2025-09-16
+OBS Screen Capture was not available in Hyprland (Wayland) until I installed the following:
+- ffmpeg
+- pipewire
+- xdg-desktop-portal-hyprland
+Then I restart Ubuntu and OBS worked again.

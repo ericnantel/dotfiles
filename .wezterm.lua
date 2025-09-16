@@ -230,6 +230,7 @@ end
 config = {
 	default_prog = default_prog,
 	automatically_reload_config = true,
+	enable_wayland = false, -- Fixed display issue in Hyprland Ubuntu 25.04
 	enable_scroll_bar = false,
 	enable_tab_bar = false,
 	use_fancy_tab_bar = false,

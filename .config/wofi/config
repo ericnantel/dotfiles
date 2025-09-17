@@ -1,0 +1,14 @@
+
+mode = drun
+prompt = Application
+hide_scroll = true
+allow_images = true
+image_size = 30
+width = 25%
+#height = 30%
+lines = 7
+#sort_order = alphabetical
+#search = Firefox
+#term = kitty
+monitor = HDMI-A-1
+layer = top

@@ -65,7 +65,10 @@ Regardless, use a package manager and install the following packages:
 - socat (optional for hyprland' script hyprwswp_d - on GNU/Linux)
 - xdg_desktop_portal_hyprland (recommended for obs in hyprland)
 - pipewire (recommended for obs in hyprland)
-- ffmpeg (recommended for obs in hyprland)
+- ffmpeg (recommended for obs and camlink in hyprland)
+- v4l2loopback-utils (recommended for camlink in hyprland)
+- v4l2loopback-dkms (recommended for camlink in hyprland)
+
 
 Then open a Terminal application and type the command 'vim' or 'nvim' to see if you have it installed.
 To close vim/neovim, press ':q' to return to the console.

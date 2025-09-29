@@ -62,6 +62,7 @@ Regardless, use a package manager and install the following packages:
 - hyprpaper (optional - on GNU/Linux)
 - waybar (optional - on GNU/Linux)
 - wofi (optional - on GNU/Linux)
+- wlogout (optional - on GNU/Linux)
 - socat (optional for hyprland' script hyprwswp_d - on GNU/Linux)
 - xdg_desktop_portal_hyprland (recommended for obs in hyprland)
 - pipewire (recommended for obs in hyprland)

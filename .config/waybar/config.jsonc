@@ -2,11 +2,36 @@
 {
 	"layer": "top",
 	"position": "right",
-	"modules-left": [],
+	"modules-left": [
+		"custom/power",
+		"custom/blank",
+		"hyprland/language",
+		"clock"
+	],
 	"modules-center": [
 		"hyprland/workspaces"
 	],
 	"modules-right": [],
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "wlogout"
+	},
+	"custom/blank": {
+		"format": "",
+		"tooltip": false
+	},
+	"hyprland/language": {
+		"format": "{shortDescription}",
+		"tooltip": false
+	},
+	"clock": {
+		"interval": 60,
+		"format": "󰥔",
+		"tooltip": true,
+		"tooltip-format": "{:%Y-%m-%d %H:%M}",
+		"max-length": 25
+	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {

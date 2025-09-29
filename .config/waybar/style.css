@@ -2,7 +2,7 @@
 	border: none;
 	font-family: JetBrainsMonoNL Nerd Font Propo;
 	font-size: 24px;
-	/*color: #ffffff;*/
+	/* color: #ffffff; */
 }
 
 window {
@@ -18,25 +18,77 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-.modules-center {}
-
-#workspaces {
+.modules-left {
 	/*background-color: rgba(0, 0, 0, 0.5);*/
 	background-color: rgba(34, 36, 54, 0.5);
-	border-radius: 10px;
-	margin: 2px 6px;
+	border-radius: 7px;
+	margin: 10px 6px;
 	padding: 0px 0px;
 }
+
+.modules-center {
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+	background-color: rgba(34, 36, 54, 0.5);
+	border-radius: 7px;
+	margin: 10px 6px;
+	padding: 0px 0px;
+}
+.modules-right {}
+
+#custom-power {
+	font-size: 26px;
+	color: #b5e8e0;
+	background-color: transparent;
+	border-radius: 7px;
+	padding: 4px 10px;
+	transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#custom-power:hover {
+	color: #89b4fa;
+	background: #dfe1f2;
+}
+
+#custom-blank {
+	font-size: 12px;
+	color: transparent;
+	background-color: transparent;
+}
+
+#language {
+	/* font-size: 20px; */
+	color: #b5e8e0;
+	background-color: transparent;
+	border-radius: 7px;
+	/* padding: 4px 10px; */
+	transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#language:hover {
+	color: #89b4fa;
+	background: #dfe1f2;
+}
+
+#clock {
+	color: #b5e8e0;
+	background-color: transparent;
+	border-radius: 7px;
+	padding: 4px 10px;
+	transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#clock:hover {
+	color: #89b4fa;
+	background: #dfe1f2;
+}
+
+#workspaces {}
 
 #workspaces button {
 	color: #b5e8e0;
 	background-color: transparent;
 	padding: 4px 10px;
 	transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
-}
-
-#workspaces button.occupied {
-	color: #a6e3a1;
 }
 
 #workspaces button.active {
@@ -46,6 +98,7 @@ window#waybar.hidden {
 
 #workspaces button:hover {
 	color: #89b4fa;
+	background: #dfe1f2;
 }
 
 #workspaces button.active:hover {}

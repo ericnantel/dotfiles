@@ -5,6 +5,8 @@
 # AUTHOR: Eric Nantel
 # LINK: https://github.com/ericnantel/dotfiles/setup_void_linux.sh
 
+# TODO: Setup nerd fonts and add eza, starship, ripgrep, fzf, etc..
+
 os=$(uname -o)
 timestamp=$(date "+%Y.%m.%d-%H.%M.%S")
 
@@ -21,13 +23,11 @@ sudo xbps-remove -yo
 sudo vkpurge rm all
 
 # install recommended packages
-sudo xbps-install -Sy \
-	git \
+sudo xbps-install -Sy git \
 	vim
 
 # install optional packages
-sudo xbps-install -S \
-	htop \
+sudo xbps-install -S htop \
 	fastfetch
 
 # backup existing cf.map.gz
@@ -60,7 +60,7 @@ sudo cp void-linux/etc/locale.conf /etc/locale.conf
 # reconfigure locales
 sudo xbps-reconfigure -f glibc-locales
 
-# localdef --list-archives
+# localedef --list-archive
 # locale -a
 
 # log installed git version

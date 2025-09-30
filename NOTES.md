@@ -99,3 +99,6 @@ OBS Screen Capture was not available in Hyprland (Wayland) until I installed the
 - pipewire
 - xdg-desktop-portal-hyprland
 Then I restart Ubuntu and OBS worked again.
+Date: 2025-09-30
+Hyprland and Hyprpaper are not available in Void Linux Official Package Repo.
+

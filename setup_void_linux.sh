@@ -9,6 +9,7 @@
 
 os=$(uname -o)
 timestamp=$(date "+%Y.%m.%d-%H.%M.%S")
+dotfiles=$(dirname "$0")
 
 # update package manager
 sudo xbps-install -Syu xbps
@@ -44,7 +45,7 @@ sudo xbps-install -Sy git \
 	zsh-syntax-highlighting
 
 # install optional packages
-sudo xbps-install -S htop \
+sudo xbps-install -Sy htop \
 	fastfetch \
 	wezterm \
 	ghostty \
@@ -61,7 +62,7 @@ if [ -f /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz ]; then
 fi
 
 # copy cf.map
-sudo cp void-linux/usr/share/kbd/keymaps/i386/qwerty/cf.map /usr/share/kbd/keymaps/i386/qwerty/cf.map
+sudo cp ${dotfiles}/void-linux/usr/share/kbd/keymaps/i386/qwerty/cf.map /usr/share/kbd/keymaps/i386/qwerty/cf.map
 
 # compress cf.map to cf.map.gz
 sudo gzip /usr/share/kbd/keymaps/i386/qwerty/cf.map
@@ -72,7 +73,7 @@ if [ -f /etc/rc.conf ]; then
 fi
 
 # copy rc.conf
-sudo cp void-linux/etc/rc.conf /etc/rc.conf
+sudo cp ${dotfiles}/void-linux/etc/rc.conf /etc/rc.conf
 
 # backup existing libc-locales
 if [ -f /etc/default/libc-locales ]; then
@@ -80,7 +81,7 @@ if [ -f /etc/default/libc-locales ]; then
 fi
 
 # copy libc-locales
-sudo cp void-linux/etc/default/libc-locales /etc/default/libc-locales
+sudo cp ${dotfiles}/void-linux/etc/default/libc-locales /etc/default/libc-locales
 
 # backup existing locale.conf
 if [ -f /etc/locale.conf ]; then
@@ -88,7 +89,7 @@ if [ -f /etc/locale.conf ]; then
 fi
 
 # copy locale.conf
-sudo cp void-linux/etc/locale.conf /etc/locale.conf
+sudo cp ${dotfiles}/void-linux/etc/locale.conf /etc/locale.conf
 
 # reconfigure locales
 sudo xbps-reconfigure -f glibc-locales
@@ -100,8 +101,10 @@ sudo xbps-reconfigure -f glibc-locales
 git --version
 
 # init and update submodules
+cd ${dotfiles}
 git submodule init
 git submodule update
+cd -
 
 # backup existing git config
 if [ -f ~/.gitconfig ]; then
@@ -109,10 +112,10 @@ if [ -f ~/.gitconfig ]; then
 fi
 
 # copy git config
-cp .gitconfig-delta ~/.gitconfig
+cp ${dotfiles}/.gitconfig-delta ~/.gitconfig
 
 # source git config
-source ~/.gitconfig
+#source ~/.gitconfig
 
 # backup existing .bashrc
 if [ -f ~/.bashrc ]; then
@@ -120,10 +123,10 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # copy .bashrc
-cp .bashrc ~/.bashrc
+cp ${dotfiles}/.bashrc ~/.bashrc
 
-# source .bashrc
-source ~/.bashrc
+# source bash config
+#source ~/.bashrc
 
 # backup existing .zshrc
 if [ -f ~/.zshrc ]; then
@@ -131,10 +134,10 @@ if [ -f ~/.zshrc ]; then
 fi
 
 # copy .zshrc
-cp .zshrc ~/.zshrc
+cp ${dotfiles}/.zshrc ~/.zshrc
 
-# source .zshrc
-source ~/.zshrc
+# source zsh config
+#source ~/.zshrc
 
 # TODO: Add zsh to /etc/shells ?
 
@@ -143,40 +146,43 @@ source ~/.zshrc
 #sudo chsh -s $(which zsh)
 
 # copy wezterm config
-copy .wezterm.lua ~/.wezterm.lua
+cp ${dotfiles}/.wezterm.lua ~/.wezterm.lua
 
 # source wezterm config
-source ~/.wezterm.lua
+#source ~/.wezterm.lua
 
 # make directory ~/.config/ghostty
 mkdir -p ~/.config/ghostty
 
 # copy ghostty config
-cp .config/ghostty/config ~/.config/ghostty/config
+cp ${dotfiles}/.config/ghostty/config ~/.config/ghostty/config
 
 # source ghostty config
-source ~/.config/ghostty/config
+#source ~/.config/ghostty/config
 
 # make directory ~/.config/ghostty/themes
 mkdir -p ~/.config/ghostty/themes
 
 # copy ghostty themes
-copy ghostty-themes/ghostty-night-owl/NightOwlDark ~/.config/ghostty/themes/NightOwlDark
+cp ${dotfiles}/ghostty-themes/ghostty-night-owl/NightOwlDark ~/.config/ghostty/themes/NightOwlDark
 
 # copy starship config
-cp .config/starship.toml ~/.config/starship.toml
+cp ${dotfiles}/.config/starship.toml ~/.config/starship.toml
+
+# make directory ~/.kube
+mkdir -p ~/.kube
 
 # copy kubecolor config
-cp .kube/color.yaml ~/.kube/color.yaml
+cp ${dotfiles}/.kube/color.yaml ~/.kube/color.yaml
 
 # copy tmux config
-cp .tmux.conf ~/.tmux.conf
+cp ${dotfiles}/.tmux.conf ~/.tmux.conf
 
 # make directory ~/.tmux/plugins/tpm
 mkdir -p ~/.tmux/plugins/tpm
 
 # copy tmux plugin manager (tpm)
-cp -rp .tmux/plugins/tpm/* ~/.tmux/plugins/tpm
+cp -rp ${dotfiles}/.tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 
 # NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
 

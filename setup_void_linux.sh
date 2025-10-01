@@ -138,8 +138,10 @@ cp .zshrc ~/.zshrc
 # source .zshrc
 source ~/.zshrc
 
+# TODO: Add zsh to /etc/shells ?
+
 # set zsh as current shell
-sudo chsh -s $(which zsh)
+#sudo chsh -s $(which zsh)
 
 # copy wezterm config
 copy .wezterm.lua ~/.wezterm.lua

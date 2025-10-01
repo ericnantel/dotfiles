@@ -37,12 +37,9 @@ sudo xbps-install -Sy git \
 	lua \
 	nodejs \
 	yarn \
-	webpack \
 	most \
 	curl \
 	bat \
-	kubectl \
-	kubecolor \
 	zsh \
 	zsh-syntax-highlighting
 
@@ -56,6 +53,7 @@ sudo xbps-install -S htop \
 	ghostty
 
 # TODO: Clang, Clangd, Clang-Format (Should we simply install LLVM and set path in Vim for Clang-Format ?)
+# NOTE: webpack, kubecolor are missing ? Also I removed kubectl from recommended packages.
 
 # backup existing cf.map.gz
 if [ -f /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz ]; then
@@ -73,7 +71,7 @@ if [ -f /etc/rc.conf ]; then
 	sudo mv /etc/rc.conf /etc/rc-${timestamp}.conf
 fi
 
-#copy rc.conf
+# copy rc.conf
 sudo cp /void-linux/etc/rc.conf /etc/rc.conf
 
 # backup existing libc-locales

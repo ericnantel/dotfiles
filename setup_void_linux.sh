@@ -28,6 +28,7 @@ sudo xbps-install -Sy git \
 	vim \
 	neovim \
 	tmux \
+	yq \
 	eza \
 	delta \
 	starship \

@@ -27,17 +27,12 @@ sudo xbps-install -Sy git \
 	vim \
 	neovim \
 	tmux \
+	eza \
 	delta \
 	starship \
 	ripgrep \
 	fzf \
 	rsync \
-	llvm \
-	clang \
-	clangd \
-	clang-tidy \
-	clang-dbg \
-	clang-format \
 	python3 \
 	lua \
 	nodejs \
@@ -54,10 +49,13 @@ sudo xbps-install -Sy git \
 # install optional packages
 sudo xbps-install -S htop \
 	fastfetch \
-	eza \
 	wezterm \
 	ghostty \
-	emacs
+	emacs \
+	wezterm \
+	ghostty
+
+# TODO: Clang, Clangd, Clang-Format (Should we simply install LLVM and set path in Vim for Clang-Format ?)
 
 # backup existing cf.map.gz
 if [ -f /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz ]; then
@@ -192,59 +190,61 @@ if [ -f ~/.vimrc ]; then
 	mv ~/.vimrc ~/.vimrc-${timestamp}
 fi
 
-# copy vim config
-cp .vimrc ~/.vimrc
+# NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
 
-# source vim config
-source ~/.vimrc
+# # copy vim config
+# cp .vimrc ~/.vimrc
 
-# make directories ~/.vim, ~/.vim/autoload, ~/.vim/bundle, ~/.vim/colors, ~/.vim/plugged, ~/.vim/undodir
-mkdir -p ~/.vim
-mkdir -p ~/.vim/autoload
-mkdir -p ~/.vim/bundle
-mkdir -p ~/.vim/colors
-mkdir -p ~/.vim/plugged
-mkdir -p ~/.vim/undodir
+# # source vim config
+# source ~/.vimrc
 
-# copy vim coc settings to ~/.vim
-cp .vim/coc-settings.json ~/.vim/coc-settings.json
+# # make directories ~/.vim, ~/.vim/autoload, ~/.vim/bundle, ~/.vim/colors, ~/.vim/plugged, ~/.vim/undodir
+# mkdir -p ~/.vim
+# mkdir -p ~/.vim/autoload
+# mkdir -p ~/.vim/bundle
+# mkdir -p ~/.vim/colors
+# mkdir -p ~/.vim/plugged
+# mkdir -p ~/.vim/undodir
 
-# copy vim plug to ~/.vim/autoload
-cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
+# # copy vim coc settings to ~/.vim
+# cp .vim/coc-settings.json ~/.vim/coc-settings.json
 
-# copy vim colorschemes to ~/.vim/colors
-cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
-cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
-cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
+# # copy vim plug to ~/.vim/autoload
+# cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
 
-# make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
-mkdir -p ~/.vim
-mkdir -p ~/.vim/undodir-nvim
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/nvim/colors
+# # copy vim colorschemes to ~/.vim/colors
+# cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
+# cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
+# cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
 
-# copy neovim config
-cp -rp .config/nvim/* ~/.config/nvim
+# # make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
+# mkdir -p ~/.vim
+# mkdir -p ~/.vim/undodir-nvim
+# mkdir -p ~/.config/nvim
+# mkdir -p ~/.config/nvim/colors
 
-# copy vim colorschemes to ~/.config/nvim/colors
-cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
-cp -rp colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
-cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
+# # copy neovim config
+# cp -rp .config/nvim/* ~/.config/nvim
 
-# backup existing emacs config
-if [ -d ~/.emacs.d ]; then
-	mv ~/.emacs.d/* ~/.emacs.d-${timestamp}
-fi
+# # copy vim colorschemes to ~/.config/nvim/colors
+# cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
+# cp -rp colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
+# cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
 
-# make directory ~/.emacs.d
-mkdir -p ~/.emacs.d
+# # backup existing emacs config
+# if [ -d ~/.emacs.d ]; then
+# 	mv ~/.emacs.d/* ~/.emacs.d-${timestamp}
+# fi
 
-# copy emacs config
-cp .emacs.d/init.el ~/.emacs.d/init.el
+# # make directory ~/.emacs.d
+# mkdir -p ~/.emacs.d
 
-# copy emacs themes/colorschemes
-cp .emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
-cp .emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
+# # copy emacs config
+# cp .emacs.d/init.el ~/.emacs.d/init.el
+
+# # copy emacs themes/colorschemes
+# cp .emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
+# cp .emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
 
 # reboot now
 sudo shutdown -r now

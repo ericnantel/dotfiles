@@ -24,14 +24,24 @@ sudo vkpurge rm all
 
 # install recommended packages
 sudo xbps-install -Sy git \
-	vim
+	vim \
+	tmux \
+	starship \
+	ripgrep \
+	fzf \
+	python3 \
+	lua \
+	nodejs
 
 # install optional packages
 sudo xbps-install -S htop \
-	fastfetch
+	fastfetch \
+	eza
 
 # backup existing cf.map.gz
-sudo mv /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz /usr/share/kbd/keymaps/i386/qwerty/cf-${timestamp}.map.gz
+if [ -f /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz ]; then
+	sudo mv /usr/share/kbd/keymaps/i386/qwerty/cf.map.gz /usr/share/kbd/keymaps/i386/qwerty/cf-${timestamp}.map.gz
+fi
 
 # copy cf.map
 sudo cp void-linux/usr/share/kbd/keymaps/i386/qwerty/cf.map /usr/share/kbd/keymaps/i386/qwerty/cf.map
@@ -40,19 +50,25 @@ sudo cp void-linux/usr/share/kbd/keymaps/i386/qwerty/cf.map /usr/share/kbd/keyma
 sudo gzip /usr/share/kbd/keymaps/i386/qwerty/cf.map
 
 # backup existing rc.conf
-sudo mv /etc/rc.conf /etc/rc-${timestamp}.conf
+if [ -f /etc/rc.conf ]; then
+	sudo mv /etc/rc.conf /etc/rc-${timestamp}.conf
+fi
 
 #copy rc.conf
 sudo cp /void-linux/etc/rc.conf /etc/rc.conf
 
 # backup existing libc-locales
-sudo mv /etc/default/libc-locales /etc/default/libc-locales-${timestamp}
+if [ -f /etc/default/libc-locales ]; then
+	sudo mv /etc/default/libc-locales /etc/default/libc-locales-${timestamp}
+fi
 
 # copy libc-locales
 sudo cp void-linux/etc/default/libc-locales /etc/default/libc-locales
 
 # backup existing locale.conf
-sudo mv /etc/locale.conf /etc/locale-${timestamp}.conf
+if [ -f /etc/locale.conf ]; then
+	sudo mv /etc/locale.conf /etc/locale-${timestamp}.conf
+fi
 
 # copy locale.conf
 sudo cp void-linux/etc/locale.conf /etc/locale.conf
@@ -69,6 +85,8 @@ git --version
 # init and update submodules
 git submodule init
 git submodule update
+
+#sleep 10
 
 # reboot now
 sudo shutdown -r now

@@ -72,7 +72,7 @@ if [ -f /etc/rc.conf ]; then
 fi
 
 # copy rc.conf
-sudo cp /void-linux/etc/rc.conf /etc/rc.conf
+sudo cp void-linux/etc/rc.conf /etc/rc.conf
 
 # backup existing libc-locales
 if [ -f /etc/default/libc-locales ]; then
@@ -177,20 +177,20 @@ mkdir -p ~/.tmux/plugins/tpm
 # copy tmux plugin manager (tpm)
 cp -rp .tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 
-# backup existing Jetbrains IntelliJ vim config
-if [ -f ~/.ideavimrc ]; then
-	mv ~/.ideavimrc ~/.ideavimrc-${timestamp}
-fi
-
-# copy Jetbrains IntelliJ vim config
-cp .ideavimrc ~/.ideavimrc
-
-# backup existing vim config
-if [ -f ~/.vimrc ]; then
-	mv ~/.vimrc ~/.vimrc-${timestamp}
-fi
-
 # NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
+
+# # backup existing Jetbrains IntelliJ vim config
+# if [ -f ~/.ideavimrc ]; then
+# 	mv ~/.ideavimrc ~/.ideavimrc-${timestamp}
+# fi
+
+# # copy Jetbrains IntelliJ vim config
+# cp .ideavimrc ~/.ideavimrc
+
+# # backup existing vim config
+# if [ -f ~/.vimrc ]; then
+# 	mv ~/.vimrc ~/.vimrc-${timestamp}
+# fi
 
 # # copy vim config
 # cp .vimrc ~/.vimrc

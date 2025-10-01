@@ -139,11 +139,9 @@ cp ${dotfiles}/.zshrc ~/.zshrc
 # source zsh config
 #source ~/.zshrc
 
-# TODO: Add zsh to /etc/shells ?
-
-# set zsh as current shell
-# NOTE: Remove sudo if for current user
-#sudo chsh -s $(which zsh)
+# set zsh as current shell for current user
+# NOTE: Add sudo to set it for root user
+chsh -s $(which zsh)
 
 # copy wezterm config
 cp ${dotfiles}/.wezterm.lua ~/.wezterm.lua

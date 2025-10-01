@@ -65,7 +65,19 @@ eval "$(starship init zsh)"
 # NOTE: This assumes you have zsh-syntax-highlighting installed
 if [[ "$os" == "GNU/Linux" ]]; then
 	# NOTE: This assumes you are on Linux
-	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	if [ -f /etc/os-release ]; then
+		. /etc/os-release
+		OS=$DISTRIB_ID
+		case ${OS} in
+			"void")
+				# Void Linux
+				source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+			;;
+		esac
+	else
+		# Possibly Debian or Ubuntu
+		source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	fi
 else
 	# NOTE: This assumes you have homebrew installed (MacOS or Linux)
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

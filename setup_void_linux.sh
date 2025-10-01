@@ -139,6 +139,7 @@ source ~/.zshrc
 # TODO: Add zsh to /etc/shells ?
 
 # set zsh as current shell
+# NOTE: Remove sudo if for current user
 #sudo chsh -s $(which zsh)
 
 # copy wezterm config

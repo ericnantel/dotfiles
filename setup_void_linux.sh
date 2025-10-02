@@ -33,6 +33,7 @@ sudo xbps-install -Sy git \
 	delta \
 	starship \
 	ripgrep \
+	fd \
 	fzf \
 	rsync \
 	python3 \
@@ -97,6 +98,23 @@ sudo xbps-reconfigure -f glibc-locales
 
 # localedef --list-archive
 # locale -a
+
+# make directory ~/.local/share/fonts
+mkdir -p ~/.local/share/fonts
+
+# make directory ~/.local/share/fonts/nerd-fonts
+mkdir -p ~/.local/share/fonts/nerd-fonts
+
+# copy nerd fonts
+cp -rp ${dotfiles}/fonts/nerd-fonts/* ~/.local/share/fonts/nerd-fonts
+
+# reconfigure fonts
+sudo xbps-reconfigure -f fontconfig
+
+# clean and regenerate font cache
+fc-cache -f -v ~/.local/share/fonts
+
+# fc-list | grep "JetBrainsMono"
 
 # log installed git version
 git --version

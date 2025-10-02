@@ -133,9 +133,9 @@ sudo xbps-install -Syu hyprland \
 	xdg-desktop-portal-hyprland \
 	wayland \
 	dbus \
-	elogind \
-	seatd \
 	polkit \
+	seatd \
+	elogind \
 	mesa-dri \
 	pipewire \
 	kitty \
@@ -154,12 +154,28 @@ sudo ln -s /etc/sv/polkit /var/service/polkitd
 sudo ln -s /etc/sv/seatd /var/service/seatd
 
 # add user to _seatd group
-# sudo usermod -aG _seatd $USER
-sudo usermod -aG _seatd kalel
+sudo usermod -aG _seatd $USER
 
 # enable elogind service
-# sudo ln -s /etc/sv/elogind /var/service/elogind
+sudo ln -s /etc/sv/elogind /var/service/elogind
 
+# make directory ~/.config/hypr
+mkdir -p ~/.config/hypr
+
+# copy hyprland config (including hyprpaper and custom script)
+cp -rp ${dotfiles}/.config/hypr/* ~/.config/hypr
+
+# make directory ~/.config/waybar
+mkdir -p ~/.config/waybar
+
+# copy waybar config
+cp -rp ${dotfiles}/.config/waybar/* ~/.config/waybar
+
+# make directory ~/.config/wofi
+mkdir -p ~/.config/wofi
+
+# copy wofi config
+cp -rp ${dotfiles}/.config/wofi/* ~/.config/wofi
 
 # log installed git version
 git --version

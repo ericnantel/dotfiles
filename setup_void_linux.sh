@@ -142,6 +142,7 @@ sudo xbps-install -Syu hyprland \
 	hyprpaper \
 	Waybar \
 	wofi \
+	hyprland-qtutils \
 	socat
 
 # enable dbus service

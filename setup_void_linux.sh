@@ -116,6 +116,27 @@ fc-cache -f -v ~/.local/share/fonts
 
 # fc-list | grep "JetBrainsMono"
 
+# make directory /etc/xbps.d
+sudo mkdir -p /etc/xbps.d
+
+# copy hyprland xbps repository
+sudo cp ${dotfiles}/void-linux/etc/xbps.d/hyprland-void.conf /etc/xbps.d/hyprland-void.conf
+
+# refresh xbps repositories
+sudo xbps-install -S
+
+# xbps-query -Rs hypr
+
+# install hyprland and related packages
+sudo xbps-install -Syu hyprland \
+	xdg-desktop-portal-hyprland \
+	wayland \
+	kitty \
+	hyprpaper \
+	waybar \
+	wofi \
+	socat
+
 # log installed git version
 git --version
 

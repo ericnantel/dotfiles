@@ -135,6 +135,8 @@ sudo xbps-install -Syu hyprland \
 	dbus \
 	elogind \
 	seatd \
+	polkit \
+	mesa-dri \
 	pipewire \
 	kitty \
 	hyprpaper \
@@ -145,14 +147,19 @@ sudo xbps-install -Syu hyprland \
 # enable dbus service
 sudo ln -s /etc/sv/dbus /var/service/dbus
 
-# enable elogind service
-sudo ln -s /etc/sv/elogind /var/service/elogind
+# enable polkit service
+sudo ln -s /etc/sv/polkit /var/service/polkitd
 
 # enable seatd service
-# sudo ln -s /etc/sv/seatd /var/service/seatd
+sudo ln -s /etc/sv/seatd /var/service/seatd
 
 # add user to _seatd group
 # sudo usermod -aG _seatd $USER
+sudo usermod -aG _seatd kalel
+
+# enable elogind service
+# sudo ln -s /etc/sv/elogind /var/service/elogind
+
 
 # log installed git version
 git --version

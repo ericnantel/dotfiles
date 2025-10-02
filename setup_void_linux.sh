@@ -25,6 +25,7 @@ sudo vkpurge rm all
 
 # install recommended packages
 sudo xbps-install -Sy git \
+	cmake \
 	vim \
 	neovim \
 	tmux \
@@ -131,11 +132,23 @@ sudo xbps-install -S
 sudo xbps-install -Syu hyprland \
 	xdg-desktop-portal-hyprland \
 	wayland \
+	dbus \
+	seatd \
+	pipewire \
 	kitty \
 	hyprpaper \
-	waybar \
+	Waybar \
 	wofi \
 	socat
+
+# enable dbus service
+sudo ln -s /etc/sv/dbus /var/service/dbus
+
+# enable seatd service
+sudo ln -s /etc/sv/seatd /var/service/seatd
+
+# add user to _seatd group
+sudo usermod -aG _seatd $USER
 
 # log installed git version
 git --version

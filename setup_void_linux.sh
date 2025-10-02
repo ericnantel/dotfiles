@@ -126,7 +126,7 @@ sudo cp ${dotfiles}/void-linux/etc/xbps.d/hyprland-void.conf /etc/xbps.d/hyprlan
 # refresh xbps repositories
 sudo xbps-install -S
 
-# xbps-query -Rs hypr
+xbps-query -Rs hypr
 
 # install hyprland and related packages
 sudo xbps-install -Syu hyprland \
@@ -149,10 +149,10 @@ sudo ln -s /etc/sv/dbus /var/service/dbus
 sudo ln -s /etc/sv/elogind /var/service/elogind
 
 # enable seatd service
-sudo ln -s /etc/sv/seatd /var/service/seatd
+# sudo ln -s /etc/sv/seatd /var/service/seatd
 
 # add user to _seatd group
-sudo usermod -aG _seatd $USER
+# sudo usermod -aG _seatd $USER
 
 # log installed git version
 git --version

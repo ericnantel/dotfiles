@@ -146,7 +146,7 @@ sudo xbps-install -Syu hyprland \
 sudo ln -s /etc/sv/dbus /var/service/dbus
 
 # enable elogind service
-sudo ln -s /etc/sv/elogind /var/services/elogind
+sudo ln -s /etc/sv/elogind /var/service/elogind
 
 # enable seatd service
 sudo ln -s /etc/sv/seatd /var/service/seatd

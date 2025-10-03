@@ -292,7 +292,7 @@ if [ -f ~/.ideavimrc ]; then
 fi
 
 # copy Jetbrains IntelliJ vim config
-cp .ideavimrc ~/.ideavimrc
+cp ${dotfiles}/.ideavimrc ~/.ideavimrc
 
 # backup existing vim config
 if [ -f ~/.vimrc ]; then
@@ -300,7 +300,7 @@ if [ -f ~/.vimrc ]; then
 fi
 
 # copy vim config
-cp .vimrc ~/.vimrc
+cp ${dotfiles}/.vimrc ~/.vimrc
 
 # source vim config
 source ~/.vimrc
@@ -314,15 +314,15 @@ mkdir -p ~/.vim/plugged
 mkdir -p ~/.vim/undodir
 
 # copy vim coc settings to ~/.vim
-cp .vim/coc-settings.json ~/.vim/coc-settings.json
+cp ${dotfiles}/.vim/coc-settings.json ~/.vim/coc-settings.json
 
 # copy vim plug to ~/.vim/autoload
-cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
+cp ${dotfiles}/vim-plug/plug.vim ~/.vim/autoload/plug.vim
 
 # copy vim colorschemes to ~/.vim/colors
-cp -rp colorschemes/candle-grey/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
-cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
-cp -rp colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
+cp -rp ${dotfiles}/colorschemes/candle-grey/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
+cp -rp ${dotfiles}/colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
+cp -rp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
 
 # make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
 mkdir -p ~/.vim
@@ -331,12 +331,12 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/nvim/colors
 
 # copy neovim config
-cp -rp .config/nvim/* ~/.config/nvim
+cp -rp ${dotfiles}/.config/nvim/* ~/.config/nvim
 
 # copy vim colorschemes to ~/.config/nvim/colors
-cp -rp colorschemes/candle-grey/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
-cp -rp colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
-cp -rp colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
+cp -rp ${dotfiles}/colorschemes/candle-grey/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
+cp -rp ${dotfiles}/colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
+cp -rp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
 
 # backup existing emacs config
 if [ -d ~/.emacs.d ]; then
@@ -347,11 +347,11 @@ fi
 mkdir -p ~/.emacs.d
 
 # copy emacs config
-cp .emacs.d/init.el ~/.emacs.d/init.el
+cp ${dotfiles}/.emacs.d/init.el ~/.emacs.d/init.el
 
 # copy emacs themes/colorschemes
-cp .emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
-cp .emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
+cp ${dotfiles}/.emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
+cp ${dotfiles}/.emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
 
 # reboot now
 sudo shutdown -r now

@@ -274,6 +274,7 @@ cp -rp ${dotfiles}/.tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 # NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
 
 sudo xbps-install -Sy python3 \
+	python3-virtualenv \
 	lua \
 	nodejs \
 	yarn \

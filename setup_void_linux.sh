@@ -161,6 +161,9 @@ sudo ln -s /etc/sv/elogind /var/service/elogind
 # enable polkitd service
 sudo ln -s /etc/sv/polkitd /var/service/polkitd
 
+# add user to _pipewire group
+sudo usermod -aG _pipewire $USER
+
 # make directory ~/.config/hypr
 mkdir -p ~/.config/hypr
 

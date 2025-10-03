@@ -25,7 +25,6 @@ sudo vkpurge rm all
 
 # install recommended packages
 sudo xbps-install -Sy git \
-	cmake \
 	vim \
 	neovim \
 	tmux \
@@ -37,13 +36,7 @@ sudo xbps-install -Sy git \
 	fd \
 	fzf \
 	rsync \
-	python3 \
-	lua \
-	nodejs \
-	yarn \
 	most \
-	curl \
-	bat \
 	zsh \
 	zsh-syntax-highlighting
 
@@ -126,10 +119,9 @@ sudo cp ${dotfiles}/void-linux/etc/xbps.d/hyprland-void.conf /etc/xbps.d/hyprlan
 # refresh xbps repositories
 sudo xbps-install -S
 
-# xbps-query -Rs hypr
-
 # install hyprland and related packages
 sudo xbps-install -Syu hyprland \
+	hyprland-devel \
 	xdg-desktop-portal-hyprland \
 	xorg-server-xwayland \
 	gtk-layer-shell \
@@ -142,6 +134,8 @@ sudo xbps-install -Syu hyprland \
 	ffmpeg \
 	pipewire \
 	wireplumber \
+	linux-firmware-intel \
+	intel-video-accel \
 	mesa-dri \
 	kitty \
 	hyprpaper \
@@ -149,24 +143,24 @@ sudo xbps-install -Syu hyprland \
 	wlogout \
 	wofi \
 	socat \
-	qemu-system \
 	firefox
+
+xbps-query -Rs hypr
 
 # enable dbus service
 sudo ln -s /etc/sv/dbus /var/service/dbus
+
+# disable acpid service
+# sudo rm /var/service/acpid
+
+# enable polkitd service
+sudo ln -s /etc/sv/polkitd /var/service/polkitd
 
 # enable seatd service
 sudo ln -s /etc/sv/seatd /var/service/seatd
 
 # add user to _seatd group
 sudo usermod -aG _seatd $USER
-
-# disable acpid service
-sudo rm /var/service/acpid
-sleep 1
-
-# enable polkitd service
-sudo ln -s /etc/sv/polkitd /var/service/polkitd
 
 # enable elogind service
 sudo ln -s /etc/sv/elogind /var/service/elogind
@@ -281,72 +275,83 @@ cp -rp ${dotfiles}/.tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 
 # NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
 
-# # backup existing Jetbrains IntelliJ vim config
-# if [ -f ~/.ideavimrc ]; then
-# 	mv ~/.ideavimrc ~/.ideavimrc-${timestamp}
-# fi
+sudo xbps-install -Sy python3 \
+	lua \
+	nodejs \
+	yarn \
+	cmake \
+	llvm \
+	bat \
+	curl \
+	fzf \
+	ripgrep
 
-# # copy Jetbrains IntelliJ vim config
-# cp .ideavimrc ~/.ideavimrc
+# backup existing Jetbrains IntelliJ vim config
+if [ -f ~/.ideavimrc ]; then
+	mv ~/.ideavimrc ~/.ideavimrc-${timestamp}
+fi
 
-# # backup existing vim config
-# if [ -f ~/.vimrc ]; then
-# 	mv ~/.vimrc ~/.vimrc-${timestamp}
-# fi
+# copy Jetbrains IntelliJ vim config
+cp .ideavimrc ~/.ideavimrc
 
-# # copy vim config
-# cp .vimrc ~/.vimrc
+# backup existing vim config
+if [ -f ~/.vimrc ]; then
+	mv ~/.vimrc ~/.vimrc-${timestamp}
+fi
 
-# # source vim config
-# source ~/.vimrc
+# copy vim config
+cp .vimrc ~/.vimrc
 
-# # make directories ~/.vim, ~/.vim/autoload, ~/.vim/bundle, ~/.vim/colors, ~/.vim/plugged, ~/.vim/undodir
-# mkdir -p ~/.vim
-# mkdir -p ~/.vim/autoload
-# mkdir -p ~/.vim/bundle
-# mkdir -p ~/.vim/colors
-# mkdir -p ~/.vim/plugged
-# mkdir -p ~/.vim/undodir
+# source vim config
+source ~/.vimrc
 
-# # copy vim coc settings to ~/.vim
-# cp .vim/coc-settings.json ~/.vim/coc-settings.json
+# make directories ~/.vim, ~/.vim/autoload, ~/.vim/bundle, ~/.vim/colors, ~/.vim/plugged, ~/.vim/undodir
+mkdir -p ~/.vim
+mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/bundle
+mkdir -p ~/.vim/colors
+mkdir -p ~/.vim/plugged
+mkdir -p ~/.vim/undodir
 
-# # copy vim plug to ~/.vim/autoload
-# cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
+# copy vim coc settings to ~/.vim
+cp .vim/coc-settings.json ~/.vim/coc-settings.json
 
-# # copy vim colorschemes to ~/.vim/colors
-# cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
-# cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
-# cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
+# copy vim plug to ~/.vim/autoload
+cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
 
-# # make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
-# mkdir -p ~/.vim
-# mkdir -p ~/.vim/undodir-nvim
-# mkdir -p ~/.config/nvim
-# mkdir -p ~/.config/nvim/colors
+# copy vim colorschemes to ~/.vim/colors
+cp -rp colorschemes/candle-grey/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
+cp -rp colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
+cp -rp colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
 
-# # copy neovim config
-# cp -rp .config/nvim/* ~/.config/nvim
+# make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
+mkdir -p ~/.vim
+mkdir -p ~/.vim/undodir-nvim
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/colors
 
-# # copy vim colorschemes to ~/.config/nvim/colors
-# cp -rp colorschemes/darcula/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
-# cp -rp colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
-# cp -rp colorschemes/darcula/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
+# copy neovim config
+cp -rp .config/nvim/* ~/.config/nvim
 
-# # backup existing emacs config
-# if [ -d ~/.emacs.d ]; then
-# 	mv ~/.emacs.d/* ~/.emacs.d-${timestamp}
-# fi
+# copy vim colorschemes to ~/.config/nvim/colors
+cp -rp colorschemes/candle-grey/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
+cp -rp colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
+cp -rp colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
 
-# # make directory ~/.emacs.d
-# mkdir -p ~/.emacs.d
+# backup existing emacs config
+if [ -d ~/.emacs.d ]; then
+	mv ~/.emacs.d/* ~/.emacs.d-${timestamp}
+fi
 
-# # copy emacs config
-# cp .emacs.d/init.el ~/.emacs.d/init.el
+# make directory ~/.emacs.d
+mkdir -p ~/.emacs.d
 
-# # copy emacs themes/colorschemes
-# cp .emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
-# cp .emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
+# copy emacs config
+cp .emacs.d/init.el ~/.emacs.d/init.el
+
+# copy emacs themes/colorschemes
+cp .emacs.d/cappuccino-noir-theme.el ~/.emacs.d/cappuccino-noir-theme.el
+cp .emacs.d/somnus-theme.el ~/.emacs.d/somnus-theme.el
 
 # reboot now
 sudo shutdown -r now

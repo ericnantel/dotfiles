@@ -101,4 +101,6 @@ OBS Screen Capture was not available in Hyprland (Wayland) until I installed the
 Then I restart Ubuntu and OBS worked again.
 Date: 2025-09-30
 Hyprland and Hyprpaper are not available in Void Linux Official Package Repo.
-
+Date: 2925-10-03
+Void Linux tty console does not support 256 colors, so I will not set darcula colorscheme
+in Vim config if that's the case. I might need to do the same for Neovim.

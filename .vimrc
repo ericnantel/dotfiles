@@ -47,12 +47,22 @@ set clipboard^=unnamed,unnamedplus
 " 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
 let $LANG = "fr_CA.UTF-8"
 
-set background=dark
 syntax on
-set t_Co=256
-" Comment this if your terminal doesn't support it
-" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
-set termguicolors
+
+if $TERM != 'linux'
+	set background=dark
+	set t_Co=256
+	" Comment this if your terminal doesn't support it
+	" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
+	set termguicolors
+
+	" Make sure to have ~/.vim/colors/darcula.vim
+	" You can find it in my dotfiles submodules
+	" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
+	" or comment the line below
+	" NOTE: Requires 256 colors support
+	colorscheme darcula
+endif
 
 set scrolloff=5
 set showcmd
@@ -83,12 +93,6 @@ if has("win32")
 		set rtp+=~/scoop/apps/llvm/current/bin
 	endif
 endif
-
-" Make sure to have ~/.vim/colors/darcula.vim
-" You can find it in my dotfiles submodules
-" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
-" or comment the line below
-colorscheme darcula
 
 " Z80
 autocmd BufNewFile,BufRead *.z80.asm set filetype=z80

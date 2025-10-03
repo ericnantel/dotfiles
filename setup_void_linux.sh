@@ -117,66 +117,60 @@ fc-cache -f -v ~/.local/share/fonts
 
 # fc-list | grep "JetBrainsMono"
 
-# # make directory /etc/xbps.d
-# sudo mkdir -p /etc/xbps.d
+# make directory /etc/xbps.d
+sudo mkdir -p /etc/xbps.d
 
-# # copy hyprland xbps repository
-# sudo cp ${dotfiles}/void-linux/etc/xbps.d/hyprland-void.conf /etc/xbps.d/hyprland-void.conf
+# copy hyprland xbps repository
+sudo cp ${dotfiles}/void-linux/etc/xbps.d/hyprland-void.conf /etc/xbps.d/hyprland-void.conf
 
-# # refresh xbps repositories
-# sudo xbps-install -S
+# refresh xbps repositories
+sudo xbps-install -S
 
 # xbps-query -Rs hypr
 
-# # install hyprland and related packages
-# sudo xbps-install -Syu hyprland \
-# 	xdg-desktop-portal-hyprland \
-# 	wayland \
-# 	dbus \
-# 	polkit \
-# 	seatd \
-# 	elogind \
-# 	mesa-dri \
-# 	pipewire \
-# 	kitty \
-# 	hyprpaper \
-# 	Waybar \
-# 	wofi \
-# 	hyprland-qtutils \
-# 	socat
+# install hyprland and related packages
+sudo xbps-install -Syu hyprland \
+	xdg-desktop-portal-hyprland \
+	wayland \
+	dbus \
+	seatd \
+	elogind \
+	mesa-dri \
+	kitty \
+	hyprpaper \
+	Waybar \
+	wofi \
+	socat
 
-# # enable dbus service
+# enable dbus service
 # sudo ln -s /etc/sv/dbus /var/service/dbus
 
-# # enable polkit service
-# sudo ln -s /etc/sv/polkit /var/service/polkitd
-
-# # enable seatd service
+# enable seatd service
 # sudo ln -s /etc/sv/seatd /var/service/seatd
 
-# # add user to _seatd group
-# sudo usermod -aG _seatd $USER
+# add user to _seatd group
+sudo usermod -aG _seatd $USER
 
-# # enable elogind service
-# sudo ln -s /etc/sv/elogind /var/service/elogind
+# enable elogind service
+sudo ln -s /etc/sv/elogind /var/service/elogind
 
-# # make directory ~/.config/hypr
-# mkdir -p ~/.config/hypr
+# make directory ~/.config/hypr
+mkdir -p ~/.config/hypr
 
-# # copy hyprland config (including hyprpaper and custom script)
-# cp -rp ${dotfiles}/.config/hypr/* ~/.config/hypr
+# copy hyprland config (including hyprpaper and custom script)
+cp -rp ${dotfiles}/.config/hypr/* ~/.config/hypr
 
-# # make directory ~/.config/waybar
-# mkdir -p ~/.config/waybar
+# make directory ~/.config/waybar
+mkdir -p ~/.config/waybar
 
-# # copy waybar config
-# cp -rp ${dotfiles}/.config/waybar/* ~/.config/waybar
+# copy waybar config
+cp -rp ${dotfiles}/.config/waybar/* ~/.config/waybar
 
-# # make directory ~/.config/wofi
-# mkdir -p ~/.config/wofi
+# make directory ~/.config/wofi
+mkdir -p ~/.config/wofi
 
-# # copy wofi config
-# cp -rp ${dotfiles}/.config/wofi/* ~/.config/wofi
+# copy wofi config
+cp -rp ${dotfiles}/.config/wofi/* ~/.config/wofi
 
 # log installed git version
 git --version

@@ -130,11 +130,15 @@ sudo xbps-install -S
 
 # install hyprland and related packages
 sudo xbps-install -Syu hyprland \
+	xorg-server-xwayland \
 	xdg-desktop-portal-hyprland \
 	wayland \
 	dbus \
 	seatd \
 	elogind \
+	polkit \
+	pipewire \
+	wireplumber \
 	mesa-dri \
 	kitty \
 	hyprpaper \
@@ -143,16 +147,19 @@ sudo xbps-install -Syu hyprland \
 	socat
 
 # enable dbus service
-# sudo ln -s /etc/sv/dbus /var/service/dbus
+sudo ln -s /etc/sv/dbus /var/service/dbus
 
 # enable seatd service
-# sudo ln -s /etc/sv/seatd /var/service/seatd
+sudo ln -s /etc/sv/seatd /var/service/seatd
 
 # add user to _seatd group
 sudo usermod -aG _seatd $USER
 
 # enable elogind service
 sudo ln -s /etc/sv/elogind /var/service/elogind
+
+# enable polkitd service
+sudo ln -s /etc/sv/polkitd /var/service/polkitd
 
 # make directory ~/.config/hypr
 mkdir -p ~/.config/hypr

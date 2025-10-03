@@ -321,7 +321,7 @@ cp ${dotfiles}/vim-plug/plug.vim ~/.vim/autoload/plug.vim
 # copy vim colorschemes to ~/.vim/colors
 cp ${dotfiles}/colorschemes/candle-grey/colors/candle-grey.vim ~/.vim/colors/candle-grey.vim
 cp ${dotfiles}/colorschemes/darcula/colors/darcula.vim ~/.vim/colors/darcula.vim
-cp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.vim/colors/gruvbox8.vim
+cp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox8.vim ~/.vim/colors/gruvbox8.vim
 
 # make directories for ~/.vim, ~/.vim/undodir-nvim, ~/.config/nvim, ~/.config/nvim/colors
 mkdir -p ~/.vim
@@ -335,10 +335,11 @@ cp -rp ${dotfiles}/.config/nvim/* ~/.config/nvim
 # copy vim colorschemes to ~/.config/nvim/colors
 cp ${dotfiles}/colorschemes/candle-grey/colors/candle-grey.vim ~/.config/nvim/colors/candle-grey.vim
 cp ${dotfiles}/colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
-cp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox.vim ~/.config/nvim/colors/gruvbox8.vim
+cp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox8.vim ~/.config/nvim/colors/gruvbox8.vim
 
 # backup existing emacs config
 if [ -d ~/.emacs.d ]; then
+	mkdir -p ~/.emacs.d-${timestamp}
 	mv ~/.emacs.d/* ~/.emacs.d-${timestamp}
 fi
 

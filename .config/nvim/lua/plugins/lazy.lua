@@ -783,10 +783,12 @@ lazy.setup({
 			lazy = false,
 			priority = 1000,
 			config = function()
-				local nightowl = require("night-owl")
-				nightowl.setup()
+				if not os.getenv("TERM") == "linux" then
+					local nightowl = require("night-owl")
+					nightowl.setup()
 
-				vim.cmd.colorscheme("night-owl")
+					vim.cmd.colorscheme("night-owl")
+				end
 			end,
 		},
 		-- oxocarbon

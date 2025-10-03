@@ -68,12 +68,15 @@ vim.opt.wildignore = "*.swp,*.DS_Store,*.meta"
 
 vim.opt.path:append("**")
 
-vim.opt.background = "dark"
 vim.opt.syntax = on
-vim.opt.termguicolors = true
 
--- NOTE: Will be using night-owl (see plugins.lazy.lua)
--- vim.cmd([[ colorscheme darcula ]])
+if not os.getenv("TERM") == "linux" then
+	vim.opt.background = "dark"
+	vim.opt.termguicolors = true
+
+	-- NOTE: Will be using night-owl (see plugins.lazy.lua)
+	-- vim.cmd([[ colorscheme darcula ]])
+end
 
 vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])
 -- vim.cmd([[autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab]])

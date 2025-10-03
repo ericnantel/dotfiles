@@ -130,21 +130,27 @@ sudo xbps-install -S
 
 # install hyprland and related packages
 sudo xbps-install -Syu hyprland \
-	xorg-server-xwayland \
 	xdg-desktop-portal-hyprland \
+	xorg-server-xwayland \
+	gtk-layer-shell \
 	wayland \
+	wayland-protocols \
 	dbus \
 	seatd \
-	elogind \
 	polkit \
+	elogind \
+	ffmpeg \
 	pipewire \
 	wireplumber \
 	mesa-dri \
 	kitty \
 	hyprpaper \
 	Waybar \
+	wlogout \
 	wofi \
-	socat
+	socat \
+	qemu-system \
+	firefox
 
 # enable dbus service
 sudo ln -s /etc/sv/dbus /var/service/dbus
@@ -155,11 +161,15 @@ sudo ln -s /etc/sv/seatd /var/service/seatd
 # add user to _seatd group
 sudo usermod -aG _seatd $USER
 
-# enable elogind service
-sudo ln -s /etc/sv/elogind /var/service/elogind
+# disable acpid service
+sudo rm /var/service/acpid
+sleep 1
 
 # enable polkitd service
 sudo ln -s /etc/sv/polkitd /var/service/polkitd
+
+# enable elogind service
+sudo ln -s /etc/sv/elogind /var/service/elogind
 
 # add user to _pipewire group
 sudo usermod -aG _pipewire $USER
@@ -227,6 +237,8 @@ cp ${dotfiles}/.zshrc ~/.zshrc
 # set zsh as current shell for current user
 # NOTE: Add sudo to set it for root user
 chsh -s $(which zsh)
+zsh
+source ~/.zshrc
 
 # copy wezterm config
 cp ${dotfiles}/.wezterm.lua ~/.wezterm.lua

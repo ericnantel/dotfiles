@@ -231,8 +231,6 @@ cp ${dotfiles}/.zshrc ~/.zshrc
 # set zsh as current shell for current user
 # NOTE: Add sudo to set it for root user
 chsh -s $(which zsh)
-zsh
-source ~/.zshrc
 
 # copy wezterm config
 cp ${dotfiles}/.wezterm.lua ~/.wezterm.lua

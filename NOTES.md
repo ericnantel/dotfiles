@@ -107,3 +107,5 @@ in Vim config if that's the case. I might need to do the same for Neovim.
 Date: 2025-10-03
 Delta will not display properly in Void Linux tty. So I might need to verify first before
 copying the .gitconfig.
+Date: 2025-10-03
+Emacs in no-window launch (-nw) might need we disable colorscheme if in Void Linux tty.

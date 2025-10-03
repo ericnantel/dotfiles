@@ -282,6 +282,7 @@ sudo xbps-install -Sy python3 \
 	clang-tools-extra \
 	bat \
 	curl \
+	unzip \
 	fzf \
 	ripgrep
 

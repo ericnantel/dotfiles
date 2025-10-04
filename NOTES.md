@@ -112,3 +112,6 @@ Emacs in no-window launch (-nw) might need we disable colorscheme if in Void Lin
 Date: 2025-10-04
 Checking if vim, nvim, tmux? and emacs are opened within a pseudo-terminal fixes
 colorization, unlike checking if $TERM == "linux" which is not reliable.
+Date: 2025-10-04
+It seems we cannot run tmux scripts to remove/install plugins within tmux config.
+Will need to add an alias to run both scripts before launching tmux.

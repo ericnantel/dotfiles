@@ -783,7 +783,7 @@ lazy.setup({
 			lazy = false,
 			priority = 1000,
 			config = function()
-				if not os.getenv("TERM") == "linux" then
+				if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 then
 					local nightowl = require("night-owl")
 					nightowl.setup()
 

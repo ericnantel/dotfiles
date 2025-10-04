@@ -76,6 +76,14 @@ alias Gswitch="git switch"
 # NOTE: This assumes most is installed
 export MANPAGER="most"
 
+# For vim, nvim, tmux? and emacs
+# NOTE: We need to figure out if we can use colorschemes
+# NOTE: Check if /dev/tty* or /dev/pts/*
+# NOTE: Checking if $TERM is linux is not reliable
+# NOTE: Checking if $TERMCOLOR supports 256 colors or Truecolor (24bits)
+# NOTE: We need to consider looking mainly at the output if ssh
+export TTY="$( tty )"
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH

@@ -109,3 +109,6 @@ Delta will not display properly in Void Linux tty. So I might need to verify fir
 copying the .gitconfig.
 Date: 2025-10-03
 Emacs in no-window launch (-nw) might need we disable colorscheme if in Void Linux tty.
+Date: 2025-10-04
+Checking if vim, nvim, tmux? and emacs are opened within a pseudo-terminal fixes
+colorization, unlike checking if $TERM == "linux" which is not reliable.

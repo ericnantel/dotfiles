@@ -70,7 +70,7 @@ vim.opt.path:append("**")
 
 vim.opt.syntax = on
 
-if not os.getenv("TERM") == "linux" then
+if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 then
 	vim.opt.background = "dark"
 	vim.opt.termguicolors = true
 

@@ -49,7 +49,8 @@ let $LANG = "fr_CA.UTF-8"
 
 syntax on
 
-if $TERM != 'linux'
+" if has('gui_running') -> I don't use gVim; only the terminal :)
+if stridx($TTY, "/dev/pts") >= 0 " If using a pseudo-terminal
 	set background=dark
 	set t_Co=256
 	" Comment this if your terminal doesn't support it

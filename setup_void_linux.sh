@@ -339,6 +339,8 @@ cp ${dotfiles}/colorschemes/candle-grey/colors/candle-grey.vim ~/.config/nvim/co
 cp ${dotfiles}/colorschemes/darcula/colors/darcula.vim ~/.config/nvim/colors/darcula.vim
 cp ${dotfiles}/colorschemes/vim-gruvbox8/colors/gruvbox8.vim ~/.config/nvim/colors/gruvbox8.vim
 
+# NOTE: Won't add emacs as a service, because Hyprland will take care of it
+
 # backup existing emacs config
 if [ -d ~/.emacs.d ]; then
 	mkdir -p ~/.emacs.d-${timestamp}

@@ -50,7 +50,7 @@ let $LANG = "fr_CA.UTF-8"
 syntax on
 
 " if has('gui_running') -> I don't use gVim; only the terminal :)
-if stridx($TTY, "/dev/pts") >= 0 " If using a pseudo-terminal
+if stridx($TTY, "/dev/pts") >= 0 || stridx($TTY, "/dev/ttys") >= 0 " If using a pseudo-terminal or macos ttys
 	set background=dark
 	set t_Co=256
 	" Comment this if your terminal doesn't support it

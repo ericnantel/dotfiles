@@ -115,3 +115,7 @@ colorization, unlike checking if $TERM == "linux" which is not reliable.
 Date: 2025-10-04
 It seems we cannot run tmux scripts to remove/install plugins within tmux config.
 Will need to add an alias to run both scripts before launching tmux.
+Date: 2025-10-06
+It seems MacOS uses a pseudo-terminal that starts with /dev/tty, thus causing issues
+with colorization, which are fixed for Neo(Vim) and Tmux, only Emacs' left to fix on
+MacOS.

@@ -780,14 +780,38 @@ lazy.setup({
 		-- Otherwise, make it lazy and comment priority
 		{
 			"oxfist/night-owl.nvim",
-			lazy = false,
-			priority = 1000,
+			lazy = true,
+			-- priority = 1000,
 			config = function()
-				if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 then
+				if
+					vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0
+					or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0
+				then
 					local nightowl = require("night-owl")
 					nightowl.setup()
 
 					vim.cmd.colorscheme("night-owl")
+				end
+			end,
+		},
+		-- rose-pine
+		-- NOTE: Requires a terminal that supports truecolor (24Bit)
+		-- Otherwise, make it lazy and comment priority
+		{
+			"rose-pine/neovim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				if
+					vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0
+					or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0
+				then
+					local rosepine = require("rose-pine")
+					rosepine.setup({
+						variant = "moon",
+					})
+
+					vim.cmd.colorscheme("rose-pine")
 				end
 			end,
 		},

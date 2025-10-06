@@ -22,8 +22,11 @@
 
 ;; hide other ui elements
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+(when (string-match "/dev/pts" (getenv "TTY"))
+  ;; NOTE: Verify why it is not in newer Emacs version
+  ;; (tool-bar-mode -1)
+  ;; (scroll-bar-mode -1)
+)
 
 ;; show line numbers
 (global-display-line-numbers-mode 1)
@@ -78,11 +81,12 @@
 ;; 			 (ergoemacs-status-mode))
 
 ;; night-owl theme
-(use-package night-owl-theme
-			 :ensure t
-			 :pin melpa
-			 :init
-			 (load-theme 'night-owl t))
+(when (string-match "/dev/pts" (getenv "TTY"))
+  (use-package night-owl-theme
+			   :ensure t
+			   :pin melpa
+			   :init
+			   (load-theme 'night-owl t)))
 
 ;; exotica theme
 ;; (use-package exotica-theme

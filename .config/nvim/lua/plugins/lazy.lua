@@ -787,10 +787,12 @@ lazy.setup({
 					vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0
 					or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0
 				then
-					local nightowl = require("night-owl")
-					nightowl.setup()
+					if os.getenv("COLORTERM") == "truecolor" then
+						local nightowl = require("night-owl")
+						nightowl.setup()
 
-					vim.cmd.colorscheme("night-owl")
+						vim.cmd.colorscheme("night-owl")
+					end
 				end
 			end,
 		},
@@ -806,12 +808,14 @@ lazy.setup({
 					vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0
 					or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0
 				then
-					local rosepine = require("rose-pine")
-					rosepine.setup({
-						variant = "moon",
-					})
+					if os.getenv("COLORTERM") == "truecolor" then
+						local rosepine = require("rose-pine")
+						rosepine.setup({
+							variant = "moon",
+						})
 
-					vim.cmd.colorscheme("rose-pine")
+						vim.cmd.colorscheme("rose-pine")
+					end
 				end
 			end,
 		},

@@ -55,7 +55,9 @@ if stridx($TTY, "/dev/pts") >= 0 || stridx($TTY, "/dev/ttys") >= 0 " If using a 
 	set t_Co=256
 	" Comment this if your terminal doesn't support it
 	" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
-	set termguicolors
+	if $COLORTERM == "truecolor"
+		set termguicolors
+	endif
 
 	" Make sure to have ~/.vim/colors/darcula.vim
 	" You can find it in my dotfiles submodules

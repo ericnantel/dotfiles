@@ -72,10 +72,13 @@ vim.opt.syntax = on
 
 if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0 then
 	vim.opt.background = "dark"
-	vim.opt.termguicolors = true
-
-	-- NOTE: Will be using night-owl (see plugins.lazy.lua)
-	-- vim.cmd([[ colorscheme darcula ]])
+	if os.getenv("COLORTERM") == "truecolor" then
+		vim.opt.termguicolors = true
+		-- NOTE: Truecolor colorscheme will be set by lazy (see plugins.lazy.lua)
+	else
+		-- NOTE: Default 256 colors colorscheme
+		vim.cmd([[ colorscheme darcula ]])
+	end
 end
 
 vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])

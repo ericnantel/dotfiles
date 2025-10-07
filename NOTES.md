@@ -119,3 +119,8 @@ Date: 2025-10-06
 It seems MacOS uses a pseudo-terminal that starts with /dev/tty, thus causing issues
 with colorization, which are fixed for Neo(Vim) and Tmux, only Emacs' left to fix on
 MacOS.
+Date: 2025-10-07
+The issue with MacOS regarding tty, is that the Terminal app only supports 256 colors.
+In that case, we should not set termguicolors in Vim. On the other hand, Neovim expects
+truecolor support. We need a way to make the distinction on MacOS, if possible, without
+relying on $TERM or $TERMCOLOR.

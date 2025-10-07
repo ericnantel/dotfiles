@@ -28,7 +28,7 @@
   ;; (message "TTY not found")
   (when (string-match "*/dev/pts*" (getenv "TTY"))
 	(setq colorize_enable 1)))
-	;; (message "PTS found")))
+	;; (message "PTS found"))) ; NOTE: If not PTS likely a TTY unless on Macos (TTYS)
 (if (eq system-type 'darwin)
   (setq colorize_enable 1)
   ;; (message "Darwin System")

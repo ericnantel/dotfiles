@@ -20,9 +20,24 @@
 ;; revert Dired and other buffers
 (setq global-auto-revert-non-file-buffers t)
 
+;; NOTE: C-h e to see messages buffer in Emacs
+(setq messages-buffer-max-lines 10)
+(setq colorize_enable 0)
+(if (eq (getenv "TTY") nil)
+  (setq colorize_enable 1)
+  ;; (message "TTY not found")
+  (when (string-match "*/dev/pts*" (getenv "TTY"))
+	(setq colorize_enable 1)))
+	;; (message "PTS found")))
+(if (eq system-type 'darwin)
+  (setq colorize_enable 1)
+  ;; (message "Darwin System")
+  (setq colorize_enable 0))
+  ;; (message "Not Darwin System"))
+
 ;; hide other ui elements
 (menu-bar-mode -1)
-(when (string-match "/dev/pts" (getenv "TTY"))
+(when (eq colorize_enable 1)
   ;; NOTE: Verify why it is not in newer Emacs version
   ;; (tool-bar-mode -1)
   ;; (scroll-bar-mode -1)
@@ -81,12 +96,15 @@
 ;; 			 (ergoemacs-status-mode))
 
 ;; night-owl theme
-(when (string-match "/dev/pts" (getenv "TTY"))
-  (use-package night-owl-theme
-			   :ensure t
-			   :pin melpa
-			   :init
-			   (load-theme 'night-owl t)))
+;; (when (eq colorize_enable 1)
+;;   (use-package night-owl-theme
+;; 			   :ensure t
+;; 			   :pin melpa
+;; 			   :init
+;; 			   (load-theme 'night-owl t)))
+
+;; TODO: Might require autothemr dependency..
+;;rose-pine-moon theme
 
 ;; exotica theme
 ;; (use-package exotica-theme
@@ -96,11 +114,12 @@
 ;; 			 (load-theme 'exotica t))
 
 ;; nordic night theme
-;; (use-package nordic-night-theme
-;; 			 :ensure t
-;; 			 :pin melpa
-;; 			 :init
-;; 			 (load-theme 'nordic-night t))
+(when (eq colorize_enable 1)
+  (use-package nordic-night-theme
+			   :ensure t
+			   :pin melpa
+			   :init
+			   (load-theme 'nordic-night t)))
 
 ;; doom themes
 ;; (use-package doom-themes

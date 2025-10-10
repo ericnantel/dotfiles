@@ -5,7 +5,8 @@
 # Type ghostty +list-themes
 # Type 'q' to exit preview
 
-theme = NightOwlDark
+# theme = NightOwlDark
+theme = "Rose Pine Moon"
 background-opacity = 0.8
 font-family = "JetBrains Mono"
 font-size = 16

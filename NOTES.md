@@ -124,3 +124,7 @@ The issue with MacOS regarding tty, is that the Terminal app only supports 256 c
 In that case, we should not set termguicolors in Vim. On the other hand, Neovim expects
 truecolor support. We need a way to make the distinction on MacOS, if possible, without
 relying on $TERM or $TERMCOLOR.
+Date: 2025-10-10
+Ghostty theme Rose-Pine on MacOS is 'Rose Pine Moon' and on GNU/Linux 'rose-pine-moon'
+which is bothering me a little .. because I cannot set a theme per system-type within
+the config file..oh well.

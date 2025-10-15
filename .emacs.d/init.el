@@ -23,17 +23,17 @@
 ;; NOTE: C-h e to see messages buffer in Emacs
 (setq messages-buffer-max-lines 10)
 (setq colorize_enable 0)
+(if (eq system-type 'darwin) ;;TODO: Check for Windows as well
+  (setq colorize_enable 1)
+  ;; (message "Darwin System")
+  nil)
+  ;; (message "Not Darwin System"))
 (if (eq (getenv "TTY") nil)
   (setq colorize_enable 1)
   ;; (message "TTY not found")
   (when (string-match "*/dev/pts*" (getenv "TTY"))
 	(setq colorize_enable 1)))
 	;; (message "PTS found")))
-(if (eq system-type 'darwin) ;;TODO: Check for Windows as well
-  (setq colorize_enable 1)
-  ;; (message "Darwin System")
-  (setq colorize_enable 0))
-  ;; (message "Not Darwin System"))
 
 ;; hide other ui elements
 (menu-bar-mode -1)
@@ -96,12 +96,12 @@
 ;; 			 (ergoemacs-status-mode))
 
 ;; night-owl theme
-;; (when (eq colorize_enable 1)
-;;   (use-package night-owl-theme
-;; 			   :ensure t
-;; 			   :pin melpa
-;; 			   :init
-;; 			   (load-theme 'night-owl t)))
+(when (eq colorize_enable 1)
+  (use-package night-owl-theme
+			   :ensure t
+			   :pin melpa
+			   :init
+			   (load-theme 'night-owl t)))
 
 ;; TODO: Might require autothemr dependency..
 ;;rose-pine-moon theme
@@ -114,12 +114,12 @@
 ;; 			 (load-theme 'exotica t))
 
 ;; nordic night theme
-(when (eq colorize_enable 1)
-  (use-package nordic-night-theme
-			   :ensure t
-			   :pin melpa
-			   :init
-			   (load-theme 'nordic-night t)))
+;; (when (eq colorize_enable 1)
+;;   (use-package nordic-night-theme
+;; 			   :ensure t
+;; 			   :pin melpa
+;; 			   :init
+;; 			   (load-theme 'nordic-night t)))
 
 ;; doom themes
 ;; (use-package doom-themes

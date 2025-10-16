@@ -280,7 +280,7 @@ function! s:build_quickfix_list(lines)
 endfunction
 " TODO: Add smart selection to quickfix list
 " Which is if we don't select anything, then select all
-let $FZF_DEFAULT_OPTS = '--bind tab:down,shift-tab:up,ctrl-s:toggle --multi --reverse --no-scrollbar --smart-case --preview-window=left'
+let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,tab:toggle --multi --reverse --no-scrollbar --smart-case --preview-window=left'
 let g:fzf_action = {
 	\ 'ctrl-q': function('s:build_quickfix_list')
 	\ }

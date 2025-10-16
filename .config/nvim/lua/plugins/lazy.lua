@@ -567,9 +567,9 @@ lazy.setup({
 						mappings = {
 							i = {
 								-- NOTE: Find another keybind to toggle select (default was TAB)
-								["<TAB>"] = actions.move_selection_next,
-								["<S-TAB>"] = actions.move_selection_previous,
-								["<C-s>"] = actions.toggle_selection,
+								["<C-j>"] = actions.move_selection_next,
+								["<C-k>"] = actions.move_selection_previous,
+								["<TAB>"] = actions.toggle_selection,
 								["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
 							},
 						},

@@ -128,3 +128,7 @@ Date: 2025-10-10
 Ghostty theme Rose-Pine on MacOS is 'Rose Pine Moon' and on GNU/Linux 'rose-pine-moon'
 which is bothering me a little .. because I cannot set a theme per system-type within
 the config file..oh well.
+Date: 2025-10-15
+I updated Neo(Vim) plugin keybinds in Insert Mode to use Ctrl-j/k which breaks Tmux
+Navigator, so either we change Tmux Navigation keybinds to use Ctrl-a hjkl or we only
+navigate when in Normal mode inside Neo(Vim).

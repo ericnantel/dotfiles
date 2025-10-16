@@ -49,6 +49,7 @@ alias Gshow="git show"
 alias Gstash="git stash"
 alias Gstatus="git status"
 alias Gswitch="git switch"
+alias Gworktree="git worktree"
 
 # For language
 #export LANG=fr_CA.UTF-8

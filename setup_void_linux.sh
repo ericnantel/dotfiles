@@ -281,6 +281,7 @@ sudo xbps-install -Sy python3 \
 	cmake \
 	clang \
 	clang-tools-extra \
+	Bear \
 	bat \
 	curl \
 	unzip \

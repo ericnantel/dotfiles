@@ -1147,16 +1147,23 @@ lazy.setup({
 						end,
 					},
 					mapping = {
-						["<TAB>"] = function(fallback)
+						["<C-j>"] = function(fallback)
 							if cmp.visible() then
 								cmp.select_next_item()
 							else
 								fallback()
 							end
 						end,
-						["<S-TAB>"] = function(fallback)
+						["<C-k>"] = function(fallback)
 							if cmp.visible() then
 								cmp.select_prev_item()
+							else
+								fallback()
+							end
+						end,
+						["<TAB>"] = function(fallback)
+							if cmp.visible() then
+								cmp.confirm({ select = true })
 							else
 								fallback()
 							end

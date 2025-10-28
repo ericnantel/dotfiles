@@ -67,6 +67,7 @@ alias Grestore="git restore"
 alias Gshow="git show"
 alias Gstash="git stash"
 alias Gstatus="git status"
+alias Gsubmodule="git submodule"
 alias Gswitch="git switch"
 alias Gworktree="git worktree"
 

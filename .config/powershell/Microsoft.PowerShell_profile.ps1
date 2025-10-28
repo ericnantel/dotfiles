@@ -75,6 +75,8 @@ Set-Alias -Name Gstash -Value GitStash_Cmd -Option AllScope
 function GitStash_Cmd { git stash $args }
 Set-Alias -Name Gstatus -Value GitStatus_Cmd -Option AllScope
 function GitStatus_Cmd { git status $args }
+Set-Alias -Name Gsubmodule -Value GitSubmodule_Cmd -Option AllScope
+function GitSubmodule_Cmd { git submodule $args }
 Set-Alias -Name Gswitch -Value GitSwitch_Cmd -Option AllScope
 function GitSwitch_Cmd { git switch $args }
 Set-Alias -Name Gworktree -Value GitWorktree_Cmd -Option AllScope

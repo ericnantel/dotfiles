@@ -33,8 +33,6 @@ Register-ArgumentCompleter -CommandName 'K', 'kubectl', 'kubecolor' -ScriptBlock
 # Assumes git is installed
 Set-Alias -Name Gadd -Value GitAdd_Cmd -Option AllScope
 function GitAdd_Cmd { git add $args }
-Set-Alias -Name Gamend -Value GitAmend_Cmd -Option AllScope
-function GitAmend_Cmd { git amend $args }
 Set-Alias -Name Gblame -Value GitBlame_Cmd -Option AllScope
 function GitBlame_Cmd { git blame $args }
 Set-Alias -Name Gbranch -Value GitBranch_Cmd -Option AllScope
@@ -49,6 +47,8 @@ Set-Alias -Name Gclone -Value GitClone_Cmd -Option AllScope
 function GitClone_Cmd { git clone $args }
 Set-Alias -Name Gcommit -Value GitCommit_Cmd -Option AllScope
 function GitCommit_Cmd { git commit $args }
+Set-Alias -Name Gcommitamend -Value GitCommitAmend_Cmd -Option AllScope
+function GitCommitAmend_Cmd { git commit --amend $args }
 Set-Alias -Name Gdiff -Value GitDiff_Cmd -Option AllScope
 function GitDiff_Cmd { git diff $args }
 Set-Alias -Name Gfetch -Value GitFetch_Cmd -Option AllScope

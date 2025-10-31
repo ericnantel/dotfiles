@@ -27,7 +27,6 @@ compinit
 # For git
 # NOTE: This assumes you have git installed
 alias Gadd="git add"
-alias Gamend="git amend"
 alias Gblame="git blame"
 alias Gbranch="git branch"
 alias Gcheckout="git checkout"
@@ -35,6 +34,7 @@ alias Gcherrypick="git cherry-pick"
 alias Gclean="git clean"
 alias Gclone="git clone"
 alias Gcommit="git commit"
+alias Gcommitamend="git commit --amend"
 alias Gdiff="git diff"
 alias Gfetch="git fetch"
 alias Ginit="git init"

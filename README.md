@@ -39,6 +39,7 @@ Regardless, use a package manager and install the following packages:
 - cmake and make (unless you have it already)
 - ninja (ninja-build for Apt)
 - bear (Bear on VoidLinux)
+- doxygen (optional)
 - nodejs
 - npm
 - python3 and python3-pip (optional) and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)

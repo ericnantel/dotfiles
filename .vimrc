@@ -280,7 +280,7 @@ function! s:build_quickfix_list(lines)
 endfunction
 " TODO: Add smart selection to quickfix list
 " Which is if we don't select anything, then select all
-let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,tab:toggle --multi --reverse --no-scrollbar --smart-case --preview-window=left'
+let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,tab:toggle,ctrl-s:toggle --multi --reverse --no-scrollbar --smart-case --preview-window=left'
 let g:fzf_action = {
 	\ 'ctrl-q': function('s:build_quickfix_list')
 	\ }
@@ -466,6 +466,8 @@ inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm()
+							\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <C-s> coc#pum#visible() ? coc#pum#confirm()
 							\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 function! CheckBackspace() abort
 	let col = col('.') - 1

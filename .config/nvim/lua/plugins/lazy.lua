@@ -570,6 +570,7 @@ lazy.setup({
 								["<C-j>"] = actions.move_selection_next,
 								["<C-k>"] = actions.move_selection_previous,
 								["<TAB>"] = actions.toggle_selection,
+								["<C-s>"] = actions.toggle_selection, -- let's try since C-TAB doesn't work..
 								["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
 							},
 						},
@@ -1162,6 +1163,13 @@ lazy.setup({
 							end
 						end,
 						["<TAB>"] = function(fallback)
+							if cmp.visible() then
+								cmp.confirm({ select = true })
+							else
+								fallback()
+							end
+						end,
+						["<C-s>"] = function(fallback) -- let's try since C-TAB doesn't work..
 							if cmp.visible() then
 								cmp.confirm({ select = true })
 							else

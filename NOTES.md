@@ -132,3 +132,11 @@ Date: 2025-10-15
 I updated Neo(Vim) plugin keybinds in Insert Mode to use Ctrl-j/k which breaks Tmux
 Navigator, so either we change Tmux Navigation keybinds to use Ctrl-a hjkl or we only
 navigate when in Normal mode inside Neo(Vim).
+Date: 2025-11-06
+I may have mentionned it previously, but C++ lsp goto-definitions is not working properly
+on MacOS, unless we have been to a source file, then Clangd knows the path. This is strange
+because all source file paths are in compile_commands.json and it works perfectly on
+Ubuntu. Unsure why, but it might be interesting to try compiling with GCC on MacOS and to
+generate compile_commands.json using bear. Only issue is that Apple seems to define an alias
+for gcc, g++ which is annoying because I'll need to specify a path for the compiler in
+CMakePresets.json ..

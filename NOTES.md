@@ -143,3 +143,5 @@ CMakePresets.json ..
 Date: 2025-11-07
 I added back kubectl,kubecolor aliases to .zshrc,.bashrc but completion may still not be
 working properly with Powershell.
+Date: 2025-11-07
+Should I add doxygen, googletest and pandoc to setup_void_linux.sh ?

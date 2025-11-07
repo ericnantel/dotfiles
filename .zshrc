@@ -18,11 +18,17 @@ compinit
 
 # For kubectl and kubecolor completion
 # NOTE: This assumes you have kubectl installed
-# alias K="sudo kubecolor"
-# alias Kget="sudo kubecolor get"
-# alias Kportforward="sudo kubecolor port-forward"
-# source <(kubectl completion zsh)
-# compdef kubecolor=kubectl
+if which kubectl > /dev/null; then
+	echo Found kubectl
+	source <(kubectl completion zsh)
+fi
+if which kubecolor > /dev/null; then
+	echo Found kubecolor
+	alias K="sudo kubecolor"
+	alias Kget="sudo kubecolor get"
+	alias Kportforward="sudo kubecolor port-forward"
+	compdef kubecolor=kubectl
+fi
 
 # For git
 # NOTE: This assumes you have git installed
@@ -43,7 +49,6 @@ alias Gmerge="git merge"
 alias Gpull="git pull"
 alias Gpush="git push"
 alias Grebase="git rebase"
-alias Gremote="git remote"
 alias Greset="git reset"
 alias Grestore="git restore"
 alias Gshow="git show"

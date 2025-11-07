@@ -145,3 +145,5 @@ I added back kubectl,kubecolor aliases to .zshrc,.bashrc but completion may stil
 working properly with Powershell.
 Date: 2025-11-07
 Should I add doxygen, googletest and pandoc to setup_void_linux.sh ?
+Date: 2025-11-07
+I think it's time to rewrite README.md and add links to the other projects (cmake_examples, etc.)

@@ -65,6 +65,8 @@ Set-Alias -Name Gpush -Value GitPush_Cmd -Option AllScope
 function GitPush_Cmd { git push $args }
 Set-Alias -Name Grebase -Value GitRebase_Cmd -Option AllScope
 function GitRebase_Cmd { git rebase $args }
+Set-Alias -Name Gremote -Value GitRemote_Cmd -Option AllScope
+function GitRemote_Cmd { git remote $args }
 Set-Alias -Name Greset -Value GitReset_Cmd -Option AllScope
 function GitReset_Cmd { git reset $args }
 Set-Alias -Name Grestore -Value GitRestore_Cmd -Option AllScope

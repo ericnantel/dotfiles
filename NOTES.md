@@ -140,3 +140,6 @@ Ubuntu. Unsure why, but it might be interesting to try compiling with GCC on Mac
 generate compile_commands.json using bear. Only issue is that Apple seems to define an alias
 for gcc, g++ which is annoying because I'll need to specify a path for the compiler in
 CMakePresets.json ..
+Date: 2025-11-07
+I added back kubectl,kubecolor aliases to .zshrc,.bashrc but completion may still not be
+working properly with Powershell.

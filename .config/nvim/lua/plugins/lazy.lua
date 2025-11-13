@@ -71,6 +71,12 @@ lazy.setup({
 		{
 			"ericnantel/vim-z80-docs",
 		},
+		-- vim-cmake
+		-- Vim/Neovim plugin to build presets/workflow cmake projects
+		{
+			"ericnantel/vim-cmake",
+			branch = "develop",
+		},
 		-- which-key
 		-- lua plugin for Neovim 0.5 that displays a pop with possible keybindings
 		{

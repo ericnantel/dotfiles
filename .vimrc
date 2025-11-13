@@ -389,7 +389,7 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'samsaga2/vim-z80'
 	Plug 'ericnantel/vim-z80-docs'
-	Plug 'ericnantel/vim-cmake', { 'branch': 'develop' }
+	Plug 'ericnantel/vim-cmake'
 
 	" vim-glsl
 	" Dependencies:

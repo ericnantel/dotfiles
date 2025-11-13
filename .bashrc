@@ -35,11 +35,11 @@ alias notes="nvim ~/Notes/neorg/personal/index.norg"
 # For kubectl and kubecolor completion
 # NOTE: This assumes you have kubectl, kubecolor installed
 if which kubectl > /dev/null; then
-	echo Found kubectl
+	# echo Found kubectl
 	source <(kubectl completion bash)
 fi
 if which kubecolor > /dev/null; then
-	echo Found kubecolor
+	# echo Found kubecolor
 	alias K="sudo kubecolor"
 	alias Kget="sudo kubecolor get"
 	alias Kportforward="sudo kubecolor port-forward"

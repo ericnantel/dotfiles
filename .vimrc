@@ -305,6 +305,11 @@ let g:fzf_colors = {
 	\ }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" vim-cmake keymaps
+
+" vim-cmake settings
+let g:cmake_bear_intercept = 0
+
 " NERDTree keymaps
 nmap <leader>ee <cmd>NERDTreeToggle %<CR>
 
@@ -389,7 +394,14 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'samsaga2/vim-z80'
 	Plug 'ericnantel/vim-z80-docs'
-	Plug 'ericnantel/vim-cmake'
+
+	" vim-cmake
+	" Dependencies:
+	" - cmake
+	" - bear (optional)
+	" Description:
+	" Vim/Neovim plugin to build presets/workflow cmake projects
+	Plug 'ericnantel/vim-cmake' " , { 'branch': 'develop' }
 
 	" vim-glsl
 	" Dependencies:

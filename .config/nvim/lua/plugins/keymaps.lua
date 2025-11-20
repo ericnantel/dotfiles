@@ -27,6 +27,9 @@ vim.keymap.set("n", "z", "gc", { desc = "", remap = true, silent = true })
 vim.keymap.set("n", "zz", "gcc", { desc = "", remap = true, silent = true })
 vim.keymap.set("v", "z", "gc", { desc = "", remap = true, silent = true })
 
+-- vim-cmake keymaps
+-- TODO: F5 ?
+
 -- nvim-tree keymaps
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer Tree" })
 

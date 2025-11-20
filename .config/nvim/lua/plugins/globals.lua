@@ -21,3 +21,6 @@ vim.cmd([[autocmd FileType lisp setlocal commentstring=;;\ %s]])
 vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_signs = 1
 vim.g.gitgutter_async = 1
+
+-- vim-cmake
+vim.g.cmake_bear_intercept = 0

@@ -33,6 +33,7 @@ set autoindent
 set smartindent
 
 set nospell
+set spelllang="en_ca,fr_ca"
 set nowrap
 set nolinebreak
 set noshowmatch
@@ -109,6 +110,30 @@ endif
 autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 "autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab
 
+augroup highlightYankedText
+	autocmd!
+	autocmd TextYankPost * call FlashYankedText()
+augroup END
+function! FlashYankedText()
+	if !exists('g:yankedTextMatches')
+		let g:yankedTextMatches = []
+	endif
+	let matchId = matchadd("IncSearch", ".\\%>'\\[\\_.*\\%<']..")
+	let windowId = winnr()
+	call add(g:yankedTextMatches, [windowId, matchId])
+	call timer_start(200, "DeleteTemporaryMatch")
+endfunction
+function! DeleteTemporaryMatch(timerId)
+	while !empty(g:yankedTextMatches)
+		let match = remove(g:yankedTextMatches, 0)
+		let windowID = match[0]
+		let matchID = match[1]
+		try
+			call matchdelete(matchID, windowID)
+		endtry
+	endwhile
+endfunction
+
 let g:mapleader = ' '
 let g:maplocalleader = ' '
 
@@ -166,6 +191,7 @@ nmap <leader>s<Up> <C-w>-
 nmap <leader>s<Down> <C-w>+
 
 nmap <leader>nh <cmd>nohlsearch<CR>
+nmap <ESC> <cmd>nohlsearch<CR>
 
 " vim-tmux-navigator
 nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
@@ -253,6 +279,7 @@ let g:which_key_map.f = {
 	\ 'c': [':Rg <C-r><C-w><CR>', "find-files"],
 	\ }
 let g:which_key_map['nh'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
+let g:which_key_map['<ESC>'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
 let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
 let g:which_key_map_visual = {}
 let g:which_key_map_visual['+'] = ['g<C-a>', "number-increment-block"]

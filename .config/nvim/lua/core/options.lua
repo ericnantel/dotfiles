@@ -34,6 +34,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 vim.opt.spell = false
+vim.opt.spelllang = "en_ca,fr_ca"
 vim.opt.wrap = false
 vim.opt.linebreak = false
 vim.opt.showmatch = false
@@ -89,3 +90,12 @@ end
 
 vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])
 -- vim.cmd([[autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab]])
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 200
+		})
+	end,
+})

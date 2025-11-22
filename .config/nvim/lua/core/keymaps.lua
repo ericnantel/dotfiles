@@ -56,3 +56,5 @@ vim.keymap.set("n", "<leader>s<Up>", "<C-w>-", { desc = "Decrement Current Split
 vim.keymap.set("n", "<leader>s<Down>", "<C-w>+", { desc = "Increment Current Split Height" })
 
 vim.keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlight" })
+vim.keymap.set("n", "<ESC>", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlight" })
+

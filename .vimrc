@@ -8,6 +8,9 @@ set splitbelow
 set undodir=~/.vim/undodir
 set undofile
 
+set nobackup
+set nowritebackup
+
 set number
 set relativenumber
 set signcolumn=yes
@@ -18,6 +21,9 @@ set smartcase
 set incsearch
 set hlsearch
 
+" NOTE: Only available in Neovim
+" set inccommand=split
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -26,15 +32,17 @@ set noexpandtab
 set autoindent
 set smartindent
 
+set nospell
 set nowrap
+set nolinebreak
 set noshowmatch
+set nolist
 set noruler
 set notitle
 set nocursorline
-set nobackup
-set nowritebackup
+set nocursorcolumn
 
-"set mouse=
+set mouse=a
 "set ttymouse=
 "set mousescroll=ver:0,hor:0
 set encoding=UTF-8

@@ -28,7 +28,15 @@ vim.keymap.set("n", "zz", "gcc", { desc = "", remap = true, silent = true })
 vim.keymap.set("v", "z", "gc", { desc = "", remap = true, silent = true })
 
 -- vim-cmake keymaps
--- TODO: F5 ?
+vim.keymap.set("n", "<F5>", "<cmd>CMakeListPresets<CR>", { desc = "CMake List Presets" })
+vim.keymap.set("n", "<F6>", "<cmd>CMakePreset default<CR>", { desc = "CMake Configure Fresh Preset 'default'" })
+vim.keymap.set("n", "<F7>", "<cmd>CMakeBuildPreset default<CR>", { desc = "CMake Build Preset 'default'" })
+vim.keymap.set(
+	"n",
+	"<F8>",
+	"<cmd>CMakeFreshWorkflowPreset default<CR>",
+	{ desc = "CMake Run Fresh Workflow Preset 'default'" }
+)
 
 -- nvim-tree keymaps
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer Tree" })

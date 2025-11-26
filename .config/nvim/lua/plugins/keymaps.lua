@@ -34,8 +34,8 @@ vim.keymap.set("n", "<F7>", "<cmd>CMakeBuildPreset default<CR>", { desc = "CMake
 vim.keymap.set(
 	"n",
 	"<F8>",
-	"<cmd>CMakeFreshWorkflowPreset default<CR>",
-	{ desc = "CMake Run Fresh Workflow Preset 'default'" }
+	"<cmd>CMakeWorkflowFreshPreset default<CR>",
+	{ desc = "CMake Run Workflow Fresh Preset 'default'" }
 )
 
 -- nvim-tree keymaps

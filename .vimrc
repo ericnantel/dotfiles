@@ -283,7 +283,7 @@ let g:which_key_map['<ESC>'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
 " let g:which_key.map['<F5>'] = [':CMakeListPresets', "cmake-list-presets"]
 " let g:which_key.map['<F6>'] = [':CMakeFreshPreset default', "cmake-fresh-preset-default"]
 " let g:which_key.map['<F7>'] = [':CMakeBuildPreset default', "cmake-build-preset-default"]
-" let g:which_key.map['<F8>'] = [':CMakeFreshWorkflowPreset default', "cmake-fresh-worflow-preset-default"]
+" let g:which_key.map['<F8>'] = [':CMakeWorkflowFreshPreset default', "cmake-worflow-fresh-preset-default"]
 let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
 let g:which_key_map_visual = {}
 let g:which_key_map_visual['+'] = ['g<C-a>', "number-increment-block"]
@@ -348,7 +348,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nnoremap <F5> <cmd>CMakeListPresets<CR>
 nnoremap <F6> <cmd>CMakeFreshPreset default<CR>
 nnoremap <F7> <cmd>CMakeBuildPreset default<CR>
-nnoremap <F8> <cmd>CMakeFreshWorkflowPreset default<CR>
+nnoremap <F8> <cmd>CMakeWorkflowFreshPreset default<CR>
 
 " vim-cmake settings
 let g:cmake_bear_intercept = 0

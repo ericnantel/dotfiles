@@ -56,26 +56,6 @@ set clipboard^=unnamed,unnamedplus
 " 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
 let $LANG = "fr_CA.UTF-8"
 
-syntax on
-
-" if has('gui_running') -> I don't use gVim; only the terminal :)
-if stridx($TTY, "/dev/pts") >= 0 || stridx($TTY, "/dev/ttys") >= 0 " If using a pseudo-terminal or macos ttys
-	set background=dark
-	set t_Co=256
-	" Comment this if your terminal doesn't support it
-	" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
-	if $COLORTERM == "truecolor"
-		set termguicolors
-	endif
-
-	" Make sure to have ~/.vim/colors/darcula.vim
-	" You can find it in my dotfiles submodules
-	" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
-	" or comment the line below
-	" NOTE: Requires 256 colors support
-	colorscheme darcula
-endif
-
 set scrolloff=5
 set showcmd
 set showmode
@@ -104,6 +84,36 @@ if has("win32")
 	if isdirectory(expand("~/scoop/apps/llvm/current/bin"))
 		set rtp+=~/scoop/apps/llvm/current/bin
 	endif
+endif
+
+syntax on
+
+let s:pseudo_terminal = 0
+if has("win32")
+	" Assuming you are not using Command Prompt..but Terminal app
+	let s:pseudo_terminal = 1
+else
+	" If using a pseudo-terminal or macos ttys
+	if stridx($TTY, "/dev/pts") >= 0 || stridx($TTY, "/dev/ttys") >= 0
+		let s:pseudo_terminal = 1
+	endif
+endif
+
+if s:pseudo_terminal == 1
+	set background=dark
+	set t_Co=256
+	" Comment this if your terminal doesn't support it
+	" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
+	if $COLORTERM == "truecolor"
+		set termguicolors
+	endif
+
+	" Make sure to have ~/.vim/colors/darcula.vim
+	" You can find it in my dotfiles submodules
+	" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
+	" or comment the line below
+	" NOTE: Requires 256 colors support
+	colorscheme darcula
 endif
 
 " Z80

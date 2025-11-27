@@ -77,7 +77,15 @@ vim.opt.path:append("**")
 
 vim.opt.syntax = on
 
-if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0 then
+local pseudo_terminal = false
+if vim.loop.os_uname().sysname == "Windows" then
+	pseudo_terminal = true
+else
+	if vim.fn.stridx(os.getenv("TTY"), "/dev/pts") >= 0 or vim.fn.stridx(os.getenv("TTY"), "/dev/ttys") >= 0 then
+		pseudo_terminal = true
+	end
+end
+if pseudo_terminal then
 	vim.opt.background = "dark"
 	if os.getenv("COLORTERM") == "truecolor" then
 		vim.opt.termguicolors = true
@@ -95,7 +103,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank({
 			higroup = "IncSearch",
-			timeout = 200
+			timeout = 200,
 		})
 	end,
 })

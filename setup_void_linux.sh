@@ -271,8 +271,7 @@ mkdir -p ~/.tmux/plugins/tpm
 # copy tmux plugin manager (tpm)
 cp -rp ${dotfiles}/.tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 
-# NOTE: Uncomment if you want to add my Vim, Neovim and Emacs configs (may need to install additional packages)
-
+# NOTE: googletest ? 
 sudo xbps-install -Sy python3 \
 	python3-virtualenv \
 	lua \
@@ -286,7 +285,8 @@ sudo xbps-install -Sy python3 \
 	curl \
 	unzip \
 	fzf \
-	ripgrep
+	ripgrep \
+	doxygen
 
 # backup existing Jetbrains IntelliJ vim config
 if [ -f ~/.ideavimrc ]; then

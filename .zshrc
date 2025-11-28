@@ -84,11 +84,18 @@ if [[ "$os" == "GNU/Linux" ]]; then
 	# NOTE: This assumes you are on Linux
 	if [ -f /etc/os-release ]; then
 		. /etc/os-release
-		OS=$DISTRIB_ID
-		case ${OS} in
+		OS_RELEASE_DISTRIB_ID=$DISTRIB_ID
+		OS_RELEASE_NAME=$NAME
+		case ${OS_RELEASE_DISTRIB_ID} in
 			"void")
 				# Void Linux
 				source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+			;;
+		esac
+		case ${OS_RELEASE_NAME} in
+			"Ubuntu")
+				# Ubuntu
+				source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 			;;
 		esac
 	else
@@ -97,5 +104,6 @@ if [[ "$os" == "GNU/Linux" ]]; then
 	fi
 else
 	# NOTE: This assumes you have homebrew installed (MacOS or Linux)
+	# TODO: However we should check for BSD as well
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi

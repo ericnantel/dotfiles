@@ -271,7 +271,6 @@ mkdir -p ~/.tmux/plugins/tpm
 # copy tmux plugin manager (tpm)
 cp -rp ${dotfiles}/.tmux/plugins/tpm/* ~/.tmux/plugins/tpm
 
-# NOTE: googletest ? 
 sudo xbps-install -Sy python3 \
 	python3-virtualenv \
 	lua \
@@ -286,7 +285,8 @@ sudo xbps-install -Sy python3 \
 	unzip \
 	fzf \
 	ripgrep \
-	doxygen
+	doxygen \
+	gtest-devel
 
 # backup existing Jetbrains IntelliJ vim config
 if [ -f ~/.ideavimrc ]; then

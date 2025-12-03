@@ -49,6 +49,9 @@ sudo xbps-install -Sy htop \
 	wezterm \
 	ghostty
 
+# install extra packages
+# TODO: obs, vlc (also make sure to install libdvd-pkg)
+
 # TODO: Clang, Clangd, Clang-Format (Should we simply install LLVM and set path in Vim for Clang-Format ?)
 # NOTE: webpack, kubecolor are missing ? Also I removed kubectl from recommended packages.
 

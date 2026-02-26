@@ -55,6 +55,9 @@
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
 
+;; keyboard (specific for french-canadian)
+(setq ns-right-alternate-modifier 'none)
+
 ;; encoding
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)

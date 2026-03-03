@@ -239,6 +239,9 @@
 ;; (setq-default org-enforce-todo-dependencies t)
 ;; (setq-default org-export-with-todo-keywords nil)
 
+(setq org-image-actual-width 256)
+(add-hook 'org-mode-hook 'org-display-inline-images)
+
 ;; org-bullets
 (use-package org-bullets
 			 :ensure t
@@ -253,6 +256,13 @@
 ;; 			 :custom
 ;; 			 (org-indent-indentation-per-level 4))
 
+;; poke-line
+(use-package poke-line
+			 :ensure t
+			 :config
+			 (poke-line-global-mode 1)
+			 ;; (setq-default poke-line-pokemon "gengar"))
+			 (poke-line-set-random-pokemon))
 ;; which-key
 (use-package which-key
 			 :defer nil

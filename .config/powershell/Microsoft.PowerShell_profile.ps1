@@ -34,7 +34,7 @@ Register-ArgumentCompleter -CommandName 'K', 'kubectl', 'kubecolor' -ScriptBlock
 Set-Alias -Name Gadd -Value GitAdd_Cmd -Option AllScope
 function GitAdd_Cmd { git add $args }
 Set-Alias -Name Gblame -Value GitBlame_Cmd -Option AllScope
-function GitBlame_Cmd { git blame $args }
+function GitBlame_Cmd { git blame --color-lines --color-by-age $args }
 Set-Alias -Name Gbranch -Value GitBranch_Cmd -Option AllScope
 function GitBranch_Cmd { git branch $args }
 Set-Alias -Name Gcheckout -Value GitCheckout_Cmd -Option AllScope
@@ -56,7 +56,7 @@ function GitFetch_Cmd { git fetch $args }
 Set-Alias -Name Ginit -Value GitInit_Cmd -Option AllScope
 function GitInit_Cmd { git init $args }
 Set-Alias -Name Glog -Value GitLog_Cmd -Option AllScope
-function GitLog_Cmd { git log $args }
+function GitLog_Cmd { git log --graph --decorate --stat $args }
 Set-Alias -Name Gmerge -Value GitMerge_Cmd -Option AllScope
 function GitMerge_Cmd { git merge $args }
 Set-Alias -Name Gpull -Value GitPull_Cmd -Option AllScope

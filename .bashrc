@@ -52,7 +52,7 @@ fi
 # For git
 # NOTE: This assumes you have git installed
 alias Gadd="git add"
-alias Gblame="git blame"
+alias Gblame="git blame --color-lines --color-by-age"
 alias Gbranch="git branch"
 alias Gcheckout="git checkout"
 alias Gcherrypick="git cherry-pick"
@@ -63,7 +63,7 @@ alias Gcommitamend="git commit --amend"
 alias Gdiff="git diff"
 alias Gfetch="git fetch"
 alias Ginit="git init"
-alias Glog="git log"
+alias Glog="git log --graph --decorate --stat"
 alias Gmerge="git merge"
 alias Gpull="git pull"
 alias Gpush="git push"

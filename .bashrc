@@ -94,6 +94,7 @@ export MANPAGER="most"
 export TTY="$( tty )"
 
 # For fzf
+# NOTE: There seem to be no difference using either cat or bat as preview
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#232136,hl:#ea9a97
 	--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97
@@ -102,7 +103,12 @@ export FZF_DEFAULT_OPTS="
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
 	--bind ctrl-j:down,ctrl-k:up
 	--multi --reverse --no-scrollbar
-	--smart-case"
+	--smart-case
+	--preview 'cat {}'
+	--preview-window left:50%
+	--preview-border=rounded
+	--preview-label='File Content'
+	--preview-label-pos=center"
 
 # For shell prompt
 # NOTE: This assumes you have starship installed

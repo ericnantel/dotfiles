@@ -45,6 +45,7 @@ Regardless, use a package manager and install the following packages:
 - npm
 - python3 and python3-pip (optional) and python3-venv (on Debian/Ubuntu for Neovim Mason Plugins)
 - lua (lua5.4 or newer if asked by Apt) and luajit (optional) and luarocks (optional)
+- golang (optional - needed on Debian/Ubuntu to build NoiseTorch)
 - ripgrep (optional)
 - fzf (optional)
 - curl (recommended)

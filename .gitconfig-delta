@@ -7,6 +7,8 @@
 	line-numbers = true # show line-numbers
 	side-by-side = true # show diffs in side-by-side panels
 	hyperlinks = false # if set then it creates clickable links
+	dark = true # dark mode
+	syntax-theme = Rose-Pine # must be available in bat cache
 [merge]
 	conflictstyle = zdiff3
 [diff]

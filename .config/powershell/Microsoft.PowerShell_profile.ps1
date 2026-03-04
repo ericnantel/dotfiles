@@ -36,7 +36,7 @@ function GitAdd_Cmd { git add $args }
 Set-Alias -Name Gblame -Value GitBlame_Cmd -Option AllScope
 function GitBlame_Cmd { git blame --color-lines --color-by-age $args }
 Set-Alias -Name Gbranch -Value GitBranch_Cmd -Option AllScope
-function GitBranch_Cmd { git branch $args }
+function GitBranch_Cmd { git branch --color=always $args }
 Set-Alias -Name Gcheckout -Value GitCheckout_Cmd -Option AllScope
 function GitCheckout_Cmd { git checkout $args }
 Set-Alias -Name Gcherrypick -Value GitCherryPick_Cmd -Option AllScope

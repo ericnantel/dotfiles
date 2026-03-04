@@ -34,7 +34,7 @@ fi
 # NOTE: This assumes you have git installed
 alias Gadd="git add"
 alias Gblame="git blame --color-lines --color-by-age"
-alias Gbranch="git branch"
+alias Gbranch="git branch --color=always"
 alias Gcheckout="git checkout"
 alias Gcherrypick="git cherry-pick"
 alias Gclean="git clean"

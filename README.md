@@ -31,6 +31,7 @@ Your system might already have Vi or Vim and/or Git installed.
 Regardless, use a package manager and install the following packages:
 - git and git-lfs (optional)
 - git-delta (optional - named delta on Scoop for Windows)
+- bat (optional - but needed for delta custom theme)
 - less (optional - recommended on Windows if git-delta installed)
 - vim and/or neovim (0.9.5+ minimal - 0.10.0 recommended)
 - gcc or clang (on GNU/Linux) or llvm (recommended on Windows for Vim for clang-format)

@@ -6,6 +6,18 @@ os=$(uname -o)
 git submodule init
 git submodule update
 
+# make directory ~/.config/bat
+#mkdir -p ~/.config/bat
+# copy .config/bat/config to ~/.config/bat
+#cp .config/bat/config ~/.config/bat
+# make directory ~/.config/bat/themes
+#mkdir -p ~/.config/bat/themes
+# copy .config/bat/themes/Rose-Pine.tmTheme to ~/.config/bat/themes
+#cp .config/bat/themes/Rose-Pine.tmTheme ~/.config/bat/themes
+# update bat cache
+#bat cache --clean
+#bat cache --build
+
 # copy ~/.gitconfig to ~/.gitconfig-backup
 #cp ~/.gitconfig ~/.gitconfig-backup
 # copy .gitconfig-delta to ~/.gitconfig

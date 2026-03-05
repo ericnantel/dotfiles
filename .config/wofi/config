@@ -1,14 +1,20 @@
 
+monitor = HDMI-A-1
 mode = drun
+layer = top
+normal_window = false
 prompt = Application
+use_search_box = true
+sort_order = default
 hide_scroll = true
+insensitive = true
 allow_images = true
-image_size = 30
+image_size = 32
 width = 25%
 #height = 30%
-lines = 7
-#sort_order = alphabetical
-#search = Firefox
-#term = kitty
-monitor = HDMI-A-1
-layer = top
+lines = 9
+key_up = Ctrl-k
+key_down = Ctrl-j
+key_pgup = Ctrl-u
+key_pgdn = Ctrl-d
+

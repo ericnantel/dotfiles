@@ -95,7 +95,15 @@ export FZF_DEFAULT_OPTS="
 if which rg > /dev/null; then
 	# echo Found ripgrep
 	export FZF_DEFAULT_COMMAND="rg --files"
-	# export FZF_CTRL_F_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
+
+# For fzf keybinds and completion
+# NOTE: This assumes you have fzf installed (0.48.0 or later)
+if which fzf > /dev/null; then
+	# echo Found fzf
+	export FZF_CTRL_R_COMMAND= # no history
+	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+	source <(fzf --zsh)
 fi
 
 # For shell prompt

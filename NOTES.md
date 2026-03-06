@@ -150,3 +150,5 @@ I think it's time to rewrite README.md and add links to the other projects (cmak
 Date: 2026-03-06
 I noticed fr_CA keyboard deadkeys are not working within Hyprland.
 There's something missing in the config, I have to resolve this.
+Date: 2026-03-06
+I noticed clipboard copy-paste is not properly working within Hyprland.

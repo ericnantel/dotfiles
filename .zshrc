@@ -82,7 +82,7 @@ export FZF_DEFAULT_OPTS="
 	--color=border:#44415a,header:#3e8fb0,gutter:#232136
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
-	--bind ctrl-j:down,ctrl-k:up
+	--bind ctrl-j:down,ctrl-k:up,tab:toggle,ctrl-s:toggle
 	--multi --reverse --no-scrollbar
 	--smart-case
 	--preview 'cat {}'
@@ -90,6 +90,13 @@ export FZF_DEFAULT_OPTS="
 	--preview-border=rounded
 	--preview-label='File Content'
 	--preview-label-pos=center"
+
+# For ripgrep to search files faster in fzf
+if which rg > /dev/null; then
+	# echo Found ripgrep
+	export FZF_DEFAULT_COMMAND="rg --files"
+	# export FZF_CTRL_F_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
 
 # For shell prompt
 # NOTE: This assumes you have starship installed

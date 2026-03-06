@@ -147,3 +147,6 @@ Date: 2025-11-07
 Should I add doxygen, googletest and pandoc to setup_void_linux.sh ?
 Date: 2025-11-07
 I think it's time to rewrite README.md and add links to the other projects (cmake_examples, etc.)
+Date: 2026-03-06
+I noticed fr_CA keyboard deadkeys are not working within Hyprland.
+There's something missing in the config, I have to resolve this.

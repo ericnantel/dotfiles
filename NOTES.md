@@ -152,3 +152,5 @@ I noticed fr_CA keyboard deadkeys are not working within Hyprland.
 There's something missing in the config, I have to resolve this.
 Date: 2026-03-06
 I noticed clipboard copy-paste is not properly working within Hyprland.
+Date: 2026-03-07
+I noticed Wezterm keeps crashing on Ubuntu 25.10.

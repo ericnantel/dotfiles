@@ -7,7 +7,7 @@
 
 # theme = NightOwlDark
 theme = "Rose Pine Moon"
-background-opacity = 0.8
+background-opacity = 1.0
 font-family = "JetBrains Mono"
 font-size = 16
 #font-size = 14

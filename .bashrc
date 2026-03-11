@@ -113,7 +113,7 @@ export FZF_DEFAULT_OPTS="
 # For ripgrep to search files faster in fzf
 if which rg > /dev/null; then
 	# echo Found ripgrep
-	export FZF_DEFAULT_COMMAND="rg --files --hidden"
+	export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git/' -g '!node_modules/'"
 fi
 
 # For fzf keybinds and completion

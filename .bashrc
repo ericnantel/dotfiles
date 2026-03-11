@@ -113,7 +113,7 @@ export FZF_DEFAULT_OPTS="
 # For ripgrep to search files faster in fzf
 if which rg > /dev/null; then
 	# echo Found ripgrep
-	export FZF_DEFAULT_COMMAND="rg --files"
+	export FZF_DEFAULT_COMMAND="rg --files --hidden"
 fi
 
 # For fzf keybinds and completion

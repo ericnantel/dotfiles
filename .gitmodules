@@ -47,6 +47,10 @@
 	path = ghostty-themes/ghostty-night-owl
 	url = https://github.com/m1yon/ghostty-night-owl
 	ignore = dirty
+[submodule "ghostty-themes/rose-pine"]
+	path = ghostty-themes/rose-pine
+	url = https://github.com/rose-pine/ghostty
+	ignore = dirty
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm

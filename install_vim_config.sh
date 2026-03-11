@@ -52,6 +52,8 @@ git submodule update
 	#mkdir -p ~/.config/ghostty/themes
 	# copy ghostty-themes/ghostty-night-owl/NightOwlDark to ~.config/ghostty/themes/NightOwlDark
 	#cp ghostty-themes/ghostty-night-owl/NightOwlDark to ~/.config/ghostty/themes/NightOwlDark
+	# copy ghostty-themes/rose-pine/dist/rose-pine-moon to ~.config/ghostty/themes/RosePineMoon
+	#cp ghostty-themes/rose-pine/dist/rose-pine-moon to ~/.config/ghostty/themes/RosePineMoon
 # fi
 
 # copy .wezterm.lua to ~/.wezterm.lua

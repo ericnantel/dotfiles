@@ -6,7 +6,7 @@
 # Type 'q' to exit preview
 
 # theme = NightOwlDark
-theme = "Rose Pine Moon"
+theme = RosePineMoon
 background-opacity = 1.0
 font-family = "JetBrains Mono"
 font-size = 16

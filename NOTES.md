@@ -154,3 +154,6 @@ Date: 2026-03-06
 I noticed clipboard copy-paste is not properly working within Hyprland.
 Date: 2026-03-07
 I noticed Wezterm keeps crashing on Ubuntu 25.10.
+Date: 2026-03-11
+I fixed Wezterm crashes by replace wezterm by wezterm-nightly.
+Apparently wezterm is only built for Debian/Ubuntu LTS (Long Term Support).

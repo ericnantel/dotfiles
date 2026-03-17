@@ -34,10 +34,10 @@ vim.keymap.set("n", "É", "<cmd>cprevious<CR>", { desc = "quickfix-previous", re
 -- So for marks, do not double-type '`', it should work..
 -- if vim.fn.has("macunix") then -- NOTE: That did not work for some reason..
 if vim.loop.os_uname().sysname == "Darwin" then
-	vim.keymap.set("n", "ç", "$", { desc = "", remap = false })
-	vim.keymap.set("v", "ç", "$", { desc = "", remap = false })
-	vim.keymap.set("n", "à", "`", { desc = "", remap = false })
-	vim.keymap.set("n", "àà", "``", { desc = "", remap = false })
+	-- vim.keymap.set("n", "ç", "$", { desc = "", remap = false })
+	-- vim.keymap.set("v", "ç", "$", { desc = "", remap = false })
+	-- vim.keymap.set("n", "à", "`", { desc = "", remap = false })
+	-- vim.keymap.set("n", "àà", "``", { desc = "", remap = false })
 else
 	vim.keymap.set("n", "à", "`a", { desc = "", remap = false })
 	vim.keymap.set("n", "è", "`e", { desc = "", remap = false })
@@ -57,4 +57,3 @@ vim.keymap.set("n", "<leader>s<Down>", "<C-w>+", { desc = "Increment Current Spl
 
 vim.keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlight" })
 vim.keymap.set("n", "<ESC>", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlight" })
-

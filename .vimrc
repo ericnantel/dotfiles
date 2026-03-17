@@ -179,10 +179,10 @@ nnoremap É <cmd>cprevious<CR>
 " However, when double-typing '`' it is recognized as '``' (undesired jump)
 " So for marks, do not double-type '`', it should work..
 if has("macunix")
-	nnoremap ç $
-	vnoremap ç $
-	nnoremap à `
-	nnoremap àà ``
+	"nnoremap ç $
+	"vnoremap ç $
+	"nnoremap à `
+	"nnoremap àà ``
 else
 	nnoremap à `a
 	nnoremap è `e

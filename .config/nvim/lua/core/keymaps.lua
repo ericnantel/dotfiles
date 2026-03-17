@@ -15,6 +15,10 @@ vim.keymap.set("v", ">", ">gv", { desc = "", remap = false })
 vim.keymap.set("n", "¸", "$", { desc = "jump-to-end-of-line", remap = false })
 vim.keymap.set("v", "¸", "$", { desc = "jump-to-end-of-line-visual", remap = false })
 
+-- For French-Canadian keyboard layout '¶' (Alt+p)
+vim.keymap.set("n", "¶", "%", { desc = "jump-to-matching-pair-bracket", remap = false })
+vim.keymap.set("v", "¶", "%", { desc = "jump-to-matching-pair-bracket-visual", remap = false })
+
 -- For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
 -- So because '#' is to search word under cursor backward; I will use '|' for '*'
 -- NOTE: This could change in the future; my strategy is to ease-access

@@ -161,6 +161,10 @@ vnoremap > >gv
 nnoremap ¸ $
 vnoremap ¸ $
 
+" For French-Canadian keyboard layout '¶' (Alt+p)
+nnoremap ¶ %
+vnoremap ¶ %
+
 " For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
 " So because '#' is to search word under cursor backward; I will use '|' for '*'
 " NOTE: This could change in the future; my strategy is to ease-access

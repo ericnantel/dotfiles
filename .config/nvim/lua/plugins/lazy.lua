@@ -102,16 +102,16 @@ lazy.setup({
 		},
 		-- trouble
 		--
-		{
-			"folke/trouble.nvim",
-			branch = "main",
-			tag = "v2.10.0",
-			dependencies = {
-				"nvim-tree/nvim-web-devicons",
-				"folke/todo-comments.nvim",
-			},
-			opts = {},
-		},
+		-- {
+		-- 	"folke/trouble.nvim",
+		-- 	branch = "main",
+		-- 	tag = "v2.10.0",
+		-- 	dependencies = {
+		-- 		"nvim-tree/nvim-web-devicons",
+		-- 		"folke/todo-comments.nvim",
+		-- 	},
+		-- 	opts = {},
+		-- },
 		-- harpoon
 		-- Bookmarks plugin
 		{
@@ -125,177 +125,6 @@ lazy.setup({
 				harpoon:setup()
 			end,
 		},
-		-- orgmode
-		-- Neovim Orgmode clone
-		{
-			"nvim-orgmode/orgmode",
-			-- version = "*", -- On Linux, nvim might not be version 10
-			branch = "master",
-			tag = "0.3.61",
-			event = "VeryLazy",
-			--build = ":Org blabla",
-			dependencies = {
-				--	"nvim-telescope/telescope.nvim",
-				--	"nvim-orgmode/telescope-orgmode.nvim", -- NOTE: Perhaps we should add this dependency to telescope instead ..
-				"nvim-orgmode/org-bullets.nvim", -- NOTE: Requires treesitter org installed
-				--	"Saghen/blink.cmp", -- NOTE: No need we use nvim-cmp
-			},
-			ft = "org", -- Optional ?
-			config = function()
-				local org = require("orgmode")
-				-- org.setup_ts_grammar() TODO: Verify if needed
-				org.setup({
-					-- TODO: org_agenda_custom_commands
-					org_agenda_files = {
-						-- "~/org/*",
-						-- "~/Notes/orgfiles/**/*",
-						"~/Notes/orgfiles/personal.org",
-						"~/Notes/orgfiles/work.org",
-						"~/Notes/orgfiles/school.org",
-						"~/Notes/orgfiles/diary.org",
-						-- What about roam files ?
-					},
-					org_deadline_warning_days = 7,
-					-- org_agenda_include_diary = false, -- NOTE: Because we are including calendar holidays in diary.org
-					org_agenda_span = "week",
-					org_agenda_start_on_weekday = false,
-					org_agenda_start_day = "-1d",
-					-- org_agenda_custom_commands ..
-					-- org_agenda_window_setup = "only-window" ..
-
-					org_archive_location = "~/Notes/orgfiles/archive/" .. "%s_archive",
-
-					org_capture_templates = {
-						t = {
-							description = "Refile",
-							-- target is default notes file
-							-- headline = "Tasks", -- NOTE: doesn't work properly in this version
-							datetree = false,
-							template = "* TODO %?\n %U\n",
-							properties = {
-								empty_lines = 1,
-							},
-						},
-						p = {
-							description = "Personal",
-							target = "~/Notes/orgfiles/personal.org",
-							datetree = false,
-							template = "* TODO %?\n %U\n",
-							properties = {
-								empty_lines = 1,
-							},
-						},
-						w = {
-							description = "Work",
-							target = "~/Notes/orgfiles/work.org",
-							datetree = false,
-							template = "* TODO %?\n %U\n",
-							properties = {
-								empty_lines = 1,
-							},
-						},
-						s = {
-							description = "School",
-							target = "~/Notes/orgfiles/school.org",
-							datetree = false,
-							template = "* TODO %?\n %U\n",
-							properties = {
-								empty_lines = 1,
-							},
-						},
-					},
-
-					org_default_notes_file = "~/Notes/orgfiles/refile.org",
-
-					org_ellipsis = " ▼",
-
-					org_hide_emphasis_markers = true,
-
-					org_log_done = "time",
-					org_log_into_drawer = "LOGBOOK",
-
-					org_startup_indented = true, -- NOTE: Only enabled for Neovim 0.10+
-				})
-
-				local orgbullets = require("org-bullets")
-				orgbullets.setup({
-					concealcursor = true,
-					--symbols = {
-					--	checkboxes = {},
-					--},
-				})
-
-				-- NOTE: What about org-mobile (push/pop) ?
-			end,
-		},
-
-		-- org-roam ?
-
-		-- neorg
-		-- Neovim organization
-		-- {
-		-- 	"nvim-neorg/neorg",
-		-- 	lazy = false,
-		-- 	-- version = "*", -- On Linux, nvim might not be version 10
-		-- 	branch = "main",
-		-- 	tag = "v8.9.0",
-		-- 	cmd = "Neorg", -- Optional ?
-		-- 	ft = "norg", -- Optional ?
-		-- 	build = ":Neorg sync-parsers",
-		-- 	dependencies = {
-		-- 		"nvim-lua/plenary.nvim",
-		-- 	},
-		-- 	config = function()
-		-- 		local neorg = require("neorg")
-		-- 		neorg.setup({
-		-- 			load = {
-		-- 				-- Default modules
-		-- 				["core.journal"] = {
-		-- 					config = {
-		-- 						journal_folder = "journal",
-		-- 						strategy = "flat",
-		-- 						use_template = false,
-		-- 						workspace = nil, -- "notes",
-		-- 					},
-		-- 				},
-		-- 				-- Other modules
-		-- 				["core.completion"] = {
-		-- 					config = {
-		-- 						engine = "nvim-cmp",
-		-- 					},
-		-- 				},
-		-- 				["core.concealer"] = {
-		-- 					-- config = {
-		-- 					-- 	icons = {},
-		-- 					-- },
-		-- 				},
-		-- 				["core.dirman"] = {
-		-- 					config = {
-		-- 						workspaces = {
-		-- 							-- NOTE: Perhaps I have notes in other formats, so that is why
-		-- 							notes = "~/Notes/neorg/personal",
-		-- 							work = "~/Notes/neorg/work",
-		-- 						},
-		-- 						default_workspace = "notes",
-		-- 						index = "index.norg",
-		-- 					},
-		-- 				},
-		-- 				["core.export.markdown"] = {
-		-- 					config = {
-		-- 						extension = "md",
-		-- 					},
-		-- 				},
-		-- 				["core.summary"] = {
-		-- 					-- config = {},
-		-- 				},
-		-- 				-- Developer modules
-		-- 				["core.defaults"] = {
-		-- 					-- config = {},
-		-- 				},
-		-- 			},
-		-- 		})
-		-- 	end,
-		-- },
 		-- screenkey
 		-- Screencast your keys in Neovim
 		{
@@ -816,6 +645,7 @@ lazy.setup({
 		-- Otherwise, make it lazy and comment priority
 		{
 			"rose-pine/neovim",
+			name = "rose-pine",
 			lazy = false,
 			priority = 1000,
 			config = function()
@@ -1150,25 +980,25 @@ lazy.setup({
 				"hrsh7th/cmp-path",
 				"hrsh7th/cmp-cmdline",
 				"L3MON4D3/LuaSnip",
-				"saadparwaiz1/cmp_luasnip",
+				-- "saadparwaiz1/cmp_luasnip",
 				"rafamadriz/friendly-snippets",
 				"onsails/lspkind.nvim",
 			},
 			config = function()
 				local cmp = require("cmp")
-				local luasnip = require("luasnip")
-				local luasnip_loader = require("luasnip.loaders.from_vscode")
-				luasnip_loader.lazy_load()
+				-- local luasnip = require("luasnip")
+				-- local luasnip_loader = require("luasnip.loaders.from_vscode")
+				-- luasnip_loader.lazy_load()
 				local lspkind = require("lspkind")
 				cmp.setup({
 					completion = {
 						completeopt = "menu,menuone,preview,noselect",
 					},
-					snippet = {
-						expand = function(args)
-							luasnip.lsp_expand(args.body)
-						end,
-					},
+					-- snippet = {
+					-- 	expand = function(args)
+					-- 		luasnip.lsp_expand(args.body)
+					-- 	end,
+					-- },
 					mapping = {
 						["<C-j>"] = function(fallback)
 							if cmp.visible() then
@@ -1214,10 +1044,10 @@ lazy.setup({
 					sources = cmp.config.sources({
 						{ name = "nvim_lsp" },
 						{ name = "nvim_lsp_signature_help" },
-						{ name = "luasnip" },
+						-- { name = "luasnip" },
 						{ name = "buffer" },
 						{ name = "path" },
-						{ name = "orgmode" },
+						-- { name = "orgmode" },
 					}),
 					formatting = {
 						format = lspkind.cmp_format({

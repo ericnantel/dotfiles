@@ -157,3 +157,6 @@ I noticed Wezterm keeps crashing on Ubuntu 25.10.
 Date: 2026-03-11
 I fixed Wezterm crashes by replace wezterm by wezterm-nightly.
 Apparently wezterm is only built for Debian/Ubuntu LTS (Long Term Support).
+Date: 2026-03-24
+I noticed combining actions with my custom motions (¸¨) are not working.
+It seems that actions are not working with deadkeys excepts ^.

@@ -371,13 +371,13 @@ lazy.setup({
 					"nvim-telescope/telescope-fzf-native.nvim",
 					build = "make",
 				},
-				"nvim-telescope/telescope-smart-history.nvim",
-				"nvim-telescope/telescope-ui-select.nvim",
+				-- "nvim-telescope/telescope-smart-history.nvim",
+				-- "nvim-telescope/telescope-ui-select.nvim",
 				-- "kkharji/sqlite.lua",
 			},
 			config = function()
 				local data = vim.fn.stdpath("data")
-				local history_path = data .. "/telescope_history.sqlite3"
+				-- local history_path = data .. "/telescope_history.sqlite3"
 				local telescope = require("telescope")
 				local themes = require("telescope.themes")
 				local builtin = require("telescope.builtin")
@@ -467,13 +467,13 @@ lazy.setup({
 							override_file_sorter = true,
 							case_mode = "smart_case",
 						},
-						history = {
-							path = history_path,
-							limit = 100,
-						},
-						["ui-select"] = {
-							themes.get_dropdown({}),
-						},
+						-- history = {
+						-- 	path = history_path,
+						-- 	limit = 100,
+						-- },
+						-- ["ui-select"] = {
+						-- 	themes.get_dropdown({}),
+						-- },
 					},
 				})
 				pcall(telescope.load_extension, "fzf")

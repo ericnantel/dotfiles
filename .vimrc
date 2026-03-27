@@ -72,7 +72,7 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.swp,*.DS_Store,*.meta
 
-" NOTE: The motion 'gf'(Goto File) does not appear to work
+" NOTE: The motion 'gf'(goto file) does not appear to work
 " in Vim on MacOS or GNU/Linux; however it works on Windows
 " and it works in Neovim when we append '**' to path
 set path+=**
@@ -158,12 +158,10 @@ vnoremap < <gv
 vnoremap > >gv
 
 " For French-Canadian keyboard layout '¸' is next to '^'
-nnoremap ¸ $
-vnoremap ¸ $
+map ¸ $
 
-" For French-Canadian keyboard layout '¨' (S-¸)
-nnoremap ¨ %
-vnoremap ¨ %
+" For French-Canadian keyboard layout 'p' is next to '^'
+map <C-p> %
 
 " For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
 " So because '#' is to search word under cursor backward; I will use '|' for '*'
@@ -182,18 +180,18 @@ nnoremap É <cmd>cprevious<CR>
 " BUG: On Windows or Linux, remember to double-type '`', '^', '¸', '¨'
 " However, when double-typing '`' it is recognized as '``' (undesired jump)
 " So for marks, do not double-type '`', it should work..
-if has("macunix")
+"if has("macunix")
 	"nnoremap ç $
 	"vnoremap ç $
 	"nnoremap à `
 	"nnoremap àà ``
-else
-	nnoremap à `a
-	nnoremap è `e
-	nnoremap ù `u
-	nnoremap ì `i
-	nnoremap ò `o
-endif
+"else
+	"nnoremap à `a
+	"nnoremap è `e
+	"nnoremap ù `u
+	"nnoremap ì `i
+	"nnoremap ò `o
+"endif
 
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s

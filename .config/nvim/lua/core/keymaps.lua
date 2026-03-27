@@ -12,12 +12,10 @@ vim.keymap.set("v", "<", "<gv", { desc = "", remap = false })
 vim.keymap.set("v", ">", ">gv", { desc = "", remap = false })
 
 -- For French-Canadian keyboard layout '¸' is next to '^'
-vim.keymap.set("n", "¸", "$", { desc = "jump-to-end-of-line", remap = false })
-vim.keymap.set("v", "¸", "$", { desc = "jump-to-end-of-line-visual", remap = false })
+vim.keymap.set("", "¸", "$", { desc = "jump-to-end-of-line", remap = true })
 
--- For French-Canadian keyboard layout '¨' (S-¸)
-vim.keymap.set("n", "¨", "%", { desc = "jump-to-matching-pair-bracket", remap = false })
-vim.keymap.set("v", "¨", "%", { desc = "jump-to-matching-pair-bracket-visual", remap = false })
+-- For French-Canadian keyboard layout 'p' is next to '^'
+vim.keymap.set("", "<C-p>", "%", { desc = "jump-to-matching-pair-bracket", remap = true })
 
 -- For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
 -- So because '#' is to search word under cursor backward; I will use '|' for '*'
@@ -37,18 +35,18 @@ vim.keymap.set("n", "É", "<cmd>cprevious<CR>", { desc = "quickfix-previous", re
 -- However, when double-typing '`' it is recognized as '``' (undesired jump)
 -- So for marks, do not double-type '`', it should work..
 -- if vim.fn.has("macunix") then -- NOTE: That did not work for some reason..
-if vim.loop.os_uname().sysname == "Darwin" then
-	-- vim.keymap.set("n", "ç", "$", { desc = "", remap = false })
-	-- vim.keymap.set("v", "ç", "$", { desc = "", remap = false })
-	-- vim.keymap.set("n", "à", "`", { desc = "", remap = false })
-	-- vim.keymap.set("n", "àà", "``", { desc = "", remap = false })
-else
-	vim.keymap.set("n", "à", "`a", { desc = "", remap = false })
-	vim.keymap.set("n", "è", "`e", { desc = "", remap = false })
-	vim.keymap.set("n", "ù", "`u", { desc = "", remap = false })
-	vim.keymap.set("n", "ì", "`i", { desc = "", remap = false })
-	vim.keymap.set("n", "ò", "`o", { desc = "", remap = false })
-end
+-- if vim.loop.os_uname().sysname == "Darwin" then
+-- vim.keymap.set("n", "ç", "$", { desc = "", remap = false })
+-- vim.keymap.set("v", "ç", "$", { desc = "", remap = false })
+-- vim.keymap.set("n", "à", "`", { desc = "", remap = false })
+-- vim.keymap.set("n", "àà", "``", { desc = "", remap = false })
+-- else
+-- 	vim.keymap.set("n", "à", "`a", { desc = "", remap = false })
+-- 	vim.keymap.set("n", "è", "`e", { desc = "", remap = false })
+-- 	vim.keymap.set("n", "ù", "`u", { desc = "", remap = false })
+-- 	vim.keymap.set("n", "ì", "`i", { desc = "", remap = false })
+-- 	vim.keymap.set("n", "ò", "`o", { desc = "", remap = false })
+-- end
 
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split Window Vertically" })
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split Window Horizontally" })

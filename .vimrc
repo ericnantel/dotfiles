@@ -157,6 +157,11 @@ nnoremap - <C-x>
 vnoremap < <gv
 vnoremap > >gv
 
+" For French-Canadian keyboard layout '¨' is when pressing Shift and '¸'
+" NOTE: Typing iB is annoying; unlike ib, i) or i]
+" NOTE: But this needs to be called after an action; otherwise it inserts a B ..
+map ¨ iB
+
 " For French-Canadian keyboard layout '¸' is next to '^'
 map ¸ $
 

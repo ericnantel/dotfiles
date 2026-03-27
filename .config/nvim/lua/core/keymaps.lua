@@ -11,6 +11,11 @@ vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement Number", remap = false })
 vim.keymap.set("v", "<", "<gv", { desc = "", remap = false })
 vim.keymap.set("v", ">", ">gv", { desc = "", remap = false })
 
+-- For French-Canadian keyboard layout '¨' is when pressing Shift and '¸'
+-- NOTE: Typing iB is annoying; unlike ib, i) or i]
+-- NOTE: But this needs to be called after an action; otherwise it inserts a B ..
+vim.keymap.set("", "¨", "iB", { desc = "text-object-inside-bracket", remap = true })
+
 -- For French-Canadian keyboard layout '¸' is next to '^'
 vim.keymap.set("", "¸", "$", { desc = "jump-to-end-of-line", remap = true })
 

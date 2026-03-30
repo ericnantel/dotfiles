@@ -7,6 +7,9 @@ set splitbelow
 "set undodir=~/.vim/undodir-Idea
 "set undofile
 
+"set nobackup
+"set nowritebackup
+
 set number
 set relativenumber
 set signcolumn=yes
@@ -17,6 +20,9 @@ set smartcase
 set incsearch
 set hlsearch
 
+" NOTE: Only available in Neovim
+"set inccommand=split
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -25,15 +31,18 @@ set noexpandtab
 set autoindent
 set smartindent
 
+set nospell
+set spelllang="en_ca,fr_ca"
 set nowrap
+set nolinebreak
 set noshowmatch
+set nolist
 set noruler
 set notitle
 set nocursorline
-"set nobackup
-"set nowritebackup
+set nocursorcolumn
 
-"set mouse=
+"set mouse=a
 "set ttymouse=
 "set mousescroll=ver:0,hor:0
 set encoding=UTF-8
@@ -46,21 +55,14 @@ set clipboard^=unnamed,unnamedplus
 " 'É' key not firing when $LANG is not set to 'fr_CA.utf-8'
 let $LANG = "fr_CA.UTF-8"
 
-set background=dark
-syntax on
-set t_Co=256
-" Comment this if your terminal doesn't support it
-" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
-set termguicolors
-
 set scrolloff=5
 set showcmd
 set showmode
 set cmdheight=1
 set laststatus=2
 set updatetime=300
-" set timeout
-" set timeoutlen=300
+"set timeout
+"set timeoutlen=300
 set notimeout
 set timeoutlen=5000
 set history=20
@@ -71,6 +73,9 @@ set hidden
 "set wildmode=longest:full,full
 "set wildignore+=*.swp,*.DS_Store,*.meta
 
+" Not needed for Jetbrains IDE ?
+" set path+=**
+
 " Runtime paths for colorschemes, plugins, clang tools
 "set rtp+=~/.vim
 "set rtp+=~/.vim/plugged/vim-plug
@@ -80,16 +85,63 @@ set hidden
 "	endif
 "endif
 
-" Make sure to have ~/.vim/colors/darcula.vim
-" You can find it in my dotfiles submodules
-" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
-" or comment the line below
-"colorscheme darcula
+syntax on
+
+" let s:pseudo_terminal = 0
+" if has("win32")
+" 	" Assuming you are not using Command Prompt..but Terminal app
+" 	let s:pseudo_terminal = 1
+" else
+" 	" If using a pseudo-terminal or macos ttys
+" 	if stridx($TTY, "/dev/pts") >= 0 || stridx($TTY, "/dev/ttys") >= 0
+" 		let s:pseudo_terminal = 1
+" 	endif
+" endif
+
+" if s:pseudo_terminal == 1
+" 	set background=dark
+" 	set t_Co=256
+" 	" Comment this if your terminal doesn't support it
+" 	" But I mainly enabled it to fix airline and/or ailine_theme plugin(s)
+" 	if $COLORTERM == "truecolor"
+" 		set termguicolors
+" 	endif
+
+" 	" Make sure to have ~/.vim/colors/darcula.vim
+" 	" You can find it in my dotfiles submodules
+" 	" https://github.com/ericnantel/dotfiles/tree/main/colorschemes
+" 	" or comment the line below
+" 	" NOTE: Requires 256 colors support
+" 	colorscheme darcula
+" endif
 
 "" Z80
 "autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 ""autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab
 
+" augroup highlightYankedText
+" 	autocmd!
+" 	autocmd TextYankPost * call FlashYankedText()
+" augroup END
+" function! FlashYankedText()
+" 	if !exists('g:yankedTextMatches')
+" 		let g:yankedTextMatches = []
+" 	endif
+" 	let matchId = matchadd("IncSearch", ".\\%>'\\[\\_.*\\%<']..")
+" 	let windowId = winnr()
+" 	call add(g:yankedTextMatches, [windowId, matchId])
+" 	call timer_start(200, "DeleteTemporaryMatch")
+" endfunction
+" function! DeleteTemporaryMatch(timerId)
+" 	while !empty(g:yankedTextMatches)
+" 		let match = remove(g:yankedTextMatches, 0)
+" 		let windowID = match[0]
+" 		let matchID = match[1]
+" 		try
+" 			call matchdelete(matchID, windowID)
+" 		endtry
+" 	endwhile
+" endfunction
 
 set ideajoin
 set ideaput
@@ -97,13 +149,10 @@ set ideamarks
 """ Idea specific settings
 """ Rider specific settings
 
-
-""" Map leader
 let mapleader=" "
 let maplocalleader=" "
 
-
-""" Mappings
+" NOTE: Let's not forget <Ctrl-c>
 imap jk <ESC>
 vmap jk <ESC>
 
@@ -113,9 +162,16 @@ nnoremap - <C-x>
 vnoremap < <gv
 vnoremap > >gv
 
+" For French-Canadian keyboard layout '¨' is when pressing Shift and '¸'
+" NOTE: Typing iB is annoying; unlike ib, i) or i]
+" NOTE: But this needs to be called after an action; otherwise it inserts a B
+map ¨ iB
+
 " For French-Canadian keyboard layout '¸' is next to '^'
-nnoremap ¸ $
-vnoremap ¸ $
+map ¸ $
+
+" For French-Canadian keyboard layout 'p' is next to '^'
+map <C-p> %
 
 " For French-Canadian keyboard layout '|' is above <TAB> when you press <Shift>#
 " So because '#' is to search word under cursor backward; I will use '|' for '*'
@@ -134,29 +190,31 @@ nnoremap É <cmd>cprevious<CR>
 " BUG: On Windows or Linux, remember to double-type '`', '^', '¸', '¨'
 " However, when double-typing '`' it is recognized as '``' (undesired jump)
 " So for marks, do not double-type '`', it should work..
-if has("macunix")
-	nnoremap ç $
-	vnoremap ç $
-	nnoremap à `
-	nnoremap àà ``
-else
-	nnoremap à `a
-	nnoremap è `e
-	nnoremap ù `u
-	nnoremap ì `i
-	nnoremap ò `o
-endif
+"if has("macunix")
+"	nnoremap ç $
+"	vnoremap ç $
+"	nnoremap à `
+"	nnoremap àà ``
+"else
+"	nnoremap à `a
+"	nnoremap è `e
+"	nnoremap ù `u
+"	nnoremap ì `i
+"	nnoremap ò `o
+"endif
 
+" NOTE: Frustating that typing sx will insert se..
 nmap <leader>sv <C-w>v
 nmap <leader>sh <C-w>s
 nmap <leader>se <C-w>=
 nmap <leader>sx <cmd>close<CR>
-"nmap <leader>s<Left> <C-w>5<
-"nmap <leader>s<Right> <C-w>5>
-"nmap <leader>s<Up> <C-w>-
-"nmap <leader>s<Down> <C-w>+
+nmap <leader>s<Left> <C-w>5<
+nmap <leader>s<Right> <C-w>5>
+nmap <leader>s<Up> <C-w>-
+nmap <leader>s<Down> <C-w>+
 
 "nmap <leader>nh <cmd>nohlsearch<CR>
+"nmap <ESC> <cmd>nohlsearch<CR>
 
 "" vim-tmux-navigator
 "nnoremap <silent> <c-h> <cmd>TmuxNavigateLeft<CR>
@@ -224,6 +282,11 @@ vmap <silent> z gc
 " 	\ 'c': [':Rg <C-r><C-w><CR>', "find-files"],
 " 	\ }
 " let g:which_key_map['nh'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
+" let g:which_key_map['<ESC>'] = [':nohlsearch', "suspend-hlsearch-highlighting"]
+" " let g:which_key.map['<F5>'] = [':CMakeListPresets', "cmake-list-presets"]
+" " let g:which_key.map['<F6>'] = [':CMakeFreshPreset default', "cmake-fresh-preset-default"]
+" " let g:which_key.map['<F7>'] = [':CMakeBuildPreset default', "cmake-build-preset-default"]
+" " let g:which_key.map['<F8>'] = [':CMakeWorkflowFreshPreset default', "cmake-worflow-fresh-preset-default"]
 " let g:which_key_map['ee'] = [':NERDTreeToggle %', "file-explorer-tree-open-toggle"]
 " let g:which_key_map_visual = {}
 " let g:which_key_map_visual['+'] = ['g<C-a>', "number-increment-block"]
@@ -243,9 +306,12 @@ vmap <silent> z gc
 
 " fzf.vim
 
+" etc..
+
 """ Plugins
-"Plug 'szw/vim-maximizer'
-"Plug 'kshenoy/vim-signature'
+" NOTE: Most plugins are not working..
+Plug 'szw/vim-maximizer'
+Plug 'kshenoy/vim-signature'
 set commentary
 "set vim-devicons
 "set vim-airline

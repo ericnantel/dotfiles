@@ -8,6 +8,10 @@
   Auteur original: Sébastien Guillemette (2004)
   Mainteneurs actuels: Jonathan Allard, Matthieu Yiptong
   <https://github.com/ergosteur/cf-keylayout>
+
+  Version modifiée par: Eric Nantel (2026)
+  Changements: Touche 50 normal: « ; Touche 50 shift: »
+  <https://github.com/ericnantel/dotfiles/keyboard-layouts/MacOS/cf.keylayout>
 -->
 
 <keyboard group="0" id="9960" name="Canadien français 0.13" maxout="1">
@@ -92,7 +96,7 @@
                         <key code="47" output="." />
                         <key code="48" output="&#x9;" />
                         <key code="49" action="space" />
-                        <key code="50" output="#" />
+                        <key code="50" output="&#xAB" />
                         <key code="51" output="&#x8;" />
                         <key code="52" output="&#x3;" />
                         <key code="53" output="&#x1B;" />
@@ -202,7 +206,7 @@
                         <key code="47" output="." />
                         <key code="48" output="&#x9;" />
                         <key code="49" output=" " />
-                        <key code="50" output="|" />
+                        <key code="50" output="&#xBB" />
                         <key code="51" output="&#x8;" />
                         <key code="52" output="&#x3;" />
                         <key code="53" output="&#x1B;" />
@@ -312,7 +316,7 @@
                         <key code="47" output="." />
                         <key code="48" output="&#x9;" />
                         <key code="49" output=" " />
-                        <key code="50" output="#" />
+                        <key code="50" output="&#xAB" />
                         <key code="51" output="&#x8;" />
                         <key code="52" output="&#x3;" />
                         <key code="53" output="&#x1B;" />

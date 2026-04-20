@@ -51,8 +51,7 @@ This function should only modify configuration layer settings."
           org-enable-notifications t
           org-start-notification-daemon-on-startup t
           org-enable-github-support t
-          org-enable-org-contacts-support nil
-          ;;TODO: org-contacts-files
+          org-enable-org-contacts-support t
           org-enable-roam-support t
           org-enable-roam-ui t
           org-enable-roam-protocol nil
@@ -611,6 +610,8 @@ before packages are loaded."
                 org-goto-auto-isearch nil
                 org-log-done 'time
                 org-log-into-drawer t)
+  ;;org-contacts
+  (setq org-contacts-files (list (concat org-directory "/contacts.org")))
   ;;org-capture
   (setq org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-capture-templates
@@ -621,9 +622,16 @@ before packages are loaded."
           ("h" "Homeworks (school)" entry (file+headline (lambda () (concat org-directory "/agenda/homeworks.org")) "Homeworks")
            "* TODO %?\n %U\n" :empty-lines 1)
           ("r" "Revisions (school)" entry (file+headline (lambda () (concat org-directory "/agenda/revisions.org")) "Revisions")
-           "* TODO %?\n %U\n" :empty-lines 1)))
-  ;;birthdays & holidays TODO
-  ;;org-contacts TODO ?
+           "* TODO %?\n %U\n" :empty-lines 1)
+          ("c" "Contacts (add)" entry (file+headline (lambda () (concat org-directory "/contacts.org")) "Contacts")
+           "* %(org-contacts-template-name)
+:PROPERTIES:
+:EMAIL: %(org-contacts-template-email)
+:PHONE:
+:ADDRESS:
+:BIRTHDAY:
+:END:" :empty-lines 1)))
+  ;;holidays TODO
   ;;org-agenda
   (setq org-agenda-files (list (concat org-directory "/agenda")))
   (setq-default org-deadline-warning-days 7
@@ -634,8 +642,11 @@ before packages are loaded."
                 org-agenda-start-with-log-mode t
                 org-agenda-window-setup 'only-window)
   ;;org-modern
-  (setq-default org-auto-align-tags nil
-                org-tags-columns 0)
+  (setq org-auto-align-tags nil
+        org-tags-columns 0
+        org-insert-heading-respect-content t)
+  (global-org-modern-mode)
+
   ;;org-roam
   ;;NOTE: If you want to delete node history, remove file ~/.emacs.d/.cache/savehist
   (setq org-roam-directory (concat home-directory "/RoamFiles"))

@@ -650,9 +650,8 @@ before packages are loaded."
            (file+head "${slug}.org"
                       "#+title: ${title}\n#+filetags:\n#+author: Eric Nantel\n#+date: %u\n\n")
            :unnarrowed t)))
-  ;;(setq org-roam-node-display-template
-  ;;      (concat "${title:*} "
-  ;;              (propertize "${tags:10}" 'face 'org-tag)))
+  (setq org-roam-node-display-template
+        (concat "${title} " (propertize "${tags}" 'face 'org-tag)))
   (org-roam-db-autosync-mode)
   ;;org-modern
   (setq org-modern-star 'replace

@@ -49,6 +49,8 @@ Set-Alias -Name Gcommit -Value GitCommit_Cmd -Option AllScope
 function GitCommit_Cmd { git commit $args }
 Set-Alias -Name Gcommitamend -Value GitCommitAmend_Cmd -Option AllScope
 function GitCommitAmend_Cmd { git commit --amend $args }
+Set-Alias -Name Gconfiglocal -Value GitConfigLocalCmd -Option AllScope
+function GitConfigLocalCmd { git config --local $args }
 Set-Alias -Name Gdiff -Value GitDiff_Cmd -Option AllScope
 function GitDiff_Cmd { git diff $args }
 Set-Alias -Name Gfetch -Value GitFetch_Cmd -Option AllScope

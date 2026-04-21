@@ -643,7 +643,8 @@ before packages are loaded."
                 org-agenda-window-setup 'only-window)
   ;;org-modern
   (setq org-auto-align-tags nil
-        org-tags-columns 0
+        org-tags-column 0
+        org-agenda-tags-column 0
         org-insert-heading-respect-content t)
   (global-org-modern-mode)
 

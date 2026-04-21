@@ -53,7 +53,7 @@ This function should only modify configuration layer settings."
           org-enable-github-support t
           org-enable-org-contacts-support t
           org-enable-roam-support t
-          org-enable-roam-ui t
+          org-enable-roam-ui nil
           org-enable-roam-protocol nil
           org-enable-modern-support t
           org-enable-appear-support t)

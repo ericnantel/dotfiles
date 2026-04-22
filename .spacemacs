@@ -678,7 +678,7 @@ before packages are loaded."
         org-modern-keyword nil)
   ;;org-download TODO
 
-  ;;global keybinds (emacs mode)
+  ;;global set keybinds (emacs mode)
   ;;(global-set-key (kbd "C-c l") #'org-store-link)
   (global-set-key (kbd "C-c C-o") #'org-open-at-point)
   (global-set-key (kbd "C-c a") #'org-agenda)
@@ -686,6 +686,23 @@ before packages are loaded."
   ;;(global-set-key (kbd "C-c n l") #'org-roam-buffer-toggle)
   (global-set-key (kbd "C-c n f") #'org-roam-node-find)
   (global-set-key (kbd "C-c n i") #'org-roam-node-insert)
+
+  ;;global set keybinds (french-canadian alt-keys (most used ones))
+  (setq rebind-alt-keys 0)
+  (if (string-match "fr_CA.UTF-8" (getenv "LANG"))
+      (setq rebind-alt-keys 1)
+    nil)
+  (if (string-match "en_CA.UTF-8" (getenv "LANG"))
+      (when (eq system-type 'darwin)
+        (setq rebind-alt-keys 1))
+    nil)
+  (message (getenv "LANG"))
+  (when (eq rebind-alt-keys 1)
+    (global-set-key (kbd "M-#") "\\")
+    (global-set-key (kbd "M-2") "@")
+    (global-set-key (kbd "M-;") "~")
+    (global-set-key (kbd "M-`") "{")
+    (global-set-key (kbd "M-<") "}"))
 
   ;;(make-directory org-directory)
   ;;(make-directory org-roam-directory)

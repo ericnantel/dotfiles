@@ -8,11 +8,6 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 alias ll="eza -alF --icons"
 alias lt="eza --tree --icons"
 
-# For neorg
-# NOTE: This assumes you have neovim, neorg.nvim installed
-alias notes="nvim ~/Notes/neorg/personal/index.norg"
-#alias work="nvim ~/Notes/neorg/work/index.norg"
-
 autoload -Uz compinit
 compinit
 

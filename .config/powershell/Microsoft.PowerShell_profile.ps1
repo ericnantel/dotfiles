@@ -8,12 +8,6 @@ Invoke-Expression (&starship init powershell)
 Set-Alias -Name ls -Value Eza_Icons -Option AllScope
 function Eza_Icons { eza --icons $args }
 
-# Assumes neovim and neorg.nvim are installed
-Set-Alias -Name notes -Value Nvim_Notes -Option AllScope
-function Nvim_Notes { nvim ~/Notes/neorg/personal/index.norg $args }
-#Set-Alias -Name work -Value Nvim_Work -Option AllScope
-#function Nvim_Work { nvim ~/Notes/neorg/work/index.norg $args }
-
 # Assumes kubectl and kubecolor are installed
 Set-Alias -Name kubectl -Value kubecolor
 Set-Alias -Name K -Value kubectl

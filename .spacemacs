@@ -75,7 +75,8 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(doom-themes)
+   dotspacemacs-additional-packages '(doom-themes
+                                      listen)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -678,14 +679,22 @@ before packages are loaded."
         org-modern-keyword nil)
   ;;org-download TODO
 
+  ;;listen
+  (setq listen-directory (concat org-roam-directory "/Recordings/"))
+
+  ;;global unset keybinds
+  (global-unset-key (kbd "C-c l")) ;;org-store-link
+
   ;;global set keybinds (emacs mode)
-  ;;(global-set-key (kbd "C-c l") #'org-store-link)
   (global-set-key (kbd "C-c C-o") #'org-open-at-point)
   (global-set-key (kbd "C-c a") #'org-agenda)
   (global-set-key (kbd "C-c c") #'org-capture)
   ;;(global-set-key (kbd "C-c n l") #'org-roam-buffer-toggle)
   (global-set-key (kbd "C-c n f") #'org-roam-node-find)
   (global-set-key (kbd "C-c n i") #'org-roam-node-insert)
+  (global-set-key (kbd "C-c l p") #'listen-play)
+  (global-set-key (kbd "C-c l SPC") #'listen-pause)
+  (global-set-key (kbd "C-c l s") #'listen-quit)
 
   ;;global set keybinds (french-canadian alt-keys (most used ones))
   (setq rebind-alt-keys 0)

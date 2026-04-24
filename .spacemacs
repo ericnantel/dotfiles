@@ -607,7 +607,7 @@ before packages are loaded."
                 org-link-descriptive t
                 org-cycle-separator-lines 0
                 org-startup-with-inline-images t
-                org-image-actual-width '(300)
+                org-image-actual-width '(500)
                 org-goto-auto-isearch nil
                 org-log-done 'time
                 org-log-into-drawer t)

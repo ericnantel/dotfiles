@@ -616,15 +616,17 @@ before packages are loaded."
   ;;org-capture
   (setq org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-capture-templates
-        '(("p" "Personal" entry (file+headline (lambda () (concat org-directory "/agenda/personal.org")) "Personal")
+        '(("p" "[p]ersonal" entry (file+headline (lambda () (concat org-directory "/agenda/personal.org")) "Personal")
            "* TODO %?\n %U\n" :empty-lines 1)
-          ("w" "Work" entry (file+headline (lambda () (concat org-directory "/agenda/work.org")) "Work")
+          ("w" "[w]ork" entry (file+headline (lambda () (concat org-directory "/agenda/work.org")) "Work")
            "* TODO %?\n %U\n" :empty-lines 1)
-          ("h" "Homeworks (school)" entry (file+headline (lambda () (concat org-directory "/agenda/homeworks.org")) "Homeworks")
+          ("h" "[h]omeworks (school)" entry (file+headline (lambda () (concat org-directory "/agenda/homeworks.org")) "Homeworks")
            "* TODO %?\n %U\n" :empty-lines 1)
-          ("r" "Revisions (school)" entry (file+headline (lambda () (concat org-directory "/agenda/revisions.org")) "Revisions")
+          ("r" "[r]evisions (school)" entry (file+headline (lambda () (concat org-directory "/agenda/revisions.org")) "Revisions")
            "* TODO %?\n %U\n" :empty-lines 1)
-          ("c" "Contacts (add)" entry (file+headline (lambda () (concat org-directory "/contacts.org")) "Contacts")
+          ("j" "Pro[j]ect (school)" entry (file+headline (lambda () (concat org-directory "/agenda/projects.org")) "Projects")
+           "* TODO %?\n %U\n" :empty-lines 1)
+          ("c" "[c]ontacts (add)" entry (file+headline (lambda () (concat org-directory "/contacts.org")) "Contacts")
            "* %(org-contacts-template-name)
 :PROPERTIES:
 :EMAIL: %(org-contacts-template-email)

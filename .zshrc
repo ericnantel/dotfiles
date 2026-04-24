@@ -1,5 +1,8 @@
 #!/usr/bin/zsh
 
+# When paging using Ctrl-D I don't want the shell to close
+setopt ignore_eof
+
 os=$(uname -o)
 
 # For eza

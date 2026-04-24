@@ -17,6 +17,9 @@
 # alias cp='cp -i'
 # alias mv='mv -i'
 
+# When paging using Ctrl-D I don't want the shell to close
+set -o ignoreeof
+
 # For eza
 # NOTE: This assumes you have eza installed
 # NOTE: On Debian you may have to use exa instead

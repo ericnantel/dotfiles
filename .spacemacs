@@ -44,6 +44,10 @@ This function should only modify configuration layer settings."
      ;; git
      helm
      ;; lsp
+     (tree-sitter :variables
+                  tree-sitter-syntax-highlight-enable t
+                  tree-sitter-indent-enable nil
+                  tree-sitter-fold-enable nil)
      ;; markdown
      multiple-cursors
      (org :variables

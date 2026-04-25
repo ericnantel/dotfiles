@@ -3,6 +3,12 @@
 # When paging using Ctrl-D I don't want the shell to close
 setopt ignore_eof
 
+#SSH-Agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+	eval 'ssh-agent -s'
+	ssh-add -t 15m
+fi
+
 os=$(uname -o)
 
 # For eza

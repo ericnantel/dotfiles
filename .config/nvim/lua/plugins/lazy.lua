@@ -306,6 +306,7 @@ lazy.setup({
 					sync_install = false,
 					auto_install = true,
 					ignore_install = {
+						"c_sharp",
 						"glsl",
 						"markdown",
 						"markdown_inline",
@@ -319,7 +320,9 @@ lazy.setup({
 						-- 	"markdown_inline",
 						-- },
 						disable = function(lang, buf)
-							if lang == "glsl" then
+							if lang == "c_sharp" then
+								return true
+							elseif lang == "glsl" then
 								return true
 							elseif lang == "markdown" then
 								return true

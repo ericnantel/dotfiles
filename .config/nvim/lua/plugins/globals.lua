@@ -15,6 +15,7 @@ vim.g.SignatureMarkTextHLDynamic = 1
 -- vim-commentary globals
 vim.cmd([[autocmd FileType z80 setlocal commentstring=;\ %s]])
 vim.cmd([[autocmd FileType glsl setlocal commentstring=//\ %s]])
+vim.cmd([[autocmd FileType hlsl setlocal commentstring=//\ %s]])
 vim.cmd([[autocmd FileType lisp setlocal commentstring=;;\ %s]])
 
 -- vim-gitgutter globals

@@ -59,7 +59,13 @@ lazy.setup({
 		-- vim-glsl
 		-- Vim syntax highlighting for GLSL
 		{
-			"tikhomirov/vim-glsl",
+			-- "tikhomirov/vim-glsl",
+			"stykhomyrov/vim-glsl",
+		},
+		-- hlsl.vim
+		-- High Level Shader Language (HLSL) Vim syntax highlighting
+		{
+			"beyondmarc/hlsl.vim",
 		},
 		-- vim-z80
 		-- Vim syntax for Z80 Assembler
@@ -308,6 +314,7 @@ lazy.setup({
 					ignore_install = {
 						"c_sharp",
 						"glsl",
+						"hlsl",
 						"markdown",
 						"markdown_inline",
 						-- "org",
@@ -316,6 +323,7 @@ lazy.setup({
 						enable = true,
 						-- disable = {
 						-- 	"glsl",
+						-- 	"hlsl",
 						-- 	"markdown",
 						-- 	"markdown_inline",
 						-- },
@@ -323,6 +331,8 @@ lazy.setup({
 							if lang == "c_sharp" then
 								return true
 							elseif lang == "glsl" then
+								return true
+							elseif lang == "hlsl" then
 								return true
 							elseif lang == "markdown" then
 								return true
@@ -864,6 +874,7 @@ lazy.setup({
 						"yamlls",
 						"vimls",
 						"glsl_analyzer",
+						-- TODO: hlsl
 					},
 				})
 				mason_lspconfig.setup_handlers({
@@ -916,7 +927,8 @@ lazy.setup({
 					-- lua = { "luacheck" },
 					python = { "pylint" },
 					yaml = { "yamllint" },
-					-- glsl = { "glslc" },
+					-- glsl = { "glslc" }, ?
+					-- hlsl = { "hlslc" }, ?
 				}
 
 				local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

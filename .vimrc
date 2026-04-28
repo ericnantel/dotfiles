@@ -238,6 +238,7 @@ nmap <silent> zz gcc
 vmap <silent> z gc
 autocmd FileType z80 setlocal commentstring=;\ %s
 autocmd FileType glsl setlocal commentstring=//\ %s
+autocmd FileType hlsl setlocal commentstring=//\ %s
 autocmd FileType lisp setlocal commentstring=;;\ %s
 
 " vim-devicons
@@ -472,7 +473,15 @@ call plug#begin('~/.vim/plugged')
 	" Description:
 	" Vim syntax highlighting for OpenGL Shading Language
 	" Note:
-	Plug 'tikhomirov/vim-glsl'
+	" Plug 'tikhomirov/vim-glsl'
+	Plug 'stykhomyrov/vim-glsl'
+
+	" hlsl.vim
+	" Dependencies:
+	" Description:
+	" High Level Shader Language (HLSL) Vim syntax highlighting
+	" Note:
+	Plug 'beyondmarc/hlsl.vim'
 
 	" NERDTree
 	" Dependencies:

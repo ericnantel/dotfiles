@@ -8,9 +8,11 @@
 # theme = NightOwlDark
 theme = RosePineMoon
 background-opacity = 1.0
-font-family = "JetBrains Mono"
+# font-family = "JetBrains Mono"
+font-family = "JetBrainsMonoNL Nerd Font Propo"
 font-size = 16
-#font-size = 14
+# font-size = 14
+font-synthetic-style = false
 shell-integration-features = no-cursor
 cursor-opacity = 1
 cursor-style = block

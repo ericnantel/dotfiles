@@ -893,8 +893,14 @@ lazy.setup({
 											"vim",
 										},
 									},
+									workspace = {
+										checkThirdParty = false,
+									},
 									completion = {
 										callSnippet = "Replace",
+									},
+									telemetry = {
+										enable = false,
 									},
 								},
 							},

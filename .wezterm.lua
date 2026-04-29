@@ -1,6 +1,5 @@
-local wezterm = require("wezterm")
-
-local config = wezterm.config_builder()
+local wezterm = require("wezterm") ---@type Wezterm
+local config = wezterm.config_builder() ---@type Config
 
 -- NOTE: On Windows, Navigation between pane and vim/neovim splits does
 -- not work properly yet, we need to add a plugin for neovim (wezterm-move.nvim)

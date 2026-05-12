@@ -1,0 +1,101 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+#UseTab: Never
+#TabWidth: 4
+
+ColumnLimit: 150
+
+Language: Cpp
+Standard: Auto
+PointerAlignment: Left
+QualifierAlignment: Left
+ReferenceAlignment: Left
+RemoveParentheses: Leave
+RemoveSemicolon: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: false
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeTernaryOperators: true
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+#SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterIfMacros: true
+  AfterOverloadedOperator: false
+  AfterPlacementOperator: true
+  BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpacesInAngles: Never
+SpacesInContainerLiterals: true
+SpacesInLineCommentPrefix:
+  Minimum: 0
+  Maximum: -1
+SpacesInParens: Custom
+SpacesInParensOptions:
+  InConditionalStatements: false
+  InCStyleCasts: false
+  InEmptyParentheses: false
+  Other: false
+SpacesInSquareBrackets: false
+SeparateDefinitionBlocks: Always
+BreakInheritanceList: AfterComma
+BreakConstructorInitializers: BeforeComma
+PackConstructorInitializers: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+IndentAccessModifiers: false
+#BreakFunctionDefinitionParameters: false
+IndentCaseLabels: true
+IndentCaseBlocks: false
+BreakStringLiterals: true
+Cpp11BracedListStyle: false
+IncludeBlocks: Preserve
+FixNamespaceComments: true
+NamespaceIndentation: All
+ShortNamespaceLines: 0
+SortUsingDeclarations: Lexicographic
+InsertBraces: true
+InsertNewlineAtEOF: true
+IndentRequiresClause: true
+IndentPPDirectives: BeforeHash
+IndentExternBlock: AfterExternBlock
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: None
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+BitFieldColonSpacing: Both
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterStruct: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterCaseLabel: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: false
+  BeforeWhile: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: true
+#DisableFormat: true

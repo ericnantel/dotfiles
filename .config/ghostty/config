@@ -1,0 +1,19 @@
+# NOTE: To Reload Config
+# On Linux Press 'CTRL' + 'SHIFT' + '+' + ','
+# On MacOS Press 'CMD' + 'SHIFT' + '+' + ','
+# NOTE: To Preview ColorSchemes
+# Type ghostty +list-themes
+# Type 'q' to exit preview
+
+# theme = NightOwlDark
+theme = RosePineMoon
+background-opacity = 1.0
+# font-family = "JetBrains Mono"
+font-family = "JetBrainsMonoNL Nerd Font Propo"
+font-size = 16
+# font-size = 14
+font-synthetic-style = false
+shell-integration-features = no-cursor
+cursor-opacity = 1
+cursor-style = block
+cursor-style-blink = false

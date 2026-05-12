@@ -1,0 +1,55 @@
+
+{
+	"layer": "top",
+	"position": "right",
+	"modules-left": [
+		"custom/power",
+		"custom/blank",
+		"hyprland/language",
+		"clock"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [],
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "wlogout"
+	},
+	"custom/blank": {
+		"format": "",
+		"tooltip": false
+	},
+	"hyprland/language": {
+		"format": "{shortDescription}",
+		"tooltip": false
+	},
+	"clock": {
+		"interval": 60,
+		"format": "󰥔",
+		"tooltip": true,
+		"tooltip-format": "{:%Y-%m-%d %H:%M}",
+		"max-length": 25
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "󰈹",
+			"3": "",
+			"4": "󰇮",
+			"5": "",
+			"6": "󰑋",
+			"7": "",
+			"8": "󰨡",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"HDMI-A-1": [1, 2, 3, 4, 5]
+		},
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace -1",
+		"on-scroll-down": "hyprctl dispatch workspace +1"
+	}
+}

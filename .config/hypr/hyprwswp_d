@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# NOTE: Credit: vitarsi.com (or diff_edge) ;but fixed it
+
+# NOTE: Make sure hyprland, hyprpaper and socat are installed
+# Also hyprpaper config should preload all these wallpapers and ipc = true
+# Eventually I will pass the monitor name and wallpaper folder as params
+# To make it more generic as solution to update wallpaper per workspace
+handleWorkspaceSwitch() {
+	case $1 in
+		"workspace>>1")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace1.jpg"
+			sleep 0.1
+			;;
+		"workspace>>2")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace2.jpg"
+			sleep 0.1
+			;;
+		"workspace>>3")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace3.jpg"
+			sleep 0.1
+			;;
+		"workspace>>4")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace4.jpg"
+			sleep 0.1
+			;;
+		"workspace>>5")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace5.jpg"
+			sleep 0.1
+			;;
+		"workspace>>6")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace6.jpg"
+			sleep 0.1
+			;;
+		"workspace>>7")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace7.jpg"
+			sleep 0.1
+			;;
+		"workspace>>8")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace8.jpg"
+			sleep 0.1
+			;;
+		"workspace>>9")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace9.jpg"
+			sleep 0.1
+			;;
+		"workspace>>10")
+			hyprctl hyprpaper wallpaper "HDMI-A-1,~/Images/Wallpapers/workspace10.jpg"
+			sleep 0.1
+			;;
+	esac
+}
+
+socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handleWorkspaceSwitch "$line"; done

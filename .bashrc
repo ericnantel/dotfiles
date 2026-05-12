@@ -1,0 +1,136 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# Note: PS1 and umask are already set in /etc/profile. You should not
+# need this unless you want different defaults for root.
+# PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
+# umask 022
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+# export LS_OPTIONS='--color=auto'
+# eval "$(dircolors)"
+# alias ls='ls $LS_OPTIONS'
+# alias ll='ls $LS_OPTIONS -l'
+# alias l='ls $LS_OPTIONS -lA'
+#
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+
+# When paging using Ctrl-D I don't want the shell to close
+set -o ignoreeof
+
+#SSH-Agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+	eval 'ssh-agent -s'
+	ssh-add -t 15m
+fi
+
+# For eza
+# NOTE: This assumes you have eza installed
+# NOTE: On Debian you may have to use exa instead
+#alias ls="eza --icons"
+#alias ll="eza -laF --icons"
+#alias lt="eza --tree --icons"
+
+#autoload -Uz compinit
+#compinit
+
+# For kubectl and kubecolor completion
+# NOTE: This assumes you have kubectl, kubecolor installed
+if which kubectl > /dev/null; then
+	# echo Found kubectl
+	source <(kubectl completion bash)
+fi
+if which kubecolor > /dev/null; then
+	# echo Found kubecolor
+	alias K="sudo kubecolor"
+	alias Kget="sudo kubecolor get"
+	alias Kportforward="sudo kubecolor port-forward"
+	complete -o default -F __start_kubectl kubecolor
+	complete -o default -F __start_kubectl K
+	complete -o default -F __start_kubectl Kget
+	complete -o default -F __start_kubectl Kportforward
+fi
+
+# For git
+# NOTE: This assumes you have git installed
+alias Gadd="git add"
+alias Gblame="git blame --color-lines --color-by-age"
+alias Gbranch="git branch --color=always"
+alias Gcheckout="git checkout"
+alias Gcherrypick="git cherry-pick"
+alias Gclean="git clean"
+alias Gclone="git clone"
+alias Gcommit="git commit"
+alias Gcommitamend="git commit --amend"
+alias Gconfiglocal="git config --local"
+alias Gdiff="git diff"
+alias Gfetch="git fetch"
+alias Ginit="git init"
+alias Glog="git log --graph --decorate --stat"
+alias Gmerge="git merge"
+alias Gpull="git pull"
+alias Gpush="git push"
+alias Grebase="git rebase"
+alias Gremote="git remote"
+alias Greset="git reset"
+alias Grestore="git restore"
+alias Gshow="git show"
+alias Gstash="git stash"
+alias Gstatus="git status"
+alias Gsubmodule="git submodule"
+alias Gswitch="git switch"
+alias Gworktree="git worktree"
+
+# For language
+#export LANG=fr_CA.UTF-8
+
+# For man
+# NOTE: This assumes most is installed
+export MANPAGER="most"
+
+# For vim, nvim, tmux? and emacs
+# NOTE: We need to figure out if we can use colorschemes
+# NOTE: Check if /dev/tty* or /dev/pts/*
+# NOTE: Checking if $TERM is linux is not reliable
+# NOTE: Checking if $TERMCOLOR supports 256 colors or Truecolor (24bits)
+# NOTE: We need to consider looking mainly at the output if ssh
+export TTY="$( tty )"
+
+# For fzf
+# NOTE: There seem to be no difference using either cat or bat as preview
+export FZF_DEFAULT_OPTS="
+	--color=fg:#908caa,bg:#232136,hl:#ea9a97
+	--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97
+	--color=border:#44415a,header:#3e8fb0,gutter:#232136
+	--color=spinner:#f6c177,info:#9ccfd8
+	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
+	--bind ctrl-j:down,ctrl-k:up,tab:toggle,ctrl-s:toggle
+	--multi --reverse --no-scrollbar
+	--smart-case
+	--preview 'cat {}'
+	--preview-window left:50%
+	--preview-border=rounded
+	--preview-label='File Content'
+	--preview-label-pos=center"
+
+# For ripgrep to search files faster in fzf
+if which rg > /dev/null; then
+	# echo Found ripgrep
+	export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git/' -g '!node_modules/'"
+fi
+
+# For fzf keybinds and completion
+# NOTE: This assumes you have fzf installed (0.48.0 or later)
+if which fzf > /dev/null; then
+	# echo Found fzf
+	export FZF_CTRL_R_COMMAND= # no history
+	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+	eval "$(fzf --bash)"
+fi
+
+# For shell prompt
+# NOTE: This assumes you have starship installed
+export PATH=~/.local/bin:$PATH
+eval "$(starship init bash)"

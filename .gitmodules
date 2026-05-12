@@ -1,0 +1,57 @@
+
+[submodule "fonts/JetBrainsMono"]
+	path = fonts/JetBrainsMono
+	url = https://github.com/JetBrains/JetBrainsMono
+	ignore = dirty
+[submodule "vim-plug"]
+	path = vim-plug
+	url = https://github.com/junegunn/vim-plug
+	ignore = dirty
+[submodule "colorschemes/Zenburn"]
+	path = colorschemes/Zenburn
+	url = https://github.com/jnurmine/Zenburn
+	ignore = dirty
+[submodule "colorschemes/candle-grey"]
+	path = colorschemes/candle-grey
+	url = https://github.com/aditya-azad/candle-grey
+	ignore = dirty
+[submodule "colorschemes/vim-yin-yang"]
+	path = colorschemes/vim-yin-yang
+	url = https://github.com/pgdouyon/vim-yin-yang
+	ignore = dirty
+[submodule "colorschemes/vim-gruvbox8"]
+	path = colorschemes/vim-gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8
+	ignore = dirty
+[submodule "colorschemes/oceanic-next-vim"]
+	path = colorschemes/oceanic-next-vim
+	url = https://github.com/adrian5/oceanic-next-vim
+	ignore = dirty
+[submodule "colorschemes/darcula"]
+	path = colorschemes/darcula
+	url = https://github.com/doums/darcula
+	ignore = dirty
+[submodule "colorschemes/nightshade.vim"]
+	path = colorschemes/nightshade.vim
+	url = https://github.com/vim-scripts/nightshade.vim
+	ignore = dirty
+[submodule "colorschemes/papercolor-theme"]
+	path = colorschemes/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme
+	ignore = dirty
+[submodule "colorschemes/dmg"]
+	path = colorschemes/dmg
+	url = https://github.com/mstcl/dmg
+	ignore = dirty
+[submodule "ghostty-themes/ghostty-night-owl"]
+	path = ghostty-themes/ghostty-night-owl
+	url = https://github.com/m1yon/ghostty-night-owl
+	ignore = dirty
+[submodule "ghostty-themes/rose-pine"]
+	path = ghostty-themes/rose-pine
+	url = https://github.com/rose-pine/ghostty
+	ignore = dirty
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+	ignore = dirty

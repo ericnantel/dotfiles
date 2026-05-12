@@ -17,7 +17,7 @@ Do you wish to make your life simpler as a developer?
 
 If the answer is yes, please keep reading. :smile:
 
-I created this repository for anyone who wants to install my Vim or NeoVim setup on their computer, while I am still learning their plugins. Btw, I might try Emacs one day, but not today. :smile:
+I created this repository for anyone who wants to install my Vim or NeoVim setup on their computer, while I am still learning their plugins.
 
 #### Step 1
 

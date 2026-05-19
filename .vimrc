@@ -85,6 +85,11 @@ if has("win32")
 		set rtp+=~/scoop/apps/llvm/current/bin
 	endif
 endif
+" if has("macunix")
+" 	if isdirectory(expand("/opt/homebrew/Cellar/llhttp/9.4.1/lib"))
+" 		set rtp+=/opt/homebrew/Cellar/llhttp/9.4.1/lib
+" 	endif
+" endif
 
 syntax on
 

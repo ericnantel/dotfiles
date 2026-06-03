@@ -1,8 +1,9 @@
 qemu-system-i386 \
 	-hda ${HOME}'/VDIs/freedos.img' \
-	-cdrom ${HOME}'/ISOs/FD13-LiveCD/FD13LIVE.iso' \ # TODO: Optional ?
-	-m 16 -boot order=c \ # NOTE: Might be too low-mem for games
+	-hdb fat:rw:${HOME}'/Jeux/3DREALMS/DOSGAMES' \
+	-cdrom ${HOME}'/ISOs/FD13-LiveCD/FD13LIVE.iso' \
+	-m 16 -boot order=c \
+	-rtc base=localtime \
 	-display sdl \
-	-enable-kvm \
 	-device sb16 \
 	-device adlib

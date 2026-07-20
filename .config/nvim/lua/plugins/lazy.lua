@@ -308,6 +308,8 @@ lazy.setup({
 						-- "norg",
 						-- "norg_meta",
 						"org",
+						"hyprlang",
+						"kdl",
 					},
 					sync_install = false,
 					auto_install = true,

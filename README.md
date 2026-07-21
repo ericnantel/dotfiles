@@ -68,6 +68,7 @@ Regardless, use a package manager and install the following packages:
 - waybar (optional - on GNU/Linux)
 - wofi (optional - on GNU/Linux)
 - wlogout (optional - on GNU/Linux)
+- wl-clipboard (optional - useful to copy-paste SSH public keys)
 - socat (optional for hyprland' script hyprwswp_d - on GNU/Linux)
 - xdg_desktop_portal_hyprland (recommended for obs in hyprland)
 - pipewire (recommended for obs in hyprland)

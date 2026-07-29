@@ -60,6 +60,7 @@ Regardless, use a package manager and install the following packages:
 - most (optional - on MacOS and GNU/Linux - colorize man pages)
 - ssh (optional)
 - yq (used by a tmux plugin - optional)
+- yazi (optional - can display image preview in Terminal emulators)
 - gnome-tweaks (GNU/Linux Gnome DE - optional but helpful to swap CapLocks and Ctrl)
 - fastfetch (optional)
 - obs (optional)

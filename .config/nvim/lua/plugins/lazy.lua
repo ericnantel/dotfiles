@@ -553,15 +553,15 @@ lazy.setup({
 									fg = "#ff9e64",
 								},
 							},
-							"encoding",
-							"fileformat",
-							"filetype",
 						},
 						lualine_y = {
-							{
-								"datetime",
-								style = "%a %H:%M",
-							},
+							"filetype",
+							"encoding",
+							"fileformat",
+							-- {
+							-- 	"datetime",
+							-- 	style = "%a %H:%M",
+							-- },
 						},
 						lualine_z = {
 							"progress",
@@ -574,11 +574,16 @@ lazy.setup({
 						lualine_c = {
 							"filename",
 						},
-						lualine_x = {
+						lualine_x = {},
+						lualine_y = {
+							"filetype",
+							"encoding",
+							"fileformat",
+						},
+						lualine_z = {
+							"progress",
 							"location",
 						},
-						lualine_y = {},
-						lualine_z = {},
 					},
 					extensions = {
 						"fugitive",

@@ -163,3 +163,7 @@ It seems that actions are not working with deadkeys excepts ^.
 Date: 2026-07-21
 I found that deadkeys issue in Hyprland, Niri and Sway were actually related to GTK used by Ghostty.
 I might need to change the terminal back to Wezterm in those Window Managers..
+Date: 2026-08-04
+Yazi Image Preview does not inside TMUX with Wezterm on MacOS.
+It works without TMUX on Wezterm and it works with/without TMUX on Ghostty on MacOS.
+Need to test on GNU/Linux with Wezterm and Ghostty.

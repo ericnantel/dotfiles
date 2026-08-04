@@ -64,6 +64,8 @@ Regardless, use a package manager and install the following packages:
 - gnome-tweaks (GNU/Linux Gnome DE - optional but helpful to swap CapLocks and Ctrl)
 - fastfetch (optional)
 - obs (optional)
+- sway (optional)
+- swaylock (optional)
 - hyprland (optional - on GNU/Linux)
 - hyprpaper (optional - on GNU/Linux)
 - waybar (optional - on GNU/Linux)

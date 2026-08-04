@@ -1,4 +1,15 @@
 
+[mgr]
+ratio = [2, 2, 4]
+sort_by = "alphabetical"
+sort_sensitive = true
+sort_reverse = false
+sort_dir_first = false
+linemode = "permissions"
+show_hidden = true
+show_symlink = true
+scrolloff = 5
+
 [preview]
 max_width = 1024
 max_height = 768

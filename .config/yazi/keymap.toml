@@ -1,0 +1,8 @@
+
+[[mgr.prepend_keymap]]
+on = "<C-s>"
+for = "linux"
+orphan = true
+run = "shell -- swaymsg output 'HDMI-A-1' bg %h fill"
+desc = "Set hovered file as wallpaper"
+

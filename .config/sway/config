@@ -232,6 +232,8 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
+	# C-s to set wallpaper; z to open fzf; hjkl to navigate; q to quit
+	bindsym $mod+o exec "wezterm start yazi ~/Images/Wallpapers"
 #
 # Status Bar:
 #

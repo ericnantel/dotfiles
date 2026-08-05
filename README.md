@@ -65,6 +65,7 @@ Regardless, use a package manager and install the following packages:
 - fastfetch (optional)
 - obs (optional)
 - sway (optional)
+- swaymsg, swaybg, swayidle (optional)
 - swaylock (optional)
 - hyprland (optional - on GNU/Linux)
 - hyprpaper (optional - on GNU/Linux)

@@ -167,3 +167,5 @@ Date: 2026-08-04
 Yazi Image Preview does not inside TMUX with Wezterm on MacOS.
 It works without TMUX on Wezterm and it works with/without TMUX on Ghostty on MacOS.
 Need to test on GNU/Linux with Wezterm and Ghostty.
+Date: 2026-08-05
+Yazi Image Preview works within TMUX on GNU/Linux using Wezterm.

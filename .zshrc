@@ -9,8 +9,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 	ssh-add -t 15m
 fi
 
-os=$(uname -o)
-
 # For eza
 # NOTE: This assumes you have eza installed
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
@@ -117,7 +115,8 @@ eval "$(starship init zsh)"
 
 # For syntax highlighting
 # NOTE: This assumes you have zsh-syntax-highlighting installed
-if [[ "$os" == "GNU/Linux" ]]; then
+os=$(uname)
+if [[ "$os" == "Linux" ]]; then
 	# NOTE: This assumes you are on Linux
 	if [ -f /etc/os-release ]; then
 		. /etc/os-release
@@ -139,8 +138,13 @@ if [[ "$os" == "GNU/Linux" ]]; then
 		# Possibly Debian or Ubuntu
 		source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	fi
+elif [[ "$os" == "OpenBSD" ]]; then
+	# NOTE: This assumes you are on OpenBSD
+	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
 	# NOTE: This assumes you have homebrew installed (MacOS or Linux)
 	# TODO: However we should check for BSD as well
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+. "$HOME/.local/bin/env"

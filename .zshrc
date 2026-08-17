@@ -147,4 +147,5 @@ else
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-. "$HOME/.local/bin/env"
+# NOTE: This seems to be added automatically in Ubuntu..
+# . "$HOME/.local/bin/env"

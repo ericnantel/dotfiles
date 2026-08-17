@@ -147,5 +147,6 @@ else
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-# NOTE: This seems to be added automatically in Ubuntu..
-# . "$HOME/.local/bin/env"
+if [[ -f $HOME/.local/bin/env ]]; then
+	. "$HOME/.local/bin/env"
+fi

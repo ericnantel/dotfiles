@@ -684,7 +684,7 @@ before packages are loaded."
            :unnarrowed t)))
   (setq org-roam-node-display-template
         (concat "${title} " (propertize "${tags}" 'face 'org-tag)))
-  (org-roam-db-autosync-mode)
+  ;; (org-roam-db-autosync-mode) NOTE: Error in Emacs 30.2.2 -> Invalid function: static-when
   ;;org-modern
   (setq org-modern-star 'replace
         org-modern-cycle-stars t

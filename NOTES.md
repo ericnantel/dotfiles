@@ -169,3 +169,9 @@ It works without TMUX on Wezterm and it works with/without TMUX on Ghostty on Ma
 Need to test on GNU/Linux with Wezterm and Ghostty.
 Date: 2026-08-05
 Yazi Image Preview works within TMUX on GNU/Linux using Wezterm.
+Date: 2026-08-18
+Ghostty shows incorrect keyboard input in Shell when connected via SSH.
+Date: 2026-08-20
+Turns out updating packages in Spacemacs may result in Errors.
+For instance, updating magit-section (used by org-roam) would update transient which breaks with Emacs 30.2.2,
+because of a static-when function. The fix was: rm -rf ~/.emacs.d/elpa ; then let Spacemacs install missing packages.

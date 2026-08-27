@@ -319,7 +319,7 @@ lazy.setup({
 						"hlsl",
 						"markdown",
 						"markdown_inline",
-						-- "org",
+						"ini",
 					},
 					highlight = {
 						enable = true,
@@ -328,6 +328,7 @@ lazy.setup({
 						-- 	"hlsl",
 						-- 	"markdown",
 						-- 	"markdown_inline",
+						-- 	"ini",
 						-- },
 						disable = function(lang, buf)
 							if lang == "c_sharp" then
@@ -339,6 +340,8 @@ lazy.setup({
 							elseif lang == "markdown" then
 								return true
 							elseif lang == "markdown_inline" then
+								return true
+							elseif lang == "ini" then
 								return true
 							end
 							local max_filesize = 100 * 1024 -- 100Kb

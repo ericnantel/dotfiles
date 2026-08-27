@@ -351,7 +351,7 @@ let g:fzf_action = {
 	\ 'ctrl-q': function('s:build_quickfix_list')
 	\ }
 let g:fzf_layout = {
-	\ 'window': { 'width': 0.85, 'height': 0.85, 'relative': v:true, 'yoffset': 0.0 }
+	\ 'window': { 'width': 0.85, 'height': 0.85 }
 	\ }
 let g:fzf_colors = {
 	\ 'fg': ['fg', 'Normal'],

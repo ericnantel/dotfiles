@@ -89,7 +89,7 @@ export FZF_DEFAULT_OPTS="
 	--multi --reverse --no-scrollbar
 	--smart-case
 	--preview 'cat {}'
-	--preview-window left:50%
+	--preview-window left:45%
 	--preview-border=rounded
 	--preview-label='File Content'
 	--preview-label-pos=center"

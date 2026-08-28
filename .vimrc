@@ -346,7 +346,7 @@ let $FZF_DEFAULT_OPTS = '
 	\ --bind ctrl-j:down,ctrl-k:up,tab:toggle,ctrl-s:toggle
 	\ --multi --reverse --no-scrollbar
 	\ --smart-case
-	\ --preview-window=left'
+	\ --preview-window=left,45%'
 let g:fzf_action = {
 	\ 'ctrl-q': function('s:build_quickfix_list')
 	\ }

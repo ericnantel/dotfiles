@@ -408,7 +408,7 @@ lazy.setup({
 							anchor = "N",
 							height = 0.85,
 							mirror = true,
-							preview_width = 0.55,
+							preview_width = 0.45,
 							prompt_position = "top",
 							width = 0.85,
 						},

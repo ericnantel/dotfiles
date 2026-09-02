@@ -51,6 +51,7 @@ Regardless, use a package manager and install the following packages:
 - fzf (optional)
 - curl (recommended)
 - tmux (on MacOS and GNU/Linux)
+- tms (tmux-sessionizer)
 - eza (optional but require a nerd-font)
 - zsh (optional - on GNU/Linux)
 - zsh-syntax-highlighting (optional - on MacOS and GNU/Linux)

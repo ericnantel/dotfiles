@@ -1,0 +1,10 @@
+
+session_sort_order = "Alphabetical"
+
+[[search_dirs]]
+path = "~/Projets"
+depth = 10
+
+input_position = "Top"
+
+list_worktrees = true

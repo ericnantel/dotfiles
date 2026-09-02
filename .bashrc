@@ -130,6 +130,13 @@ if which fzf > /dev/null; then
 	eval "$(fzf --bash)"
 fi
 
+# For tms completion
+# NOTE: This assumes you have tms installed
+if which tms > /dev/null; then
+	# echo Found tms
+	source <(COMPLETE=bash tms)
+fi
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 export PATH=~/.local/bin:$PATH

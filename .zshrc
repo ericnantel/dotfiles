@@ -109,6 +109,13 @@ if which fzf > /dev/null; then
 	source <(fzf --zsh)
 fi
 
+# For tms completion
+# NOTE: This assumes you have tms installed
+if which tms > /dev/null; then
+	# echo Found tms
+	source <(COMPLETE=zsh tms)
+fi
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
 eval "$(starship init zsh)"

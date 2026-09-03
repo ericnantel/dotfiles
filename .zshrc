@@ -157,3 +157,6 @@ fi
 if [[ -f $HOME/.local/bin/env ]]; then
 	. "$HOME/.local/bin/env"
 fi
+if [[ -d $HOME/.cargo/bin ]]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi

@@ -137,7 +137,12 @@ if which tms > /dev/null; then
 	source <(COMPLETE=bash tms)
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+if [[ -d $HOME/.cargo/bin ]]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # For shell prompt
 # NOTE: This assumes you have starship installed
-export PATH=~/.local/bin:$PATH
 eval "$(starship init bash)"
+

@@ -298,6 +298,7 @@ lazy.setup({
 						"vimdoc",
 						"cmake",
 						"bash",
+						"fish",
 						"dockerfile",
 						"git_config",
 						"git_rebase",

@@ -264,119 +264,119 @@ lazy.setup({
 		-- nvim-treesitter
 		--
 		{
-			"nvim-treesitter/nvim-treesitter",
-			branch = "master",
-			tag = "v0.9.3",
-			event = { "BufReadPre", "BufNewFile" },
-			build = ":TSUpdate",
-			dependencies = {
-				{
-					"nvim-treesitter/nvim-treesitter-context",
-					opts = {},
-				},
-				-- TODO: ufo (folding)
-				"HiPhish/rainbow-delimiters.nvim",
-			},
-			config = function()
-				local nvimtreesitter = require("nvim-treesitter.configs")
-				nvimtreesitter.setup({
-					ensure_installed = {
-						"c",
-						"cpp",
-						"javascript",
-						"typescript",
-						"tsx",
-						-- 'c_sharp', 'java',
-						"rust",
-						"go",
-						"lua",
-						"python",
-						"json",
-						"yaml",
-						"toml",
-						"vim",
-						"vimdoc",
-						"cmake",
-						"bash",
-						"fish",
-						"dockerfile",
-						"git_config",
-						"git_rebase",
-						"gitattributes",
-						"gitcommit",
-						"gitignore",
-						"tmux",
-						-- "norg",
-						-- "norg_meta",
-						"org",
-						"hyprlang",
-						"kdl",
-					},
-					sync_install = false,
-					auto_install = true,
-					ignore_install = {
-						"c_sharp",
-						"glsl",
-						"hlsl",
-						"markdown",
-						"markdown_inline",
-						"ini",
-					},
-					highlight = {
-						enable = true,
-						-- disable = {
-						-- 	"glsl",
-						-- 	"hlsl",
-						-- 	"markdown",
-						-- 	"markdown_inline",
-						-- 	"ini",
-						-- },
-						disable = function(lang, buf)
-							if lang == "c_sharp" then
-								return true
-							elseif lang == "glsl" then
-								return true
-							elseif lang == "hlsl" then
-								return true
-							elseif lang == "markdown" then
-								return true
-							elseif lang == "markdown_inline" then
-								return true
-							elseif lang == "ini" then
-								return true
-							end
-							local max_filesize = 100 * 1024 -- 100Kb
-							local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-							if ok and stats and stats.size > max_filesize then
-								return true
-							end
-						end,
-						additional_vim_regex_highlighting = false,
-					},
-				})
+			-- "nvim-treesitter/nvim-treesitter",
+			-- branch = "master",
+			-- tag = "v0.9.3",
+			-- event = { "BufReadPre", "BufNewFile" },
+			-- build = ":TSUpdate",
+			-- dependencies = {
+			-- 	{
+			-- 		"nvim-treesitter/nvim-treesitter-context",
+			-- 		opts = {},
+			-- 	},
+			-- 	-- TODO: ufo (folding)
+			-- 	"HiPhish/rainbow-delimiters.nvim",
+			-- },
+			-- config = function()
+			-- 	local nvimtreesitter = require("nvim-treesitter.configs")
+			-- 	nvimtreesitter.setup({
+			-- 		ensure_installed = {
+			-- 			"c",
+			-- 			"cpp",
+			-- 			"javascript",
+			-- 			"typescript",
+			-- 			"tsx",
+			-- 			-- 'c_sharp', 'java',
+			-- 			"rust",
+			-- 			"go",
+			-- 			"lua",
+			-- 			"python",
+			-- 			"json",
+			-- 			"yaml",
+			-- 			"toml",
+			-- 			"vim",
+			-- 			"vimdoc",
+			-- 			"cmake",
+			-- 			"bash",
+			-- 			"fish",
+			-- 			"dockerfile",
+			-- 			"git_config",
+			-- 			"git_rebase",
+			-- 			"gitattributes",
+			-- 			"gitcommit",
+			-- 			"gitignore",
+			-- 			"tmux",
+			-- 			-- "norg",
+			-- 			-- "norg_meta",
+			-- 			"org",
+			-- 			"hyprlang",
+			-- 			"kdl",
+			-- 		},
+			-- 		sync_install = false,
+			-- 		auto_install = true,
+			-- 		ignore_install = {
+			-- 			"c_sharp",
+			-- 			"glsl",
+			-- 			"hlsl",
+			-- 			"markdown",
+			-- 			"markdown_inline",
+			-- 			"ini",
+			-- 		},
+			-- 		highlight = {
+			-- 			enable = true,
+			-- 			-- disable = {
+			-- 			-- 	"glsl",
+			-- 			-- 	"hlsl",
+			-- 			-- 	"markdown",
+			-- 			-- 	"markdown_inline",
+			-- 			-- 	"ini",
+			-- 			-- },
+			-- 			disable = function(lang, buf)
+			-- 				if lang == "c_sharp" then
+			-- 					return true
+			-- 				elseif lang == "glsl" then
+			-- 					return true
+			-- 				elseif lang == "hlsl" then
+			-- 					return true
+			-- 				elseif lang == "markdown" then
+			-- 					return true
+			-- 				elseif lang == "markdown_inline" then
+			-- 					return true
+			-- 				elseif lang == "ini" then
+			-- 					return true
+			-- 				end
+			-- 				local max_filesize = 100 * 1024 -- 100Kb
+			-- 				local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+			-- 				if ok and stats and stats.size > max_filesize then
+			-- 					return true
+			-- 				end
+			-- 			end,
+			-- 			additional_vim_regex_highlighting = false,
+			-- 		},
+			-- 	})
 
-				local nvimtreesittercontext = require("treesitter-context")
-				nvimtreesittercontext.setup({
-					enable = true,
-					max_lines = 5,
-					min_window_height = 0,
-					line_numbers = true,
-					multiline_threshold = 20,
-					trim_scope = "outer",
-					mode = "cursor",
-					separator = nil,
-					zindex = 20,
-					on_attach = nil,
-				})
+			-- 	local nvimtreesittercontext = require("treesitter-context")
+			-- 	nvimtreesittercontext.setup({
+			-- 		enable = true,
+			-- 		max_lines = 5,
+			-- 		min_window_height = 0,
+			-- 		line_numbers = true,
+			-- 		multiline_threshold = 20,
+			-- 		trim_scope = "outer",
+			-- 		mode = "cursor",
+			-- 		separator = nil,
+			-- 		zindex = 20,
+			-- 		on_attach = nil,
+			-- 	})
 
-				local rainbowdelimiters = require("rainbow-delimiters.setup")
-				rainbowdelimiters.setup({
-					blacklist = {
-						"c",
-						"cpp",
-					},
-				})
-			end,
+			-- 	local rainbowdelimiters = require("rainbow-delimiters.setup")
+			-- 	rainbowdelimiters.setup({
+			-- 		blacklist = {
+			-- 			"c",
+			-- 			"cpp",
+			-- 		},
+			-- 	})
+			-- end,
 		},
 		-- telescope
 		--

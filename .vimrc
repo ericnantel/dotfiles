@@ -86,6 +86,11 @@ if has("win32")
 	endif
 endif
 " if has("macunix")
+" 	if isdirectory(expand("/opt/homebrew/opt/llvm/bin"))
+" 		set rtp+=/opt/homebrew/opt/llvm/bin
+" 	endif
+" endif
+" if has("macunix")
 " 	if isdirectory(expand("/opt/homebrew/Cellar/llhttp/9.4.1/lib"))
 " 		set rtp+=/opt/homebrew/Cellar/llhttp/9.4.1/lib
 " 	endif
@@ -422,7 +427,16 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
 " vim-clang-format settings
-let g:clang_format#command = "clang-format"
+if has("macunix")
+	if isdirectory(expand("/opt/homebrew/opt/llvm/bin"))
+		let g:clang_format#command = "/opt/homebrew/opt/llvm/bin/clang-format"
+	else
+		" NOTE: This assumes you have installed it separately from llvm
+		let g:clang_format#command = "clang-format"
+	endif
+else
+	let g:clang_format#command = "clang-format"
+endif
 "let g:clang_format#extra_args = "--verbose"
 let g:clang_format#auto_format = 1
 let g:clang_format#auto_filetypes = [ "c", "cpp" ]

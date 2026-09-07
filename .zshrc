@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+os=$(uname)
+
 # When paging using Ctrl-D I don't want the shell to close
 setopt ignore_eof
 
@@ -7,6 +9,12 @@ setopt ignore_eof
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	eval 'ssh-agent -s'
 	ssh-add -t 15m
+fi
+
+# For clang extra-tools (MacOS only)
+# NOTE: This assumes you have clang-format installed
+if [[ "$os" == "Darwin" ]]; then
+	alias clang-format="/opt/homebrew/opt/llvm/bin/clang-format"
 fi
 
 # For eza
@@ -122,7 +130,6 @@ eval "$(starship init zsh)"
 
 # For syntax highlighting
 # NOTE: This assumes you have zsh-syntax-highlighting installed
-os=$(uname)
 if [[ "$os" == "Linux" ]]; then
 	# NOTE: This assumes you are on Linux
 	if [ -f /etc/os-release ]; then
@@ -148,10 +155,12 @@ if [[ "$os" == "Linux" ]]; then
 elif [[ "$os" == "OpenBSD" ]]; then
 	# NOTE: This assumes you are on OpenBSD
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-else
+elif [[ "$os" == "Darwin" ]]; then
 	# NOTE: This assumes you have homebrew installed (MacOS or Linux)
 	# TODO: However we should check for BSD as well
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+	# echo cannot set zsh-syntax-highlighting ..
 fi
 
 if [[ -f $HOME/.local/bin/env ]]; then

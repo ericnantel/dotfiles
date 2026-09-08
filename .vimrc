@@ -46,6 +46,7 @@ set nocursorcolumn
 set mouse=a
 "set ttymouse=
 "set mousescroll=ver:0,hor:0
+"set guicursor=
 set encoding=UTF-8
 set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus
@@ -60,7 +61,7 @@ set scrolloff=5
 set showcmd
 set showmode
 set cmdheight=1
-set laststatus=2
+set laststatus=3
 set updatetime=300
 set timeout
 set timeoutlen=300
@@ -76,6 +77,7 @@ set wildignore+=*.swp,*.DS_Store,*.meta
 " in Vim on MacOS or GNU/Linux; however it works on Windows
 " and it works in Neovim when we append '**' to path
 set path+=**
+set isfname+="@-@"
 
 " Runtime paths for colorschemes, plugins, clang tools
 set rtp+=~/.vim
@@ -164,6 +166,9 @@ vmap jk <ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+" nnoremap J mzJ`z
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
 vnoremap < <gv
 vnoremap > >gv
 
@@ -187,8 +192,8 @@ vnoremap \| *
 
 " For French-Canadian keyboard layout 'é' and 'É' are unused
 " So let's use it for quickfix list
-nnoremap é <cmd>cnext<CR>
-nnoremap É <cmd>cprevious<CR>
+nnoremap « <cmd>cnext<CR>
+nnoremap » <cmd>cprevious<CR>
 
 " NOTE: Ignore and comment this if your keyboard layout is fine
 " BUG: On MacOS, my personal keyboard layout is missing dead keys
@@ -238,7 +243,8 @@ vnoremap <leader>sm <cmd>MaximizerToggle<CR>gv
 let g:maximizer_set_default_mapping = 1
 
 " vim-signature
-nmap <silent> m; ]`
+nmap <silent> é ]`
+nmap <silent> É [`
 let g:SignatureWrapJumps = 1
 let g:SignatureMarkTextHLDynamic = 1
 
@@ -592,10 +598,10 @@ endif
 " NOTE: Make sure that "coc.preferences.useQuickfixForLocations": true
 " Is in the :CocConfig so that coc-references uses quickfix list
 nmap <silent><nowait> grr <Plug>(coc-references)
+nmap <silent><nowait> gri <Plug>(coc-implementation)
 nmap <silent><nowait> gD <Plug>(coc-declaration)
 nmap <silent><nowait> gd <Plug>(coc-definition)
-nmap <silent><nowait> gi <Plug>(coc-implementation)
-nmap <silent><nowait> gt <Plug>(coc-type-definition)
+nmap <silent><nowait> gT <Plug>(coc-type-definition)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
 function! ShowDocumentation()

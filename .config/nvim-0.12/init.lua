@@ -163,6 +163,9 @@ vim.pack.add({
 		src = "https://github.com/nvim-tree/nvim-web-devicons",
 	},
 	{
+		src = "https://github.com/uga-rosa/ccc.nvim",
+	},
+	{
 		src = "https://github.com/nvim-lualine/lualine.nvim",
 	},
 	{
@@ -365,6 +368,15 @@ local plugin_oil = require("oil")
 plugin_oil.setup()
 vim.keymap.set("n", "<leader>ee", "<cmd>Oil --float<CR>", {
 	desc = "Open parent directory",
+})
+
+-- setting plugin ccc
+local plugin_ccc = require("ccc")
+plugin_ccc.setup({
+	highlighter = {
+		auto_enable = true,
+		lsp = true,
+	},
 })
 
 -- setting plugin lualine

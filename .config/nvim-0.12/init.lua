@@ -597,6 +597,7 @@ plugin_conform.setup({
 
 -- setting mason & mason-lspconfig
 -- NOTE: Mainly to install some language servers such as typescript-language-server
+-- NOTE: brew install npm and cargo
 local plugin_mason = require("mason")
 plugin_mason.setup({
 	ui = {

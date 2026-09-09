@@ -587,7 +587,16 @@ plugin_conform.setup({
 	log_level = vim.log.levels.INFO,
 	formatters = {
 		["clang-format"] = {
-			-- TODO: Verify path on MacOS
+			command = function()
+				if vim.loop.os_uname().sysname == "Darwin" then
+					if vim.fn.isdirectory(vim.fn.expand("/opt/homebrew/opt/llvm/bin")) then
+						return "/opt/homebrew/opt/llvm/bin/clang-format"
+					else
+						return "clang-format"
+					end
+				end
+				return "clang-format"
+			end,
 			prepend_args = { "-fallback-style=none" },
 		},
 	},

@@ -611,6 +611,7 @@ local plugin_masonlspconfig = require("mason-lspconfig")
 plugin_masonlspconfig.setup({
 	ensure_installed = {
 		"ts_ls",
+		"vimls",
 	},
 })
 
@@ -638,6 +639,7 @@ vim.lsp.enable({
 	"clangd",
 	"lua_ls",
 	"ts_ls",
+	"vimls",
 })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {
 	silent = true,

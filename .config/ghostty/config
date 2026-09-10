@@ -17,3 +17,4 @@ shell-integration-features = no-cursor
 cursor-opacity = 1
 cursor-style = block
 cursor-style-blink = false
+cursor-color = "#c4a7e7"

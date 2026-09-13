@@ -361,7 +361,42 @@ vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", {
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", {
 	desc = "Telescope Grep Word",
 })
--- TODO: Complete.
+vim.keymap.set("n", "<leader>f/", "<cmd>Telescope current_buffer_fuzzy_find<CR>", {
+	desc = "Telescope Search in Current Buffer",
+})
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files", {
+	desc = "Telescope Git Files",
+})
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", {
+	desc = "Telescope Buffers",
+})
+vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics bufnr=0<CR>", {
+	desc = "Telescope Diagnostics in Current Buffer",
+})
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", {
+	desc = "Telescope Help Tags",
+})
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<CR>", {
+	desc = "Telescope Marks",
+})
+vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<CR>", {
+	desc = "Telescope QuickFix List",
+})
+vim.keymap.set("n", "<leader>fj", "<cmd>Telescope jumplist<CR>", {
+	desc = "Telescope JumpList",
+})
+vim.keymap.set("n", "<leader>fR", "<cmd>Telescope registers", {
+	desc = "Telescope Registers",
+})
+vim.keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references", {
+	desc = "Telescope LSP References",
+})
+-- also Telescope lsp_definitions, lsp_implementations, lsp_type_definitions
+-- TODO: add fld, fli, flt ?
+-- NOTE: Difference between default lsp keybinds and telescope lsp keybinds
+-- is that default lsp keybinds add all results to the quickfix list
+-- with Telescope you can select what you want to add to the quickfix list
+-- we need both essentially.
 
 -- setting plugin oil
 local plugin_oil = require("oil")
@@ -491,6 +526,8 @@ vim.diagnostic.config({
 		source = true,
 	},
 })
+-- TODO: Add keybind for : vim.diagnostic.open_float() ?
+-- TODO: Add keybind for : add all diagnostics to quickfix ?
 
 -- setting treesitter & treesitter-context
 -- TODO: brew install tree-sitter-cli
@@ -669,15 +706,15 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, {
 })
 vim.keymap.set("n", "grr", vim.lsp.buf.references, {
 	silent = true,
-	desc = "LSP References - QuickFix",
+	desc = "LSP References - QuickFix List",
 })
 vim.keymap.set("n", "grn", vim.lsp.buf.rename, {
 	silent = true,
-	desc = "LSP Rename - QuickFix",
+	desc = "LSP Rename - QuickFix List",
 })
 vim.keymap.set("n", "gri", vim.lsp.buf.implementation, {
 	silent = true,
-	desc = "LSP Implementation - QuickFix",
+	desc = "LSP Implementation - QuickFix List",
 })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
 	silent = true,

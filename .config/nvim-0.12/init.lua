@@ -364,7 +364,7 @@ vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", {
 vim.keymap.set("n", "<leader>f/", "<cmd>Telescope current_buffer_fuzzy_find<CR>", {
 	desc = "Telescope Search in Current Buffer",
 })
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files", {
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", {
 	desc = "Telescope Git Files",
 })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", {
@@ -385,10 +385,10 @@ vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<CR>", {
 vim.keymap.set("n", "<leader>fj", "<cmd>Telescope jumplist<CR>", {
 	desc = "Telescope JumpList",
 })
-vim.keymap.set("n", "<leader>fR", "<cmd>Telescope registers", {
+vim.keymap.set("n", "<leader>fR", "<cmd>Telescope registers<CR>", {
 	desc = "Telescope Registers",
 })
-vim.keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references", {
+vim.keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", {
 	desc = "Telescope LSP References",
 })
 -- also Telescope lsp_definitions, lsp_implementations, lsp_type_definitions

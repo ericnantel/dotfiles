@@ -1,10 +1,22 @@
 
+# input_position = "Top"
+display_full_path = true
 session_sort_order = "Alphabetical"
+list_worktrees = true
+search_submodules = false
 
 [[search_dirs]]
 path = "~/Projets"
-depth = 10
+depth = 1
 
-input_position = "Top"
+[picker_colors]
+highlight_color = "#908caa"
+highlight_text_color = "#e0def4"
+border_color = "#ea9a97"
+info_color = "#eb6f92"
+prompt_color = "#c4a7e7"
 
-list_worktrees = true
+# NOTE: Ctrl-j/k won't work if we are inside Tmux already..
+[shortcuts]
+ctrl-j = "move_down"
+ctrl-k = "move_up"

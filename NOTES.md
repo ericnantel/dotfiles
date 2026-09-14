@@ -175,3 +175,6 @@ Date: 2026-08-20
 Turns out updating packages in Spacemacs may result in Errors.
 For instance, updating magit-section (used by org-roam) would update transient which breaks with Emacs 30.2.2,
 because of a static-when function. The fix was: rm -rf ~/.emacs.d/elpa ; then let Spacemacs install missing packages.
+Date: 2026-09-14
+I recently noticed how slow tpm is when launching tmux. I might try to use
+those plugins without tpm if that's possible..

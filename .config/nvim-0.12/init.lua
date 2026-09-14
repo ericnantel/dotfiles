@@ -400,7 +400,44 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", {
 
 -- setting plugin oil
 local plugin_oil = require("oil")
-plugin_oil.setup()
+plugin_oil.setup({
+	default_file_explorer = true,
+	columns = {
+		"icon",
+		-- "permissions",
+		-- "size",
+		-- "mtime"
+	},
+	win_options = {
+		signcolumn = vim.o.signcolumn,
+		cursorcolumn = false,
+		spell = false,
+	},
+	delete_to_trash = false,
+	skip_confirm_for_simple_edits = false,
+	prompt_save_on_select_new_entry = true,
+	-- use_default_keymaps = false,
+	view_options = {
+		show_hidden = true,
+		natural_order = "fast",
+		case_insensitive = true,
+	},
+	float = {
+		-- padding = 2,
+		max_width = 0.85,
+		max_height = 0.85,
+		border = "rounded",
+		get_win_title = nil,
+		preview_split = "left",
+	},
+	preview_win = {
+		preview_method = "fast_scratch",
+	},
+	-- confirmation = {}
+	-- progress = {}
+	-- ssh = {}
+	-- keymaps_help = {}
+})
 vim.keymap.set("n", "<leader>ee", "<cmd>Oil --float<CR>", {
 	desc = "Open parent directory",
 })

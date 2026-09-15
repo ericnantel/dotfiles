@@ -64,6 +64,7 @@ git submodule update
 #cp .clang-format ~/.clang-format
 #source ~/.clang-format
 
+# NOTE: Now using .config/tmux/plugins and .config/tmux/tmux.conf
 # make directory ~/.tmux/plugins/tpm
 #mkdir -p ~/.tmux/plugins/tpm
 # copy .tmux/plugins/tpm/* to ~/.tmux/plugins/tpm

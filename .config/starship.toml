@@ -1,9 +1,19 @@
 # NOTE: https://starship.rs/presets/
 
-add_newline = true
+add_newline = false
+
 follow_symlinks = false
 
 palette = "rose-pine-moon"
+
+format = """
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$line_break\
+$jobs"""
 
 [palettes.rose-pine-moon]
 overlay = '#393552'
@@ -14,22 +24,22 @@ pine = '#3e8fb0'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
 
-
 [directory]
-format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
-style = "bg:overlay fg:pine"
+# format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
+# style = "bg:overlay fg:pine"
 
 [git_branch]
-format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) "
-style = "bg:overlay fg:foam"
+# format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) "
+format = "[ $symbol $branch ]($style)"
+# style = "bg:overlay fg:foam"
 symbol = ""
-truncation_length = 48
+truncation_length = 28
 truncation_symbol = "*"
 
 [git_status]
-style = "bg:overlay fg:love"
-format = '[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) '
-up_to_date = '[ ✓ ](bg:overlay fg:iris)'
+# format = '[](fg:overlay)([ $all_status$ahead_behind ]($style))[](fg:overlay) '
+# style = "bg:overlay fg:love"
+# up_to_date = '[ ✓ ](bg:overlay fg:iris)'
 # untracked = '[?\($count\)](bg:overlay fg:gold)'
 # stashed = '[\$](bg:overlay fg:iris)'
 # modified = '[!\($count\)](bg:overlay fg:gold)'
@@ -39,21 +49,3 @@ up_to_date = '[ ✓ ](bg:overlay fg:iris)'
 # ahead = '[⇡\(${count}\)](bg:overlay fg:foam)'
 # diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
 # behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
-
-[cmake]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[python]
-disabled = true
-
-[lua]
-disabled = true
-
-[kubernetes]
-disabled = true
-#symbol = "⎈"
-#format = 'on [$symbol](bright-black) [$context( \($namespace\))](dimmed green) '
-

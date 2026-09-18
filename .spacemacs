@@ -702,7 +702,10 @@ before packages are loaded."
         (quote (("DONE" :background "#403d52" :foreground "white" :weight bold)
                 ("CANCELED" :background "#403d52" :foreground "#eb6f92" :weight bold))))
   (global-org-modern-mode)
-  ;;org-download TODO
+
+  ;;org-download
+  (setq org-download-image-dir (concat org-roam-directory "/Downloads/"))
+  (setq org-download-timestamp "%Y-%m-%d_%H-%M-%S_")
 
   ;;listen
   (setq listen-directory (concat org-roam-directory "/Recordings/"))

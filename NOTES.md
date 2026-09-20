@@ -178,3 +178,5 @@ because of a static-when function. The fix was: rm -rf ~/.emacs.d/elpa ; then le
 Date: 2026-09-14
 I recently noticed how slow tpm is when launching tmux. I might try to use
 those plugins without tpm if that's possible..
+Date: 2026-09-20
+Tools such as bat and delta are not rendering properly in OpenBSD via SSH.

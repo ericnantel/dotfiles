@@ -53,6 +53,10 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.wildmenu = true
 
+-- setting additional extensions for z80, lisp files
+vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])
+vim.cmd([[autocmd BufNewFile,BufRead *.spacemacs set filetype=lisp]])
+
 -- setting yank highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
@@ -246,7 +250,6 @@ vim.g.cmake_bear_intercept = 0
 -- TODO: Complete keymaps
 
 -- setting plugin vim-z80
-vim.cmd([[autocmd BufNewFile,BufRead *.z80.asm set filetype=z80]])
 
 -- setting plugin vim-z80-docs
 

@@ -132,6 +132,9 @@ endif
 autocmd BufNewFile,BufRead *.z80.asm set filetype=z80
 "autocmd FileType z80 setlocal ts=4 sts=4 sw=4 noexpandtab
 
+" Lisp
+autocmd BufNewFile,BufRead *.spacemacs set filetype=lisp
+
 augroup highlightYankedText
 	autocmd!
 	autocmd TextYankPost * call FlashYankedText()

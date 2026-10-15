@@ -217,7 +217,7 @@ exec swayidle -w \
     # bindsym $mod+w layout tabbed
     # bindsym $mod+e layout toggle split
 	bindsym Ctrl+w+f layout splith ; gaps horizontal current set 64
-	bindsym Ctrl+w+g layout tabbed ; gaps horizontal current set 144
+	bindsym Ctrl+w+g layout stacking ; gaps horizontal current set 144
 
     # Make the current focus fullscreen
     # bindsym $mod+f fullscreen

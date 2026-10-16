@@ -73,6 +73,7 @@ Regardless, use a package manager and install the following packages:
 - waybar (optional - on GNU/Linux)
 - wofi (optional - on GNU/Linux)
 - fuzzel (optional - app launcher)
+- quickshell (optional - widget/bar)
 - wlogout (optional - on GNU/Linux)
 - wl-clipboard (optional - useful to copy-paste SSH public keys)
 - socat (optional for hyprland' script hyprwswp_d - on GNU/Linux)

@@ -55,6 +55,9 @@ for_window [title = "Calculatrice"] floating enable
 for_window [title = "About Mozilla Firefox"] floating enable
 for_window [class="^(steam$)" title="^(?!Steam$)"] floating enable
 
+### Quickshell configuration
+exec quickshell
+
 ### Idle configuration
 exec swayidle -w \
 	 timeout 300 'swaylock -f -c 000000' \

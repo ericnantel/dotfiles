@@ -180,3 +180,5 @@ I recently noticed how slow tpm is when launching tmux. I might try to use
 those plugins without tpm if that's possible..
 Date: 2026-09-20
 Tools such as bat and delta are not rendering properly in OpenBSD via SSH.
+Date: 2026-10-16
+Quickshell is promising on Sway; however neither Button nor MouseArea click event are working..

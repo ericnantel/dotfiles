@@ -22,7 +22,7 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 output HDMI-A-1 mode 1920x1080@60Hz position 1920 0 scale 1
-output HDMI-A-1 background ~/Images/Wallpapers/61064.jpg fill #232136
+output HDMI-A-1 background ~/Images/Wallpapers/DC01.jpg fill #232136
 
 ### Gaps configuration
 gaps horizontal 144

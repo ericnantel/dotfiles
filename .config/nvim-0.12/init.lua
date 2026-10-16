@@ -582,6 +582,7 @@ plugin_ts.install({
 	"javascript",
 	"typescript",
 	"tsx",
+	"qmljs",
 })
 local plugin_tscontext = require("treesitter-context")
 plugin_tscontext.setup({

@@ -312,6 +312,7 @@ lazy.setup({
 						"org",
 						"hyprlang",
 						"kdl",
+						"qmljs",
 					},
 					sync_install = false,
 					auto_install = true,

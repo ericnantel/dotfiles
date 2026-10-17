@@ -20,7 +20,7 @@ ShellRoot {
 				bottom: true
 			}
 			color: "transparent"
-			mask: Region {}
+			// mask: Region {}
 
 			WlrLayershell.layer: WlrLayer.Bottom
 			WlrLayershell.exclusionMode: ExclusionMode.Ignore
@@ -58,8 +58,9 @@ ShellRoot {
 						MouseArea {
 							anchors.fill: parent
 							onClicked: {
-								//todo swaymsg workspace String(index + 1)
-								console.log("click");
+								var proc = Qt.createQmlObject('import Quickshell.Io; Process { }', parent);
+								proc.command = ["swaymsg", "workspace", String(index + 1)];
+								proc.running = true;
 							}
 						}
 					}
